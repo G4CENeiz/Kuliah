@@ -19,8 +19,8 @@ public class Quiz2A {
 
         System.out.println("[A]");
         System.out.printf("%-10s"," ");
-        for (int i = 0; i < stockKind.length; i++) {
-            System.out.printf("%-15s", stockKind[i]);
+        for (int col = 0; col < stockKind.length; col++) {
+            System.out.printf("%-15s", stockKind[col]);
         }
         System.out.println();
         for (int stockNameID = 0; stockNameID < stockName.length; stockNameID++) {
@@ -34,33 +34,33 @@ public class Quiz2A {
         System.out.println("[B]");
         int[] stockAvailable = new int[stockName.length];
         System.out.println("Goods that can be borrowed");
-        for (int i = 0; i < stockName.length; i++) {
-            stockAvailable[i] = stock[i][0] - stock[i][1];
-            System.out.printf("    available %-8s to be borrowed: %2d\n", stockName[i], stock[i][0] - stock[i][1]);
+        for (int stockAvailableID = 0; stockAvailableID < stockName.length; stockAvailableID++) {
+            stockAvailable[stockAvailableID] = stock[stockAvailableID][0] - stock[stockAvailableID][1];
+            System.out.printf("    available %-8s to be borrowed: %2d\n", stockName[stockAvailableID], stock[stockAvailableID][0] - stock[stockAvailableID][1]);
         }
         int stockAvailableSum = 0;
-        for (int i = 0; i < stockAvailable.length; i++) {
-            stockAvailableSum += stockAvailable[i];
+        for (int stockAvailableID = 0; stockAvailableID < stockAvailable.length; stockAvailableID++) {
+            stockAvailableSum += stockAvailable[stockAvailableID];
         }
         System.out.printf("Total available item to be borrowed: %d\n", stockAvailableSum);
 
         System.out.println("[C]");
         System.out.println("Total turn over for each item");
         int totalTurnOver = 0;
-        for (int i = 0; i < stockName.length; i++) {
-            System.out.printf("%-8s turn over: Rp %,d\n", stockName[i], stockAvailable[i] * price[i]);
-            totalTurnOver += stockAvailable[i] * price[i];
+        for (int stockNameID = 0; stockNameID < stockName.length; stockNameID++) {
+            System.out.printf("%-8s turn over: Rp %,d\n", stockName[stockNameID], stockAvailable[stockNameID] * price[stockNameID]);
+            totalTurnOver += stockAvailable[stockNameID] * price[stockNameID];
         }
         System.out.printf("Total turn over for every item: Rp %,d\n", totalTurnOver);
 
         System.out.println("[D]");
-        int compare = 0;
-        for (int i = 0; i < stockAvailable.length; i++) {
-            if (compare < stockAvailable[i]) {
-                compare = i;
+        int stockLot = 0;
+        for (int stockAvailableID = 0; stockAvailableID < stockAvailable.length; stockAvailableID++) {
+            if (stockLot < stockAvailable[stockAvailableID]) {
+                stockLot = stockAvailableID;
             }
         }
-        System.out.printf("Item with the most stock that can be borrowed is %s", stockName[compare]);
+        System.out.printf("Item with the most stock that can be borrowed is %s", stockName[stockLot]);
         input.close();
     }
 }
