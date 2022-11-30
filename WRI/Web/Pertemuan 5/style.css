@@ -42,11 +42,11 @@ div {
     background-color: #2196f3;
     pad: 10px;
 }
-.item1:hover {background-color: antiquewhite;}
-.item2:hover {background-color: antiquewhite;}
-.item3:hover {background-color: antiquewhite;}
-.item4:hover {background-color: antiquewhite;}
-.item5:hover {background-color: antiquewhite;}
+.item1:hover {background-color: lightgray;}
+.item2:hover {background-color: lightgray;}
+.item3:hover {background-color: lightgray;}
+.item4:hover {background-color: lightgray;}
+.item5:hover {background-color: lightgray;}
 /*
 #poemdiv {
     background-color: darkgoldenrod;
