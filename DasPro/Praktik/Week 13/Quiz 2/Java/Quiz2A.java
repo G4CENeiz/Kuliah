@@ -48,7 +48,7 @@ public class Quiz2A {
         System.out.println("Total turn over for each item");
         int totalTurnOver = 0;
         for (int stockNameID = 0; stockNameID < stockName.length; stockNameID++) {
-            System.out.printf("%-8s turn over: Rp %,d\n", stockName[stockNameID], stockAvailable[stockNameID] * price[stockNameID]);
+            System.out.printf("    %-8s turn over: Rp %,d\n", stockName[stockNameID], stockAvailable[stockNameID] * price[stockNameID]);
             totalTurnOver += stockAvailable[stockNameID] * price[stockNameID];
         }
         System.out.printf("Total turn over for every item: Rp %,d\n", totalTurnOver);
