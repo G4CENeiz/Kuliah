@@ -54,13 +54,15 @@ public class Quiz2A {
         System.out.printf("Total turn over for every item: Rp %,d\n", totalTurnOver);
 
         System.out.println("[D]");
-        int stockLot = 0;
+        int stockAvailableMost = 0;
+        int stockAvailableMostID = 0;
         for (int stockAvailableID = 0; stockAvailableID < stockAvailable.length; stockAvailableID++) {
-            if (stockLot < stockAvailable[stockAvailableID]) {
-                stockLot = stockAvailableID;
+            if (stockAvailableMost < stockAvailable[stockAvailableID]) {
+                stockAvailableMost = stockAvailable[stockAvailableID];
+                stockAvailableMostID = stockAvailableID;
             }
         }
-        System.out.printf("Item with the most stock that can be borrowed is %s", stockName[stockLot]);
+        System.out.printf("Item with the most stock that can be borrowed is %s", stockName[stockAvailableMostID]);
         input.close();
     }
 }
