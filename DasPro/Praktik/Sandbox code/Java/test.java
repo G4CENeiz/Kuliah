@@ -1,3 +1,5 @@
+//package com.baihaqi.bankingcreditcli;
+
 import java.util.Scanner;
 
 /**
@@ -22,7 +24,7 @@ public class test {
     // region login
     static String usernameCheck() {
         while (true) {
-            System.out.print("Username: ");
+            write("Username: ");
             String userInput = input.next();
             for (String[] strings : credential) {
                 if (strings[0] == null)
@@ -40,7 +42,7 @@ public class test {
     static boolean passwordCheck() {
         int limit = 0;
         while (limit < 3) {
-            System.out.print("Password: ");
+            write("Password: ");
             String userInput = input.next();
             for (String[] strings : credential) {
                 if (strings[0].equals(username)) {
@@ -50,9 +52,9 @@ public class test {
                 }
             }
             if (limit < 1)
-                System.out.println("Wrong password");
+                writeln("Wrong password");
             if (limit == 1)
-                System.out.println("""
+                writeln("""
                         Wrong password, Last attempt
                         if you fail again, you would need to re-enter your username""");
             limit++;
@@ -90,9 +92,9 @@ public class test {
             bar += "=";
         }
         int gap = ((heading - (side.length() * 2) - prompt.length()) / 2);
-        System.out.println(bar);
-        System.out.printf("%s%" + gap + "s%s%" + gap + "s%s\n", side, " ", prompt, " ", side);
-        System.out.println(bar);
+        writeln(bar);
+        write(String.format("%s%" + gap + "s%s%" + gap + "s%s\n", side, " ", prompt, " ", side));
+        writeln(bar);
     }
 
     static void printPromptSplit(String prompt) {
@@ -101,46 +103,47 @@ public class test {
         while (i < promptSplit.length) {
             int limit = 0;
             while (limit < 65 && i < promptSplit.length && (limit + promptSplit[i].length()) < 65) {
-                System.out.printf("%s ", promptSplit[i]);
+                write(String.format("%s ", promptSplit[i]));
                 limit = limit + (promptSplit[i].length() + 1);
                 i++;
             }
-            System.out.println();
+            writeln("");
         }
     }
 
-    static void mortgageApplicationDetail(int debt, int tenor, int downPayment, int creditFacilities, double interest, double installment) {
+    static void mortgageApplicationDetail(double... detail) {
         int id = getUserID();
         String prompt = "Mortgage Application";
         String ordinal;
-        switch (String.valueOf(creditFacilities).charAt(String.valueOf(creditFacilities).length()-1)) {
+        switch (String.valueOf(detail[3]).charAt(String.valueOf(detail[3]).length()-1)) {
             case '1' -> ordinal = "st";
             case '2' -> ordinal = "nd";
             case '3' -> ordinal = "rd";
             default -> ordinal = "th";
         }
-        double downPaymentPercentageByDebt = ((double)downPayment / debt) * 100;
-
+        
         String[] varValue = {
-                String.format(": %d%s", creditFacilities, ordinal),
-                String.format(": IDR %,d", debt),
-                String.format(": IDR %,d", downPayment),
-                String.format(": IDR %,d", (debt - downPayment)),
-                String.format(": %d", tenor),
-                String.format(": %.2f%s", interest, "%"),
-                String.format(": IDR %,.2f", installment),
-                String.format(": IDR %,.2f", (installment * 2))
+            String.format(": %d%s", detail[3], ordinal),
+            String.format(": IDR %,d", detail[0]),
+            String.format(": IDR %,d", detail[2]),
+            String.format(": IDR %,d", (detail[0] - detail[2])),
+            String.format(": %d", detail[1]),
+            String.format(": %.2f%s", detail[4], "%"),
+            String.format(": IDR %,.2f", detail[5]),
+            String.format(": IDR %,.2f", (detail[5] * 2))
         };
+        
+        double downPaymentPercentageByDebt = (detail[2] / detail[0]) * 100;
 
         String[] varName = {
-                "Credit facility",
-                "House price",
-                String.format("Down payment %.1f%s", downPaymentPercentageByDebt, "%"),
-                "Debt principal",
-                "Tenor",
-                "Interest",
-                "installment",
-                "Minimum income"
+                "Credit facility ",
+                "House price ",
+                String.format("Down payment %.2f%s ", downPaymentPercentageByDebt, "%"),
+                "Debt principal ",
+                "Tenor ",
+                "Interest ",
+                "installment ",
+                "Minimum income "
         };
         int heading;
         String barTop = "", side = "||", barBot = "";
@@ -177,14 +180,17 @@ public class test {
         insertMortgageDetail(barBot);
 
         if (confirm()) {
-            creditMortgage[id][0] = debt;
-            creditMortgage[id][1] = tenor;
-            creditMortgage[id][2] = downPayment;
-            creditMortgage[id][3] = installment;
+            creditMortgage[id][0] = detail[0];
+            creditMortgage[id][1] = detail[1];
+            creditMortgage[id][2] = detail[2];
+            creditMortgage[id][3] = detail[5];
         }
         newLoanMenu();
     }
 
+    static void write(String x) {System.out.print(x);}
+
+    static void writeln(String x) {System.out.println(x);}
     // endregion
     // region etc
     static void newStringArray(String[][] data) {
@@ -216,7 +222,7 @@ public class test {
     }
 
     static String promptedTextInput(String prompt) {
-        System.out.print(prompt);
+        write(prompt);
         return input.next();
     }
 
@@ -229,7 +235,7 @@ public class test {
     }
 
     static void notFound() {
-        System.out.println("""
+        writeln("""
                  _  _    ___  _  _  \s
                 | || |  / _ \\| || | \s
                 | || |_| | | | || |_\s
@@ -247,14 +253,14 @@ public class test {
 
     static boolean confirm() {
         while (true){
-            System.out.print("Are you sure (y/n): ");
+            write("Are you sure (y/n): ");
             String userInput = input.next();
             if (userInput.equalsIgnoreCase("y")) {
                 return true;
             } else if (userInput.equalsIgnoreCase("n")) {
                 return false;
             }
-            System.out.println("Please enter a valid input!");
+            writeln("Please enter a valid input!");
         }
     }
 
@@ -269,7 +275,7 @@ public class test {
     }
 
     static void insertMortgageDetail(String s) {
-        System.out.print(s + "\n");
+        write(s + "\n");
         creditMortgageDetail[getUserID()] += s + "\n";
     }
     // endregion
@@ -295,23 +301,25 @@ public class test {
 
     static void mainMenu() {
         printHeading("MENU");
-        System.out.println("""
+        writeln("""
                 1. Credit card menu
                 2. Loan menu
                 3. Account information
-                4. Log out""");
+                4. Log out
+                5. Quit the program""");
         switch (promptedTextInput("menu: ")) {
             case "1" -> creditCardMenu();
             case "2" -> loanMenu();
             case "3" -> accountInfoMenu();
             case "4" -> loginMenu();
+            case "5" -> quitMenu();
         }
     }
 
     // region mainMenu
     static void creditCardMenu() {
         printHeading("CREDIT CARD");
-        System.out.println("""
+        writeln("""
                 1. Apply for a credit card
                 2. Owned Credit card
                 3. Back to main menu""");
@@ -325,7 +333,7 @@ public class test {
     // region creditCardMenu
     static void newCreditCard() {
         printHeading("APPLY FOR A CREDIT CARD");
-        System.out.println("""
+        writeln("""
                 1. General purpose
                 2. Travel
                 3. Lifestyle
@@ -375,7 +383,7 @@ public class test {
     // endregion
     static void loanMenu() {
         printHeading("LOAN");
-        System.out.println("""
+        writeln("""
                 1. Apply for a loan
                 2. Current loan status
                 3. Back to main menu""");
@@ -389,7 +397,7 @@ public class test {
     // region loanMenu
     static void newLoanMenu() {
         printHeading("APPLY FOR A LOAN");
-        System.out.println("""
+        writeln("""
                 1. Personal
                 2. Auto
                 3. Mortgage
@@ -427,20 +435,20 @@ public class test {
         double installment;
         double interest = 7.25;
         printHeading("MORTGAGE LOAN");
-        System.out.println("""
+        writeln("""
                 Purpose of Credit
                 1. Buying a house
                 2. Renovating""");
         String s = promptedTextInput("menu: ");
         if (s.equals("1")) {
-            System.out.println("""
+            writeln("""
                     Collateral Type
                     1. House
                     2. Apartment
                     3. Shop""");
             String collateralType = promptedTextInput("menu: ");
             if (collateralType.equals("1") || collateralType.equals("2")) {
-                System.out.print("Building Area (m2): ");
+                write("Building Area (m2): ");
                 buildingArea = input.nextInt();
                 if (buildingArea > 70)
                     downPaymentPercentage += 5;
@@ -448,39 +456,39 @@ public class test {
         } else if (s.equals("2")) {
             downPaymentPercentage += 20;
         }
-        System.out.println("How many Credit Facilities do you have");
+        writeln("How many Credit Facilities do you have");
         boolean i = true;
         do {
-            System.out.print("Credit Facility: ");
+            write("Credit Facility: ");
             creditFacilities = input.nextInt();
             if (creditFacilities < 1) {
-                System.out.println("Please enter a positive value!");
+                writeln("Please enter a positive value!");
             } else {
                 i = false;
             }
         } while (i);
         if (creditFacilities > 2)
             downPaymentPercentage += 10;
-        System.out.print("House price: ");
+        write("House price: ");
         debt = input.nextInt();
-        System.out.printf("Minimum down payment amount: %,d\n", (debt / 100) * downPaymentPercentage);
+        write(String.format("Minimum down payment amount: %,d\n", (debt / 100) * downPaymentPercentage));
         i = true;
         do {
-            System.out.print("Down payment: ");
+            write("Down payment: ");
             downPayment = input.nextInt();
             if (downPayment < (debt / 100) * downPaymentPercentage) {
-                System.out.println("Please enter a value bigger than the minimum!");
+                writeln("Please enter a value bigger than the minimum!");
             } else {
                 i = false;
             }
         } while (i);
-        System.out.println("Maximum 20 years tenor");
+        writeln("Maximum 20 years tenor");
         i = true;
         do {
-            System.out.print("Tenor: ");
+            write("Tenor: ");
             tenor = input.nextInt();
             if (tenor < 1 || tenor > 20) {
-                System.out.println("Please enter a value between 1 to 20");
+                writeln("Please enter a value between 1 to 20");
             } else {
                 i = false;
             }
@@ -491,9 +499,9 @@ public class test {
         double inverseReturnOfPoweredInterest = 1 - (1 / powerDouble(interestPowerBase, tenorMonth));
 
         installment = debtInterest / inverseReturnOfPoweredInterest;
-        System.out.printf("%14s IDR %,d\n", "Installment", (long) installment);
-        System.out.printf("%14s IDR %,d\n", "Debt principal", (debt - downPayment));
-        System.out.printf("%14s IDR %,d\n", "Minimum Income", (long) installment * 2);
+        write(String.format("%14s IDR %,d\n", "Installment", (long) installment));
+        write(String.format("%14s IDR %,d\n", "Debt principal", (debt - downPayment)));
+        write(String.format("%14s IDR %,d\n", "Minimum Income", (long) installment * 2));
 
         mortgageApplicationDetail(debt, tenor, downPayment, creditFacilities, interest, installment);
     }
@@ -510,9 +518,9 @@ public class test {
         if (creditMortgage[getUserID()][0] == 0) {
             notFound();
         } else {
-            System.out.print(creditMortgageDetail[getUserID()]);
+            write(creditMortgageDetail[getUserID()]);
         }
-        System.out.print("Exit?");
+        write("Exit?");
         if (confirm()){
             loanMenu();
         }
@@ -524,7 +532,10 @@ public class test {
         printHeading("ACCOUNT INFO");
         notFound();
         mainMenu();
+    }
 
+    static void quitMenu() {
+        //lol its just a blank
     }
     // endregion
     // endregion
