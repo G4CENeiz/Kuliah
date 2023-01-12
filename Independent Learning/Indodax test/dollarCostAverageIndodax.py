@@ -60,15 +60,16 @@ for i in range(num_of_days):
             purchase_prices.append(price)
             purchase_btc.append(amount_btc)
         else:
-            # if the hour is not the target hours, sleep for 1 hour
-            for i in range(3600, 0, -1):
+            # if the hour is not the target hours, sleep until the next target hour
+            while True:
+                current_time = time.time()
+                current_hour = datetime.datetime.fromtimestamp(current_time).hour
+                if current_hour in target_hours:
+                    break
                 sys.stdout.write("\r")
-                sys.stdout.write("Waiting for {} seconds before next check...".format(i))
+                sys.stdout.write("Waiting for next target hour...")
                 sys.stdout.flush()
-                time.sleep(1)
-            sys.stdout.write("\r")
-            sys.stdout.write("Waiting completed. Checking now...")
-            sys.stdout.flush()
+                time.sleep(60)
 
     except Exception as e:
         # Handle any exceptions that may occur
