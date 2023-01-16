@@ -3,18 +3,28 @@ import time
 import datetime
 import math
 import sys
+import msvcrt
+import os
+
+def wait_for_key():
+    sys.stdout.write("\r")
+    print("Press any key to continue...")
+    msvcrt.getch()
+
+apiKey = os.environ.get("API_KEY")
+apiSecret = os.environ.get("API_SECRET")
 
 symbol = 'BTC/IDR'
-target_hours = [15]
-num_of_days = 30
+target_hours = [9]
+num_of_days = 7
 
 # Authenticate with Indodax using your API key and secret
 indodax = ccxt.indodax({
     'rateLimit': 3000,
     'enableRateLimit': True,
     'verbose': True,
-    'apiKey': 'YOUR_API_KEY',
-    'secret': 'YOUR_SECRET',
+    'apiKey': apiKey,
+    'secret': apiSecret,
 })
 
 # Get the account balance
@@ -74,6 +84,7 @@ for i in range(num_of_days):
     except Exception as e:
         # Handle any exceptions that may occur
         print("An error occurred: ", e)
+        wait_for_key()
 
 # wait for 5 days before selling the cryptocurrency
 for i in range(432000, 0, -1):
@@ -109,3 +120,6 @@ try:
 except Exception as e:
     # Handle any exceptions that may occur
     print("An error occurred: ", e)
+    wait_for_key()
+
+wait_for_key()
