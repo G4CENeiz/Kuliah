@@ -68,6 +68,6 @@ public class Quiz2Hawa {
             }
         }
         System.out.printf("Item with the most stock that can be borrow is %s", stock[itemmostborrow]);
-
+        sc.close(); // this line is not the OG,this fucking thing is bugging me 
     }
 }

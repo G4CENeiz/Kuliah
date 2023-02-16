@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: coral;
+    display: flex;
+    justify-content: center;
+
+}
+
+.form {
+    background-color: white;
+    width: 400px;
+    padding: 50px;
+    border-radius: 5px;
+    margin-top: 120px;
+}
+
+.form_input {
+    display: block;
+    padding: 20px 20px;
+    margin-bottom: 20px;
+    border: solid 5px aquamarine;
+    border-radius: 20px;
+    outline: none;
+    margin-left: 40px
+}
+
+.form_submit {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    width: 210px;
+    background-color: aquamarine;
+    color: grey;
+    font-weight: bold;
+    margin-left: 45px;
+    text-align: center;
+
+
+}
+
+.form_title {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
