@@ -1,0 +1,55 @@
+exercise 2
+1 c
+2 a
+3 d
+4 e
+5 b
+
+exercise 5
+1 program
+2 flowchart
+3 language
+4 compiled
+5 errors
+6 debugging
+7 documentation
+
+exercise 7
+1 Terminator 
+	indicates the beginning or the end of a program
+2 Input/Output
+	indicates that something is either brought to or taken from the program
+3 Processes
+	indicates a place in the program where action is taken
+4 Decision
+	indicate that a decision has to be made
+5 Direction/Flow
+	used to show the flow or direction in which the different actions in the program are performed
+6 In  Page Conector
+7 Out Page Conector
+
+exercise 8
+1  true
+2  false
+3  false
+4  true
+5  false
+6  true
+7  true
+8  false (it deppends)
+9  true
+10 false
+
+exercise 9
+1  k
+2  c
+3  e
+4y b
+4n i
+5  h
+6y j
+6n d
+7  g
+8y f
+9n a
+10 l
