@@ -1,26 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ADVANCE</title>
-</head>
-<body>
-    <ol>
-
-    </ol>
+  </head>
+  <body>
+    <ol></ol>
     <button onclick="call()">CLICK ME</button>
     <script>
-        const arr = ['apple', 'orange', 'banana', 'strawberry', 'blueberry']
-        function call() {
-	        const list = document.querySelector('ol')
-	        for (let i = 0; i < arr.length; i++) {
-	            const li = document.createElement('li')
-	            li.textContent = arr[i];
-	            list.appendChild(li)
-	        }
-}
+      const arr = ["apple", "orange", "banana", "strawberry", "blueberry"];
+      function call() {
+        const list = document.querySelector("ol");
+        for (let i = 0; i < arr.length; i++) {
+          const li = document.createElement("li");
+          li.textContent = arr[i];
+          list.appendChild(li);
+        }
+      }
     </script>
-</body>
+  </body>
 </html>

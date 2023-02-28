@@ -1,0 +1,69 @@
+Exercise 12
+	Flowchart
+		A diagram that descripe the logical step of a program
+	Programmer
+		A person who write codes to make a program
+	Bugs
+		A mistake that doesnt catch an error but has an unintended result
+	Compiler
+		A program that turn source code into machine codes
+	Debugger
+		A person who fixes bugs
+	Pascal
+		A programming language
+	Cobol
+		A programming language for bussiness
+	Basic
+		A programming language for beginner
+
+Exercise 14
+1. XML
+2. Fortran
+3. Java
+4. VoiceXML
+5. COBOL
+
+Presentation Material
+C# with .NET
+
+C#
+multi paradigm
+simillar to java
+heavy OOP but support other
+runs on most OS
+
+.NET
+
+has a runtime to run the source code
+the thing that runs'em (virtual execution system) ar called common language runtime
+support ahead of time and JIT compilation
+
+Example
+
+	using System;
+
+	public class Program {
+		public static void Main(String[] args) {
+			Console.WriteLine("Hello, World!");
+		}
+	}
+
+An HTTP server is a software program that listens for incoming HTTP requests from client applications, such as web browsers or mobile apps, and responds with HTTP responses. HTTP (Hypertext Transfer Protocol) is the underlying protocol used for communication on the World Wide Web.
+
+.NET is a software framework developed by Microsoft that provides developers with tools and libraries for building software applications. It includes support for building HTTP servers using the ASP.NET framework.
+
+ASP.NET is a web application framework within the .NET framework that allows developers to build web applications using a variety of programming languages, such as C# or VB.NET. ASP.NET includes a built-in HTTP server, which can be used to host web applications on a variety of platforms, including Windows, Linux, and macOS.
+
+To create an HTTP server with .NET, you would typically use ASP.NET to create a web application that can handle incoming HTTP requests. This can be done using the ASP.NET Web API, which provides a set of tools and libraries for building RESTful web services.
+
+Once your web application is created, you would then deploy it to a web server or cloud platform, such as Microsoft Azure, where it can be accessed by client applications over the internet.
+
+Overall, building an HTTP server with .NET involves using the ASP.NET framework to create a web application that can handle incoming HTTP requests and respond with HTTP responses. This can be a powerful tool for building web applications and services that can be accessed by users all over the world.
+
+r/eli5
+
+An HTTP server is like a waiter in a restaurant. When you go to a restaurant, you tell the waiter what you want to eat, and the waiter brings you your food. Similarly, when you use a website or an app, your computer talks to an HTTP server and tells it what you want to see. The server then sends the website or app back to your computer so you can see it.
+
+.NET is like a special toolbox that helps people make websites and apps. It's like a set of special tools that builders use to build houses. So when people use .NET, they can build websites and apps more easily.
+
+Together, HTTP server and .NET help people make websites and apps that we can use on our computers, phones, and tablets.
