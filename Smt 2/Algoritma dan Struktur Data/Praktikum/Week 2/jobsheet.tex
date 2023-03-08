@@ -90,7 +90,9 @@
 
 \newpage
 
-\section*{11.Question}
+\setcounter{section}{10}
+
+\section{Question}
 
 \begin{enumerate}
     \item {
@@ -111,8 +113,9 @@
     \item {
         The methods were declared on line 7 until line 22.
     }
-    \item {
-        \begin{minted}[autogobble]{java}
+    \item 
+    {
+        \begin{minted}[autogobble,breaklines]{java}
             void kurangiStok(int n) {
                 if (stok <= 0) {
                     stok = stok - n;
@@ -142,7 +145,7 @@
         In line 16 of class BarangMain in part 4, what the code is doing is instantiate an object called b2 using the parametric constructor
     }
     \item {
-        \begin{minted}[autogobble]{java}
+        \begin{minted}[autogobble,breaklines]{java}
             Barang b3 = new Barang("KTT Kang White", "Keyboard Switch", 9999, 3_000);
         \end{minted}
     }
@@ -150,11 +153,12 @@
 
 \newpage
 
-\section*{12.Task}
+\section{Task}
 
 \begin{enumerate}
-    \item {
-        \begin{minted}[autogobble]{java}
+    \item 
+    {
+        \begin{minted}[autogobble,breaklines]{java}
             public class Lingkaran {
                 double phi = Math.PI, r;
                 Lingkaran() {
@@ -172,8 +176,9 @@
             }
         \end{minted}
     }
-    \item {
-        \begin{minted}[autogobble]{java}
+    \item \mbox{}
+    {
+        \begin{minted}[autogobble,breaklines]{java}
             public class RentalTransaction {
                 String memberId, memberName, gameName;
                 int dailyPrice, dayRent;
@@ -212,34 +217,29 @@
             \end{class}
         \end{tikzpicture}
     }
-    \item {
-        \begin{minted}[autogobble]{java}
+    \item 
+    {
+        \begin{minted}[autogobble,breaklines]{java}
             public class Item {
                 String name;
                 int unitPrice, qty;
-
                 Item() {
 
                 }
-
                 Item(String name, int unitPrice, int qty) {
                     this.name = name;
                     this.unitPrice = unitPrice;
                     this.qty = qty;
                 }
-
-                
                 int calculateTotalPrice() {
                     return qty * unitPrice;
                 }
-
                 int calculateDiscount() {
                     int totalPrice = calculateTotalPrice();
                     if (totalPrice > 100_000) return (int) 0.9;
                     if (totalPrice > 50_000) return (int) 0.95;
                     return 1;
                 }
-
                 int calculateFinalPrice() {
                     int totalPrice = calculateTotalPrice();
                     int discount = calculateDiscount();
@@ -248,40 +248,32 @@
             }
         \end{minted}
     }
-
-\newpage
-    \item {
-        \begin{minted}[autogobble]{java}
+    \item  
+    {
+        \begin{minted}[autogobble,breaklines]{java}
             public class PacMan {
                 int x, y, height, width;
-                
                 PacMan() {
 
                 }
-
                 PacMan(int x, int y, int height, int width) {
                     this.x = x;
                     this.y = y;
                     this.width = width;
                     this.height = height;
                 }
-
                 void moveLeft() {
                     if (x > 0) x--;
                 }
-
                 void moveRight() {
                     if (x < width) x++;
                 }
-
                 void moveDown() {
                     if (y > 0) y--;
                 }
-
                 void moveUp() {
                     if (y < height) y++;
                 }
-
                 void printCoordinate() {
                     System.out.printf("x: %d y: %d", x, y);
                 }

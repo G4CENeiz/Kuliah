@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Exploartion</title>
+  </head>
+  <body>
+    <button>Change color</button>
+    <img
+      src="../../../../Latex/images/polinema-logo.png"
+      alt="logo polinema"
+      onload="loaded()"
+    />
+    <input type="text" onkeypress="console.log('press')" />
+    <input type="text" onchange="console.log('change')" />
+    <script>
+      function loaded() {
+        /*
+        const arr = [
+          "disini senang",
+          "disana senang",
+          "dimana-mana hatiku senang",
+        ];
+        const element = document.querySelector("img");
+        const ol = document.createElement("ol");
+        const list = document.querySelector("ol");
+        element.parentNode.insertBefore(ol, element.nextSibling);
+        for (let i = 0; i < arr.length; i++) {
+          const li = document.createElement("li");
+          li.textContent = arr[i];
+          list.appendChild(li);
+        }
+        */
+       document.createElement("p").textContent(woakokwaokawokwaok);
+      }
+      const btn = document.querySelector("button");
+
+      function random(number) {
+        return Math.floor(Math.random() * (number + 1));
+      }
+
+      btn.addEventListener("click", () => {
+        const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+        document.body.style.backgroundColor = rndCol;
+      });
+
+    </script>
+  </body>
+</html>

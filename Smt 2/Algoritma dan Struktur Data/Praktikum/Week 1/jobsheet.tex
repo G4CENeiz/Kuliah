@@ -1,0 +1,513 @@
+\documentclass[12pt,titlepage]{article}
+\usepackage[margin=1.25in]{geometry}
+\usepackage{graphicx,amsmath,blindtext,minted}
+
+%% Variables definition
+\newcommand{\vSubject}{Data Structure and Algorithm Practicum}
+\newcommand{\vSubtitle}{Basic Programming}
+\newcommand{\vName}{Muhammad Baihaqi Aulia Asy'ari}
+\newcommand{\vNIM}{2241720145}
+\newcommand{\vClass}{1I}
+\newcommand{\vDepartment}{Information Technology}
+\newcommand{\vStudyProgram}{D4 Informatics Engineering}
+
+%% [START] Tikz related stuff
+\usepackage{tikz}
+\usetikzlibrary{svg.path,calc,shapes.geometric,shapes.misc}
+\tikzstyle{terminator} = [rectangle, draw, text centered, rounded corners = 1em, minimum height=2em]
+\tikzstyle{preparation} = [chamfered rectangle, chamfered rectangle sep=0.75em, draw, text centered, minimum height = 2em]
+\tikzstyle{process} = [rectangle, draw, text centered, minimum height=2em]
+\tikzstyle{decision} = [diamond, aspect=2, draw, text centered, minimum height=2em]
+\tikzstyle{data}=[trapezium, draw, text centered, trapezium left angle=60, trapezium right angle=120, minimum height=2em]
+\tikzstyle{connector} = [line width=0.25mm,->]
+%% [END] Tikz related stuff
+
+%% [START] Fancy header related stuff
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setlength{\headheight}{15pt} % compensate fancyhdr style
+\fancyhead{}
+\fancyfoot{}
+\fancyfoot[L]{\thepage}
+\fancyfoot[R]{\textit{\vSubject - \vSubtitle}}
+\renewcommand{\footrulewidth}{0.4pt}% default is 0pt, overline for footer
+%% [END] Fancy header related stuff
+
+%% [START] Custom tabular command related stuff
+\usepackage{tabularx}
+\newcommand{\details}[2]{
+    #1 & #2  \\
+}
+%% [END] Custom tabular command related stuff
+
+%% [START] Figure related stuff
+\newcommand{\image}[3][1]{
+    \begin{figure}[h]
+        \centering
+        \includegraphics[#1]{#2}
+        \caption{#3}
+        \label{#3}
+    \end{figure}
+}
+%% [END] Figure related stuff
+
+%%
+\usepackage{pgf-umlcd}
+
+\renewcommand{\umldrawcolor}{black}
+\renewcommand{\umlfillcolor}{white}
+%%
+
+%%
+\usepackage{pdfpages}
+%%
+
+\begin{document}
+\begin{titlepage}
+    \centering
+    \vfill
+    {\bfseries\LARGE
+        \vSubject\\
+        \vskip0.25cm
+        \vSubtitle
+    }
+    \vfill
+    \includegraphics[width=6cm]{images/polinema-logo.png}
+    \vfill
+    {
+        \textbf{Name}\\
+        \vName\\
+        \vskip0.5cm
+        \textbf{NIM}\\
+        \vNIM\\
+        \vskip0.5cm
+        \textbf{Class}\\
+        \vClass\\
+        \vskip0.5cm
+        \textbf{Department}\\
+        \vDepartment\\
+        \vskip0.5cm
+        \textbf{Study Program}\\
+        \vStudyProgram
+    }
+\end{titlepage}
+
+\newpage
+
+\setcounter{section}{1}
+\setcounter{subsection}{1}
+\subsection{Conditional Statements}
+\subsubsection{Practicum of Conditional Statements}
+\texttt{Questions}
+
+\begin{enumerate}
+    \item Create a program to calculate final score of students with these compositions. 20\% of final score comes from assignment score, 35\% from midterm score, and 45\% from final exam. Each input score ranges from 0 – 100. Once the final score is determined, do the conversion as follows: \mbox{}\\
+    \begin{tabular}{|c|c|}
+        \hline
+        \textbf{Score} & \textbf{Alphabet} \\
+        \hline
+        80 $<$ N $\le$ 100 & A \\
+        \hline
+        73 $<$ N $\le$ 80 & B+ \\
+        \hline
+        65 $<$ N $\le$ 73 & B \\
+        \hline
+        60 $<$ N $\le$ 65 & C+ \\
+        \hline
+        50 $<$ N $\le$ 60 & C \\
+        \hline
+        39 $<$ N $\le$ 50 & D \\
+        \hline
+        N $\le$ 39 & E \\
+        \hline
+    \end{tabular}
+    \mbox{}\\
+    If the acquired alphabets are A, B+, B, C+, C then the student is \textbf{passed}. Otherwise, the student is \textbf{failed}.
+    \begin{itemize}
+        \item The program needs inputs for assignment score, midterm, final exam score
+        \item The output will be the final score, its alphabet, and information whether they \textbf{passed} or \textbf{failed}
+    \end{itemize}
+    \texttt{Example:}
+    \begin{minted}[autogobble,breaklines]{text}
+        Program Menghitung Nilai Akhir
+        ======================
+        Masukkan Nilai Tugas: 85
+        Masukkan Nilai UTS: 60
+        Masukkan Nilai UAS: 82
+        ======================
+        ======================
+        nilai akhir : 74.9
+        Nilai Huruf :B+
+        ======================
+        SELAMAT LULUS
+    \end{minted}
+\end{enumerate}
+
+\newpage
+
+\begin{minted}[autogobble,breaklines]{java}
+    import java.util.Scanner;
+
+    public class ConditonalStatement {
+        final static Scanner input = new Scanner(System.in);
+        static double AssignmentPercentage = 0.2;
+        static double MidtermPercentage = 0.35;
+        static double finalExamPercentage = 0.45;
+        public static void main(String[] args) {
+            System.out.println("Program Menghitung Nilai Akhir");
+            bar();
+            int assignmentScore =   PromptInput("assignment");
+            int midtermScore    =   PromptInput("midterm");
+            int finalExamScore  =   PromptInput("finals exam");
+            bar();
+            double finalScore = (assignmentScore * AssignmentPercentage) + (midtermScore * MidtermPercentage) + (finalExamScore * finalExamPercentage);
+            String scorePredicate = scorePredicate(finalScore);
+            String status = (finalExamScore > 50) ? "Passed" : "Failed"; 
+            bar();
+            System.out.printf("Final score  : %.1f\n", finalScore);
+            System.out.printf("Predicate    : %s\n", scorePredicate);
+            bar();
+            System.out.println(status);
+        }
+        static void bar() {
+            System.out.println("================================");
+        }
+        static int PromptInput(String prompt) {
+            System.out.printf("Enter %-12s score: ",prompt);
+            int userInput = input.nextInt();
+            input.nextLine();
+            return userInput;
+        }
+        static String scorePredicate(double finalScore) {
+            if (finalScore > 80) {
+                return "A";
+            } else if (finalScore > 73) {
+                return "B+";
+            } else if (finalScore > 65) {
+                return "B";
+            } else if (finalScore > 60) {
+                return "C+";
+            } else if (finalScore > 50) {
+                return "C";
+            } else if (finalScore > 39) {
+                return "D";
+            } else {
+                return "E";
+            }
+        }
+    }
+\end{minted}
+
+\subsection{Loops}
+
+\subsubsection{Practicum of Loops}
+
+\texttt{Question}
+
+\begin{enumerate}
+    \item Create a program that can display the day from Monday to Sunday repetitively with days amount is n, the n will be the last 2 digits from your NIM.\mbox{}\\
+    *if n $<$ 10, then add 10 (n+=10)\mbox{}\\
+    Example: \mbox{}\\
+    Input NIM: 2041720010, then n = 10\mbox{}\\
+    \texttt{OUTPUT: Monday Tuesday Wednesday Thursday Friday Saturday Sunday Monday Tuesday Wednesday}\mbox{}\\
+    2\textsuperscript{nd} Example: \mbox{}\\
+    Input NIM: 2041720002, then n = 12\mbox{}\\
+    OUTPUT: Monday Tuesday Wednesday Thursday Friday Saturday Sunday Monday Tuesday Wednesday Thursday Friday \mbox{}\\
+    \mbox{}\\
+    Example result: \mbox{}\\
+    \begin{minted}[autogobble]{text}
+        Masukkan NIM :201234501
+        =====================
+        n : 11
+        senin selasa rabu kamis jumat sabtu minggu senin selasa rabu kamis
+    \end{minted}
+\end{enumerate}
+
+\texttt{Answer: }
+
+\newpage
+
+\begin{minted}[autogobble,breaklines]{java}
+    import java.util.Scanner;
+
+    public class Loops {
+        final static Scanner input = new Scanner(System.in);
+        public static void main(String[] args) {
+            String[] days = {"Monday ", "Tuesday ", "Wednesday ", "Thursday ", "Friday ", "Saturday ", "Sunday "};          
+            String NIM = getNIM();
+            int last2digits = Integer.parseInt(String.format("%c%c", NIM.charAt(NIM.length() - 2), NIM.charAt(NIM.length() - 1)));
+            int limit = last2digits < 10 ? last2digits + 10 : last2digits;
+            for (int i = 0; i < limit; i++) {
+                System.out.print(days[i % days.length]);
+            }
+        }
+        static String getNIM() {
+            while (true) {
+                System.out.print("Enter NIM: ");
+                String userInput = input.next();
+                if (validateNIM(userInput)) return userInput;
+                System.out.println("Please enter a 10 digit number");
+            }
+        }
+        static boolean validateNIM(String numbers) {
+            int length = numbers.length();
+            if (length != 10) return false;
+            for (int i = 0; i < length; i++) {
+                switch (numbers.charAt(i)) {
+                    case '1', '2', '3', '4', '5', '6', '7', '8', '9', '0' -> {
+                    }
+                    default -> {
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
+    }
+\end{minted}
+
+\newpage
+
+\subsection{Array}
+
+\subsubsection{Practicum of Array}
+
+\texttt{Question}
+
+\begin{enumerate}
+    \item RoyalGarden is a flower shop that has many branches. Every day, the sold flowers and its stock has recorded as follows \mbox{}\\
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        $\backslash$ & Aglaonema & Taro & Alocasia & Rose \\
+        \hline
+        Royal Garden 1 & 10 & 5 & 15 & 7 \\
+        \hline
+        Royal Garden 2 & 6 & 11 & 9 & 12 \\
+        \hline
+        Royal Garden 3 & 2 & 10 & 10 & 5 \\
+        \hline
+        Royal Garden 4 & 5 & 7 & 12 & 9 \\
+        \hline
+    \end{tabular} \mbox{}\\
+    The price for each Aglaonema is 75.000, Taro is 50.000, Alocasia is 60.000, and Rose is 10.000. Please help RoyalGarden to create a program that can calculate:
+    \begin{enumerate}
+        \item Stock for each flower through all branches
+        \item If there is an additional information about a stock has decreased since the flowers are wither or dead on RoyalGarden 1 branch. Those dead flowers are 1 Aglaonema, 2 Taros, and 5 Roses. Please calculate the income of RoyalGarden 1 if all flowers are sold out.
+    \end{enumerate}
+\end{enumerate}
+
+\texttt{Answer: }
+
+\begin{minted}[autogobble,breaklines]{java}
+    public class Array {
+        public static void main(String[] args) {
+            int[][] stock = {
+                {10, 5, 15, 7},
+                {6, 11, 9, 12},
+                {2, 10, 10, 5},
+                {5, 7, 12, 9}
+            };
+            String[] flowerName = {"Aglaonema", "Taro", "Alocasia", "Rose"};
+            int[] flowerStock = new int[stock[0].length];
+            int[] flowerPrice = {75_000, 50_000, 60_000, 10_000};
+            int[] withered = {1, 2, 0, 5};
+
+            for (int flowerID = 0; flowerID < stock[0].length; flowerID++) {
+                for (int branchID = 0; branchID < stock.length; branchID++) {
+                    flowerStock[flowerID] += stock[branchID][flowerID];
+                }
+            }
+            for (int i = 0; i < flowerName.length; i++) {
+                System.out.printf("%-10s: %d\n", flowerName[i], flowerStock[i]);
+            }
+            int branchProfit = 0;
+            for (int flowerID = 0; flowerID < flowerName.length; flowerID++) {
+                branchProfit += (stock[0][flowerID]-withered[flowerID]) * flowerPrice[flowerID];
+            }
+            System.out.printf("Branch 1 income: %,d", branchProfit);
+        }
+    }
+
+\end{minted}
+
+\subsection{Function}
+
+\subsubsection{Practicum of Function}
+
+\texttt{Question}
+
+\begin{enumerate}
+    \item Create 2 functions for:
+    \begin{enumerate}
+        \item Display Fibonacci row using loop
+        \item Display Fibonacci row using recursive function
+        \mbox{}\\ Notes: 
+        \mbox{}\\ Fibonacci row: 0, 1, 1, 2, 3, 5, 8, 13, 21
+    \end{enumerate}
+\end{enumerate}
+
+\texttt{Answer: }
+
+\begin{minted}[autogobble,breaklines]{java}
+    public class function {
+        static int n1=0,n2=1,n3=0; 
+        static void printFibonacci(int count){    
+            if(count>0){    
+                n3 = n1 + n2;    
+                n1 = n2;    
+                n2 = n3;    
+                System.out.print(" "+n3);   
+                printFibonacci(count-1);    
+            }    
+        }
+        public static void main(String[] args) {
+            int secondPrev = 0, prev = 1, cur, limit = 9;
+            System.out.printf("%s, %s", secondPrev, prev);
+            for (int i = 2; i < limit; ++i) {
+                cur = secondPrev + prev;
+                System.out.printf(", %s", cur);
+                secondPrev = prev;
+                prev = cur;
+            }
+            int count=10;    
+            System.out.print(n1+" "+n2);    
+            printFibonacci(count-2);
+        }
+    }
+\end{minted}
+
+\subsubsection{Assignment}
+
+\begin{enumerate}
+    \item Smile Laundry is a laundry service that costs its customer as follows:
+    \begin{enumerate}
+        \item item Cost for each 1kg clothes is Rp 4.500
+        \item If the customer does laundry more than 10kg clothes, they will get 5\% discount
+    \end{enumerate}
+    \mbox{}\\ 
+    Today, the laundry has 4 customers, those are Ani, Budi, Bina, and Cita. Ani brought 4kg clothes, Budi brought 15kg clothes, Bina brought 6kg, and Cita brought 11kg. Create a program to calculate the income of Smile Laundry at that day.
+    \begin{minted}[autogobble,breaklines]{java}
+       public class Assignment1 {
+            static double income = 0;
+            public static void calculatePrice(String name, int laundry) {
+                double pricePerkilo = 4_500;
+                double discount = 1.00;
+                if (laundry > 10) discount = 0.95;
+                double cost = laundry * pricePerkilo * discount;
+                income += cost; 
+                System.out.printf("%s laundries cost: %.0f\n", name, cost);
+            }
+            public static void main(String[] args) {
+                int[] customerLaundries = {4, 15, 6, 11};
+                String[] customerName = {"Ani", "Budi", "Bina", "Cita"};
+                for (int i = 0; i < customerLaundries.length; i++) {
+                    calculatePrice(customerName[i], customerLaundries[i]);
+                }
+                System.out.printf("Total income: %.0f\n", income);
+            }
+        } 
+    \end{minted}
+    \item Somebody saves 1 million rupiahs in a bank. With its interest is 2\% for each month, then in what month does the customer balance reach 1.5 million? Create a program for this case study.
+    \begin{minted}[autogobble,breaklines]{java}
+        public class Assignment2 {
+            public static void main(String[] args) {
+                double balance = 1_000_000;
+                double target = 1_500_000;
+                int month = 0;
+                System.out.printf("Initial balance: %,.2f\n", balance);
+                while (balance < target) {
+                    balance *= 1.02;
+                    month++;
+                    System.out.printf("%d month balance: %,.2f\n", month, balance);
+                }
+                System.out.printf("It takes %d month to reach the target of %,.0f\n", month, target);
+            }
+        }
+    \end{minted}
+    \item Create a program that can display even numbers from 2 until nth row, unless the even number is a multiple of 4. \mbox{}\\
+    Example: \mbox{}\\
+    Input of n: 5 \mbox{}\\
+    output: 2, 6, 10, 14, 18
+    \begin{minted}[autogobble,breaklines]{java}
+        import java.util.Scanner;
+
+        public class Assignment3 {
+            public static void main(String[] args) {
+                Scanner input = new Scanner(System.in);
+
+                System.out.print("Input of n: ");
+                int limit = input.nextInt();
+                int currentNumber = 2;
+                input.close();
+                
+                System.out.print("output: ");
+                for (int i = 0; i < limit; i++) {
+                    if (currentNumber % 4 != 0) System.out.printf("%d, ", currentNumber); 
+                    else --i; 
+                    currentNumber += 2;
+                }
+            }
+        }
+    \end{minted}
+    \item Create a program that includes a function to:
+    \begin{enumerate}
+        \item Menu (to choose a calculation for area of triangle / rectangle / circle)
+        \item Calculate area of triangle
+        \item Calculate area of rectangle
+        \item Calculate area of circle
+    \end{enumerate}
+    \begin{minted}[autogobble,breaklines]{java}
+        import java.util.Scanner;
+
+        public class Assignment4 {
+            static Scanner input = new Scanner(System.in);
+            static void menu() {
+                System.out.println("Choose a shape to calculate the area of");
+                System.out.println("Type in the number");
+                System.out.println("1. Calculate area of triangle");
+                System.out.println("2. Calculate area of rectangle");
+                System.out.println("3. Calculate area of circle");
+                System.out.print("Menu: ");
+                String menu = input.next();
+                switch (menu) {
+                    case "1" -> calculateAreaOfTriangle();
+                    case "2" -> calculateAreaOfRectangle();
+                    case "3" -> calculateAreaOfCircle();
+                }
+            }
+            static void calculateAreaOfTriangle() {
+                System.out.print("Enter length of the side: ");
+                double side = input.nextDouble();
+                System.out.print("Enter length of the height: ");
+                double height = input.nextDouble();
+
+
+                double area = 0.5 * side * height;
+                System.out.printf("The area of triangle with side of %.2f and height of %.2f is %.2f", side, height, area);
+            }
+            static void calculateAreaOfRectangle() {
+                System.out.print("Enter length of the width: ");
+                double width = input.nextDouble();
+                System.out.print("Enter length of the length: ");
+                double length = input.nextDouble();
+
+                double area = width * length;
+                System.out.printf("The area of rectangle with width of %.2f and length of %.2f is %.2f", width, length, area);
+            }
+            static void calculateAreaOfCircle() {
+                double pi = Math.PI;
+                System.out.print("Enter length of the radius: ");
+                double radius = input.nextDouble();
+
+                double area = pi * radius * radius;
+                System.out.printf("The area of circle with radius of %.2f is %.2f", radius, area);
+            }
+            public static void main(String[] args) {
+                menu();
+            }
+        }
+
+    \end{minted}
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{package}\PYG{+w}{ }\PYG{n+nn}{ArrayOfObjects}\PYG{p}{;}
+
+\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kd}{class} \PYG{n+nc}{ArrayOfObjects}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kd}{static}\PYG{+w}{ }\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{main}\PYG{p}{(}\PYG{n}{String}\PYG{o}{[]}\PYG{+w}{ }\PYG{n}{args}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{Rectangle}\PYG{o}{[]}\PYG{+w}{ }\PYG{n}{rectangleArray}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{new}\PYG{+w}{ }\PYG{n}{Rectangle}\PYG{o}{[}\PYG{l+m+mi}{3}\PYG{o}{]}\PYG{p}{;}
+
+\PYG{+w}{    }\PYG{n}{rectangleArray}\PYG{o}{[]}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

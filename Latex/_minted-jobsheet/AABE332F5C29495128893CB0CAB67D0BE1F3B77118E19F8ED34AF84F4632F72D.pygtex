@@ -1,0 +1,26 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kd}{class} \PYG{n+nc}{RentalTransaction}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{String}\PYG{+w}{ }\PYG{n}{memberId}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{memberName}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{gameName}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{dailyPrice}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{dayRent}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{RentalTransaction}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{n}{RentalTransaction}\PYG{p}{(}\PYG{n}{String}\PYG{+w}{ }\PYG{n}{memberId}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{String}\PYG{+w}{ }\PYG{n}{memberName}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{String}\PYG{+w}{ }\PYG{n}{gameName}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{dailyPrice}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{dayRent}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{k}{this}\PYG{p}{.}\PYG{n+na}{memberId}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{memberId}\PYG{p}{;}
+\PYG{+w}{        }\PYG{k}{this}\PYG{p}{.}\PYG{n+na}{memberName}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{memberName}\PYG{p}{;}
+\PYG{+w}{        }\PYG{k}{this}\PYG{p}{.}\PYG{n+na}{gameName}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{gameName}\PYG{p}{;}
+\PYG{+w}{        }\PYG{k}{this}\PYG{p}{.}\PYG{n+na}{dailyPrice}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{dailyPrice}\PYG{p}{;}
+\PYG{+w}{        }\PYG{k}{this}\PYG{p}{.}\PYG{n+na}{dayRent}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{dayRent}\PYG{p}{;}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{print}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{System}\PYG{p}{.}\PYG{n+na}{out}\PYG{p}{.}\PYG{n+na}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZdq{}\PYGZdq{}}
+\PYG{l+s}{                Member ID   : \PYGZpc{}s}
+\PYG{l+s}{                Member name : \PYGZpc{}s}
+\PYG{l+s}{                Game name   : \PYGZpc{}s}
+\PYG{l+s}{                Price       : \PYGZpc{}d}
+\PYG{l+s}{                Rent period : \PYGZpc{}d \PYGZpc{}s}
+\PYG{l+s}{                Total       : \PYGZpc{}d}
+\PYG{l+s}{                \PYGZdq{}\PYGZdq{}\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{memberId}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{memberName}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{gameName}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{dailyPrice}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{dayRent}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{dayRent}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{l+m+mi}{2}\PYG{+w}{ }\PYG{o}{?}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}day\PYGZdq{}}\PYG{+w}{ }\PYG{p}{:}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}days\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{dailyPrice}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n}{dayRent}\PYG{p}{);}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

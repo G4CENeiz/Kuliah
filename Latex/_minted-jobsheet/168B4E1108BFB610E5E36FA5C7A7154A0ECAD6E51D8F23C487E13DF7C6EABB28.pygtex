@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+Program Menghitung Nilai Akhir
+======================
+Masukkan Nilai Tugas: 85
+Masukkan Nilai UTS: 60
+Masukkan Nilai UAS: 82
+======================
+======================
+nilai akhir : 74.9
+Nilai Huruf :B+
+======================
+SELAMAT LULUS
+\end{Verbatim}

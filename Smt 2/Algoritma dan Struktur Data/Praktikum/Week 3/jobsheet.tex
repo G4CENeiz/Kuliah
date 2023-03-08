@@ -1,0 +1,481 @@
+\documentclass[12pt,titlepage]{article}
+\usepackage[margin=1.25in]{geometry}
+\usepackage{graphicx,amsmath,blindtext,minted}
+
+%% Variables definition
+\newcommand{\vSubject}{Data Structure and Algorithm Practicum}
+\newcommand{\vSubtitle}{Array of Objects}
+\newcommand{\vName}{Muhammad Baihaqi Aulia Asy'ari}
+\newcommand{\vNIM}{2241720145}
+\newcommand{\vClass}{1I}
+\newcommand{\vDepartment}{Information Technology}
+\newcommand{\vStudyProgram}{D4 Informatics Engineering}
+
+%% [START] Tikz related stuff
+\usepackage{tikz}
+\usetikzlibrary{svg.path,calc,shapes.geometric,shapes.misc}
+\tikzstyle{terminator} = [rectangle, draw, text centered, rounded corners = 1em, minimum height=2em]
+\tikzstyle{preparation} = [chamfered rectangle, chamfered rectangle sep=0.75em, draw, text centered, minimum height = 2em]
+\tikzstyle{process} = [rectangle, draw, text centered, minimum height=2em]
+\tikzstyle{decision} = [diamond, aspect=2, draw, text centered, minimum height=2em]
+\tikzstyle{data}=[trapezium, draw, text centered, trapezium left angle=60, trapezium right angle=120, minimum height=2em]
+\tikzstyle{connector} = [line width=0.25mm,->]
+%% [END] Tikz related stuff
+
+%% [START] Fancy header related stuff
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setlength{\headheight}{15pt} % compensate fancyhdr style
+\fancyhead{}
+\fancyfoot{}
+\fancyfoot[L]{\thepage}
+\fancyfoot[R]{\textit{\vSubject - \vSubtitle}}
+\renewcommand{\footrulewidth}{0.4pt}% default is 0pt, overline for footer
+%% [END] Fancy header related stuff
+
+%% [START] Custom tabular command related stuff
+\usepackage{tabularx}
+\newcommand{\details}[2]{
+    #1 & #2  \\
+}
+%% [END] Custom tabular command related stuff
+
+%% [START] Figure related stuff
+\newcommand{\image}[3][1]{
+    \begin{figure}[h]
+        \centering
+        \includegraphics[#1]{#2}
+        \caption{#3}
+        \label{#3}
+    \end{figure}
+}
+%% [END] Figure related stuff
+
+%%
+\usepackage{pgf-umlcd}
+
+\renewcommand{\umldrawcolor}{black}
+\renewcommand{\umlfillcolor}{white}
+%%
+
+%%
+\usepackage{pdfpages}
+%%
+
+\begin{document}
+\begin{titlepage}
+    \centering
+    \vfill
+    {\bfseries\LARGE
+        \vSubject\\
+        \vskip0.25cm
+        \vSubtitle
+    }
+    \vfill
+    \includegraphics[width=6cm]{images/polinema-logo.png}
+    \vfill
+    {
+        \textbf{Name}\\
+        \vName\\
+        \vskip0.5cm
+        \textbf{NIM}\\
+        \vNIM\\
+        \vskip0.5cm
+        \textbf{Class}\\
+        \vClass\\
+        \vskip0.5cm
+        \textbf{Department}\\
+        \vDepartment\\
+        \vskip0.5cm
+        \textbf{Study Program}\\
+        \vStudyProgram
+    }
+\end{titlepage}
+
+\newpage
+
+\setcounter{section}{1}
+\setcounter{subsection}{1}
+\subsection{Create, insert, and display Array of Object}
+\subsubsection{Steps}
+\begin{enumerate}
+    \item \begin{minted}[autogobble,breaklines]{java}
+        package ArrayOfObjects;
+
+        public class Rectangle {
+            public int length;
+            public int width;
+        }
+    \end{minted}
+    \item \begin{minted}[autogobble,breaklines]{java}
+        package ArrayOfObjects;
+
+        public class ArrayOfObjects {
+        public static void main(String[] args) {
+            Rectangle[] rectangleArray = new Rectangle[3];
+
+            rectangleArray[0] = new Rectangle();
+            rectangleArray[0].length = 110
+            rectangleArray[0].width = 30
+
+            rectangleArray[1] = new Rectangle();
+            rectangleArray[1].length = 80
+            rectangleArray[1].width = 40
+
+            rectangleArray[2] = new Rectangle();
+            rectangleArray[2].length = 100
+            rectangleArray[2].width = 20
+
+            System.out.println("First Rectangle, width: " + rectangleArray[0].width + ", length: " + rectangleArray[0].length);
+            System.out.println("First Rectangle, width: " + rectangleArray[1].width + ", length: " + rectangleArray[1].length);
+            System.out.println("First Rectangle, width: " + rectangleArray[2].width + ", length: " + rectangleArray[2].length);
+            }
+        }
+    \end{minted}
+\end{enumerate}
+
+\subsubsection{Result}
+
+\begin{minted}[autogobble,breaklines,linenos]{text}
+    "C:\Program Files\Java\jdk-18.0.2.1\bin\java.exe" - javaagent:C:\Users\ASUS\AppData\Local\JetBrains\Toolbox\apps\ IDEA-C\ch-0\223.8617.56\lib\idea_rt.jar=53329:C:\Users\ASUS\ AppData\Local\JetBrains\Toolbox\apps\IDEA-C\ch-0\223.8617.56\bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath "D:\Kuliah Smt 2\Algoritma dan Struktur Data\Praktikum Week 3\codes\ArrayOfObjects\target\classes" ArrayOfObjects.ArrayOfObjects
+    First Rectangle, width: 30, length: 110
+    Second Rectangle, width: 40, length: 80
+    Third Rectangle, width: 20, length: 100
+
+    Process finished with exit code 0
+
+\end{minted}
+
+\subsubsection{Questions}
+
+\begin{enumerate}
+    \item Based on practicum 1.2, does the class that are going to be used as an array of object must have attributes and methods? Please explain
+    \item Does class \textbf{Rectangle} have constructor? If not, why we instantiate the object as follows? 
+    \begin{minted}[autogobble,breaklines]{java}
+        rectangleArray[1] = new Rectangle();
+    \end{minted}
+    \item What’s the meaning of this line of code?
+    \begin{minted}[autogobble,breaklines]{java}
+        Rectangle[] rectangleArray = new Rectangle[3];
+    \end{minted}
+    \item Whats the meaning of these lines of code? 
+    \begin{minted}[autogobble,breaklines]{java}
+        rectangleArray[1] = new Rectangle();
+        rectangleArray[1].length = 80;
+        rectangleArray[1].width = 40;
+    \end{minted}
+    \item Why \textbf{ArrayOfObject} class and \textbf{Rectangle} class should be differentiated?
+\end{enumerate}
+
+\newpage
+
+\subsection{Get input in Array of Objects using Loops}
+
+\subsubsection{Steps}
+
+\begin{minted}[autogobble,breaklines]{java}
+    package ArrayOfObjects;
+
+    import java.util.Scanner;
+
+    public class ArrayOfObjects {
+        public static void main(String[] args) {
+            Rectangle[] rectangleArray = new Rectangle[3];
+            Scanner sc = new Scanner(System.in);
+
+            // Assign the values for each attributes in objects
+            for (int i = 0; i < 3; i++) {
+                rectangleArray[i] = new Rectangle();
+                System.out.println("Rectangle " + i);
+
+                System.out.print("Input length : ");
+                rectangleArray[i].length = sc.nextInt();
+
+                System.out.print("Input width : ");
+                rectangleArray[i].width = sc.nextInt();
+            }
+
+            // Display the result in console
+            for (int i = 0; i < 10; i++) {
+                System.out.println("Rectangle " + i);
+                System.out.println("width: " + rectangleArray[0].width + ", length: " + rectangleArray[0].length);
+            }
+        }
+    }
+\end{minted}
+
+\subsubsection{Result}
+
+\newpage
+\begin{minted}[autogobble,breaklines,linenos]{text}
+    "C:\Program Files\Java\jdk-18.0.2.1\bin\java.exe" - javaagent:C:\Users\ASUS\AppData\Local\JetBrains\Toolbox\apps\ IDEA-C\ch-0\223.8617.56\lib\idea_rt.jar=53329:C:\Users\ASUS\ AppData\Local\JetBrains\Toolbox\apps\IDEA-C\ch-0\223.8617.56\bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath "D:\Kuliah Smt 2\Algoritma dan Struktur Data\Praktikum Week 3\codes\ArrayOfObjects\target\classes" ArrayOfObjects.ArrayOfObjects
+    Rectangle 0
+    Input length : 5
+    Input width : 6
+    Rectangle 1
+    Input length : 5
+    Input width : 6
+    Rectangle 2
+    Input length : 5
+    Input width : 6
+    Rectangle 0
+    width: 6, length: 5
+    Rectangle 1
+    width: 6, length: 5
+    Rectangle 2
+    width: 6, length: 5
+    Rectangle 3
+    width: 6, length: 5
+    Rectangle 4
+    width: 6, length: 5
+    Rectangle 5
+    width: 6, length: 5
+    Rectangle 6
+    width: 6, length: 5
+    Rectangle 7
+    width: 6, length: 5
+    Rectangle 8
+    width: 6, length: 5
+    Rectangle 9
+    width: 6, length: 5
+
+    Process finished with exit code 0
+
+\end{minted}
+
+\newpage
+
+\subsubsection{Questions}
+
+\begin{enumerate}
+    \item Does array of object can be implemented on 2D array?
+    \item If yes, then please give an example. Otherwise, please explain?
+    \item There is a \textbf{Square} class that has an attribute \textbf{side} with integer as its data type. There will be an error when we run this code, why?
+    \begin{minted}[autogobble,breaklines]{java}
+        Square[] squareArray = new Square[100];
+        squareArray[5].side = 20;
+    \end{minted}
+    \item Modify the code on practicum 1.3 so that the length of the array will be defined from user input
+    \item Can we duplicate the instantiation process in array of objects? For example, we assign the object in \textbf{ppArray[i]} and \textbf{ppArray[0]}, the instantiation process of \textbf{ppArray[0]} will be done twice. What’s the effect of this?
+\end{enumerate}
+
+\newpage
+
+\subsection{Mathematical operation in array of object’s attribute}
+
+\subsubsection{Steps}
+
+\begin{minted}[autogobble,breaklines]{java}
+    package ArrayBlock;
+
+    public class Blocks {
+        public int width, length, height;
+
+        public Blocks(int p, int l, int t) {
+            length = p;
+            width = l;
+            height = t;
+        }
+
+        public int countVolume() {
+            return length * width * height;
+        }
+    }
+\end{minted}
+
+\begin{minted}[autogobble,breaklines]{java}
+    package ArrayBlock;
+
+    public class ArrayBlocks {
+        public static void main(String[] args) {
+            Blocks[] blArray = new Blocks[3];
+
+            blArray[0] = new Blocks(100, 30, 12);
+            blArray[1] = new Blocks(128, 40, 15);
+            blArray[2] = new Blocks(210, 50, 25);
+
+            for (int i = 0; i < 3; i++) {
+                System.out.println("Volume blocks - " + i + " : " + blArray[i].countVolume());
+            }
+        }
+    }
+\end{minted}
+
+\subsubsection{Result}
+
+\newpage
+
+\begin{minted}[autogobble,breaklines,linenos]{text}
+    "C:\Program Files\Java\jdk-18.0.2.1\bin\java.exe" - javaagent:C:\Users\ASUS\AppData\Local\JetBrains\Toolbox\apps\ IDEA-C\ch-0\223.8617.56\lib\idea_rt.jar=53329:C:\Users\ASUS\ AppData\Local\JetBrains\Toolbox\apps\IDEA-C\ch-0\223.8617.56\bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath "D:\Kuliah Smt 2\Algoritma dan Struktur Data\Praktikum Week 3\codes\ArrayOfObjects\target\classes" ArrayOfBlock.ArrayOfBlock
+    Volume blocks - 0 : 36000
+    Volume blocks - 1 : 76800
+    Volume blocks - 2 : 262500
+
+    Process finished with exit code 0
+
+\end{minted}
+
+\subsubsection{Questions}
+
+\begin{enumerate}
+    \item Can we have more than one constructor in one class? Please explain
+    \item Create a \textbf{Triangle} class as follows
+    \begin{minted}[autogobble,breaklines]{java}
+        public class Triangle{
+            public int base;
+            public int height;
+        }
+    \end{minted}
+    Add another constructor in this class that has parameter \textbf{int a, int t}. These represents its base and height.
+    \item Add method \textbf{countArea()} and \textbf{countPerimeter()} in class \textbf{Triangle}
+    \item In main function, instantiate array of \textbf{Triangle} objects. Assign the attributes values as follows:
+    \mbox{}\\ \texttt{0\textsuperscript{th} trArray} base: 10, height: 4
+    \mbox{}\\ \texttt{1\textsuperscript{st} trArray} base: 20, height: 10
+    \mbox{}\\ \texttt{2\textsuperscript{nd} trArray} base: 15, height: 6
+    \mbox{}\\ \texttt{3\textsuperscript{rd} trArray} base: 25, height: 10
+    \item Display the result of area and perimeter for each triangle by calling the method \textbf{countArea()} and \textbf{countPerimeter()}
+\end{enumerate}
+
+\newpage
+
+\subsection{Practice}
+
+\begin{enumerate}
+    \item Create a program that can count surface area and volume of some 3D Geometry object (Cube, blocks, cylinder, etc). Then, create one more class to instantiate the array of objects with its constructor to assign values of its attributes.
+    \mbox{}\\
+    \mbox{}\\Note: Create loop to get user input and assign it to the attributes of the objects, then display
+    the surface area and volume of each 3\textsuperscript{rd} geometry object in console
+    \item A company that handles land transaction needs a program to calculate land area. This program must receive user input to assign values of these:
+    \begin{itemize}
+        \item How many lands?
+        \item Length and width of the land
+    \end{itemize}
+    \mbox{}\\ This program calculates the area of inputted land information as its output. Check this following program:
+    \begin{minted}[autogobble,breaklines]{text}
+        How many lands: 3
+
+        Land 1
+        Length: 100
+        Width : 40
+
+        Land 2
+        Length: 250
+        Width : 100
+
+        Land 3
+        Length: 120
+        Width : 100
+
+        Land Area 1: 4000
+        Land Area 2: 25000
+        Land Area 3: 12000
+    \end{minted}
+    \item Modify the program above so that it can display the widest area. (Additional note: create a different function to get the widest area)
+    \mbox{}\\
+    \begin{minted}[autogobble,breaklines]{text}
+        
+        Land 1
+        Length: 100
+        Width : 40
+
+        Land 2
+        Length: 250
+        Width : 100
+
+        Land 3
+        Length: 120
+        Width : 100
+
+        Land Area 1: 4000
+        Land Area 2: 25000
+        Land Area 3: 12000
+        
+        The widest land is Land 2
+
+    \end{minted}
+    \item A university needs a program to display student’s information such as name, nim, gender, and GPA. This program should be able to receive input from all of those informations and display it to the user. Implement the program if there is 3 data sample, here is a reference of how you do it:
+    \mbox{}\\ 
+    \mbox{}\\ Insert 1\textsuperscript{st} student data
+    \mbox{}\\ Insert name :Rina
+    \mbox{}\\ Insert nim :1234567
+    \mbox{}\\ Insert gender :P
+    \mbox{}\\ Insert IPK :3.5
+    \mbox{}\\
+    \mbox{}\\ Insert 2\textsuperscript{nd} student data
+    \mbox{}\\ Insert name :Rio
+    \mbox{}\\ Insert nim :7654321
+    \mbox{}\\ Insert gender:L
+    \mbox{}\\ Insert IPK :4.0
+    \mbox{}\\
+    \mbox{}\\ Insert 3\textsuperscript{rd} student data
+    \mbox{}\\ Insert name :Reza
+    \mbox{}\\ Insert nim :8765398
+    \mbox{}\\ Insert gender:L
+    \mbox{}\\ Insert IPK :3.8
+    \mbox{}\\ 
+    \mbox{}\\ \texttt{Result} 
+    \mbox{}\\ 
+    \mbox{}\\ 1\textsuperscript{st} student data
+    \mbox{}\\ name :Rina
+    \mbox{}\\ nim :1234567
+    \mbox{}\\ gender :P
+    \mbox{}\\ IPK :3.5
+    \mbox{}\\
+    \mbox{}\\ 2\textsuperscript{nd} student data
+    \mbox{}\\ name :Rio
+    \mbox{}\\ nim :7654321
+    \mbox{}\\ gender:L
+    \mbox{}\\ IPK :4.0
+    \mbox{}\\
+    \mbox{}\\ 3\textsuperscript{rd} student data
+    \mbox{}\\ name :Reza
+    \mbox{}\\ nim :8765398
+    \mbox{}\\ gender:L
+    \mbox{}\\ IPK :3.8
+    \mbox{}\\ 
+    \item Modify the program above so that it can receive the average of IPK score from all students.
+    \mbox{}\\ (Note: create a new function to calculate the average of IPK Score in class \textbf{Students})
+    \mbox{}\\ 
+    \mbox{}\\ Insert 1\textsuperscript{st} student data
+    \mbox{}\\ Insert name :Rina
+    \mbox{}\\ Insert nim :1234567
+    \mbox{}\\ Insert gender :P
+    \mbox{}\\ Insert IPK :3.5
+    \mbox{}\\
+    \mbox{}\\ Insert 2\textsuperscript{nd} student data
+    \mbox{}\\ Insert name :Rio
+    \mbox{}\\ Insert nim :7654321
+    \mbox{}\\ Insert gender:L
+    \mbox{}\\ Insert IPK :4.0
+    \mbox{}\\
+    \mbox{}\\ Insert 3\textsuperscript{rd} student data
+    \mbox{}\\ Insert name :Reza
+    \mbox{}\\ Insert nim :8765398
+    \mbox{}\\ Insert gender:L
+    \mbox{}\\ Insert IPK :3.8
+    \mbox{}\\ 
+    \mbox{}\\ \texttt{Result} 
+    \mbox{}\\ 
+    \mbox{}\\ 1\textsuperscript{st} student data
+    \mbox{}\\ name :Rina
+    \mbox{}\\ nim :1234567
+    \mbox{}\\ gender :P
+    \mbox{}\\ IPK :3.5
+    \mbox{}\\
+    \mbox{}\\ 2\textsuperscript{nd} student data
+    \mbox{}\\ name :Rio
+    \mbox{}\\ nim :7654321
+    \mbox{}\\ gender:L
+    \mbox{}\\ IPK :4.0
+    \mbox{}\\
+    \mbox{}\\ 3\textsuperscript{rd} student data
+    \mbox{}\\ name :Reza
+    \mbox{}\\ nim :8765398
+    \mbox{}\\ gender:L
+    \mbox{}\\ IPK :3.8
+    \mbox{}\\ 
+    \mbox{}\\ Avergae IPK of all students : 3.7666667
+    \mbox{}\\ 
+\end{enumerate}
+
+\end{document}

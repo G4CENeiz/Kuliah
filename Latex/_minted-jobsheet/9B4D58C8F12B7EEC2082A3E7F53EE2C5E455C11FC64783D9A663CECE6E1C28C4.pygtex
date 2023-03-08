@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{x}{void kurangiStok(int n) \PYGZob{}}
+\PYG{x}{    if (stok \PYGZlt{}= 0) \PYGZob{}}
+\PYG{x}{        stok = stok \PYGZhy{} n;}
+\PYG{x}{    \PYGZcb{}}
+\PYG{x}{\PYGZcb{}}
+\end{Verbatim}
