@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.2.23)  8 MAR 2023 09:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.2.23)  9 MAR 2023 00:25
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -685,63 +685,131 @@ Package pdftex.def Info: images/polinema-logo.png  used on input line 75.
 {c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./images/polinema-logo.png>]
 \openout3 = `jobsheet.pyg'.
 
- (./_minted-jobsheet/default.pygstyle) (./_minted-jobsheet/168B4E1108BFB610E5E36FA5C7A7154A0ECAD6E51D8F23C487E13DF7C6EABB28.pygtex) [1]
-\openout3 = `jobsheet.pyg'.
-
- (./_minted-jobsheet/91795A33A2C9072E0B7ABF12B0E9CAFA06AA7789149954248D394D74EA6050D2.pygtex
+ (./_minted-jobsheet/default.pygstyle) (./_minted-jobsheet/794D30B70DE1E290A05A9F4A31BC620B06AA7789149954248D394D74EA6050D2.pygtex
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 2.
- [2])
+)
 \openout3 = `jobsheet.pyg'.
 
- (./_minted-jobsheet/7D0B49A98C5749FB83F3AEEF9657A1570ECAD6E51D8F23C487E13DF7C6EABB28.pygtex
-Overfull \hbox (34.1799pt too wide) in paragraph at lines 208--1
-\OT1/cmtt/m/n/12 OUTPUT: Monday Tuesday Wednesday Thursday Friday Saturday Sunday Monday
+ (./_minted-jobsheet/4EA053B1B3E5440E3AAFCA09AD91CB7606AA7789149954248D394D74EA6050D2.pygtex)
+\openout3 = `jobsheet.pyg'.
+
+ (./_minted-jobsheet/670388016A307AF9D8CA5A971D6E8B2D0ECAD6E51D8F23C487E13DF7C6EABB28.pygtex [1])
+\openout3 = `jobsheet.pyg'.
+
+ (./_minted-jobsheet/D27B51D1A4F1D7B3C0103CD5A81F6BA906AA7789149954248D394D74EA6050D2.pygtex)
+\openout3 = `jobsheet.pyg'.
+
+ (./_minted-jobsheet/8067541A75E52052717BABB0E5401E4D06AA7789149954248D394D74EA6050D2.pygtex)
+\openout3 = `jobsheet.pyg'.
+
+ (./_minted-jobsheet/B3B5EEEB13FEAB8636ED17A62CA23C5C06AA7789149954248D394D74EA6050D2.pygtex [2])
+\openout3 = `jobsheet.pyg'.
+
+ (./_minted-jobsheet/1C96D9F950696251C656FD1A8133C8B506AA7789149954248D394D74EA6050D2.pygtex [3])
+\openout3 = `jobsheet.pyg'.
+
+ (./_minted-jobsheet/9FB2F9C54CA68D79101F234406F8C78C0ECAD6E51D8F23C487E13DF7C6EABB28.pygtex [4])
+\openout3 = `jobsheet.pyg'.
+
+ (./_minted-jobsheet/D69337B1EAAFD682F5B7BA0723DEB98D06AA7789149954248D394D74EA6050D2.pygtex)
+\openout3 = `jobsheet.pyg'.
+
+ (./_minted-jobsheet/C51C8A608795997976D35219AF10E79A06AA7789149954248D394D74EA6050D2.pygtex)
+\openout3 = `jobsheet.pyg'.
+
+ (./_minted-jobsheet/1C732F6157E2131A108C0D6FD031276606AA7789149954248D394D74EA6050D2.pygtex [5])
+\openout3 = `jobsheet.pyg'.
+
+ (./_minted-jobsheet/884B2F1787743D447B838316F06F886E06AA7789149954248D394D74EA6050D2.pygtex) [6]
+\openout3 = `jobsheet.pyg'.
+
+ (./_minted-jobsheet/AE6CCE5F2E514CB3BF8CDCBD1C14024406AA7789149954248D394D74EA6050D2.pygtex)
+\openout3 = `jobsheet.pyg'.
+
+ (./_minted-jobsheet/BA37DAAD9623B4B9172C562DA8D5A4E406AA7789149954248D394D74EA6050D2.pygtex)
+\openout3 = `jobsheet.pyg'.
+
+ (./_minted-jobsheet/3A1DB60DEF47090A37F2AD50374E9AC70ECAD6E51D8F23C487E13DF7C6EABB28.pygtex [7])
+\openout3 = `jobsheet.pyg'.
+
+ (./_minted-jobsheet/290F6F4476297D9BD52857E6926BE7BD06AA7789149954248D394D74EA6050D2.pygtex)
+\openout3 = `jobsheet.pyg'.
+
+ (./_minted-jobsheet/C0357CFDD6516CA22801B1100C943BB806AA7789149954248D394D74EA6050D2.pygtex)
+\openout3 = `jobsheet.pyg'.
+
+ (./_minted-jobsheet/93EDC5939B1408B5A1806DAB3C456F7806AA7789149954248D394D74EA6050D2.pygtex [8])
+\openout3 = `jobsheet.pyg'.
+
+ (./_minted-jobsheet/7EE911F18CEDCF02CEEA6A4E4F0990A906AA7789149954248D394D74EA6050D2.pygtex [9])
+\openout3 = `jobsheet.pyg'.
+
+ (./_minted-jobsheet/5F76E622344E4EEF86207FC042305CAB06AA7789149954248D394D74EA6050D2.pygtex [10])
+\openout3 = `jobsheet.pyg'.
+
+ (./_minted-jobsheet/A4CC6B0D6EC1F6E19A5E67DD1A1B4B9F0ECAD6E51D8F23C487E13DF7C6EABB28.pygtex)
+\openout3 = `jobsheet.pyg'.
+
+ (./_minted-jobsheet/E73DE5508C4ED2CB16457F95076FD84C06AA7789149954248D394D74EA6050D2.pygtex [11])
+\openout3 = `jobsheet.pyg'.
+
+ (./_minted-jobsheet/A137E25EC1CE05D1BF6E540BCB6BB12606AA7789149954248D394D74EA6050D2.pygtex [12])
+\openout3 = `jobsheet.pyg'.
+
+ (./_minted-jobsheet/17918A102991CCCCE89C1EAC96EA1D3D0ECAD6E51D8F23C487E13DF7C6EABB28.pygtex)
+\openout3 = `jobsheet.pyg'.
+
+ (./_minted-jobsheet/7A52DE4F3BCFCAE946290254CDCB360D06AA7789149954248D394D74EA6050D2.pygtex [13])
+\openout3 = `jobsheet.pyg'.
+
+ (./_minted-jobsheet/6DE51CA9DC674E9107992F94117F906F06AA7789149954248D394D74EA6050D2.pygtex)
+\openout3 = `jobsheet.pyg'.
+
+ (./_minted-jobsheet/1D760B87C5ECF5150424657B81FA3FF10ECAD6E51D8F23C487E13DF7C6EABB28.pygtex
+Underfull \hbox (badness 10000) in paragraph at lines 646--1
+
  []
 
+[14])
+\openout3 = `jobsheet.pyg'.
 
-Underfull \hbox (badness 10000) in paragraph at lines 208--1
+ (./_minted-jobsheet/C710E1B89E6DE5FDE20DB3623177901C06AA7789149954248D394D74EA6050D2.pygtex [15])
+\openout3 = `jobsheet.pyg'.
+
+ (./_minted-jobsheet/B590A8F21FD938C0D52274134D52B67106AA7789149954248D394D74EA6050D2.pygtex
+Underfull \hbox (badness 10000) in paragraph at lines 707--1
 
  []
 
-) [3]
+[16])
 \openout3 = `jobsheet.pyg'.
 
- (./_minted-jobsheet/E49A79035C93AF36C904E29FC2FAE0E606AA7789149954248D394D74EA6050D2.pygtex) [4]
+ (./_minted-jobsheet/45CA1B0E0A4FBE7461A5BBDFDF94068D06AA7789149954248D394D74EA6050D2.pygtex [17])
 \openout3 = `jobsheet.pyg'.
 
- (./_minted-jobsheet/16581F6EAB646B14243ED08062CE6F6C06AA7789149954248D394D74EA6050D2.pygtex [5])
-\openout3 = `jobsheet.pyg'.
+ (./_minted-jobsheet/D8B950A5CC6E9AE2F4C7EC84E1F7D97506AA7789149954248D394D74EA6050D2.pygtex
+Underfull \hbox (badness 10000) in paragraph at lines 799--1
 
- (./_minted-jobsheet/C7642AC4EBCC1EDA0F688BA2A866EF7206AA7789149954248D394D74EA6050D2.pygtex [6])
-\openout3 = `jobsheet.pyg'.
+ []
 
- (./_minted-jobsheet/411420DB14A8487DF8D1330A9003D02106AA7789149954248D394D74EA6050D2.pygtex [7])
-\openout3 = `jobsheet.pyg'.
-
- (./_minted-jobsheet/7BD8DE0E6C15F4706AE0B2C11375936306AA7789149954248D394D74EA6050D2.pygtex)
-\openout3 = `jobsheet.pyg'.
-
- (./_minted-jobsheet/0FBFD3E4BBD436C2A688002C52AA947206AA7789149954248D394D74EA6050D2.pygtex [8])
-\openout3 = `jobsheet.pyg'.
-
- (./_minted-jobsheet/13A911539D1516D957002892F6112ED906AA7789149954248D394D74EA6050D2.pygtex [9]) [10] (./jobsheet.aux)
+[18] [19]) [20] (./jobsheet.aux)
 runsystem(del jobsheet.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 20598 strings out of 476029
- 441288 string characters out of 5794164
+ 20728 strings out of 476029
+ 452162 string characters out of 5794164
  1866340 words of memory out of 5000000
- 40622 multiletter control sequences out of 15000+600000
- 518164 words of font info for 53 fonts, out of 8000000 for 9000
+ 40688 multiletter control sequences out of 15000+600000
+ 518500 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,11n,89p,727b,717s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on jobsheet.pdf (11 pages, 279679 bytes).
+ 84i,11n,89p,972b,723s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on jobsheet.pdf (21 pages, 298766 bytes).
 PDF statistics:
- 97 PDF objects out of 1000 (max. 8388607)
- 61 compressed objects within 1 object stream
+ 134 PDF objects out of 1000 (max. 8388607)
+ 86 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 

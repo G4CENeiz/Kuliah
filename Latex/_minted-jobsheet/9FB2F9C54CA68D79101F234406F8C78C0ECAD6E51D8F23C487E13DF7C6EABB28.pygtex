@@ -1,0 +1,35 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYGZdq{}C:\PYGZbs{}Program Files\PYGZbs{}Java\PYGZbs{}jdk\PYGZhy{}18.0.2.1\PYGZbs{}bin\PYGZbs{}java.exe\PYGZdq{} \PYGZhy{} javaagent:C:\PYGZbs{}Users\PYGZbs{}ASUS\PYGZbs{}AppData\PYGZbs{}Local\PYGZbs{}JetBrains\PYGZbs{}Toolbox\PYGZbs{}apps\PYGZbs{} IDEA\PYGZhy{}C\PYGZbs{}ch\PYGZhy{}0\PYGZbs{}223.8617.56\PYGZbs{}lib\PYGZbs{}idea\PYGZus{}rt.jar=53329:C:\PYGZbs{}Users\PYGZbs{}ASUS\PYGZbs{} AppData\PYGZbs{}Local\PYGZbs{}JetBrains\PYGZbs{}Toolbox\PYGZbs{}apps\PYGZbs{}IDEA\PYGZhy{}C\PYGZbs{}ch\PYGZhy{}0\PYGZbs{}223.8617.56\PYGZbs{}bin \PYGZhy{}Dfile.encoding=UTF\PYGZhy{}8 \PYGZhy{}Dsun.stdout.encoding=UTF\PYGZhy{}8 \PYGZhy{}Dsun.stderr.encoding=UTF\PYGZhy{}8 \PYGZhy{}classpath \PYGZdq{}D:\PYGZbs{}Kuliah Smt 2\PYGZbs{}Algoritma dan Struktur Data\PYGZbs{}Praktikum Week 3\PYGZbs{}codes\PYGZbs{}ArrayOfObjects\PYGZbs{}target\PYGZbs{}classes\PYGZdq{} ArrayOfObjects.ArrayOfObjects
+Rectangle 0
+Input length : 5
+Input width : 6
+Rectangle 1
+Input length : 5
+Input width : 6
+Rectangle 2
+Input length : 5
+Input width : 6
+Rectangle 0
+width: 6, length: 5
+Rectangle 1
+width: 6, length: 5
+Rectangle 2
+width: 6, length: 5
+Rectangle 3
+width: 6, length: 5
+Rectangle 4
+width: 6, length: 5
+Rectangle 5
+width: 6, length: 5
+Rectangle 6
+width: 6, length: 5
+Rectangle 7
+width: 6, length: 5
+Rectangle 8
+width: 6, length: 5
+Rectangle 9
+width: 6, length: 5
+
+Process finished with exit code 0
+
+\end{Verbatim}

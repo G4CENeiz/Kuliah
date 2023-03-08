@@ -150,24 +150,32 @@
 
 \begin{enumerate}
     \item Based on practicum 1.2, does the class that are going to be used as an array of object must have attributes and methods? Please explain
+    \mbox{}\\ \texttt{Answer:}
+    \mbox{}\\ Yes, each element of the array is an object of its own, because of that attributes and methods are needed. without them, they wouldn't have behaviour or interaction and data to interact with.
     \item Does class \textbf{Rectangle} have constructor? If not, why we instantiate the object as follows? 
     \begin{minted}[autogobble,breaklines]{java}
         rectangleArray[1] = new Rectangle();
     \end{minted}
+    \mbox{}\\ \texttt{Answer:}
+    \mbox{}\\ Yes, by default. But no, we didn't declared the constructor. But by default the class already have constructor despite not being declared.
     \item What’s the meaning of this line of code?
     \begin{minted}[autogobble,breaklines]{java}
         Rectangle[] rectangleArray = new Rectangle[3];
     \end{minted}
+    \mbox{}\\ \texttt{Answer:}
+    \mbox{}\\ it means an array of Objects by the name of rectangleArray is instantiate with 3 element from class \textbf{Rectangle}
     \item Whats the meaning of these lines of code? 
     \begin{minted}[autogobble,breaklines]{java}
         rectangleArray[1] = new Rectangle();
         rectangleArray[1].length = 80;
         rectangleArray[1].width = 40;
     \end{minted}
+    \mbox{}\\ \texttt{Answer:}
+    \mbox{}\\ it's declaring the second element of rectangleArray array as an object of class \textbf{Rectangle} and then declaring its attributes of length and width to 80 and 40.
     \item Why \textbf{ArrayOfObject} class and \textbf{Rectangle} class should be differentiated?
+    \mbox{}\\ \texttt{Answer:}
+    \mbox{}\\ So that the class \textbf{ArrayOfObject} can make multiple independent objects of \textbf{Rectangle} that can be manipulated and would be individually different.
 \end{enumerate}
-
-\newpage
 
 \subsection{Get input in Array of Objects using Loops}
 
@@ -206,7 +214,7 @@
 
 \subsubsection{Result}
 
-\newpage
+
 \begin{minted}[autogobble,breaklines,linenos]{text}
     "C:\Program Files\Java\jdk-18.0.2.1\bin\java.exe" - javaagent:C:\Users\ASUS\AppData\Local\JetBrains\Toolbox\apps\ IDEA-C\ch-0\223.8617.56\lib\idea_rt.jar=53329:C:\Users\ASUS\ AppData\Local\JetBrains\Toolbox\apps\IDEA-C\ch-0\223.8617.56\bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath "D:\Kuliah Smt 2\Algoritma dan Struktur Data\Praktikum Week 3\codes\ArrayOfObjects\target\classes" ArrayOfObjects.ArrayOfObjects
     Rectangle 0
@@ -243,23 +251,79 @@
 
 \end{minted}
 
-\newpage
-
 \subsubsection{Questions}
 
 \begin{enumerate}
     \item Does array of object can be implemented on 2D array?
+    \mbox{}\\ \texttt{Answer:}
+    \mbox{}\\ Yes we can
     \item If yes, then please give an example. Otherwise, please explain?
+    \begin{minted}[autogobble,breaklines]{java}
+        public class Example {
+            public int x;
+            public int y;
+        }
+    \end{minted}
+    \begin{minted}[autogobble,breaklines]{java}
+        public class ArrayOfExample {
+            public static void main(String[] args) {
+                int length = 3, width = 3;
+                Example[][] exampleArray = new Example[length][width];
+                for (int arrayLength = 0; arrayLength < length; arrayLength++) {
+                    for (int arrayWidth = 0; arrayWidth < width; arrayWidth++) {
+                        exampleArray[arrayLength][arrayWidth] = new Example();
+                        exampleArray[arrayLength][arrayWidth].x = arrayLength;
+                        exampleArray[arrayLength][arrayWidth].y = arrayWidth;
+                    }
+
+                }
+
+            }
+
+        }
+    \end{minted}
     \item There is a \textbf{Square} class that has an attribute \textbf{side} with integer as its data type. There will be an error when we run this code, why?
     \begin{minted}[autogobble,breaklines]{java}
         Square[] squareArray = new Square[100];
         squareArray[5].side = 20;
     \end{minted}
+    \mbox{}\\ \texttt{Answer:}
+    \mbox{}\\ The error occure because not every object in the array has their attribute declared 
     \item Modify the code on practicum 1.3 so that the length of the array will be defined from user input
-    \item Can we duplicate the instantiation process in array of objects? For example, we assign the object in \textbf{ppArray[i]} and \textbf{ppArray[0]}, the instantiation process of \textbf{ppArray[0]} will be done twice. What’s the effect of this?
-\end{enumerate}
+    \begin{minted}[autogobble,breaklines]{java}
+        package ArrayOfObjects;
 
-\newpage
+        import java.util.Scanner;
+
+        public class ArrayOfObjects {
+            public static void main(String[] args) {
+                Scanner sc = new Scanner(System.in);
+                System.out.print("Enter length of the Array: ")
+                int arrayLength = sc.nextInt();
+                Rectangle[] rectangleArray = new Rectangle[arrayLength];
+                // Assign the values for each attributes in objects
+                for (int i = 0; i < arrayLength; i++) {
+                    rectangleArray[i] = new Rectangle();
+                    System.out.println("Rectangle " + i);
+
+                    System.out.print("Input length : ");
+                    rectangleArray[i].length = sc.nextInt();
+
+                    System.out.print("Input width : ");
+                    rectangleArray[i].width = sc.nextInt();
+                }
+                // Display the result in console
+                for (int i = 0; i < arrayLength; i++) {
+                    System.out.println("Rectangle " + i);
+                    System.out.println("width: " + rectangleArray[i].width + ", length: " + rectangleArray[i].length);
+                }
+            }
+        }
+    \end{minted}
+    \item Can we duplicate the instantiation process in array of objects? For example, we assign the object in \textbf{ppArray[i]} and \textbf{ppArray[0]}, the instantiation process of \textbf{ppArray[0]} will be done twice. What’s the effect of this?
+    \mbox{}\\ \texttt{Answer:}
+    \mbox{}\\ it will create a seperate instance of an object. the instantiation from the loop would be different than the seperate duplicate instantiation. 
+\end{enumerate}
 
 \subsection{Mathematical operation in array of object’s attribute}
 
@@ -303,8 +367,6 @@
 
 \subsubsection{Result}
 
-\newpage
-
 \begin{minted}[autogobble,breaklines,linenos]{text}
     "C:\Program Files\Java\jdk-18.0.2.1\bin\java.exe" - javaagent:C:\Users\ASUS\AppData\Local\JetBrains\Toolbox\apps\ IDEA-C\ch-0\223.8617.56\lib\idea_rt.jar=53329:C:\Users\ASUS\ AppData\Local\JetBrains\Toolbox\apps\IDEA-C\ch-0\223.8617.56\bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath "D:\Kuliah Smt 2\Algoritma dan Struktur Data\Praktikum Week 3\codes\ArrayOfObjects\target\classes" ArrayOfBlock.ArrayOfBlock
     Volume blocks - 0 : 36000
@@ -319,6 +381,8 @@
 
 \begin{enumerate}
     \item Can we have more than one constructor in one class? Please explain
+    \mbox{}\\ \texttt{Answer:}
+    \mbox{}\\ We can, but if we add more than 1 constructor we would need to add a default constructor.
     \item Create a \textbf{Triangle} class as follows
     \begin{minted}[autogobble,breaklines]{java}
         public class Triangle{
@@ -327,16 +391,125 @@
         }
     \end{minted}
     Add another constructor in this class that has parameter \textbf{int a, int t}. These represents its base and height.
+    \mbox{}\\ \texttt{Answer:}
+    \begin{minted}[autogobble,breaklines]{java}
+        public class Triangle{
+            public int base;
+            public int height;
+
+            public Triangle(int a, int t) {
+                this.base = a;
+                this.height = t;
+            }
+        }
+    \end{minted}
     \item Add method \textbf{countArea()} and \textbf{countPerimeter()} in class \textbf{Triangle}
+    \mbox{}\\ \texttt{Answer:}
+    \begin{minted}[autogobble,breaklines]{java}
+        public class Triangle{
+            public int base;
+            public int height;
+
+            public Triangle(int a, int t) {
+                this.base = a;
+                this.height = t;
+            }
+
+            public void countArea() {
+                int area = (int) 0.5*this.base*this.height;
+            }
+
+            public void countPerimiter() {
+                int perimiter = this.base*3;
+            }
+        }
+    \end{minted}
     \item In main function, instantiate array of \textbf{Triangle} objects. Assign the attributes values as follows:
     \mbox{}\\ \texttt{0\textsuperscript{th} trArray} base: 10, height: 4
     \mbox{}\\ \texttt{1\textsuperscript{st} trArray} base: 20, height: 10
     \mbox{}\\ \texttt{2\textsuperscript{nd} trArray} base: 15, height: 6
     \mbox{}\\ \texttt{3\textsuperscript{rd} trArray} base: 25, height: 10
-    \item Display the result of area and perimeter for each triangle by calling the method \textbf{countArea()} and \textbf{countPerimeter()}
-\end{enumerate}
+    \begin{minted}[autogobble,breaklines]{java}
+        package Triangle;
 
-\newpage
+        public class Triangle {
+            public int base;
+            public int height;
+            
+            public Triangle(int a, int t) {
+                this.base = a;
+                this.height = t;
+            }
+
+            public void countArea() {
+                double area = 0.5*this.base*this.height;
+                System.out.print(area);
+            }
+
+            public void countPerimiter() {
+                int perimiter = this.base*3;
+                System.out.print(perimiter);
+            }
+
+            public static void main(String[] args) {
+                Triangle[] triangleArray = new Triangle[4];
+
+                triangleArray[0] = new Triangle(10, 4);
+                triangleArray[1] = new Triangle(20, 10);
+                triangleArray[2] = new Triangle(15, 6);
+                triangleArray[3] = new Triangle(25, 10);
+            }
+        }
+    \end{minted}
+    \item Display the result of area and perimeter for each triangle by calling the method \textbf{countArea()} and \textbf{countPerimeter()}
+    \begin{minted}[autogobble,breaklines]{java}
+        package Triangle;
+
+        public class Triangle {
+            public int base;
+            public int height;
+            
+            public Triangle(int a, int t) {
+                this.base = a;
+                this.height = t;
+            }
+
+            public void countArea() {
+                double area = 0.5*this.base*this.height;
+                System.out.print(area);
+            }
+
+            public void countPerimiter() {
+                int perimiter = this.base*3;
+                System.out.print(perimiter);
+            }
+
+            public static void main(String[] args) {
+                Triangle[] triangleArray = new Triangle[4];
+
+                triangleArray[0] = new Triangle(10, 4);
+                triangleArray[1] = new Triangle(20, 10);
+                triangleArray[2] = new Triangle(15, 6);
+                triangleArray[3] = new Triangle(25, 10);
+
+                for (int i = 0; i < triangleArray.length; i++) {
+                    System.out.printf("Triangle %d has an area of ", i + 1);
+                    triangleArray[i].countArea();
+                    System.out.print(" and a perimiter of ");
+                    triangleArray[i].countPerimiter();
+                    System.out.println();
+                }
+            }
+        }
+    \end{minted}
+    \begin{minted}[autogobble,breaklines,linenos]{text}
+        PS D:\Kuliah>  d:; cd 'd:\Kuliah'; & 'C:\Program Files\Java\jdk-18.0.2.1\bin\java.exe' '-XX:+ShowCodeDetailsInExceptionMessages' '-cp' 'C:\Users\ASUS\AppData\Roaming\Code\User\workspaceStorage\ ce3fcb236261368a6cbd019dc8ddda8b\redhat.java\jdt_ws\ Kuliah_28156aa7\bin' 'Triangle.Triangle' 
+        Triangle 1 has an area of 20.0 and a perimiter of 30 
+        Triangle 2 has an area of 100.0 and a perimiter of 60
+        Triangle 3 has an area of 45.0 and a perimiter of 45 
+        Triangle 4 has an area of 125.0 and a perimiter of 75
+    \end{minted}
+\end{enumerate}
 
 \subsection{Practice}
 
@@ -345,6 +518,61 @@
     \mbox{}\\
     \mbox{}\\Note: Create loop to get user input and assign it to the attributes of the objects, then display
     the surface area and volume of each 3\textsuperscript{rd} geometry object in console
+    \mbox{}\\ \texttt{Answer:}
+    \begin{minted}[autogobble,breaklines]{java}
+        package Practice;
+
+        public class Geometry {
+            int length;
+            int width;
+            int height;
+            public Geometry(int l, int w, int h) {
+                this.length = l;
+                this.width = w;
+                this.height = h;
+            }
+            public void calculateSurfaceArea() {
+                int surfaceArea = 2*((length*width)+(width*height)+(height*length));
+                System.out.print(surfaceArea);
+            }
+            public void calculateVolume() {
+                int volume = length*width*height;
+                System.out.print(volume);
+            }
+        }
+    \end{minted}
+    \begin{minted}[autogobble,breaklines]{java}
+        package Practice;
+
+        import java.util.Scanner;
+
+        public class GeometryMain {
+            public static void main(String[] args) {
+                Scanner input = new Scanner(System.in);
+                System.out.print("Enter the length of the Array: ");
+                int limit = input.nextInt();
+
+                Geometry[] geometries = new Geometry[limit];
+                for (int i = 0; i < geometries.length; i++) {
+                    System.out.print("Enter Block " + (i+1) + " length: ");
+                    int l = input.nextInt();
+                    System.out.print("Enter Block " + (i+1) + " width: ");
+                    int w = input.nextInt();
+                    System.out.print("Enter Block " + (i+1) + " height: ");
+                    int h = input.nextInt();
+                    geometries[i] = new Geometry(l, w, h);
+                }
+                for (int i = 0; i < geometries.length; i++) {
+                    System.out.printf("The surface area of block %d is ", i+1);
+                    geometries[i].calculateSurfaceArea();
+                    System.out.print(" and volume of ");
+                    geometries[i].calculateVolume();
+                    System.out.println();
+                }
+                input.close();
+            }
+        }
+    \end{minted}
     \item A company that handles land transaction needs a program to calculate land area. This program must receive user input to assign values of these:
     \begin{itemize}
         \item How many lands?
@@ -370,6 +598,51 @@
         Land Area 2: 25000
         Land Area 3: 12000
     \end{minted}
+    \mbox{}\\ \texttt{Answer:}
+    \begin{minted}[autogobble,breaklines]{java}
+        package Practice;
+
+        public class Land {
+            int length;
+            int width;
+            public Land(int l, int w) {
+                this.length = l;
+                this.width = w;
+            }
+            public int area() {
+                return length * width;
+            }
+        }
+    \end{minted}
+    \begin{minted}[autogobble,breaklines]{java}
+        package Practice;
+
+        import java.util.Scanner;
+
+        public class LandMain {
+            public static void main(String[] args) {
+                Scanner input = new Scanner(System.in);
+                System.out.print("How many lands: ");
+                int unit = input.nextInt();
+                System.out.println();
+
+                Land[] lands = new Land[unit];
+                for (int i = 0; i < lands.length; i++) {
+                    System.out.printf("Land %d\n", i+1);
+                    System.out.print("length: ");
+                    int l = input.nextInt();
+                    System.out.print("width : ");
+                    int w = input.nextInt();
+                    lands[i] = new Land(l, w);
+                    System.out.println();
+                }
+                for (int i = 0; i < lands.length; i++) {
+                    System.out.printf("Land Area %d: %,d\n", i+1, lands[i].area());
+                }
+                input.close();
+            }
+        }
+    \end{minted}
     \item Modify the program above so that it can display the widest area. (Additional note: create a different function to get the widest area)
     \mbox{}\\
     \begin{minted}[autogobble,breaklines]{text}
@@ -392,6 +665,44 @@
         
         The widest land is Land 2
 
+    \end{minted}
+    \begin{minted}[autogobble,breaklines]{java}
+        package Practice;
+
+        import java.util.Scanner;
+
+        public class LandMain {
+            public static void main(String[] args) {
+                Scanner input = new Scanner(System.in);
+                System.out.print("How many lands: ");
+                int unit = input.nextInt();
+                System.out.println();
+
+                Land[] lands = new Land[unit];
+                for (int i = 0; i < lands.length; i++) {
+                    System.out.printf("Land %d\n", i+1);
+                    System.out.print("length: ");
+                    int l = input.nextInt();
+                    System.out.print("width : ");
+                    int w = input.nextInt();
+                    lands[i] = new Land(l, w);
+                    System.out.println();
+                }
+                for (int i = 0; i < lands.length; i++) {
+                    System.out.printf("Land Area %d: %,d\n", i+1, lands[i].area());
+                }
+                int wide = 0;
+                int widest = 0;
+                for (int i = 0; i < lands.length; i++) {
+                    if (lands[i].area() < wide) continue;
+                    wide = lands[i].area();
+                    widest = i + 1;
+                }
+                System.out.println();
+                System.out.printf("The widest land is Land %d", widest);
+                input.close();
+            }
+        }
     \end{minted}
     \item A university needs a program to display student’s information such as name, nim, gender, and GPA. This program should be able to receive input from all of those informations and display it to the user. Implement the program if there is 3 data sample, here is a reference of how you do it:
     \mbox{}\\ 
@@ -433,6 +744,58 @@
     \mbox{}\\ gender:L
     \mbox{}\\ IPK :3.8
     \mbox{}\\ 
+    \begin{minted}[autogobble,breaklines]{java}
+        package Practice;
+
+        public class StudentData {
+            public String name;
+            public String NIM;
+            public String gender;
+            public double IPK;
+            public void printData() {
+                
+            }
+        }
+    \end{minted}
+    \begin{minted}[autogobble,breaklines]{java}
+        package Practice;
+
+        import java.util.Scanner;
+
+        public class StudentDataMain {
+            public static void main(String[] args) {
+                Scanner input = new Scanner(System.in);
+                int limit = 3;
+
+                StudentData[] studentDatas = new StudentData[limit];
+                for (int i = 0; i < limit; i++) {
+                    studentDatas[i] = new StudentData();
+                    System.out.printf("Insert %d student data\n", i+1);
+                    System.out.print("Insert name: ");
+                    studentDatas[i].name = input.next();
+                    input.nextLine();
+                    System.out.print("Insert NIM: ");
+                    studentDatas[i].NIM = input.next();
+                    input.nextLine();
+                    System.out.print("Insert gender: ");
+                    studentDatas[i].gender = input.next();
+                    input.nextLine();
+                    System.out.print("Insert IPK: ");
+                    studentDatas[i].IPK = input.nextDouble();
+                    System.out.println();
+                }
+                for (int i = 0; i < limit; i++) {
+                    System.out.printf("%d student data\n", i+1);
+                    System.out.printf("name: %s\n", studentDatas[i].name);
+                    System.out.printf("nim: %s\n", studentDatas[i].NIM);
+                    System.out.printf("gender: %s\n", studentDatas[i].gender);
+                    System.out.printf("IPK: %.1f\n", studentDatas[i].IPK);
+                    System.out.println();
+                }
+                input.close();
+            }
+        }
+    \end{minted}
     \item Modify the program above so that it can receive the average of IPK score from all students.
     \mbox{}\\ (Note: create a new function to calculate the average of IPK Score in class \textbf{Students})
     \mbox{}\\ 
@@ -476,6 +839,50 @@
     \mbox{}\\ 
     \mbox{}\\ Avergae IPK of all students : 3.7666667
     \mbox{}\\ 
+    \begin{minted}[autogobble,breaklines]{java}
+        package Practice;
+
+        import java.util.Scanner;
+
+        public class StudentDataMain {
+            public static void main(String[] args) {
+                Scanner input = new Scanner(System.in);
+                int limit = 3;
+
+                StudentData[] studentDatas = new StudentData[limit];
+                for (int i = 0; i < limit; i++) {
+                    studentDatas[i] = new StudentData();
+                    System.out.printf("Insert %d student data\n", i+1);
+                    System.out.print("Insert name: ");
+                    studentDatas[i].name = input.next();
+                    input.nextLine();
+                    System.out.print("Insert NIM: ");
+                    studentDatas[i].NIM = input.next();
+                    input.nextLine();
+                    System.out.print("Insert gender: ");
+                    studentDatas[i].gender = input.next();
+                    input.nextLine();
+                    System.out.print("Insert IPK: ");
+                    studentDatas[i].IPK = input.nextDouble();
+                    System.out.println();
+                }
+                for (int i = 0; i < limit; i++) {
+                    System.out.printf("%d student data\n", i+1);
+                    System.out.printf("name: %s\n", studentDatas[i].name);
+                    System.out.printf("nim: %s\n", studentDatas[i].NIM);
+                    System.out.printf("gender: %s\n", studentDatas[i].gender);
+                    System.out.printf("IPK: %.1f\n", studentDatas[i].IPK);
+                    System.out.println();
+                }
+                double sumIPK = 0;
+                for (int i = 0; i < limit; i++) {
+                    sumIPK += studentDatas[i].IPK;
+                }
+                System.out.printf("Average IPK of all students: %.6f", sumIPK/limit);
+                input.close();
+            }
+        }
+    \end{minted}
 \end{enumerate}
 
 \end{document}
