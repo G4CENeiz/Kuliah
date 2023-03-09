@@ -26,7 +26,7 @@ public class Loops {
     }
     static boolean validateNIM(String numbers) {
         int length = numbers.length();
-        if (length != 10 && numbers.charAt(0) == '0')
+        if (length != 10)
             return false;
         for (int i = 0; i < length; i++) {
             switch (numbers.charAt(i)) {
