@@ -1,8 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{k+kn}{package}\PYG{+w}{ }\PYG{n+nn}{ArrayOfObjects}\PYG{p}{;}
-
-\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kd}{class} \PYG{n+nc}{Rectangle}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
-\PYG{+w}{    }\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{length}\PYG{p}{;}
-\PYG{+w}{    }\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{width}\PYG{p}{;}
-\PYG{p}{\PYGZcb{}}
-\end{Verbatim}

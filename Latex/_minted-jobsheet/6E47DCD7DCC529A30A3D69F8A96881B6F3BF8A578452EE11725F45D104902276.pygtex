@@ -1,0 +1,33 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{    }\PYG{k+kn}{package}\PYG{+w}{ }\PYG{n+nn}{Practice}\PYG{p}{;}
+
+\PYG{+w}{    }\PYG{k+kn}{import}\PYG{+w}{ }\PYG{n+nn}{java.util.Scanner}\PYG{p}{;}
+
+\PYG{+w}{    }\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kd}{class} \PYG{n+nc}{GeometryMain}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kd}{static}\PYG{+w}{ }\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{main}\PYG{p}{(}\PYG{n}{String}\PYG{o}{[]}\PYG{+w}{ }\PYG{n}{args}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{n}{Scanner}\PYG{+w}{ }\PYG{n}{input}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{new}\PYG{+w}{ }\PYG{n}{Scanner}\PYG{p}{(}\PYG{n}{System}\PYG{p}{.}\PYG{n+na}{in}\PYG{p}{);}
+\PYG{+w}{            }\PYG{n}{System}\PYG{p}{.}\PYG{n+na}{out}\PYG{p}{.}\PYG{n+na}{print}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Enter the length of the Array: \PYGZdq{}}\PYG{p}{);}
+\PYG{+w}{           }\PYG{err}{\PYGZbs{}}\PYG{n}{begin}\PYG{p}{\PYGZob{}}\PYG{n}{itemize}\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{err}{\PYGZbs{}}\PYG{n}{item}\PYG{+w}{ }\PYG{n}{How}\PYG{+w}{ }\PYG{n}{many}\PYG{+w}{ }\PYG{n}{lands}\PYG{o}{?}
+\PYG{+w}{    }\PYG{err}{\PYGZbs{}}\PYG{n}{item}\PYG{+w}{ }\PYG{n}{Length}\PYG{+w}{ }\PYG{n}{and}\PYG{+w}{ }\PYG{n}{width}\PYG{+w}{ }\PYG{n}{of}\PYG{+w}{ }\PYG{n}{the}\PYG{+w}{ }\PYG{n}{land}
+\PYG{err}{\PYGZbs{}}\PYG{n}{end}\PYG{p}{\PYGZob{}}\PYG{n}{itemize}\PYG{p}{\PYGZcb{}}
+\PYG{err}{\PYGZbs{}}\PYG{n}{mbox}\PYG{p}{\PYGZob{}\PYGZcb{}}\PYG{err}{\PYGZbs{}\PYGZbs{}}\PYG{+w}{ }\PYG{n}{This}\PYG{+w}{ }\PYG{n}{program}\PYG{+w}{ }\PYG{n}{calculates}\PYG{+w}{ }\PYG{n}{the}\PYG{+w}{ }\PYG{n}{area}\PYG{+w}{ }\PYG{n}{of}\PYG{+w}{ }\PYG{n}{inputted}\PYG{+w}{ }\PYG{n}{land}\PYG{+w}{ }\PYG{n}{information}\PYG{+w}{ }\PYG{n}{as}\PYG{+w}{ }\PYG{n}{its}\PYG{+w}{ }\PYG{n}{output}\PYG{p}{.}\PYG{+w}{ }\PYG{n}{Check}\PYG{+w}{ }\PYG{k}{this}\PYG{+w}{ }\PYG{n}{following}\PYG{+w}{ }\PYG{n}{program}\PYG{p}{:}
+\PYG{err}{\PYGZbs{}}\PYG{n}{begin}\PYG{p}{\PYGZob{}}\PYG{n}{minted}\PYG{p}{\PYGZcb{}}\PYG{o}{[}\PYG{n}{autogobble}\PYG{p}{,}\PYG{n}{breaklines}\PYG{o}{]}\PYG{p}{\PYGZob{}}\PYG{n}{text}\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{n}{How}\PYG{+w}{ }\PYG{n}{many}\PYG{+w}{ }\PYG{n}{lands}\PYG{p}{:}\PYG{+w}{ }\PYG{l+m+mi}{3}
+
+\PYG{+w}{    }\PYG{n}{Land}\PYG{+w}{ }\PYG{l+m+mi}{1}
+\PYG{+w}{    }\PYG{n}{Length}\PYG{p}{:}\PYG{+w}{ }\PYG{l+m+mi}{100}
+\PYG{+w}{    }\PYG{n}{Width}\PYG{+w}{ }\PYG{p}{:}\PYG{+w}{ }\PYG{l+m+mi}{40}
+
+\PYG{+w}{    }\PYG{n}{Land}\PYG{+w}{ }\PYG{l+m+mi}{2}
+\PYG{+w}{    }\PYG{n}{Length}\PYG{p}{:}\PYG{+w}{ }\PYG{l+m+mi}{250}
+\PYG{+w}{    }\PYG{n}{Width}\PYG{+w}{ }\PYG{p}{:}\PYG{+w}{ }\PYG{l+m+mi}{100}
+
+\PYG{+w}{    }\PYG{n}{Land}\PYG{+w}{ }\PYG{l+m+mi}{3}
+\PYG{+w}{    }\PYG{n}{Length}\PYG{p}{:}\PYG{+w}{ }\PYG{l+m+mi}{120}
+\PYG{+w}{    }\PYG{n}{Width}\PYG{+w}{ }\PYG{p}{:}\PYG{+w}{ }\PYG{l+m+mi}{100}
+
+\PYG{+w}{    }\PYG{n}{Land}\PYG{+w}{ }\PYG{n}{Area}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{:}\PYG{+w}{ }\PYG{l+m+mi}{4000}
+\PYG{+w}{    }\PYG{n}{Land}\PYG{+w}{ }\PYG{n}{Area}\PYG{+w}{ }\PYG{l+m+mi}{2}\PYG{p}{:}\PYG{+w}{ }\PYG{l+m+mi}{25000}
+\PYG{+w}{    }\PYG{n}{Land}\PYG{+w}{ }\PYG{n}{Area}\PYG{+w}{ }\PYG{l+m+mi}{3}\PYG{p}{:}\PYG{+w}{ }\PYG{l+m+mi}{12000}
+\end{Verbatim}
