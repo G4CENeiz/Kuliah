@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{showData}\PYG{p}{(}\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{x}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{pos}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{pos}\PYG{+w}{ }\PYG{o}{!=}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{System}\PYG{p}{.}\PYG{n+na}{out}\PYG{p}{.}\PYG{n+na}{println}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}NIM \PYGZbs{}t : \PYGZdq{}}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{x}\PYG{p}{);}
+\PYG{+w}{        }\PYG{n}{System}\PYG{p}{.}\PYG{n+na}{out}\PYG{p}{.}\PYG{n+na}{println}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Name \PYGZbs{}t : \PYGZdq{}}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{listStd}\PYG{o}{[}\PYG{n}{pos}\PYG{o}{]}\PYG{p}{.}\PYG{n+na}{name}\PYG{p}{);}
+\PYG{+w}{        }\PYG{n}{System}\PYG{p}{.}\PYG{n+na}{out}\PYG{p}{.}\PYG{n+na}{println}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Age \PYGZbs{}t : \PYGZdq{}}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{listStd}\PYG{o}{[}\PYG{n}{pos}\PYG{o}{]}\PYG{p}{.}\PYG{n+na}{age}\PYG{p}{);}
+\PYG{+w}{        }\PYG{n}{System}\PYG{p}{.}\PYG{n+na}{out}\PYG{p}{.}\PYG{n+na}{println}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}IPK \PYGZbs{}t : \PYGZdq{}}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{listStd}\PYG{o}{[}\PYG{n}{pos}\PYG{o}{]}\PYG{p}{.}\PYG{n+na}{gpa}\PYG{p}{);}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{k}{else}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{System}\PYG{p}{.}\PYG{n+na}{out}\PYG{p}{.}\PYG{n+na}{println}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Data \PYGZdq{}}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{x}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{} is not found\PYGZdq{}}\PYG{p}{);}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.2.23)  30 MAR 2023 12:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.2.23)  30 MAR 2023 12:49
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**d:/Kuliah/Latex/jobsheet.tex
-(d:/Kuliah/Latex/jobsheet.tex
+**"d:/Kuliah/Smt 2/Algoritma dan Struktur Data/Praktikum/Week 7/Latex/week7.tex"
+(d:/Kuliah/Smt 2/Algoritma dan Struktur Data/Praktikum/Week 7/Latex/week7.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-02-07> (c:/texlive/2022/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
@@ -272,7 +272,7 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@every@listing=\toks26
 \c@listing=\count324
 )
-runsystem(if not exist _minted-jobsheet mkdir _minted-jobsheet)...executed.
+runsystem(if not exist _minted-week7 mkdir _minted-week7)...executed.
 
  (c:/texlive/2022/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (c:/texlive/2022/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (c:/texlive/2022/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (c:/texlive/2022/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
 \pgfutil@everybye=\toks27
@@ -588,16 +588,16 @@ File: pppdftex.def 2022/12/19 v0.5x Pdfpages driver for pdfTeX (AM)
 \c@AM@survey=\count357
 \AM@templatesizebox=\box100
 )
-runsystem(for ^%i in (pygmentize.exe pygmentize.bat pygmentize.cmd) do set > jobsheet.aex <nul: /p x=^%~$PATH:i>> jobsheet.aex)...executed.
+runsystem(for ^%i in (pygmentize.exe pygmentize.bat pygmentize.cmd) do set > week7.aex <nul: /p x=^%~$PATH:i>> week7.aex)...executed.
 
-runsystem(del jobsheet.aex)...executed.
+runsystem(del week7.aex)...executed.
 
  (c:/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count358
 \l__pdf_internal_box=\box101
-) (./jobsheet.aux)
-\openout1 = `jobsheet.aux'.
+) (./week7.aux)
+\openout1 = `week7.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 65.
 LaTeX Font Info:    ... okay on input line 65.
@@ -683,55 +683,89 @@ Package pdftex.def Info: images/polinema-logo.png  used on input line 75.
  [1
 
 {c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./images/polinema-logo.png>]
-\openout3 = `jobsheet.pyg'.
+\openout3 = `week7.pyg'.
 
- (./_minted-jobsheet/default.pygstyle) (./_minted-jobsheet/7B649E31E03A5913525AB20F766A713B06AA7789149954248D394D74EA6050D2.pygtex
+ (./_minted-week7/default.pygstyle) (./_minted-week7/3D9BF52BF77E49FBB9E6055E2CF9513EF0D74698BD4FF33EEACB122081B66676.pygtex
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 2.
 )
-\openout3 = `jobsheet.pyg'.
+\openout3 = `week7.pyg'.
 
- (./_minted-jobsheet/A13464CA08693C785E289A9757483CBD06AA7789149954248D394D74EA6050D2.pygtex)
-\openout3 = `jobsheet.pyg'.
+ (./_minted-week7/9677273DADC74DCACF14F86E7562186DF0D74698BD4FF33EEACB122081B66676.pygtex)
+\openout3 = `week7.pyg'.
 
- (./_minted-jobsheet/783556FB70FFD191A5920533D0CBE66D06AA7789149954248D394D74EA6050D2.pygtex)
-\openout3 = `jobsheet.pyg'.
+ (./_minted-week7/89350F1CAE8B0CC87C7F4D365DCC672DF0D74698BD4FF33EEACB122081B66676.pygtex)
+\openout3 = `week7.pyg'.
 
- (./_minted-jobsheet/AF7A9AD04F6FB8CB223061375E906F8E06AA7789149954248D394D74EA6050D2.pygtex [1])
-\openout3 = `jobsheet.pyg'.
+ (./_minted-week7/BE3D1AEF3AA948D98D339CD04B6299E5F0D74698BD4FF33EEACB122081B66676.pygtex)
+\openout3 = `week7.pyg'.
 
- (./_minted-jobsheet/C0B9410DC13EE90B2981F57DEF9FC0C406AA7789149954248D394D74EA6050D2.pygtex)
-\openout3 = `jobsheet.pyg'.
+ (./_minted-week7/9DA146A76EA7B6712CBE58ACCC2CB245F0D74698BD4FF33EEACB122081B66676.pygtex [1])
+\openout3 = `week7.pyg'.
 
- (./_minted-jobsheet/78BD190259A976C07526A9F31E92914F06AA7789149954248D394D74EA6050D2.pygtex)
-\openout3 = `jobsheet.pyg'.
+ (./_minted-week7/2DF2EC7935E283806CC8E9076CA918EBF0D74698BD4FF33EEACB122081B66676.pygtex)
+\openout3 = `week7.pyg'.
 
- (./_minted-jobsheet/2B0FA50C1D1D66A104C93ED63380A26B06AA7789149954248D394D74EA6050D2.pygtex [2])
-\openout3 = `jobsheet.pyg'.
+ (./_minted-week7/1B31FCC4B6FABD37F5C235D75618312BF0D74698BD4FF33EEACB122081B66676.pygtex)
+\openout3 = `week7.pyg'.
 
- (./_minted-jobsheet/E88411AEE6FA868E61D1A295589C406106AA7789149954248D394D74EA6050D2.pygtex [3])
-\openout3 = `jobsheet.pyg'.
+ (./_minted-week7/D8E1A4E70854D5E00AA5F13E3CABBF41F0D74698BD4FF33EEACB122081B66676.pygtex)
+\openout3 = `week7.pyg'.
 
- (./_minted-jobsheet/F9A42895A8E107A72D6F307EFE2233940ECAD6E51D8F23C487E13DF7C6EABB28.pygtex)
-\openout3 = `jobsheet.pyg'.
+ (./_minted-week7/4315E971CA04F46E1A1BAB03EBB72EA6F0D74698BD4FF33EEACB122081B66676.pygtex [2])
+\openout3 = `week7.pyg'.
 
- (./_minted-jobsheet/13963F3BE9CA74C0F5653E3CE2FA3D120ECAD6E51D8F23C487E13DF7C6EABB28.pygtex [4]) [5] (./jobsheet.aux)
-runsystem(del jobsheet.pyg)...executed.
+ (./_minted-week7/0D76B2337CC1F7CA0F3579F30400AB5BF0D74698BD4FF33EEACB122081B66676.pygtex)
+\openout3 = `week7.pyg'.
+
+ (./_minted-week7/B9061C3A607A98698AD13E0DA2E14AB4F0D74698BD4FF33EEACB122081B66676.pygtex
+Overfull \hbox (36.95102pt too wide) in paragraph at lines 202--1
+\OT1/cmtt/m/n/12 Students\OT1/cmr/m/n/12 , then add all stu-dents ob-ject by call-ing \OT1/cmtt/m/n/12 add \OT1/cmr/m/n/12 func-tion in ob-ject \OT1/cmtt/m/n/12 SearchStudent 
+ []
+
+[3])
+\openout3 = `week7.pyg'.
+
+ (./_minted-week7/0E3276CF3CA2B3DB653D3A7E0BDA5E97F0D74698BD4FF33EEACB122081B66676.pygtex)
+\openout3 = `week7.pyg'.
+
+ (./_minted-week7/8736DA3AB5D1183EE81BE0F489EE9E1FF0D74698BD4FF33EEACB122081B66676.pygtex)
+\openout3 = `week7.pyg'.
+
+ (./_minted-week7/91D8E73B354FC28CD376BFE0766B9993F0D74698BD4FF33EEACB122081B66676.pygtex)
+\openout3 = `week7.pyg'.
+
+ (./_minted-week7/1EE8F043D66787A442A955695E6E0057F0D74698BD4FF33EEACB122081B66676.pygtex)
+\openout3 = `week7.pyg'.
+
+ (./_minted-week7/22AED94C8BAD8333C6276A34FCEBF859F0D74698BD4FF33EEACB122081B66676.pygtex [4])
+\openout3 = `week7.pyg'.
+
+ (./_minted-week7/60C18896ECD92D0E367872DB7A54ABA6F0D74698BD4FF33EEACB122081B66676.pygtex
+Overfull \hbox (34.1799pt too wide) in paragraph at lines 19--19
+[]\OT1/cmtt/m/n/12 System.[]out[].[]println[]([]"[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]"[]);|  
+ []
+
+[5])
+\openout3 = `week7.pyg'.
+
+ (./_minted-week7/7CA86D29998E0A0304F8AF249B03FD63F0D74698BD4FF33EEACB122081B66676.pygtex [6]) [7] (./week7.aux)
+runsystem(del week7.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 20584 strings out of 476029
- 441149 string characters out of 5794164
- 1867340 words of memory out of 5000000
- 40614 multiletter control sequences out of 15000+600000
+ 20627 strings out of 476029
+ 445013 string characters out of 5794164
+ 1866340 words of memory out of 5000000
+ 40633 multiletter control sequences out of 15000+600000
  515853 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,11n,89p,688b,822s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on jobsheet.pdf (6 pages, 250651 bytes).
+ 84i,11n,89p,574b,744s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on week7.pdf (8 pages, 236438 bytes).
 PDF statistics:
- 64 PDF objects out of 1000 (max. 8388607)
- 39 compressed objects within 1 object stream
+ 67 PDF objects out of 1000 (max. 8388607)
+ 42 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 

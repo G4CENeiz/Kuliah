@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kd}{class} \PYG{n+nc}{Students}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{nim}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{age}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{String}\PYG{+w}{ }\PYG{n}{name}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k+kt}{double}\PYG{+w}{ }\PYG{n}{gpa}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

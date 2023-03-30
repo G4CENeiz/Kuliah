@@ -1,0 +1,381 @@
+\documentclass[12pt,titlepage]{article}
+\usepackage[margin=1.25in]{geometry}
+\usepackage{graphicx,amsmath,blindtext,minted}
+
+%% Variables definition
+\newcommand{\vSubject}{Data Structure and Algorithm Practicum}
+\newcommand{\vSubtitle}{Searching}
+\newcommand{\vName}{Muhammad Baihaqi Aulia Asy'ari}
+\newcommand{\vNIM}{2241720145}
+\newcommand{\vClass}{1I}
+\newcommand{\vDepartment}{Information Technology}
+\newcommand{\vStudyProgram}{D4 Informatics Engineering}
+
+%% [START] Tikz related stuff
+\usepackage{tikz}
+\usetikzlibrary{svg.path,calc,shapes.geometric,shapes.misc}
+\tikzstyle{terminator} = [rectangle, draw, text centered, rounded corners = 1em, minimum height=2em]
+\tikzstyle{preparation} = [chamfered rectangle, chamfered rectangle sep=0.75em, draw, text centered, minimum height = 2em]
+\tikzstyle{process} = [rectangle, draw, text centered, minimum height=2em]
+\tikzstyle{decision} = [diamond, aspect=2, draw, text centered, minimum height=2em]
+\tikzstyle{data}=[trapezium, draw, text centered, trapezium left angle=60, trapezium right angle=120, minimum height=2em]
+\tikzstyle{connector} = [line width=0.25mm,->]
+%% [END] Tikz related stuff
+
+%% [START] Fancy header related stuff
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setlength{\headheight}{15pt} % compensate fancyhdr style
+\fancyhead{}
+\fancyfoot{}
+\fancyfoot[L]{\thepage}
+\fancyfoot[R]{\textit{\vSubject - \vSubtitle}}
+\renewcommand{\footrulewidth}{0.4pt}% default is 0pt, overline for footer
+%% [END] Fancy header related stuff
+
+%% [START] Custom tabular command related stuff
+\usepackage{tabularx}
+\newcommand{\details}[2]{
+    #1 & #2  \\
+}
+%% [END] Custom tabular command related stuff
+
+%% [START] Figure related stuff
+\newcommand{\image}[3][1]{
+    \begin{figure}[h]
+        \centering
+        \includegraphics[#1]{#2}
+        \caption{#3}
+        \label{#3}
+    \end{figure}
+}
+%% [END] Figure related stuff
+
+%%
+\usepackage{pgf-umlcd}
+
+\renewcommand{\umldrawcolor}{black}
+\renewcommand{\umlfillcolor}{white}
+%%
+
+%%
+\usepackage{pdfpages}
+%%
+
+\begin{document}
+\begin{titlepage}
+    \centering
+    \vfill
+    {\bfseries\LARGE
+        \vSubject\\
+        \vskip0.25cm
+        \vSubtitle
+    }
+    \vfill
+    \includegraphics[width=6cm]{images/polinema-logo.png}
+    \vfill
+    {
+        \textbf{Name}\\
+        \vName\\
+        \vskip0.5cm
+        \textbf{NIM}\\
+        \vNIM\\
+        \vskip0.5cm
+        \textbf{Class}\\
+        \vClass\\
+        \vskip0.5cm
+        \textbf{Department}\\
+        \vDepartment\\
+        \vskip0.5cm
+        \textbf{Study Program}\\
+        \vStudyProgram
+    }
+\end{titlepage}
+
+\newpage
+
+\setcounter{section}{1}
+\setcounter{subsection}{1}
+\subsection{Sequential Search Method}
+\subsubsection{Steps}
+
+\begin{enumerate}
+    \item Create a new project in NetBeans called \texttt{TestSearching}
+    \item Then, create a new package \texttt{week7}.
+    \item Create new \texttt{Students} class, then declare following attributes:
+    \begin{minted}[autogobble, breaklines]{java}
+        public class Students {
+            int nim, age;
+            String name;
+            double gpa;
+        }
+    \end{minted}
+    \item Create a constructor in \texttt{Students} class with parameters (int ni, String nm, int age, double gpa). Convert it to program code as follows:
+    \begin{minted}[autogobble,breaklines]{java}
+        public Students(int nim, int age, String name, double gpa) {
+            this.nim = nim;
+            this.age = age;
+            this.name = name;
+            this.gpa = gpa;
+        }
+    \end{minted}
+    \item Create display() method with void as its return type
+    \begin{minted}[autogobble,breaklines]{java}
+        public void display() {
+            System.out.println("NIM =" + nim);
+            System.out.println("Name =" + name);
+            System.out.println("Age =" + age);
+            System.out.println("GPA =" + gpa);
+        }
+    \end{minted}
+    \item Create a new \texttt{SearchStudent} class as follows.
+    \begin{minted}[autogobble,breaklines]{java}
+        public class SearchStudent {
+            Students[] listStd = new Students[5];
+            int idx;
+        }
+    \end{minted}
+    \item Create method \texttt{add()} at that class! This will be used for adding objects from \texttt{Students} class to listStd attribute
+    \begin{minted}[autogobble,breaklines]{java}
+        public void add(Students std) {
+            if (idx < listStd.length) {
+                listStd[idx] = std;
+                idx++;
+            } else {
+                System.out.println("Data is already full");
+            }
+        }
+    \end{minted}
+    \item Create method \texttt{display()} in class \texttt{SearchStudent}! This display() method will be used to print all students data available in this class. Pay attention on how we use \texttt{for loops} differently. Even so, the concepts is still the same
+    \begin{minted}[autogobble,breaklines]{java}
+        public void display() {
+            for (Students students : listStd) {
+                students.display();
+                System.out.println("--------------------------------");
+            }
+        }
+    \end{minted}
+    \item Create method \texttt{FindSeqSearch} with integer as its return type. Then fill in the function with sequential search algorithm.
+    \begin{minted}[autogobble,breaklines]{java}
+        public int findSeqSearch(int search) {
+            int potition = 1;
+            for (int i = 0; i < listStd.length; i++) {
+                if (listStd[i].nim == search) {
+                    potition = i;
+                    break;
+                }
+            }
+            return potition;
+        }
+    \end{minted}
+    \item Create method \texttt{displayPosition} with void as its return type. And write these following code as follows
+    \begin{minted}[autogobble,breaklines]{java}
+        public void showPotition(int x, int pos) {
+            if (pos != 1) {
+                System.out.println("Data : " + x + " is found in index-" + pos);
+            } else {
+                System.out.println("Data : " + x + "is not found");
+            }
+        }
+    \end{minted}
+    \item Create method \texttt{displayData} with void as its return type. And write these following code as follows
+    \begin{minted}[autogobble,breaklines]{java}
+        public void showData(int x, int pos) {
+            if (pos != 1) {
+                System.out.println("NIM \t : " + x);
+                System.out.println("Name \t : " + listStd[pos].name);
+                System.out.println("Age \t : " + listStd[pos].age);
+                System.out.println("IPK \t : " + listStd[pos].gpa);
+            } else {
+                System.out.println("Data " + x + " is not found");
+            }
+        }
+    \end{minted}
+    \item Create a main class named \texttt{StudentsMain} and add main method as follows
+    \begin{minted}[autogobble,breaklines]{java}
+        public class StudentsMain {
+            public static void main(String[] args) {
+            
+            }
+        }
+    \end{minted}
+    \item In main method, instantiate an object in \texttt{SearchStudent} that consist of \texttt{5 Students}, then add all students object by calling \texttt{add} function in object \texttt{SearchStudent}
+    \begin{minted}[autogobble,breaklines]{java}
+        Scanner s = new Scanner(System.in);
+        Scanner sl = new Scanner(System.in);
+
+        SearchStudent data = new SearchStudent();
+        int amountStudent = 5;
+
+        System.out.println("--------------------------------");
+        System.out.println("Input student data accordingly from samllest NIM");
+        for (int i = 0; i < amountStudent; i++) {
+            System.out.println("----------------");
+            System.out.print("NIM\t: ");
+            int nim = s.nextInt();
+            System.out.print("Name\t: ");
+            String name = sl.nextLine();
+            System.out.print("Age\t: ");
+            int age = s.nextInt();
+            System.out.print("GPA\t: ");
+            double gpa = s.nextDouble();
+
+            Students std = new Students(nim, age, name, gpa);
+            data.add(std);
+        }
+    \end{minted}
+    \item Add method \texttt{display} to print all inserted data
+    \begin{minted}[autogobble,breaklines]{java}
+        System.out.println("--------------------------------");
+        System.out.println("Entire Student Data");
+        data.display();
+    \end{minted}
+    \item To search students by their NIM, create a search variable to hold input from user. Then call method FindSeqSearch with its parameter is the search variable we’ve declared before
+    \begin{minted}[autogobble,breaklines]{java}
+        System.out.println("________________________");
+        System.out.println("________________________");
+        System.out.print("Search student by NIM: ");
+        int search = s.nextInt();
+        System.out.println("Using Sequential Search");
+        int potition = data.findSeqSearch(search);
+    \end{minted}
+    \item Call method displayPosition from class SearchStudent.
+    \begin{minted}[autogobble,breaklines]{java}
+        data.showPotition(search, potition);
+    \end{minted} 
+    \item Call method displayData from class SearchStudent
+    \begin{minted}[autogobble,breaklines]{java}
+        data.showData(search, potition);
+    \end{minted}
+    \item Run the program and see the result
+    \begin{minted}[autogobble,breaklines]{java}
+        package week7;
+
+        public class Students {
+            int nim, age;
+            String name;
+            double gpa;
+
+            public Students(int nim, int age, String name, double gpa) {
+                this.nim = nim;
+                this.age = age;
+                this.name = name;
+                this.gpa = gpa;
+            }
+
+            public void display() {
+                System.out.println("NIM =" + nim);
+                System.out.println("Name =" + name);
+                System.out.println("Age =" + age);
+                System.out.println("GPA =" + gpa);
+            }
+        }
+    \end{minted}
+    \begin{minted}[autogobble,breaklines]{java}
+        package week7;
+
+        public class SearchStudent {
+            Students[] listStd = new Students[5];
+            int idx;
+            public void add(Students std) {
+                if (idx < listStd.length) {
+                    listStd[idx] = std;
+                    idx++;
+                } else {
+                    System.out.println("Data is already full");
+                }
+            }
+
+            public void display() {
+                for (Students students : listStd) {
+                    students.display();
+                    System.out.println("--------------------------------");
+                }
+            }
+
+            public int findSeqSearch(int search) {
+                int potition = 1;
+                for (int i = 0; i < listStd.length; i++) {
+                    if (listStd[i].nim == search) {
+                        potition = i;
+                        break;
+                    }
+                }
+                return potition;
+            }
+
+            public void showPotition(int x, int pos) {
+                if (pos != 1) {
+                    System.out.println("Data : " + x + " is found in index-" + pos);
+                } else {
+                    System.out.println("Data : " + x + "is not found");
+                }
+            }
+
+            public void showData(int x, int pos) {
+                if (pos != 1) {
+                    System.out.println("NIM \t : " + x);
+                    System.out.println("Name \t : " + listStd[pos].name);
+                    System.out.println("Age \t : " + listStd[pos].age);
+                    System.out.println("IPK \t : " + listStd[pos].gpa);
+                } else {
+                    System.out.println("Data " + x + " is not found");
+                }
+            }
+        }
+    \end{minted}
+    \begin{minted}[autogobble,breaklines]{java}
+        package week7;
+
+        import java.util.Scanner;
+
+        public class StudentsMain {
+            public static void main(String[] args) {
+                Scanner s = new Scanner(System.in);
+                Scanner sl = new Scanner(System.in);
+
+                SearchStudent data = new SearchStudent();
+                int amountStudent = 5;
+
+                System.out.println("--------------------------------");
+                System.out.println("Input student data accordingly from samllest NIM");
+                for (int i = 0; i < amountStudent; i++) {
+                    System.out.println("----------------");
+                    System.out.print("NIM\t: ");
+                    int nim = s.nextInt();
+                    System.out.print("Name\t: ");
+                    String name = sl.nextLine();
+                    System.out.print("Age\t: ");
+                    int age = s.nextInt();
+                    System.out.print("GPA\t: ");
+                    double gpa = s.nextDouble();
+
+                    Students std = new Students(nim, age, name, gpa);
+                    data.add(std);
+                }
+
+                System.out.println("--------------------------------");
+                System.out.println("Entire Student Data");
+                data.display();
+
+                System.out.println("________________________");
+                System.out.println("________________________");
+                System.out.print("Search student by NIM: ");
+                int search = s.nextInt();
+                System.out.println("Using Sequential Search");
+                int potition = data.findSeqSearch(search);
+
+                data.showPotition(search, potition);
+
+                data.showData(search, potition);
+
+                s.close();
+                sl.close();
+            }
+        }
+    \end{minted}
+\end{enumerate}
+
+\subsubsection{Result}
+
+\end{document}

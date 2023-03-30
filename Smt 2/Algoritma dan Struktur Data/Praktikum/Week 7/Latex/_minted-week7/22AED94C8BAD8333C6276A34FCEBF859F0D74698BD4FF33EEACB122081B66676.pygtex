@@ -1,0 +1,23 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{package}\PYG{+w}{ }\PYG{n+nn}{week7}\PYG{p}{;}
+
+\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kd}{class} \PYG{n+nc}{Students}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{nim}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{age}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{String}\PYG{+w}{ }\PYG{n}{name}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k+kt}{double}\PYG{+w}{ }\PYG{n}{gpa}\PYG{p}{;}
+
+\PYG{+w}{    }\PYG{k+kd}{public}\PYG{+w}{ }\PYG{n+nf}{Students}\PYG{p}{(}\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{nim}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{age}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{String}\PYG{+w}{ }\PYG{n}{name}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kt}{double}\PYG{+w}{ }\PYG{n}{gpa}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{k}{this}\PYG{p}{.}\PYG{n+na}{nim}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{nim}\PYG{p}{;}
+\PYG{+w}{        }\PYG{k}{this}\PYG{p}{.}\PYG{n+na}{age}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{age}\PYG{p}{;}
+\PYG{+w}{        }\PYG{k}{this}\PYG{p}{.}\PYG{n+na}{name}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{name}\PYG{p}{;}
+\PYG{+w}{        }\PYG{k}{this}\PYG{p}{.}\PYG{n+na}{gpa}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{gpa}\PYG{p}{;}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+
+\PYG{+w}{    }\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{display}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{System}\PYG{p}{.}\PYG{n+na}{out}\PYG{p}{.}\PYG{n+na}{println}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}NIM =\PYGZdq{}}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{nim}\PYG{p}{);}
+\PYG{+w}{        }\PYG{n}{System}\PYG{p}{.}\PYG{n+na}{out}\PYG{p}{.}\PYG{n+na}{println}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Name =\PYGZdq{}}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{name}\PYG{p}{);}
+\PYG{+w}{        }\PYG{n}{System}\PYG{p}{.}\PYG{n+na}{out}\PYG{p}{.}\PYG{n+na}{println}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Age =\PYGZdq{}}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{age}\PYG{p}{);}
+\PYG{+w}{        }\PYG{n}{System}\PYG{p}{.}\PYG{n+na}{out}\PYG{p}{.}\PYG{n+na}{println}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}GPA =\PYGZdq{}}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{gpa}\PYG{p}{);}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}
