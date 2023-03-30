@@ -43,9 +43,13 @@ def buy():
         idr_balance = balance['IDR']
         
         # Divide the initial balance by the number of days
-        buy_amount = ((idr_balance / (days - i)) * 0.9949) / sell_price
+        if ((idr_balance / (days - i)) * 0.9949) < 10000:
+            buy_amount = 10000 / sell_price
+        else:
+            buy_amount = ((idr_balance / (days - i)) * 0.9949) / sell_price
         print(idr_balance)
         print(buy_amount)
+
 
         # Fetch the order book data for the symbol
         order_book = indodax.fetch_order_book(symbol)
