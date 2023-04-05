@@ -1,0 +1,142 @@
+\documentclass[12pt,titlepage]{article}
+\usepackage[margin=1.25in]{geometry}
+\usepackage{graphicx,amsmath,blindtext,minted}
+
+%% Variables definition
+\newcommand{\vSubject}{Islamic Education}
+\newcommand{\vSubtitle}{A Summary of Lecture on}
+\newcommand{\vSubsubtitle}{Human Beings and Religion}
+\newcommand{\vName}{Muhammad Baihaqi Aulia Asy'ari}
+\newcommand{\vNIM}{2241720145}
+\newcommand{\vClass}{1I}
+\newcommand{\vDepartment}{Information Technology}
+\newcommand{\vStudyProgram}{D4 Informatics Engineering}
+
+%% [START] Tikz related stuff
+\usepackage{tikz}
+\usetikzlibrary{svg.path,calc,shapes.geometric,shapes.misc}
+\tikzstyle{terminator} = [rectangle, draw, text centered, rounded corners = 1em, minimum height=2em]
+\tikzstyle{preparation} = [chamfered rectangle, chamfered rectangle sep=0.75em, draw, text centered, minimum height = 2em]
+\tikzstyle{process} = [rectangle, draw, text centered, minimum height=2em]
+\tikzstyle{decision} = [diamond, aspect=2, draw, text centered, minimum height=2em]
+\tikzstyle{data}=[trapezium, draw, text centered, trapezium left angle=60, trapezium right angle=120, minimum height=2em]
+\tikzstyle{connector} = [line width=0.25mm,->]
+%% [END] Tikz related stuff
+
+%% [START] Fancy header related stuff
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setlength{\headheight}{15pt} % compensate fancyhdr style
+\fancyhead{}
+\fancyfoot{}
+\fancyfoot[L]{\thepage}
+\fancyfoot[R]{\textit{\vSubject - \vSubsubtitle}}
+\renewcommand{\footrulewidth}{0.4pt}% default is 0pt, overline for footer
+%% [END] Fancy header related stuff
+
+%% [START] Custom tabular command related stuff
+\usepackage{tabularx}
+\newcommand{\details}[2]{
+    #1 & #2  \\
+}
+%% [END] Custom tabular command related stuff
+
+%% [START] Figure related stuff
+\newcommand{\image}[3][1]{
+    \begin{figure}[h]
+        \centering
+        \includegraphics[#1]{#2}
+        \caption{#3}
+        \label{#3}
+    \end{figure}
+}
+%% [END] Figure related stuff
+
+%%
+\usepackage{pgf-umlcd}
+
+\renewcommand{\umldrawcolor}{black}
+\renewcommand{\umlfillcolor}{white}
+%%
+
+%% [BEGIN] Custom enumerator
+\usepackage{enumitem}
+%% [END] Custom enumerator
+
+%% [START] Arab text
+\usepackage{arabtex}
+\usepackage{utf8}
+\usepackage{unicode}
+%% [END] Arab Text
+
+%% [BEGIN] Paragraph indent
+\usepackage{indentfirst}
+%% [END] Paragraph indent
+
+\begin{document}
+\begin{titlepage}
+    \centering
+    \vfill
+    {\bfseries\LARGE
+        \vSubject\\
+        \vskip0.25cm
+        \vSubtitle
+        \vskip0.25cm
+        \vSubsubtitle
+    }
+    \vfill
+    \includegraphics[width=6cm]{images/polinema-logo.png}
+    \vfill
+    {
+        \textbf{Name}\\
+        \vName\\
+        \vskip0.5cm
+        \textbf{NIM}\\
+        \vNIM\\
+        \vskip0.5cm
+        \textbf{Class}\\
+        \vClass\\
+        \vskip0.5cm
+        \textbf{Department}\\
+        \vDepartment\\
+        \vskip0.5cm
+        \textbf{Study Program}\\
+        \vStudyProgram
+    }
+\end{titlepage}
+
+\newpage
+
+\setcode{utf8}
+
+\begin{enumerate}[label=\textbf{\Alph*.}]
+    \item \textbf{Introduction of Surah Al-Mulk}
+    \paragraph{}
+     It's better to refer to the Surah Al-Mulk when studying about Human Being and Religion. As Abu Hurayrah narrated that the Prophet (peace and blessings of Allah be upon him) said: “A surah from the Quran containing thirty verses will intercede for a man so that he will be forgiven. It is the surah Tabarak Alladhi bi yadihi’l-mulk [i.e.,Surat al-Mulk ].” (Narrated by al-Tirmidhi, 2891; Abu Dawud, 1400; Ibn Majah, 3786. Abd-Allah ibn Mas'ud said: Whoever reads Tabarak alladhi bi yadihi'l-mulk [i.e., Surat al-Mulk ] every night, Allah will protect him from the torment of the grave . At the time of the Messenger of Allah (peace and blessings of Allah be upon him) we used to call it al-mani'ah (that which protects).
+    \item \textbf{Content of Surah Al-Mulk}
+    \begin{enumerate}[label=\alph*.]
+        \item Allah’s power (1-4)
+        \item Heaven, Hell (5-15)
+        \item Sudden threat (16-2)
+        \item Life is short (23-24)
+        \item When (25-27)
+        \item Human is weak (28-30)
+    \end{enumerate}
+    \item \textbf{The purposes of understanding Surah Al-Mulk}
+    \paragraph{}
+    Understanding Surah Al-Mulk can serve several important purposes. Firstly, it can help us understand the purpose of human life in this world, which is to worship Allah and follow His commands. Surah Al-Mulk provides us with valuable insights into Allah's sovereignty and power, reminding us of our duty to submit to Him. Secondly, Surah Al-Mulk serves as a guide and formula for living, offering us the principles and values necessary to navigate life's challenges. Finally, it helps us to understand the concept of success and khusnul khotimah, emphasizing the importance of living a righteous life and leaving this world with Allah's mercy and blessings. By striving to understand and embody the teachings of Surah Al-Mulk, we can hope to fulfill our purpose in life and attain eternal happiness in the hereafter.
+    \item \textbf{Al-Mulk Verse 3}
+    \mbox{}\\ 
+    \<ٱلَّذِىَخَلَقَسَبْعسَمَـٰوَ ٰ تطِ بَاقًۭ اۖمَّاٰتَرَ ىفِىِخَلْقٱِلرَّ حْ مَـٰنمِ نتَفَـٰوُ تَۖفٱِرْ جِ عٱَلْبَصَرْهَلٰتَرَ ىمِ نفُطُور٣>
+    \paragraph{} 
+     Surah Al-Mulk verse 3 He is the One Who created seven heavens, one above the other. You will never see any imperfection in the creation of the Most Compassionate.1 So look again: do you see any flaws?
+    \paragraph{}
+     It's stated that Allah SWT designed life and death as a means of testing individuals. In this existence, Allah does not require perfection, but rather encourages progress. If individuals strive to improve themselves consistently and make progress day by day, they may be able to attain a good ending or khusnul khotimah, with the help of Allah.
+    \item \textbf{Scientist Discoveries of 7 Heaven or Skies According to Quran}
+    \paragraph{}
+    Scientists have also discovered many truths in the Al-Quran, such as the existence of the 7 layers of the sky. Although scientists only recently discovered this fact in the late 20th century, the Al-Quran had stated it centuries ago. Research shows that these layers include the troposphere, stratosphere, mesosphere, thermosphere, exosphere, ozonosphere, and ionosphere. This evidence proves that the Al-Quran contains factual information, and its veracity cannot be doubted. This is why it is essential for Muslims and humans to have faith in religion, as it provides a framework for understanding and dealing with our emotions. It gives us a sense of control, knowing that God is on our side, and imbues the world with meaning by offering a cosmic narrative to the universe.
+    \item \textbf{Conclusion}
+    \paragraph{} Surah Al-Mulk is a special chapter in the Al-Quran that holds the potential to save us from the torment of the grave. We must acknowledge the authority and kingdom of Allah and seek to offer our blessings to Him. As believers, we should recognize that the true essence of our life exists in the hereafter. Our lifes on this earth are merely a test to determine whether we are the best version of ourself. The Al-Quran is the eternal truth that guides us on this journey and provides us with the wisdom and knowledge to navigate the challenges of life. Ultimately, by adhering to its teachings, we can hope to attain success and salvation in this world and the hereafter.
+\end{enumerate}
+
+\end{document}
