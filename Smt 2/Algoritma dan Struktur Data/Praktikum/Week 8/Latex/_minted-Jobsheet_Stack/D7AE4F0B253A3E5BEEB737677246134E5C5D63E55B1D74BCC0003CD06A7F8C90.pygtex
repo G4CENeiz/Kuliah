@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{String}\PYG{+w}{ }\PYG{n}{title}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{authorName}\PYG{p}{;}
+\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{publishedYear}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{pageAmount}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{price}\PYG{p}{;}
+
+\PYG{k+kd}{public}\PYG{+w}{ }\PYG{n+nf}{Book}\PYG{p}{(}\PYG{n}{String}\PYG{+w}{ }\PYG{n}{tt}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{String}\PYG{+w}{ }\PYG{n}{nm}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{yr}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{pam}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{pr}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{this}\PYG{p}{.}\PYG{n+na}{title}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{tt}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k}{this}\PYG{p}{.}\PYG{n+na}{authorName}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{nm}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k}{this}\PYG{p}{.}\PYG{n+na}{publishedYear}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{yr}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k}{this}\PYG{p}{.}\PYG{n+na}{pageAmount}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{pam}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k}{this}\PYG{p}{.}\PYG{n+na}{price}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{pr}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

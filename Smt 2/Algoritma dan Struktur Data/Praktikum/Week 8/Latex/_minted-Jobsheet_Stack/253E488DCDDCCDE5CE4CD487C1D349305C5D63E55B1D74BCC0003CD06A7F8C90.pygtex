@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{st}\PYG{p}{.}\PYG{n+na}{print}\PYG{p}{();}
+\PYG{n}{st}\PYG{p}{.}\PYG{n+na}{pop}\PYG{p}{();}
+\PYG{n}{st}\PYG{p}{.}\PYG{n+na}{peek}\PYG{p}{();}
+\PYG{n}{st}\PYG{p}{.}\PYG{n+na}{print}\PYG{p}{();}
+\end{Verbatim}

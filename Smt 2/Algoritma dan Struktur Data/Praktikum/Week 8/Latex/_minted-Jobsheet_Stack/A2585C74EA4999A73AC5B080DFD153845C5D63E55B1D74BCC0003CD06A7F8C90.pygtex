@@ -1,0 +1,44 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{package}\PYG{+w}{ }\PYG{n+nn}{Practicum2}\PYG{p}{;}
+
+\PYG{k+kn}{import}\PYG{+w}{ }\PYG{n+nn}{java.util.Scanner}\PYG{p}{;}
+
+\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kd}{class} \PYG{n+nc}{StackMain}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kd}{static}\PYG{+w}{ }\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{main}\PYG{p}{(}\PYG{n}{String}\PYG{o}{[]}\PYG{+w}{ }\PYG{n}{args}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{Stack}\PYG{+w}{ }\PYG{n}{st}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{new}\PYG{+w}{ }\PYG{n}{Stack}\PYG{p}{(}\PYG{l+m+mi}{8}\PYG{p}{);}
+\PYG{+w}{        }\PYG{n}{Scanner}\PYG{+w}{ }\PYG{n}{sc}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{new}\PYG{+w}{ }\PYG{n}{Scanner}\PYG{p}{(}\PYG{n}{System}\PYG{p}{.}\PYG{n+na}{in}\PYG{p}{);}
+
+\PYG{+w}{        }\PYG{k+kt}{char}\PYG{+w}{ }\PYG{n}{choose}\PYG{p}{;}
+\PYG{+w}{        }\PYG{k}{do}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{n}{System}\PYG{p}{.}\PYG{n+na}{out}\PYG{p}{.}\PYG{n+na}{print}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Title : \PYGZdq{}}\PYG{p}{);}
+\PYG{+w}{            }\PYG{n}{String}\PYG{+w}{ }\PYG{n}{title}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{sc}\PYG{p}{.}\PYG{n+na}{nextLine}\PYG{p}{();}
+
+\PYG{+w}{            }\PYG{n}{System}\PYG{p}{.}\PYG{n+na}{out}\PYG{p}{.}\PYG{n+na}{print}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Author Name : \PYGZdq{}}\PYG{p}{);}
+\PYG{+w}{            }\PYG{n}{String}\PYG{+w}{ }\PYG{n}{name}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{sc}\PYG{p}{.}\PYG{n+na}{nextLine}\PYG{p}{();}
+
+\PYG{+w}{            }\PYG{n}{System}\PYG{p}{.}\PYG{n+na}{out}\PYG{p}{.}\PYG{n+na}{print}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Published year : \PYGZdq{}}\PYG{p}{);}
+\PYG{+w}{            }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{year}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{sc}\PYG{p}{.}\PYG{n+na}{nextInt}\PYG{p}{();}
+
+\PYG{+w}{            }\PYG{n}{System}\PYG{p}{.}\PYG{n+na}{out}\PYG{p}{.}\PYG{n+na}{print}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Pages Amount : \PYGZdq{}}\PYG{p}{);}
+\PYG{+w}{            }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{pages}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{sc}\PYG{p}{.}\PYG{n+na}{nextInt}\PYG{p}{();}
+
+\PYG{+w}{            }\PYG{n}{System}\PYG{p}{.}\PYG{n+na}{out}\PYG{p}{.}\PYG{n+na}{print}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Price : \PYGZdq{}}\PYG{p}{);}
+\PYG{+w}{            }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{price}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{sc}\PYG{p}{.}\PYG{n+na}{nextInt}\PYG{p}{();}
+
+\PYG{+w}{            }\PYG{n}{Book}\PYG{+w}{ }\PYG{n}{bk}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{new}\PYG{+w}{ }\PYG{n}{Book}\PYG{p}{(}\PYG{n}{title}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{name}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{year}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{pages}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{price}\PYG{p}{);}
+\PYG{+w}{            }\PYG{n}{System}\PYG{p}{.}\PYG{n+na}{out}\PYG{p}{.}\PYG{n+na}{print}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Do you want to add new data to Stack (y/n)? \PYGZdq{}}\PYG{p}{);}
+\PYG{+w}{            }\PYG{n}{choose}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{sc}\PYG{p}{.}\PYG{n+na}{next}\PYG{p}{().}\PYG{n+na}{charAt}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{);}
+\PYG{+w}{            }\PYG{n}{sc}\PYG{p}{.}\PYG{n+na}{nextLine}\PYG{p}{();}
+\PYG{+w}{            }\PYG{n}{st}\PYG{p}{.}\PYG{n+na}{push}\PYG{p}{(}\PYG{n}{bk}\PYG{p}{);}
+
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{k}{while}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{choose}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{l+s+sc}{\PYGZsq{}y\PYGZsq{}}\PYG{p}{);}
+
+\PYG{+w}{        }\PYG{n}{st}\PYG{p}{.}\PYG{n+na}{print}\PYG{p}{();}
+\PYG{+w}{        }\PYG{n}{st}\PYG{p}{.}\PYG{n+na}{pop}\PYG{p}{();}
+\PYG{+w}{        }\PYG{n}{st}\PYG{p}{.}\PYG{n+na}{peek}\PYG{p}{();}
+\PYG{+w}{        }\PYG{n}{st}\PYG{p}{.}\PYG{n+na}{print}\PYG{p}{();}
+
+\PYG{+w}{        }\PYG{n}{sc}\PYG{p}{.}\PYG{n+na}{close}\PYG{p}{();}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

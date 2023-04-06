@@ -1,0 +1,15 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+PS D:\PYGZbs{}Kuliah\PYGZgt{}  \PYGZam{} \PYGZsq{}C:\PYGZbs{}Program Files\PYGZbs{}Java\PYGZbs{}jdk\PYGZhy{}18.0.2.1\PYGZbs{}bin\PYGZbs{}java.exe\PYGZsq{} \PYGZsq{}\PYGZhy{}XX:+ShowCodeDetailsInExceptionMessages\PYGZsq{} \PYGZsq{}\PYGZhy{}cp\PYGZsq{} \PYGZsq{}C:\PYGZbs{}Users\PYGZbs{}ASUS\PYGZbs{}AppData\PYGZbs{}Roaming\PYGZbs{}Code\PYGZbs{}User\PYGZbs{}workspaceStorage\PYGZbs{} ce3fcb236261368a6cbd019dc8ddda8b\PYGZbs{}redhat.java\PYGZbs{} jdt\PYGZus{}ws\PYGZbs{}Kuliah\PYGZus{}28156aa7\PYGZbs{}bin\PYGZsq{} \PYGZsq{}Practicum1.StackMain\PYGZsq{}
+Stack content:
+13
+27
+15
+
+Remove data : 34
+Top element : 11
+Stack content:
+11
+13
+27
+15
+\end{Verbatim}
