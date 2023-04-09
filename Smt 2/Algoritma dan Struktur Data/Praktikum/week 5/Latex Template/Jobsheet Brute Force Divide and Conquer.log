@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.4.8)  9 APR 2023 11:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.4.8)  9 APR 2023 14:18
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -774,23 +774,142 @@ Overfull \hbox (34.1799pt too wide) in paragraph at lines 12--12
  (./_minted-Jobsheet_Brute_Force_Divide_and_Conquer/A5356849D5BEB5498B299B920F66F122B592CBD9EB5E836AD8F42E60DC09E5D9.pygtex [14])
 \openout3 = `Jobsheet_Brute_Force_Divide_and_Conquer.pyg'.
 
- (./_minted-Jobsheet_Brute_Force_Divide_and_Conquer/9790951ABD15161A69B723CBF17DC9CB08AAE465ADF1C7EEDFC27839EF919650.pygtex) [15] [16] (./Jobsheet Brute Force Divide and Conquer.aux)
+ (./_minted-Jobsheet_Brute_Force_Divide_and_Conquer/9790951ABD15161A69B723CBF17DC9CB08AAE465ADF1C7EEDFC27839EF919650.pygtex)
+\openout3 = `Jobsheet_Brute_Force_Divide_and_Conquer.pyg'.
+
+ (./_minted-Jobsheet_Brute_Force_Divide_and_Conquer/E85292FD4B68E1598DD610C0F2554CAE08AAE465ADF1C7EEDFC27839EF919650.pygtex [15]
+Overfull \hbox (108.27994pt too wide) in paragraph at lines 9--9
+[]\OT1/cmtt/m/n/12 System.[]out[].[]println[]([]"================================================"[]);|  
+ []
+
+
+Overfull \hbox (108.27994pt too wide) in paragraph at lines 23--23
+[]\OT1/cmtt/m/n/12 System.[]out[].[]println[]([]"================================================"[]);|  
+ []
+
+
+Overfull \hbox (108.27994pt too wide) in paragraph at lines 28--28
+[]\OT1/cmtt/m/n/12 System.[]out[].[]println[]([]"================================================"[]);|  
+ []
+
+
+Overfull \hbox (108.27994pt too wide) in paragraph at lines 33--33
+[]\OT1/cmtt/m/n/12 System.[]out[].[]println[]([]"================================================"[]);|  
+ []
+
+[16])
+\openout3 = `Jobsheet_Brute_Force_Divide_and_Conquer.pyg'.
+
+ (./_minted-Jobsheet_Brute_Force_Divide_and_Conquer/02399B725F7D27388B1981016385904A08AAE465ADF1C7EEDFC27839EF919650.pygtex
+Overfull \hbox (108.27994pt too wide) in paragraph at lines 12--12
+[]\OT1/cmtt/m/n/12 System.[]out[].[]println[]([]"================================================"[]);|  
+ []
+
+
+Overfull \hbox (108.27994pt too wide) in paragraph at lines 17--17
+[]\OT1/cmtt/m/n/12 System.[]out[].[]println[]([]"================================================"[]);|  
+ []
+
+
+Overfull \hbox (108.27994pt too wide) in paragraph at lines 21--21
+[]\OT1/cmtt/m/n/12 System.[]out[].[]println[]([]"================================================"[]);|  
+ []
+
+
+Overfull \hbox (108.27994pt too wide) in paragraph at lines 26--26
+[]\OT1/cmtt/m/n/12 System.[]out[].[]println[]([]"================================================"[]);|  
+ []
+
+[17]
+Overfull \hbox (108.27994pt too wide) in paragraph at lines 29--29
+[]\OT1/cmtt/m/n/12 System.[]out[].[]println[]([]"================================================"[]);|  
+ []
+
+[18])
+\openout3 = `Jobsheet_Brute_Force_Divide_and_Conquer.pyg'.
+
+ (./_minted-Jobsheet_Brute_Force_Divide_and_Conquer/337B35A9BE69491F5A2685BC506C51D608AAE465ADF1C7EEDFC27839EF919650.pygtex)
+\openout3 = `Jobsheet_Brute_Force_Divide_and_Conquer.pyg'.
+
+ (./_minted-Jobsheet_Brute_Force_Divide_and_Conquer/DC10EAE2C1CBEFB290535FEE281DD3B008AAE465ADF1C7EEDFC27839EF919650.pygtex)
+\openout3 = `Jobsheet_Brute_Force_Divide_and_Conquer.pyg'.
+
+ (./_minted-Jobsheet_Brute_Force_Divide_and_Conquer/E5A52194F37E21540ED1B271342CFCC108AAE465ADF1C7EEDFC27839EF919650.pygtex)
+\openout3 = `Jobsheet_Brute_Force_Divide_and_Conquer.pyg'.
+
+ (./_minted-Jobsheet_Brute_Force_Divide_and_Conquer/ACBDCA693E4B888D7D3C6AC3C3622F5608AAE465ADF1C7EEDFC27839EF919650.pygtex [19])
+\openout3 = `Jobsheet_Brute_Force_Divide_and_Conquer.pyg'.
+
+ (./_minted-Jobsheet_Brute_Force_Divide_and_Conquer/4790644BE351A788C5DAAD3DDBA4463308AAE465ADF1C7EEDFC27839EF919650.pygtex)
+\openout3 = `Jobsheet_Brute_Force_Divide_and_Conquer.pyg'.
+
+ (./_minted-Jobsheet_Brute_Force_Divide_and_Conquer/CB5534A0A0423937BABBE3578B7A953408AAE465ADF1C7EEDFC27839EF919650.pygtex)
+\openout3 = `Jobsheet_Brute_Force_Divide_and_Conquer.pyg'.
+
+ (./_minted-Jobsheet_Brute_Force_Divide_and_Conquer/6FC545FDD7548B001C541F6C061F895708AAE465ADF1C7EEDFC27839EF919650.pygtex [20])
+\openout3 = `Jobsheet_Brute_Force_Divide_and_Conquer.pyg'.
+
+ (./_minted-Jobsheet_Brute_Force_Divide_and_Conquer/7FBC51642F19C9EBD6E12C82660661BC08AAE465ADF1C7EEDFC27839EF919650.pygtex [21])
+\openout3 = `Jobsheet_Brute_Force_Divide_and_Conquer.pyg'.
+
+ (./_minted-Jobsheet_Brute_Force_Divide_and_Conquer/CE975B47E31AC18D76B8DE3A97D0306808AAE465ADF1C7EEDFC27839EF919650.pygtex [22])
+\openout3 = `Jobsheet_Brute_Force_Divide_and_Conquer.pyg'.
+
+ (./_minted-Jobsheet_Brute_Force_Divide_and_Conquer/5298C9FB436D3CD245DACD4DAFF457A7B592CBD9EB5E836AD8F42E60DC09E5D9.pygtex
+Overfull \hbox (412.35541pt too wide) in paragraph at lines 2--2
+\OT1/cmtt/m/n/12 ^^MC:\Users\G4CE[]PC\AppData\Roaming\Code\User\workspaceStorage\80d97a47d24665dc0bce7ab1e048ecbd\redhat.java\jdt_ws\Kuliah_28156aa7\bin^^M 
+ []
+
+)
+\openout3 = `Jobsheet_Brute_Force_Divide_and_Conquer.pyg'.
+
+ (./_minted-Jobsheet_Brute_Force_Divide_and_Conquer/33308963B94AAE9A406CC869C9CFD73008AAE465ADF1C7EEDFC27839EF919650.pygtex) [23]
+Underfull \hbox (badness 10000) in paragraph at lines 889--893
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 908--908
+[][]\OT1/cmr/m/n/12 nameSdt: String 
+ []
+
+
+Underfull \hbox (badness 7869) in paragraph at lines 908--908
+\OT1/cmr/m/n/12 scoreAssgment: int 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 908--908
+\OT1/cmr/m/n/12 scoreQuiz: int 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 908--908
+\OT1/cmr/m/n/12 scoreMid: int 
+ []
+
+<./images/figures/fig4.png, id=95, 804.75656pt x 575.90157pt>
+File: ./images/figures/fig4.png Graphic file (type png)
+<use ./images/figures/fig4.png>
+Package pdftex.def Info: ./images/figures/fig4.png  used on input line 934.
+(pdftex.def)             Requested size: 398.33858pt x 285.05898pt.
+[24] [25 <./images/figures/fig4.png>] (./Jobsheet Brute Force Divide and Conquer.aux)
 runsystem(del Jobsheet_Brute_Force_Divide_and_Conquer.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 20361 strings out of 476017
- 446125 string characters out of 5793767
+ 20467 strings out of 476017
+ 454950 string characters out of 5793767
  1868660 words of memory out of 5000000
- 40381 multiletter control sequences out of 15000+600000
- 516190 words of font info for 46 fonts, out of 8000000 for 9000
+ 40442 multiletter control sequences out of 15000+600000
+ 518164 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,11n,89p,1445b,875s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,11n,89p,1445b,919s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on "Jobsheet Brute Force Divide and Conquer.pdf" (17 pages, 330075 bytes).
+Output written on "Jobsheet Brute Force Divide and Conquer.pdf" (26 pages, 368816 bytes).
 PDF statistics:
- 109 PDF objects out of 1000 (max. 8388607)
- 68 compressed objects within 1 object stream
+ 140 PDF objects out of 1000 (max. 8388607)
+ 88 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 33 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 38 words of extra memory for PDF output out of 10000 (max. 10000000)
 

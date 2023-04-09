@@ -587,10 +587,355 @@ The stages of factorial value searching with the Divide and Conquer algorithm:
     \mbox{}\\
     It is included, as the division of the problem contain a process of combining the solution from the sub-problems.
     \item Modification of the program code, assuming the attribute filling process is done by a constructor.
+    \begin{minted}[autogobble,breaklines]{java}
+        package Faktorial;
+
+        import java.util.Scanner;
+
+        public class MainSquared {
+            public static void main(String[] args) {
+                Scanner sc = new Scanner(System.in);
+                System.out.println("================================================");
+                System.out.print("Input the number of elements you want to count : ");
+                int elemen = sc.nextInt();
+                
+                Squared[] png = new Squared[elemen];
+                
+                for (int i = 0; i < elemen; i++) {
+                    System.out.print("Input the value to be squared to-"+(i+1)+" : ");
+                    int num = sc.nextInt();
+                    System.out.print("Input the squared value to-"+(i+1)+" : ");
+                    int squared = sc.nextInt();
+                    png[i] = new Squared(num, squared);
+                }
+
+                System.out.println("================================================");
+                System.out.println("Results with Brute Force Squared");
+                for (int i = 0; i < elemen; i++) {
+                    System.out.println("Value "+png[i].num+" squared "+png[i].squared+" is : "+png[i].squaredBF(png[i].num, png[i].squared));
+                }
+                System.out.println("================================================");
+                System.out.println("Results with Divide and Conquer Squared");
+                for (int i = 0; i < elemen; i++) {
+                    System.out.println("Value "+png[i].num+" squared "+png[i].squared+" is : "+png[i].squaredDC(png[i].num, png[i].squared));
+                }
+                System.out.println("================================================");
+
+                sc.close();
+            }
+        }
+    \end{minted}
     \item Add a menu so that only one of the selected methods will be run!
+    \begin{minted}[autogobble,breaklines]{java}
+        package Faktorial;
+
+        import java.util.Scanner;
+
+        public class MainSquared {
+            static Scanner sc = new Scanner(System.in);
+            static int globalElemen;
+            static Squared[] globalPng;
+
+            static void callBF() {
+                System.out.println("================================================");
+                System.out.println("Results with Brute Force Squared");
+                for (int i = 0; i < globalElemen; i++) {
+                    System.out.println("Value "+globalPng[i].num+" squared "+globalPng[i].squared+" is : "+globalPng[i].squaredBF(globalPng[i].num, globalPng[i].squared));
+                }
+                System.out.println("================================================");
+            }
+
+            static void callDC() {
+                System.out.println("================================================");
+                System.out.println("Results with Divide and Conquer Squared");
+                for (int i = 0; i < globalElemen; i++) {
+                    System.out.println("Value "+globalPng[i].num+" squared "+globalPng[i].squared+" is : "+globalPng[i].squaredDC(globalPng[i].num, globalPng[i].squared));
+                }
+                System.out.println("================================================");
+            }
+            public static void main(String[] args) {
+                System.out.println("================================================");
+                System.out.print("Input the number of elements you want to count : ");
+                int elemen = sc.nextInt();
+                Squared[] png = new Squared[elemen];
+
+                globalElemen = elemen;
+                globalPng = png;
+                
+                
+                for (int i = 0; i < elemen; i++) {
+                    System.out.print("Input the value to be squared to-"+(i+1)+" : ");
+                    int num = sc.nextInt();
+                    System.out.print("Input the squared value to-"+(i+1)+" : ");
+                    int squared = sc.nextInt();
+                    png[i] = new Squared(num, squared);
+                }
+
+                boolean choosen = false;
+                System.out.println("Choose the algorithm");
+                System.out.println("1. Brute Force");
+                System.out.println("2. Divide and Conquer");
+                while (!choosen) {
+                    System.out.print("Menu: ");
+                    sc.nextLine();
+                    char menu = sc.nextLine().charAt(0);
+
+                    switch (menu) {
+                        case '1':
+                            choosen = true;
+                            callBF();
+                            break;
+
+                        case '2':
+                            choosen = true;
+                            callDC();
+                            break;
+
+                        default:
+                            System.out.println("Please enter the number available in the option");
+                            break;
+                    }
+                }
+
+
+                sc.close();
+            }
+        }
+    \end{minted}
 \end{enumerate}
 
 \subsection{Calculating Sum Array with Brute Force and Divide and Conquer Algorithms}
 In this practicum, we will practice how the divide, conquer, and combine process is applied to a case study of the sum of profits of a company in a few months.
+
+\subsubsection{Practicum}
+
+\begin{enumerate}
+    \item On week package3. Create a new class, the Sum class. IN the class Sum there are several attributes of the number of array elements, arrays, and total.
+    \begin{minted}[autogobble,breaklines]{java}
+        public int elemen;
+        public double profit[];
+        public double total;
+    \end{minted}
+    \item Add the constructor Sum() with the parameter int elemen
+    \begin{minted}[autogobble,breaklines]{java}
+        public Sum(int element) {
+            elemen = element;
+            profit = new double[elemen];
+            total = 0;
+        }
+    \end{minted}
+    \item Add the TotalBF() method which will calculate the total value of the array with iterative.
+    \begin{minted}[autogobble,breaklines]{java}
+        double totalBF(double arr[]) {
+            for (int i = 0; i < elemen; i++) {
+                total = total + arr[i];
+            }
+            return total;
+        }
+    \end{minted}
+    \item Add the TotalDC() method to implement the calculation of the total array value using the Divide and Conquer algorithm
+    \begin{minted}[autogobble,breaklines]{java}
+        double totalDC(double arr[], int l, int r) {
+            if (l==r) {
+                return arr[l];
+            } else if (l < r) {
+                int mid = (l+r)/2;
+                double lsum = totalDC(arr, l, mid-1);
+                double rsum =  totalDC(arr, mid + 1, r);
+                return lsum+rsum+arr[mid];
+            }
+            return 0;
+        }
+    \end{minted}
+    \item In this class there is a main method. In this method the user can write how many months the profit will be calculated. In this class an object instance is also created to call the attributes or functions of the Sum class
+    \begin{minted}[autogobble,breaklines]{java}
+        Scanner sc = new Scanner(System.in);
+        System.out.println("================================ ================================");
+        System.out.println("Program for Calculating Total Profits");
+        System.out.println("Input the Number of Months : ");
+        int totElemen = sc.nextInt();
+        Sum sm = new Sum(totElemen);
+        sm.elemen = totElemen;
+    \end{minted}
+    \item Make a loop to fill the profit amount according to the number of months entered (fill in the profit value to each array index)
+    \begin{minted}[autogobble,breaklines]{java}
+        System.out.println("================================ ================================");
+        for (int i = 0; i < sm.elemen; i++) {
+            System.out.print("Input the profit of the month to - "+(i+1)+" = ");
+            sm.profit[i] = sc.nextDouble();
+        }
+    \end{minted}
+    \item Show the results of calculations through objects that have been made for both algorithm (Brute Force and Divide Conquer) by calling the totalBF() and totalDF() methods of the Sum class.
+    \begin{minted}[autogobble,breaklines]{java}
+        System.out.println("================================ ================================");
+        System.out.println("Algoritma Brute Force");
+        System.out.println("Total profits of the company for " + sm.elemen + " month is = " + sm.totalBF(sm.profit));
+        System.out.println("================================ ================================");
+        System.out.println("Algoritma Divide Conquer");
+        System.out.println("Total profits of the company for " + sm.elemen + " month is = " + sm.totalDC(sm.profit, 0, sm.elemen-1));
+    \end{minted}
+    \texttt{Result: }
+    \begin{minted}[autogobble,breaklines]{java}
+        package Bfndc;
+
+        public class Sum {
+            public int elemen;
+            public double profit[];
+            public double total;
+
+            public Sum(int element) {
+                elemen = element;
+                profit = new double[elemen];
+                total = 0;
+            }
+
+            double totalBF(double arr[]) {
+                for (int i = 0; i < elemen; i++) {
+                    total = total + arr[i];
+                }
+                return total;
+            }
+
+            double totalDC(double arr[], int l, int r) {
+                if (l==r) {
+                    return arr[l];
+                } else if (l < r) {
+                    int mid = (l+r)/2;
+                    double lsum = totalDC(arr, l, mid-1);
+                    double rsum =  totalDC(arr, mid + 1, r);
+                    return lsum+rsum+arr[mid];
+                }
+                return 0;
+            }
+        }
+    \end{minted}
+    \begin{minted}[autogobble,breaklines]{java}
+        package Bfndc;
+
+        import java.util.Scanner;
+
+        public class MainSum {
+            public static void main(String[] args) {
+                Scanner sc = new Scanner(System.in);
+                System.out.println("================================ ================================");
+                System.out.println("Program for Calculating Total Profits");
+                System.out.println("Input the Number of Months : ");
+                int totElemen = sc.nextInt();
+                Sum sm = new Sum(totElemen);
+                sm.elemen = totElemen;
+                
+                System.out.println("================================ ================================");
+                for (int i = 0; i < sm.elemen; i++) {
+                    System.out.print("Input the profit of the month to - "+(i+1)+" = ");
+                    sm.profit[i] = sc.nextDouble();
+                }
+
+                System.out.println("================================ ================================");
+                System.out.println("Algoritma Brute Force");
+                System.out.println("Total profits of the company for " + sm.elemen + " month is = " + sm.totalBF(sm.profit));
+                System.out.println("================================ ================================");
+                System.out.println("Algoritma Divide Conquer");
+                System.out.println("Total profits of the company for " + sm.elemen + " month is = " + sm.totalDC(sm.profit, 0, sm.elemen-1));
+                
+                sc.close();
+            }
+        }
+
+    \end{minted}
+\end{enumerate}
+
+\subsubsection{}
+
+\begin{minted}[autogobble,breaklines,linenos]{text}
+    PS D:\Kuliah>  d:; cd 'd:\Kuliah'; & 'C:\Program Files\Java\jdk-18.0.2.1\bin\java.exe' '-XX:+ShowCodeDetailsInExceptionMessages' '-cp' 'C:\Users\G4CE-PC\AppData\Roaming\Code\User\workspaceStorage\80d97a47d24665dc0bce7ab1e048ecbd\redhat.java\jdt_ws\Kuliah_28156aa7\bin' 'Bfndc.MainSum' 
+    ================================================================
+    Program for Calculating Total Profits
+    Input the Number of Months :
+    4
+    ================================================================
+    Input the profit of the month to - 1 = 1000
+    Input the profit of the month to - 2 = 2000
+    Input the profit of the month to - 3 = 3000
+    Input the profit of the month to - 4 = 1000
+    ================================================================
+    Algoritma Brute Force
+    Total profits of the company for 4 month is = 7000.0
+    ================================================================
+    Algoritma Divide Conquer
+    Total profits of the company for 4 month is = 7000.0
+\end{minted}
+
+\subsubsection{Questions}
+
+\begin{enumerate}
+    \item Give an illustration of the difference in profit calculation with the TotalBF() or TotalDC() method.
+    \mbox{}\\
+    \texttt{Answer:}
+    \mbox{}\\
+    The TotalBF iterate and add. Meanwhile TotalDC divide the the array by cutting the array in the middle until there is only one element in the array. After which they combine to their counter part of the split.
+    \item Why is there the following return value? Explain!
+    \begin{minted}[autogobble,breaklines]{java}
+        return lsum+rsum+arr[mid];
+    \end{minted}
+    \mbox{}\\
+    \texttt{Answer:}
+    \mbox{}\\
+    The return value is used to combine the value and return it to the function after the sub-problem function has been conquered.
+    \item Why is the mid variable required for the TotalDC() method?
+    \mbox{}\\
+    \texttt{Answer:}
+    \mbox{}\\
+    Because the mid variable are going to be the last element of the array after the problem has finish dividing.
+    \item The profit calculation program for a company is only for one company. How do you calculate several months of profit for several companies at once (each company can have a different number of months)? Prove it with the program!
+    \mbox{}\\
+    \texttt{Answer:}
+    \mbox{}\\
+\end{enumerate}
+
+\subsection{Assignments}
+
+\begin{enumerate}
+    \item Create a program based on the following class diagram!
+    \mbox{}\\
+    \begin{tikzpicture}
+        \begin{class}[text width=7cm]{ScoreAlgSdt}{0,0}
+            \attribute{nameSdt: String}
+            \attribute{scoreAssgment: int}
+            \attribute{scoreQuiz: int}
+            \attribute{scoreMid: int}
+            \attribute{scoreFinal: int}
+            \operation{CalculateTotalScore(): double}
+        \end{class}
+    \end{tikzpicture}
+    \mbox{}\\
+    Score are calculated based on total Assignment of 30\%, Quiz 20\%, Mid 20\%, Final 30\%. Adjust the method if it must have parameters.
+    \item (continued about question no. 1). Create an array of objects in the main class to find out the value of several students in one calculation at a time!
+    \item (Continued question no. 2) with the modified Brute Force algorithm program in order to know the average value of all students who have been inputted to the Algorithm and data structure course. \mbox{}\\
+    Example : \mbox{}\\
+    There are a total of the following student grades
+    \mbox{}\\
+    \begin{tabular}{|l|l|}
+        \hline
+        Name & Total Value of Algorithm Courses \\
+        \hline
+        Rani & 86,5 \\
+        \hline
+        Dani & 72,5 \\
+        \hline
+        Saraswati & 89 \\
+        \hline
+        Average & 82,67 \\
+        \hline
+    \end{tabular}
+    \mbox{}\\
+    Then the average total value of all students who have taken the algorithm course is 82.67
+    \item A university in Malang is holding a vote to elect the BEM chairman in 2020. If the number of votes collected is always even. Then by inputting the selected candidates, count the number of votes for each candidate. Make class diagrams and programs using the Divide and Conquer algorithm from the case study! (The number of array elements and the results of the vote are user input) \mbox{}\\
+    Example: Voting results are as follows (m is majority, nm is not majority)
+    \includegraphics[width=14cm]{./images/figures/fig4.png}
+    \mbox{}\\
+    Description: Blue is the divide process, yellow starts the conquer process, green starts the combining process
+    \item What if the number of votes is odd? should there be a program improvement? if yes, improve the program for case study no 4. If the number of votes collected is not always even!
+    \item Modify the program about the average value of algorithm courses using the Divide and Conquer Algorithm!
+\end{enumerate}
 
 \end{document}

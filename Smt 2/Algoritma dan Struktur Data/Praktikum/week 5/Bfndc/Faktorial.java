@@ -1,4 +1,4 @@
-package Faktorial;
+package Bfndc;
 
 public class Faktorial {
     public long num;

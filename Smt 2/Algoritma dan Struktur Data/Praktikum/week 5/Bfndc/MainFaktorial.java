@@ -1,4 +1,4 @@
-package Faktorial;
+package Bfndc;
 
 import java.util.Scanner;
 
