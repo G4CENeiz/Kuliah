@@ -1,6 +1,6 @@
-package org.example;
+package codes.ArrayOfObjects.src.main.java.org.example;
 
-import org.example.week3.Rectangle;
+import codes.ArrayOfObjects.src.main.java.org.example.week3.Rectangle;
 
 public class ArrayOfObjects {
     public static void main(String[] args) {

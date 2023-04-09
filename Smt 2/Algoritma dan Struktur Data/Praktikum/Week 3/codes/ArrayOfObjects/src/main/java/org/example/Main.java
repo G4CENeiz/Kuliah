@@ -1,4 +1,4 @@
-package org.example;
+package codes.ArrayOfObjects.src.main.java.org.example;
 
 public class Main {
     public static void main(String[] args) {

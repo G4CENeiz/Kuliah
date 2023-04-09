@@ -1,4 +1,4 @@
-package ArrayOfObjects;
+package codes.ArrayOfObjects.src.main.java.ArrayOfObjects;
 
 import java.util.Scanner;
 
@@ -24,5 +24,7 @@ public class ArrayOfObjects {
             System.out.println("Rectangle " + i);
             System.out.println("width: " + rectangleArray[0].width + ", length: " + rectangleArray[0].length);
         }
+
+        sc.close();
     }
 }

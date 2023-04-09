@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{Squared}\PYG{o}{[]}\PYG{+w}{ }\PYG{n}{png}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{new}\PYG{+w}{ }\PYG{n}{Squared}\PYG{o}{[}\PYG{n}{elemen}\PYG{o}{]}\PYG{p}{;}
+
+\PYG{k}{for}\PYG{+w}{ }\PYG{p}{(}\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{i}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{;}\PYG{+w}{ }\PYG{n}{i}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{n}{elemen}\PYG{p}{;}\PYG{+w}{ }\PYG{n}{i}\PYG{o}{++}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{png}\PYG{o}{[}\PYG{n}{i}\PYG{o}{]}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{new}\PYG{+w}{ }\PYG{n}{Squared}\PYG{p}{();}
+\PYG{+w}{    }\PYG{n}{System}\PYG{p}{.}\PYG{n+na}{out}\PYG{p}{.}\PYG{n+na}{print}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Input the value to be squared to\PYGZhy{}\PYGZdq{}}\PYG{o}{+}\PYG{p}{(}\PYG{n}{i}\PYG{o}{+}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{o}{+}\PYG{l+s}{\PYGZdq{} : \PYGZdq{}}\PYG{p}{);}
+\PYG{+w}{    }\PYG{n}{png}\PYG{o}{[}\PYG{n}{i}\PYG{o}{]}\PYG{p}{.}\PYG{n+na}{num}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{sc}\PYG{p}{.}\PYG{n+na}{nextInt}\PYG{p}{();}
+\PYG{+w}{    }\PYG{n}{System}\PYG{p}{.}\PYG{n+na}{out}\PYG{p}{.}\PYG{n+na}{print}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Input the squared value to\PYGZhy{}\PYGZdq{}}\PYG{o}{+}\PYG{p}{(}\PYG{n}{i}\PYG{o}{+}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{o}{+}\PYG{l+s}{\PYGZdq{} : \PYGZdq{}}\PYG{p}{);}
+\PYG{+w}{    }\PYG{n}{png}\PYG{o}{[}\PYG{n}{i}\PYG{o}{]}\PYG{p}{.}\PYG{n+na}{squared}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{sc}\PYG{p}{.}\PYG{n+na}{nextInt}\PYG{p}{();}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

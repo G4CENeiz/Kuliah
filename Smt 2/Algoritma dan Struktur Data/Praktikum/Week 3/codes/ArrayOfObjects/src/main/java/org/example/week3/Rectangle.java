@@ -1,4 +1,4 @@
-package org.example.week3;
+package codes.ArrayOfObjects.src.main.java.org.example.week3;
 
 public class Rectangle {
     public int length;

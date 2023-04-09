@@ -1,4 +1,4 @@
-package ArrayBlock;
+package codes.ArrayOfObjects.src.main.java.ArrayBlock;
 
 public class ArrayBlocks {
     public static void main(String[] args) {

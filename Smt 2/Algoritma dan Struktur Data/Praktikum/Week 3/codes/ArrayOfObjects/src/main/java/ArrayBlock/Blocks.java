@@ -1,4 +1,4 @@
-package ArrayBlock;
+package codes.ArrayOfObjects.src.main.java.ArrayBlock;
 
 public class Blocks {
     public int width, length, height;

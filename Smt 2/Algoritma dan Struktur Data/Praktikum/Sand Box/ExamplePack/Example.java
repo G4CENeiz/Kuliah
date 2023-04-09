@@ -1,4 +1,4 @@
-package Example;
+package ExamplePack;
 
 public class Example {
     String name;
