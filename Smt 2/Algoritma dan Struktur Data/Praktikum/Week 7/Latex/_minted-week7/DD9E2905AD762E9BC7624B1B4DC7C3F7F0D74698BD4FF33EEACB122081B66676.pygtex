@@ -1,0 +1,126 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{    }\PYG{n}{PS}\PYG{+w}{ }\PYG{n}{D}\PYG{p}{:}\PYG{err}{\PYGZbs{}}\PYG{n}{Kuliah}\PYG{o}{\PYGZgt{}}\PYG{+w}{  }\PYG{o}{\PYGZam{}}\PYG{+w}{ }\PYG{err}{\PYGZsq{}}\PYG{n}{C}\PYG{p}{:}\PYG{err}{\PYGZbs{}}\PYG{n}{Program}\PYG{+w}{ }\PYG{n}{Files}\PYG{err}{\PYGZbs{}}\PYG{n}{Java}\PYG{err}{\PYGZbs{}}\PYG{n}{jdk}\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{18.0.2.1}\PYG{err}{\PYGZbs{}}\PYG{n}{bin}\PYG{err}{\PYGZbs{}}\PYG{n}{java}\PYG{p}{.}\PYG{n+na}{exe}\PYG{l+s+sc}{\PYGZsq{} \PYGZsq{}}\PYG{o}{\PYGZhy{}}\PYG{n}{XX}\PYG{p}{:}\PYG{o}{+}\PYG{n}{ShowCodeDetailsInExceptionMessages}\PYG{l+s+sc}{\PYGZsq{} \PYGZsq{}}\PYG{o}{\PYGZhy{}}\PYG{n}{cp}\PYG{l+s+sc}{\PYGZsq{} \PYGZsq{}}\PYG{n}{C}\PYG{p}{:}\PYG{err}{\PYGZbs{}}\PYG{n}{Users}\PYG{err}{\PYGZbs{}}\PYG{n}{ASUS}\PYG{err}{\PYGZbs{}}\PYG{n}{AppData}\PYG{err}{\PYGZbs{}}\PYG{n}{Roaming}\PYG{err}{\PYGZbs{}}\PYG{n}{Code}\PYG{err}{\PYGZbs{}}\PYG{n}{User}\PYG{err}{\PYGZbs{}}\PYG{n}{workspaceStorage}\PYG{err}{\PYGZbs{}}\PYG{n}{ce3fcb236261368a6cbd019dc8ddda8b}\PYG{err}{\PYGZbs{}}\PYG{n}{redhat}\PYG{p}{.}\PYG{n+na}{java}\PYG{err}{\PYGZbs{}}\PYG{n}{jdt\PYGZus{}ws}\PYG{err}{\PYGZbs{}}\PYG{n}{Kuliah\PYGZus{}28156aa7}\PYG{err}{\PYGZbs{}}\PYG{n}{bin}\PYG{l+s+sc}{\PYGZsq{} \PYGZsq{}}\PYG{n}{week7}\PYG{p}{.}\PYG{n+na}{StudentsMain}\PYG{err}{\PYGZsq{}}
+\PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{n}{Input}\PYG{+w}{ }\PYG{n}{student}\PYG{+w}{ }\PYG{n}{data}\PYG{+w}{ }\PYG{n}{accordingly}\PYG{+w}{ }\PYG{n}{from}\PYG{+w}{ }\PYG{n}{samllest}\PYG{+w}{ }\PYG{n}{NIM}
+\PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{n}{NIM}\PYG{+w}{     }\PYG{p}{:}\PYG{+w}{ }\PYG{l+m+mi}{2017}
+\PYG{n}{Name}\PYG{+w}{    }\PYG{p}{:}\PYG{+w}{ }\PYG{n}{Dewi}\PYG{+w}{ }\PYG{n}{Lestari}
+\PYG{n}{Age}\PYG{+w}{     }\PYG{p}{:}\PYG{+w}{ }\PYG{l+m+mi}{23}
+\PYG{n}{GPA}\PYG{+w}{     }\PYG{p}{:}\PYG{+w}{ }\PYG{l+m+mf}{3.5}
+\PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{n}{NIM}\PYG{+w}{     }\PYG{p}{:}\PYG{+w}{ }\PYG{l+m+mi}{2018}
+\PYG{n}{Name}\PYG{+w}{    }\PYG{p}{:}\PYG{+w}{ }\PYG{n}{Sinta}\PYG{+w}{ }\PYG{n}{Sanjaya}
+\PYG{n}{Age}\PYG{+w}{     }\PYG{p}{:}\PYG{+w}{ }\PYG{l+m+mi}{22}
+\PYG{n}{GPA}\PYG{+w}{     }\PYG{p}{:}\PYG{+w}{ }\PYG{l+m+mi}{4}
+\PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{n}{NIM}\PYG{+w}{     }\PYG{p}{:}\PYG{+w}{ }\PYG{l+m+mi}{2019}
+\PYG{n}{Name}\PYG{+w}{    }\PYG{p}{:}\PYG{+w}{ }\PYG{n}{Danang}\PYG{+w}{ }\PYG{n}{Adi}
+\PYG{n}{Age}\PYG{+w}{     }\PYG{p}{:}\PYG{+w}{ }\PYG{l+m+mi}{22}
+\PYG{n}{GPA}\PYG{+w}{     }\PYG{p}{:}\PYG{+w}{ }\PYG{l+m+mf}{3.7}
+\PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{n}{NIM}\PYG{+w}{     }\PYG{p}{:}\PYG{+w}{ }\PYG{l+m+mi}{2020}
+\PYG{n}{Name}\PYG{+w}{    }\PYG{p}{:}\PYG{+w}{ }\PYG{n}{Budi}\PYG{+w}{ }\PYG{n}{Prakarsa}
+\PYG{n}{Age}\PYG{+w}{     }\PYG{p}{:}\PYG{+w}{ }\PYG{l+m+mi}{20}
+\PYG{n}{GPA}\PYG{+w}{     }\PYG{p}{:}\PYG{+w}{ }\PYG{l+m+mf}{2.9}
+\PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{n}{NIM}\PYG{+w}{     }\PYG{p}{:}\PYG{+w}{ }\PYG{l+m+mi}{2021}
+\PYG{n}{Name}\PYG{+w}{    }\PYG{p}{:}\PYG{+w}{ }\PYG{n}{Vania}
+\PYG{n}{Age}\PYG{+w}{     }\PYG{p}{:}\PYG{+w}{ }\PYG{l+m+mi}{20}
+\PYG{n}{GPA}\PYG{+w}{     }\PYG{p}{:}\PYG{+w}{ }\PYG{l+m+mi}{3}
+\PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{n}{Entire}\PYG{+w}{ }\PYG{n}{Student}\PYG{+w}{ }\PYG{n}{Data}
+\PYG{n}{NIM}\PYG{+w}{ }\PYG{o}{=}\PYG{l+m+mi}{2017}
+\PYG{n}{Name}\PYG{+w}{ }\PYG{o}{=}\PYG{n}{Dewi}\PYG{+w}{ }\PYG{n}{Lestari}
+\PYG{n}{Age}\PYG{+w}{ }\PYG{o}{=}\PYG{l+m+mi}{23}
+\PYG{n}{GPA}\PYG{+w}{ }\PYG{o}{=}\PYG{l+m+mf}{3.5}
+\PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{n}{NIM}\PYG{+w}{ }\PYG{o}{=}\PYG{l+m+mi}{2018}
+\PYG{n}{Name}\PYG{+w}{ }\PYG{o}{=}\PYG{n}{Sinta}\PYG{+w}{ }\PYG{n}{Sanjaya}
+\PYG{n}{Age}\PYG{+w}{ }\PYG{o}{=}\PYG{l+m+mi}{22}
+\PYG{n}{GPA}\PYG{+w}{ }\PYG{o}{=}\PYG{l+m+mf}{4.0}
+\PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{n}{NIM}\PYG{+w}{ }\PYG{o}{=}\PYG{l+m+mi}{2019}
+\PYG{n}{Name}\PYG{+w}{ }\PYG{o}{=}\PYG{n}{Danang}\PYG{+w}{ }\PYG{n}{Adi}
+\PYG{n}{Age}\PYG{+w}{ }\PYG{o}{=}\PYG{l+m+mi}{22}
+\PYG{n}{GPA}\PYG{+w}{ }\PYG{o}{=}\PYG{l+m+mf}{3.7}
+\PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{n}{NIM}\PYG{+w}{ }\PYG{o}{=}\PYG{l+m+mi}{2020}
+\PYG{n}{Name}\PYG{+w}{ }\PYG{o}{=}\PYG{n}{Budi}\PYG{+w}{ }\PYG{n}{Prakarsa}
+\PYG{n}{Age}\PYG{+w}{ }\PYG{o}{=}\PYG{l+m+mi}{20}
+\PYG{n}{GPA}\PYG{+w}{ }\PYG{o}{=}\PYG{l+m+mf}{2.9}
+\PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{n}{NIM}\PYG{+w}{ }\PYG{o}{=}\PYG{l+m+mi}{2021}
+\PYG{n}{Name}\PYG{+w}{ }\PYG{o}{=}\PYG{n}{Vania}
+\PYG{n}{Age}\PYG{+w}{ }\PYG{o}{=}\PYG{l+m+mi}{20}
+\PYG{n}{GPA}\PYG{+w}{ }\PYG{o}{=}\PYG{l+m+mf}{3.0}
+\PYG{n}{\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}}
+\PYG{n}{\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}}
+\PYG{n}{Search}\PYG{+w}{ }\PYG{n}{student}\PYG{+w}{ }\PYG{n}{by}\PYG{+w}{ }\PYG{n}{NIM}\PYG{p}{:}\PYG{+w}{ }\PYG{l+m+mi}{2018}
+\PYG{n}{Using}\PYG{+w}{ }\PYG{n}{Sequential}\PYG{+w}{ }\PYG{n}{Search}
+\PYG{n}{Data}\PYG{+w}{ }\PYG{p}{:}\PYG{+w}{ }\PYG{l+m+mi}{2018}\PYG{+w}{ }\PYG{n}{is}\PYG{+w}{ }\PYG{n}{not}\PYG{+w}{ }\PYG{n}{found}
+\PYG{n}{Data}\PYG{+w}{ }\PYG{l+m+mi}{2018}\PYG{+w}{ }\PYG{n}{is}\PYG{+w}{ }\PYG{n}{not}\PYG{+w}{ }\PYG{n}{found}
+\PYG{n}{PS}\PYG{+w}{ }\PYG{n}{D}\PYG{p}{:}\PYG{err}{\PYGZbs{}}\PYG{n}{Kuliah}\PYG{o}{\PYGZgt{}}\PYG{+w}{  }\PYG{n}{d}\PYG{p}{:;}\PYG{+w}{ }\PYG{n}{cd}\PYG{+w}{ }\PYG{err}{\PYGZsq{}}\PYG{n}{d}\PYG{p}{:}\PYG{err}{\PYGZbs{}}\PYG{n}{Kuliah}\PYG{err}{\PYGZsq{}}\PYG{p}{;}\PYG{+w}{ }\PYG{o}{\PYGZam{}}\PYG{+w}{ }\PYG{err}{\PYGZsq{}}\PYG{n}{C}\PYG{p}{:}\PYG{err}{\PYGZbs{}}\PYG{n}{Program}\PYG{+w}{ }\PYG{n}{Files}\PYG{err}{\PYGZbs{}}\PYG{n}{Java}\PYG{err}{\PYGZbs{}}\PYG{n}{jdk}\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{18.0.2.1}\PYG{err}{\PYGZbs{}}\PYG{n}{bin}\PYG{err}{\PYGZbs{}}\PYG{n}{java}\PYG{p}{.}\PYG{n+na}{exe}\PYG{l+s+sc}{\PYGZsq{} \PYGZsq{}}\PYG{o}{\PYGZhy{}}\PYG{n}{XX}\PYG{p}{:}\PYG{o}{+}\PYG{n}{ShowCodeDetailsInExceptionMessages}\PYG{l+s+sc}{\PYGZsq{} \PYGZsq{}}\PYG{o}{\PYGZhy{}}\PYG{n}{cp}\PYG{l+s+sc}{\PYGZsq{} \PYGZsq{}}\PYG{n}{C}\PYG{p}{:}\PYG{err}{\PYGZbs{}}\PYG{n}{Users}\PYG{err}{\PYGZbs{}}\PYG{n}{ASUS}\PYG{err}{\PYGZbs{}}\PYG{n}{AppData}\PYG{err}{\PYGZbs{}}\PYG{n}{Roaming}\PYG{err}{\PYGZbs{}}\PYG{n}{Code}\PYG{err}{\PYGZbs{}}\PYG{n}{User}\PYG{err}{\PYGZbs{}}\PYG{n}{workspaceStorage}\PYG{err}{\PYGZbs{}}\PYG{n}{ce3fcb236261368a6cbd019dc8ddda8b}\PYG{err}{\PYGZbs{}}\PYG{n}{redhat}\PYG{p}{.}\PYG{n+na}{java}\PYG{err}{\PYGZbs{}}\PYG{n}{jdt\PYGZus{}ws}\PYG{err}{\PYGZbs{}}\PYG{n}{Kuliah\PYGZus{}28156aa7}\PYG{err}{\PYGZbs{}}\PYG{n}{bin}\PYG{l+s+sc}{\PYGZsq{} \PYGZsq{}}\PYG{n}{week7}\PYG{p}{.}\PYG{n+na}{StudentsMain}\PYG{err}{\PYGZsq{}}
+\PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{n}{Input}\PYG{+w}{ }\PYG{n}{student}\PYG{+w}{ }\PYG{n}{data}\PYG{+w}{ }\PYG{n}{accordingly}\PYG{+w}{ }\PYG{n}{from}\PYG{+w}{ }\PYG{n}{samllest}\PYG{+w}{ }\PYG{n}{NIM}
+\PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{n}{NIM}\PYG{+w}{     }\PYG{p}{:}\PYG{+w}{ }\PYG{l+m+mi}{2017}
+\PYG{n}{Name}\PYG{+w}{    }\PYG{p}{:}\PYG{+w}{ }\PYG{n}{Dewi}\PYG{+w}{ }\PYG{n}{Lestari}
+\PYG{n}{Age}\PYG{+w}{     }\PYG{p}{:}\PYG{+w}{ }\PYG{l+m+mi}{23}
+\PYG{n}{GPA}\PYG{+w}{     }\PYG{p}{:}\PYG{+w}{ }\PYG{l+m+mf}{3.5}
+\PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{n}{NIM}\PYG{+w}{     }\PYG{p}{:}\PYG{+w}{ }\PYG{l+m+mi}{2018}
+\PYG{n}{Name}\PYG{+w}{    }\PYG{p}{:}\PYG{+w}{ }\PYG{n}{Sinta}\PYG{+w}{ }\PYG{n}{Sanjaya}
+\PYG{n}{Age}\PYG{+w}{     }\PYG{p}{:}\PYG{+w}{ }\PYG{l+m+mi}{22}
+\PYG{n}{GPA}\PYG{+w}{     }\PYG{p}{:}\PYG{+w}{ }\PYG{l+m+mi}{4}
+\PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{n}{NIM}\PYG{+w}{     }\PYG{p}{:}\PYG{+w}{ }\PYG{l+m+mi}{2019}
+\PYG{n}{Name}\PYG{+w}{    }\PYG{p}{:}\PYG{+w}{ }\PYG{n}{Danang}\PYG{+w}{ }\PYG{n}{Adi}
+\PYG{n}{Age}\PYG{+w}{     }\PYG{p}{:}\PYG{+w}{ }\PYG{l+m+mi}{22}
+\PYG{n}{GPA}\PYG{+w}{     }\PYG{p}{:}\PYG{+w}{ }\PYG{l+m+mf}{3.7}
+\PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{n}{NIM}\PYG{+w}{     }\PYG{p}{:}\PYG{+w}{ }\PYG{l+m+mi}{2020}
+\PYG{n}{Name}\PYG{+w}{    }\PYG{p}{:}\PYG{+w}{ }\PYG{n}{Budi}\PYG{+w}{ }\PYG{n}{Prakarsa}
+\PYG{n}{Age}\PYG{+w}{     }\PYG{p}{:}\PYG{+w}{ }\PYG{l+m+mi}{20}
+\PYG{n}{GPA}\PYG{+w}{     }\PYG{p}{:}\PYG{+w}{ }\PYG{l+m+mf}{2.9}
+\PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{n}{NIM}\PYG{+w}{     }\PYG{p}{:}\PYG{+w}{ }\PYG{l+m+mi}{2021}
+\PYG{n}{Name}\PYG{+w}{    }\PYG{p}{:}\PYG{+w}{ }\PYG{n}{Vania}\PYG{+w}{ }\PYG{n}{Siti}
+\PYG{n}{Age}\PYG{+w}{     }\PYG{p}{:}\PYG{+w}{ }\PYG{l+m+mi}{20}
+\PYG{n}{GPA}\PYG{+w}{     }\PYG{p}{:}\PYG{+w}{ }\PYG{l+m+mi}{3}
+\PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{n}{Entire}\PYG{+w}{ }\PYG{n}{Student}\PYG{+w}{ }\PYG{n}{Data}
+\PYG{n}{NIM}\PYG{+w}{ }\PYG{o}{=}\PYG{l+m+mi}{2017}
+\PYG{n}{Name}\PYG{+w}{ }\PYG{o}{=}\PYG{n}{Dewi}\PYG{+w}{ }\PYG{n}{Lestari}
+\PYG{n}{Age}\PYG{+w}{ }\PYG{o}{=}\PYG{l+m+mi}{23}
+\PYG{n}{GPA}\PYG{+w}{ }\PYG{o}{=}\PYG{l+m+mf}{3.5}
+\PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{n}{NIM}\PYG{+w}{ }\PYG{o}{=}\PYG{l+m+mi}{2018}
+\PYG{n}{Name}\PYG{+w}{ }\PYG{o}{=}\PYG{n}{Sinta}\PYG{+w}{ }\PYG{n}{Sanjaya}
+\PYG{n}{Age}\PYG{+w}{ }\PYG{o}{=}\PYG{l+m+mi}{22}
+\PYG{n}{GPA}\PYG{+w}{ }\PYG{o}{=}\PYG{l+m+mf}{4.0}
+\PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{n}{NIM}\PYG{+w}{ }\PYG{o}{=}\PYG{l+m+mi}{2019}
+\PYG{n}{Name}\PYG{+w}{ }\PYG{o}{=}\PYG{n}{Danang}\PYG{+w}{ }\PYG{n}{Adi}
+\PYG{n}{Age}\PYG{+w}{ }\PYG{o}{=}\PYG{l+m+mi}{22}
+\PYG{n}{GPA}\PYG{+w}{ }\PYG{o}{=}\PYG{l+m+mf}{3.7}
+\PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{n}{NIM}\PYG{+w}{ }\PYG{o}{=}\PYG{l+m+mi}{2020}
+\PYG{n}{Name}\PYG{+w}{ }\PYG{o}{=}\PYG{n}{Budi}\PYG{+w}{ }\PYG{n}{Prakarsa}
+\PYG{n}{Age}\PYG{+w}{ }\PYG{o}{=}\PYG{l+m+mi}{20}
+\PYG{n}{GPA}\PYG{+w}{ }\PYG{o}{=}\PYG{l+m+mf}{2.9}
+\PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{n}{NIM}\PYG{+w}{ }\PYG{o}{=}\PYG{l+m+mi}{2021}
+\PYG{n}{Name}\PYG{+w}{ }\PYG{o}{=}\PYG{n}{Vania}\PYG{+w}{ }\PYG{n}{Siti}
+\PYG{n}{Age}\PYG{+w}{ }\PYG{o}{=}\PYG{l+m+mi}{20}
+\PYG{n}{GPA}\PYG{+w}{ }\PYG{o}{=}\PYG{l+m+mf}{3.0}
+\PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{n}{\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}}
+\PYG{n}{\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}}
+\PYG{n}{Search}\PYG{+w}{ }\PYG{n}{student}\PYG{+w}{ }\PYG{n}{by}\PYG{+w}{ }\PYG{n}{NIM}\PYG{p}{:}\PYG{+w}{ }\PYG{l+m+mi}{2017}
+\PYG{n}{Using}\PYG{+w}{ }\PYG{n}{Sequential}\PYG{+w}{ }\PYG{n}{Search}
+\PYG{n}{Data}\PYG{+w}{ }\PYG{p}{:}\PYG{+w}{ }\PYG{l+m+mi}{2017}\PYG{+w}{ }\PYG{n}{is}\PYG{+w}{ }\PYG{n}{found}\PYG{+w}{ }\PYG{n}{in}\PYG{+w}{ }\PYG{n}{index}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{0}
+\PYG{n}{NIM}\PYG{+w}{      }\PYG{p}{:}\PYG{+w}{ }\PYG{l+m+mi}{2017}
+\PYG{n}{Name}\PYG{+w}{     }\PYG{p}{:}\PYG{+w}{ }\PYG{n}{Dewi}\PYG{+w}{ }\PYG{n}{Lestari}
+\PYG{n}{Age}\PYG{+w}{      }\PYG{p}{:}\PYG{+w}{ }\PYG{l+m+mi}{23}
+\PYG{n}{IPK}\PYG{+w}{      }\PYG{p}{:}\PYG{+w}{ }\PYG{l+m+mf}{3.5}
+\end{Verbatim}

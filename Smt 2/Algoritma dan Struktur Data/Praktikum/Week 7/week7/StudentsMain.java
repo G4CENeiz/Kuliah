@@ -41,7 +41,15 @@ public class StudentsMain {
         data.showPotition(search, potition);
 
         data.showData(search, potition);
-
+        
+        System.out.println("========================");
+        System.out.println("Using binary search");
+        int potition1 = data.findBinarySearch(search, 0, amountStudent - 1);
+        
+        data.showPotition(search, potition1);
+        
+        data.showData(search, potition1);
+        
         s.close();
         sl.close();
     }

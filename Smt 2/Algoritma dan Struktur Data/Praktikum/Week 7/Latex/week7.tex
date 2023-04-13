@@ -378,4 +378,144 @@
 
 \subsubsection{Result}
 
+\begin{minted}[autogobble,breaklines,linenos]{text}
+    PS D:\Kuliah>  d:; cd 'd:\Kuliah'; & 'C:\Program Files\Java\jdk-18.0.2.1\bin\java.exe' '-XX:+ShowCodeDetailsInExceptionMessages' '-cp' 'C:\Users\ASUS\AppData\Roaming\Code\User\workspaceStorage\ce3fcb236261368a6cbd019dc8ddda8b\redhat.java\jdt_ws\Kuliah_28156aa7\bin' 'week7.StudentsMain' 
+    --------------------------------
+    Input student data accordingly from samllest NIM
+    ----------------
+    NIM     : 2017
+    Name    : Dewi Lestari
+    Age     : 23
+    GPA     : 3.5
+    ----------------
+    NIM     : 2018
+    Name    : Sinta Sanjaya
+    Age     : 22
+    GPA     : 4
+    ----------------
+    NIM     : 2019
+    Name    : Danang Adi
+    Age     : 22
+    GPA     : 3.7
+    ----------------
+    NIM     : 2020
+    Name    : Budi Prakarsa 
+    Age     : 20
+    GPA     : 2.9
+    ----------------
+    NIM     : 2021
+    Name    : Vania Siti
+    Age     : 20
+    GPA     : 3
+    --------------------------------
+    Entire Student Data
+    NIM =2017
+    Name =Dewi Lestari
+    Age =23
+    GPA =3.5
+    --------------------------------
+    NIM =2018
+    Name =Sinta Sanjaya
+    Age =22
+    GPA =4.0
+    --------------------------------
+    NIM =2019
+    Name =Danang Adi
+    Age =22
+    GPA =3.7
+    --------------------------------
+    NIM =2020
+    Name =Budi Prakarsa
+    Age =20
+    GPA =2.9
+    --------------------------------
+    NIM =2021
+    Name =Vania Siti
+    Age =20
+    GPA =3.0
+    --------------------------------
+    ________________________
+    ________________________
+    Search student by NIM: 2017
+    Using Sequential Search
+    Data : 2017 is found in index-0
+    NIM      : 2017
+    Name     : Dewi Lestari
+    Age      : 23
+    IPK      : 3.5
+\end{minted}
+
+\subsubsection{Question}
+
+\begin{enumerate}
+    \item What is the difference of method \textbf{displayData} and \textbf{displayPosition} in \textbf{StudentSearch} class?
+    \mbox{}\\
+    \texttt{Answer: }
+    \mbox{}\\
+    displayData shows the data being search by index in the list of students. displayPosition shows the index of the searched data in the list.
+    \item What is the function of break in this following program code?
+    \begin{minted}[autogobble,breaklines]{java}
+        if (listStd[i].nim == search) {
+                potition = i;
+                break;
+            }
+    \end{minted}
+    \mbox{}\\
+    \texttt{Answer: }
+    \mbox{}\\
+    breaking the loop once the data being search has been founded.
+    \item If inserted NIM data is not sorted from smallest to biggest value, will the program encounter an error? Is the result still correct? Why is that?
+    \mbox{}\\
+    \texttt{Answer: }
+    \mbox{}\\
+    the search algorithm will output the wrong data because the search algorithm search sequentially trough the index.
+\end{enumerate}
+
+\subsection{Binary Search Method}
+
+\subsubsection{Steps}
+
+\begin{enumerate}
+    \item in step 1.2.1 (Sequential search), create method FindBinarySearch with integer as its data type in class SearchStudent. Then declare the content of method FindBinarySearch with using binary search as its searching algorithm
+    \item Call method FindBinarySearch from SearchStudent class in StudentsMain. Then call method
+    displayPosition and displayData
+    \item Run and see the result
+\end{enumerate}
+
+\subsubsection{Question}
+
+\begin{enumerate}
+    \item Show the program code in which runs the divide process
+    \mbox{}\\
+    \texttt{Answer: }
+    \begin{minted}[autogobble,breaklines]{java}
+        if (find == listStd[mid].nim) {
+                return mid;
+            } else if (listStd[mid].nim > find) {
+                return findBinarySearch(find, left, mid - 1);
+            } else {
+                return findBinarySearch(find, mid + 1, right);
+            }
+    \end{minted}
+    \item Show the program code in which runs the conquer process
+    \mbox{}\\
+    \texttt{Answer: }
+    \begin{minted}[autogobble,breaklines]{java}
+                return mid;
+
+                return findBinarySearch(find, left, mid - 1);
+
+                return findBinarySearch(find, mid + 1, right);
+    \end{minted}
+    \item If inserted NIM data is not sorted, will the program crash? Why? If inserted NIM data is sorted from largest to smallest value (e.g 20215, 20214 20212, 20211,20210) and element being searched is 20210. How is the result of binary search? does it return the correct one? if not, then change the code so that the binary search executed properly
+    \mbox{}\\
+    \texttt{Answer: }
+    \mbox{}\\
+    the program will output an error if the data is not sorted. because the program works by comparing the value of the search item with the division of the divide conquer index.
+    \item Modify program above so that the students amount inserted is matched with user input
+    \mbox{}\\
+    \texttt{Answer: }
+    \mbox{}\\
+\end{enumerate}
+
 \end{document}

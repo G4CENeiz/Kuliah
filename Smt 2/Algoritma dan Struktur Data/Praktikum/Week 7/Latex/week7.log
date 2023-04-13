@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.2.23)  30 MAR 2023 12:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.2.23)  13 APR 2023 11:59
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -749,23 +749,49 @@ Overfull \hbox (34.1799pt too wide) in paragraph at lines 19--19
 [5])
 \openout3 = `week7.pyg'.
 
- (./_minted-week7/7CA86D29998E0A0304F8AF249B03FD63F0D74698BD4FF33EEACB122081B66676.pygtex [6]) [7] (./week7.aux)
+ (./_minted-week7/7CA86D29998E0A0304F8AF249B03FD63F0D74698BD4FF33EEACB122081B66676.pygtex [6])
+\openout3 = `week7.pyg'.
+
+ (./_minted-week7/308AC1E3505F27CF88CBD320ABB4DEFD0BA4A3096758C877C42A7D9D39F27DF0.pygtex
+Overfull \hbox (393.8304pt too wide) in paragraph at lines 2--2
+\OT1/cmtt/m/n/12 ^^MC:\Users\ASUS\AppData\Roaming\Code\User\workspaceStorage\ce3fcb236261368a6cbd019dc8ddda8b\redhat.java\jdt_ws\Kuliah_28156aa7\bin^^M 
+ []
+
+[7] [8])
+\openout3 = `week7.pyg'.
+
+ (./_minted-week7/BF97574355C00A3A664C06F9207BA750F0D74698BD4FF33EEACB122081B66676.pygtex) [9]
+Overfull \hbox (3.1625pt too wide) in paragraph at lines 480--482
+[]\OT1/cmr/m/n/12 Call method Find-Bi-na-ry-Search from Search-Stu-dent class in Stu-dents-Main. Then
+ []
+
+\openout3 = `week7.pyg'.
+
+(./_minted-week7/F9C476D6EDD5AD34AC3118487C7B0C18F0D74698BD4FF33EEACB122081B66676.pygtex)
+\openout3 = `week7.pyg'.
+
+ (./_minted-week7/ABDAA6EE6E7828F858FFBC703E807FCCF0D74698BD4FF33EEACB122081B66676.pygtex)
+Underfull \hbox (badness 10000) in paragraph at lines 515--519
+
+ []
+
+[10] [11] (./week7.aux)
 runsystem(del week7.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 20627 strings out of 476029
- 445013 string characters out of 5794164
+ 20656 strings out of 476029
+ 447151 string characters out of 5794164
  1866340 words of memory out of 5000000
- 40633 multiletter control sequences out of 15000+600000
+ 40650 multiletter control sequences out of 15000+600000
  515853 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,11n,89p,574b,744s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on week7.pdf (8 pages, 236438 bytes).
+ 84i,11n,89p,731b,744s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on week7.pdf (12 pages, 255085 bytes).
 PDF statistics:
- 67 PDF objects out of 1000 (max. 8388607)
- 42 compressed objects within 1 object stream
+ 84 PDF objects out of 1000 (max. 8388607)
+ 53 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 

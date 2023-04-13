@@ -909,7 +909,61 @@ In this practicum, we will practice how the divide, conquer, and combine process
     \end{tikzpicture}
     \mbox{}\\
     Score are calculated based on total Assignment of 30\%, Quiz 20\%, Mid 20\%, Final 30\%. Adjust the method if it must have parameters.
+    \begin{minted}[autogobble,breaklines]{java}
+        package Assignment;
+
+        public class ScoreAlgSdt {
+            String nameSdt;
+            int scoreAssgnment;
+            int scoreQuiz;
+            int scoreMid;
+            int scoreFinal;
+
+            public ScoreAlgSdt(String nameSdt, int scoreAssgnment, int scoreQuiz, int scoreMid, int scoreFinal) {
+                this.nameSdt = nameSdt;
+                this.scoreAssgnment = scoreAssgnment;
+                this.scoreQuiz = scoreQuiz;
+                this.scoreMid = scoreMid;
+                this.scoreFinal = scoreFinal;
+            }
+
+            public double calculateTotalScore() {
+                return scoreAssgnment * 0.3 + scoreQuiz * 0.2 + scoreMid * 0.2 + scoreFinal * 0.3;
+            }
+        }
+    \end{minted}
     \item (continued about question no. 1). Create an array of objects in the main class to find out the value of several students in one calculation at a time!
+    \begin{minted}[autogobble,breaklines]{java}
+        package Assignment;
+
+        import java.util.Scanner;
+
+        public class ScoreAlgSdtMain {
+            public static void main(String[] args) {
+                Scanner sc = new Scanner(System.in);
+
+                System.out.print("Enter amount of student: ");
+                int amount = sc.nextInt();
+                ScoreAlgSdt[] scores = new ScoreAlgSdt[amount];
+
+                for (int i = 0; i < scores.length; i++) {
+                    System.out.print("");
+                    String name = sc.nextLine();
+                    System.out.print("");
+                    int scoreAssgnment = sc.nextInt();
+                    System.out.print("");
+                    int scoreQuiz = sc.nextInt();
+                    System.out.print("");
+                    int scoreMid = sc.nextInt();
+                    System.out.print("");
+                    int scoreFinal = sc.nextInt();
+                    scores[i] = new ScoreAlgSdt(name, scoreAssgnment, scoreQuiz, scoreMid, scoreFinal);
+                }
+
+                sc.close();
+            }
+        }
+    \end{minted}
     \item (Continued question no. 2) with the modified Brute Force algorithm program in order to know the average value of all students who have been inputted to the Algorithm and data structure course. \mbox{}\\
     Example : \mbox{}\\
     There are a total of the following student grades
@@ -929,6 +983,66 @@ In this practicum, we will practice how the divide, conquer, and combine process
     \end{tabular}
     \mbox{}\\
     Then the average total value of all students who have taken the algorithm course is 82.67
+    \begin{minted}[autogobble,breaklines]{java}
+        package Assignment;
+
+        import java.util.Scanner;
+
+        public class ScoreAlgSdtMain {
+            public static void main(String[] args) {
+                Scanner sc = new Scanner(System.in);
+
+                System.out.print("Enter amount of student: ");
+                int amount = sc.nextInt();
+                ScoreAlgSdt[] scores = new ScoreAlgSdt[amount];
+
+                for (int i = 0; i < scores.length; i++) {
+                    System.out.print("");
+                    String name = sc.nextLine();
+                    System.out.print("");
+                    int scoreAssgnment = sc.nextInt();
+                    System.out.print("");
+                    int scoreQuiz = sc.nextInt();
+                    System.out.print("");
+                    int scoreMid = sc.nextInt();
+                    System.out.print("");
+                    int scoreFinal = sc.nextInt();
+                    scores[i] = new ScoreAlgSdt(name, scoreAssgnment, scoreQuiz, scoreMid, scoreFinal);
+                }
+                
+                double totalScore = 0; 
+                for (int i = 0; i < scores.length; i++) {
+                    totalScore += scores[i].calculateTotalScore();
+                }
+                double avgScore = totalScore/amount;
+
+                int row =  amount + 2;
+                String[] nameColumn = new String[row];
+                String[] valueColumn = new String[row];
+
+                nameColumn[0] = "Name";
+                nameColumn[row-1] = "Average";
+                valueColumn[0] = "Total Value of Algorithm Courses";
+                valueColumn[row-1] = String.format("%,.2f", avgScore);
+
+                for (int i = 1; i < row-1; i++) {
+                    nameColumn[i] = scores[i-1].nameSdt;
+                    valueColumn[i] = String.format("%,.2f", scores[i-1].calculateTotalScore());
+                }
+
+                System.out.println("There are a total of the following student grades");
+                System.out.println("================================ ================================");
+                for (int i = 0; i < row; i++) {
+                    System.out.printf("|%s|", nameColumn[i]);
+                    System.out.printf("|%s|", valueColumn[i]);
+                }
+                System.out.println("================================ ================================");
+                System.out.printf("Then the average total value of all students who have taken the algorithm course is %,.2f", avgScore);
+
+                sc.close();
+            }
+        }
+    \end{minted}
     \item A university in Malang is holding a vote to elect the BEM chairman in 2020. If the number of votes collected is always even. Then by inputting the selected candidates, count the number of votes for each candidate. Make class diagrams and programs using the Divide and Conquer algorithm from the case study! (The number of array elements and the results of the vote are user input) \mbox{}\\
     Example: Voting results are as follows (m is majority, nm is not majority)
     \includegraphics[width=14cm]{./images/figures/fig4.png}
