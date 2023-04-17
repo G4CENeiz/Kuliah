@@ -501,11 +501,18 @@
     \mbox{}\\
     \texttt{Answer: }
     \begin{minted}[autogobble,breaklines]{java}
+        int mid;
+        if (right >= left) {
+            mid = (left + right) / 2;
+            if (find == listStd[mid].nim) {
                 return mid;
-
+            } else if (listStd[mid].nim > find) {
                 return findBinarySearch(find, left, mid - 1);
-
+            } else {
                 return findBinarySearch(find, mid + 1, right);
+            }
+        }
+        return -1;
     \end{minted}
     \item If inserted NIM data is not sorted, will the program crash? Why? If inserted NIM data is sorted from largest to smallest value (e.g 20215, 20214 20212, 20211,20210) and element being searched is 20210. How is the result of binary search? does it return the correct one? if not, then change the code so that the binary search executed properly
     \mbox{}\\
@@ -516,6 +523,194 @@
     \mbox{}\\
     \texttt{Answer: }
     \mbox{}\\
+    \begin{minted}[autogobble,breaklines]{java}
+        Students[] listStd;
+        int idx;
+
+        public SearchStudent(int amount) {
+            listStd = new Students[amount];
+        }
+    \end{minted}
+\end{enumerate}
+
+\subsection{Review Divide and Conquer}
+
+\subsection{Assignments}
+
+\begin{enumerate}
+    \item Modify the searching program above with these requirements:
+    \begin{enumerate}
+        \item Before we search using binary search, we have to sort the data first. You can use whichever sorting algorithm that you are comfortable with
+        \begin{minted}[autogobble,breaklines]{java}
+            public int findBinarySearch(int find, int left, int right) {
+                sort();
+                int mid;
+                if (right >= left) {
+                    mid = (left + right) / 2;
+                    if (find == listStd[mid].nim) {
+                        if (mid == listStd.length - 1 || listStd[mid + 1].nim > find) {
+                            return mid;
+                        } else {
+                            return findBinarySearch(find, mid + 1, right);
+                        }
+                    } else if (listStd[mid].nim > find) {
+                        return findBinarySearch(find, left, mid - 1);
+                    } else {
+                        return findBinarySearch(find, mid + 1, right);
+                    }
+                }
+                return -1;
+            }
+
+            private void sort() {
+                for (int i = 0; i < listStd.length - 1; i++) {
+                    for (int j = 0; j < listStd.length - i - 1; j++) {
+                        if (listStd[j].nim > listStd[j+1].nim) {
+                            Students temp = listStd[j];
+                            listStd[j] = listStd[j+1];
+                            listStd[j+1] = temp;
+                        }
+                    }
+                }
+            } 
+        \end{minted} 
+    \end{enumerate}
+    \item Modify the searching above with these requirements:
+    \begin{itemize}
+        \item Search by student’s name with Sequential Search algorithm
+        \begin{minted}[autogobble,breaklines]{java}
+            public int findSeqSearch(String search) {
+                int potition = -1;
+                for (int i = 0; i < listStd.length; i++) {
+                    if (listStd[i].name == search) {
+                        potition = i;
+                        break;
+                    }
+                }
+                return potition;
+            }
+        \end{minted}
+        \item How is the output of the program if there is any duplicate name?
+        \item There is 2d array as follows:
+        \mbox{}\\
+        \begin{tabular}{|c|c|c|c|c|c|}
+            \hline
+            index  & 0  & 1  & 2  & 3   & 4  \\
+            \hline
+            0      & 45 & 78 & 7  & 200 & 80 \\
+            \hline
+            1      & 90 & 1  & 17 & 100 & 50 \\
+            \hline
+            2      & 21 & 2  & 40 & 18  & 65 \\
+            \hline
+        \end{tabular}
+        \mbox{}\\
+        Based on data above, create a program to search data in 2d array, which the data to be searched is defined by user input (using sequential search)
+        \begin{minted}[autogobble,breaklines]{java}
+            public int[] findInArr2D(int search, int[][] arr2d) {
+                for (int i = 0; i < arr2d.length; i++) {
+                    for (int j = 0; j < arr2d[i].length; j++) {
+                        if (arr2d[i][j] == search) return new int[]{i, j};
+                    }
+                }
+                return null;
+            }
+        \end{minted}
+        \item There is a 1D array as follows:
+        \mbox{}\\
+        \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+            \hline
+            0  & 1  & 2  & 3 & 4  & 5  & 6  & 7  & 8 & 9 \\
+            \hline
+            12 & 17 & 2  & 1 & 70 & 50 & 90 & 17 & 2 & 90 \\
+            \hline
+        \end{tabular}
+        \mbox{}\\
+        Create a program to sort the array, search \& display the biggest value, and print the amount of biggest value available alongside with its position.
+        \begin{minted}[autogobble,breaklines]{java}
+            package Assignment;
+
+            public class ArraySearch {
+                private static void displayData(int[] data) {
+                    for (int i = 0; i < data.length; i++) {
+                        System.out.printf("%s ", data[i]);
+                    }
+                    System.out.println();
+                }
+
+                private static int[] sortAscending(int[] data) {
+                    for (int i = 1; i < data.length; i++) {
+                        int tmp = data[i];
+                        int j = i - 1;
+                            while (j >= 0 && data[j] > tmp) {
+                                data[j + 1] = data[j];
+                                j--;
+                            }
+                        data[j + 1] = tmp;
+                    }
+                    return data;
+                }
+
+                private static int[] sortDescending(int[] data) {
+                    for (int i = 1; i < data.length; i++) {
+                        int tmp = data[i];
+                        int j = i - 1;
+                            while (j >= 0 && data[j] < tmp) {
+                            data[j + 1] = data[j];
+                            j--;
+                            }
+                        data[j + 1] = tmp;
+                    }
+                    return data;
+                }
+
+                private static int[] findLargestValue(int[] data) {
+                    int largestPos = 0;
+                    int largest = data[largestPos];
+                    for (int i = 1; i < data.length; i++) {
+                        if (data[i] > largest) {
+                            largestPos = i;
+                            largest = data[largestPos];
+                        }
+                    }
+                    return new int[]{largestPos, largest};
+                }
+
+                private static void displayLargestValue(int[] data) {
+                    int[] sortedData = sortAscending(data);
+                    int[] largestValue = findLargestValue(sortedData);
+                    System.out.printf("Largest value position : %d\n", largestValue[0]);
+                    System.out.printf("Largest value : %d\n", largestValue[1]);
+                }
+
+                public static void main(String[] args) {
+                    int[] data = {5, 7, 4, 32, 6, 7, 89, 56, 3, 5, 7, 78, 3};
+                    System.out.println("Unsorted data: ");
+                    displayData(data);
+                    
+                    System.out.println("Sorted data (asc):");
+                    int[] sortedDataAscending = sortAscending(data);
+                    displayData(sortedDataAscending);
+
+                    System.out.println("Sorted data (desc):");
+                    int[] sortedDataDescending = sortDescending(data);
+                    displayData(sortedDataDescending);
+
+                    displayLargestValue(data);
+                }
+            }
+        \end{minted}
+        \begin{minted}[autogobble,breaklines,linenos]{text}
+            Unsorted data:
+            5 7 4 32 6 7 89 56 3 5 7 78 3
+            Sorted data (asc):
+            3 3 4 5 5 6 7 7 7 32 56 78 89
+            Sorted data (desc):
+            89 78 56 32 7 7 7 6 5 5 4 3 3
+            Largest value position : 12
+            Largest value : 89
+        \end{minted}
+    \end{itemize}
 \end{enumerate}
 
 \end{document}

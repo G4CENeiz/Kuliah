@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{System}\PYG{p}{.}\PYG{n+na}{out}\PYG{p}{.}\PYG{n+na}{println}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Ascending Sorted student list\PYGZdq{}}\PYG{p}{);}
+\PYG{n}{data}\PYG{p}{.}\PYG{n+na}{selectionSort}\PYG{p}{();}
+\PYG{n}{data}\PYG{p}{.}\PYG{n+na}{display}\PYG{p}{();}
+\end{Verbatim}

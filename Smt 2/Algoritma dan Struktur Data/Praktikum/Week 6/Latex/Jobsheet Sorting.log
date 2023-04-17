@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.4.8)  17 APR 2023 11:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.4.8)  17 APR 2023 17:57
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"d:/Kuliah/Smt 2/Algoritma dan Struktur Data/Praktikum/Week 7/Latex/week7.tex"
-(d:/Kuliah/Smt 2/Algoritma dan Struktur Data/Praktikum/Week 7/Latex/week7.tex
+**"d:/Kuliah/Smt 2/Algoritma dan Struktur Data/Praktikum/Week 6/Latex/Jobsheet Sorting.tex"
+(d:/Kuliah/Smt 2/Algoritma dan Struktur Data/Praktikum/Week 6/Latex/Jobsheet Sorting.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-03-30> (c:/texlive/2023/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
@@ -272,7 +272,7 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@every@listing=\toks26
 \c@listing=\count324
 )
-runsystem(if not exist _minted-week7 mkdir _minted-week7)...executed.
+runsystem(if not exist _minted-Jobsheet_Sorting mkdir _minted-Jobsheet_Sorting)...executed.
 
  (c:/texlive/2023/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (c:/texlive/2023/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (c:/texlive/2023/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (c:/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
 \pgfutil@everybye=\toks27
@@ -566,53 +566,42 @@ File: tikzlibraryfit.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfumlcd@ClassAbstractClassNum=\count352
 \pgfumlcd@ClassInterfaceNum=\count353
 \pgfumlcd@ClassSplitPartNum=\count354
-)) (c:/texlive/2023/texmf-dist/tex/latex/pdfpages/pdfpages.sty
-Package: pdfpages 2022/12/19 v0.5x Insert pages of external PDF documents (AM)
- (c:/texlive/2023/texmf-dist/tex/latex/eso-pic/eso-pic.sty
-Package: eso-pic 2023/03/23 v3.0b eso-pic (RN)
-\ESO@tempdima=\dimen295
-\ESO@tempdimb=\dimen296
+)) (c:/texlive/2023/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip69
+\enit@outerparindent=\dimen295
+\enit@toks=\toks41
+\enit@inbox=\box99
+\enit@count@id=\count355
+\enitdp@description=\count356
+) (c:/texlive/2023/texmf-dist/tex/latex/tools/indentfirst.sty
+Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 )
-\AM@pagewidth=\dimen297
-\AM@pageheight=\dimen298
-\AM@fboxrule=\dimen299
- (c:/texlive/2023/texmf-dist/tex/latex/pdfpages/pppdftex.def
-File: pppdftex.def 2022/12/19 v0.5x Pdfpages driver for pdfTeX (AM)
-)
-\pdfpages@includegraphics@status=\count355
-\AM@pagebox=\box99
-\AM@global@opts=\toks41
-\AM@pagecnt=\count356
-\AM@toc@title=\toks42
-\AM@lof@heading=\toks43
-\c@AM@survey=\count357
-\AM@templatesizebox=\box100
-)
-runsystem(for ^%i in (pygmentize.exe pygmentize.bat pygmentize.cmd) do set > week7.aex <nul: /p x=^%~$PATH:i>> week7.aex)...executed.
+runsystem(for ^%i in (pygmentize.exe pygmentize.bat pygmentize.cmd) do set > Jobsheet_Sorting.aex <nul: /p x=^%~$PATH:i>> Jobsheet_Sorting.aex)...executed.
 
-runsystem(del week7.aex)...executed.
+runsystem(del Jobsheet_Sorting.aex)...executed.
 
  (c:/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-03-30 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count358
-\l__pdf_internal_box=\box101
-) (./week7.aux)
-\openout1 = `week7.aux'.
+\l__color_backend_stack_int=\count357
+\l__pdf_internal_box=\box100
+) (./Jobsheet Sorting.aux)
+\openout1 = `"Jobsheet Sorting.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -650,166 +639,186 @@ LaTeX Font Info:    ... okay on input line 65.
 
 (c:/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count359
-\scratchdimen=\dimen300
-\scratchbox=\box102
-\nofMPsegments=\count360
-\nofMParguments=\count361
-\everyMPshowfont=\toks44
-\MPscratchCnt=\count362
-\MPscratchDim=\dimen301
-\MPnumerator=\count363
-\makeMPintoPDFobject=\count364
-\everyMPtoPDFconversion=\toks45
+\scratchcounter=\count358
+\scratchdimen=\dimen296
+\scratchbox=\box101
+\nofMPsegments=\count359
+\nofMParguments=\count360
+\everyMPshowfont=\toks42
+\MPscratchCnt=\count361
+\MPscratchDim=\dimen297
+\MPnumerator=\count362
+\makeMPintoPDFobject=\count363
+\everyMPtoPDFconversion=\toks43
 ) (c:/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (c:/texlive/2023/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
-)) (c:/texlive/2023/texmf-dist/tex/latex/pdflscape/pdflscape.sty
-Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
- (c:/texlive/2023/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.sty
-Package: pdflscape-nometadata 2022-10-28 v0.13 Display of landscape pages in PDF (HO)
- (c:/texlive/2023/texmf-dist/tex/latex/graphics/lscape.sty
-Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
-)
-Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
 <images/polinema-logo.png, id=4, 841.1425pt x 848.16875pt>
 File: images/polinema-logo.png Graphic file (type png)
 <use images/polinema-logo.png>
-Package pdftex.def Info: images/polinema-logo.png  used on input line 75.
+Package pdftex.def Info: images/polinema-logo.png  used on input line 82.
 (pdftex.def)             Requested size: 170.71652pt x 172.14148pt.
  [1
 
 {c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./images/polinema-logo.png>]
-\openout3 = `week7.pyg'.
+Underfull \hbox (badness 3158) in paragraph at lines 121--121
+[][]\OT1/cmr/m/n/12 name: String 
+ []
 
- (./_minted-week7/default.pygstyle) (./_minted-week7/3D9BF52BF77E49FBB9E6055E2CF9513EF0D74698BD4FF33EEACB122081B66676.pygtex
+
+Underfull \hbox (badness 2503) in paragraph at lines 121--121
+\OT1/cmr/m/n/12 entryYear: int 
+ []
+
+
+Underfull \hbox (badness 8189) in paragraph at lines 121--121
+\OT1/cmr/m/n/12 age: int 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 111--124
+
+ []
+
+\openout3 = `Jobsheet_Sorting.pyg'.
+
+(./_minted-Jobsheet_Sorting/default.pygstyle) (./_minted-Jobsheet_Sorting/69DB223D38ADC599EA482079AD6AA5AD87493DF0EAC0FD1A3F6AD529D977CC44.pygtex
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 2.
 )
-\openout3 = `week7.pyg'.
-
- (./_minted-week7/9677273DADC74DCACF14F86E7562186DF0D74698BD4FF33EEACB122081B66676.pygtex)
-\openout3 = `week7.pyg'.
-
- (./_minted-week7/89350F1CAE8B0CC87C7F4D365DCC672DF0D74698BD4FF33EEACB122081B66676.pygtex)
-\openout3 = `week7.pyg'.
-
- (./_minted-week7/BE3D1AEF3AA948D98D339CD04B6299E5F0D74698BD4FF33EEACB122081B66676.pygtex)
-\openout3 = `week7.pyg'.
-
- (./_minted-week7/9DA146A76EA7B6712CBE58ACCC2CB245F0D74698BD4FF33EEACB122081B66676.pygtex [1])
-\openout3 = `week7.pyg'.
-
- (./_minted-week7/2DF2EC7935E283806CC8E9076CA918EBF0D74698BD4FF33EEACB122081B66676.pygtex)
-\openout3 = `week7.pyg'.
-
- (./_minted-week7/1B31FCC4B6FABD37F5C235D75618312BF0D74698BD4FF33EEACB122081B66676.pygtex)
-\openout3 = `week7.pyg'.
-
- (./_minted-week7/D8E1A4E70854D5E00AA5F13E3CABBF41F0D74698BD4FF33EEACB122081B66676.pygtex)
-\openout3 = `week7.pyg'.
-
- (./_minted-week7/4315E971CA04F46E1A1BAB03EBB72EA6F0D74698BD4FF33EEACB122081B66676.pygtex [2])
-\openout3 = `week7.pyg'.
-
- (./_minted-week7/0D76B2337CC1F7CA0F3579F30400AB5BF0D74698BD4FF33EEACB122081B66676.pygtex)
-\openout3 = `week7.pyg'.
-
- (./_minted-week7/B9061C3A607A98698AD13E0DA2E14AB4F0D74698BD4FF33EEACB122081B66676.pygtex
-Overfull \hbox (36.95102pt too wide) in paragraph at lines 202--1
-\OT1/cmtt/m/n/12 Students\OT1/cmr/m/n/12 , then add all stu-dents ob-ject by call-ing \OT1/cmtt/m/n/12 add \OT1/cmr/m/n/12 func-tion in ob-ject \OT1/cmtt/m/n/12 SearchStudent 
+Underfull \hbox (badness 1675) in paragraph at lines 160--160
+[][]\OT1/cmr/m/n/12 list: Stu-dents[5] 
  []
 
-[3])
-\openout3 = `week7.pyg'.
 
- (./_minted-week7/0E3276CF3CA2B3DB653D3A7E0BDA5E97F0D74698BD4FF33EEACB122081B66676.pygtex)
-\openout3 = `week7.pyg'.
-
- (./_minted-week7/8736DA3AB5D1183EE81BE0F489EE9E1FF0D74698BD4FF33EEACB122081B66676.pygtex)
-\openout3 = `week7.pyg'.
-
- (./_minted-week7/91D8E73B354FC28CD376BFE0766B9993F0D74698BD4FF33EEACB122081B66676.pygtex)
-\openout3 = `week7.pyg'.
-
- (./_minted-week7/1EE8F043D66787A442A955695E6E0057F0D74698BD4FF33EEACB122081B66676.pygtex)
-\openout3 = `week7.pyg'.
-
- (./_minted-week7/22AED94C8BAD8333C6276A34FCEBF859F0D74698BD4FF33EEACB122081B66676.pygtex [4])
-\openout3 = `week7.pyg'.
-
- (./_minted-week7/60C18896ECD92D0E367872DB7A54ABA6F0D74698BD4FF33EEACB122081B66676.pygtex
-Overfull \hbox (34.1799pt too wide) in paragraph at lines 19--19
-[]\OT1/cmtt/m/n/12 System.[]out[].[]println[]([]"[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]"[]);|  
+Underfull \hbox (badness 2261) in paragraph at lines 160--160
+\OT1/cmr/m/n/12 display(): void 
  []
 
-[5])
-\openout3 = `week7.pyg'.
 
- (./_minted-week7/7CA86D29998E0A0304F8AF249B03FD63F0D74698BD4FF33EEACB122081B66676.pygtex [6])
-\openout3 = `week7.pyg'.
+Underfull \hbox (badness 10000) in paragraph at lines 151--163
 
- (./_minted-week7/308AC1E3505F27CF88CBD320ABB4DEFD0BA4A3096758C877C42A7D9D39F27DF0.pygtex
-Overfull \hbox (393.8304pt too wide) in paragraph at lines 2--2
-\OT1/cmtt/m/n/12 ^^MC:\Users\ASUS\AppData\Roaming\Code\User\workspaceStorage\ce3fcb236261368a6cbd019dc8ddda8b\redhat.java\jdt_ws\Kuliah_28156aa7\bin^^M 
  []
 
-[7] [8])
-\openout3 = `week7.pyg'.
+[1]
+\openout3 = `Jobsheet_Sorting.pyg'.
 
- (./_minted-week7/BF97574355C00A3A664C06F9207BA750F0D74698BD4FF33EEACB122081B66676.pygtex) [9]
-Overfull \hbox (3.1625pt too wide) in paragraph at lines 480--482
-[]\OT1/cmr/m/n/12 Call method Find-Bi-na-ry-Search from Search-Stu-dent class in Stu-dents-Main. Then
- []
+ (./_minted-Jobsheet_Sorting/46FC8EC8112679DE347A30C273092EA687493DF0EAC0FD1A3F6AD529D977CC44.pygtex)
+\openout3 = `Jobsheet_Sorting.pyg'.
 
-\openout3 = `week7.pyg'.
+ (./_minted-Jobsheet_Sorting/BA40FF3BBC558038A0549821194F6F8A87493DF0EAC0FD1A3F6AD529D977CC44.pygtex)
+\openout3 = `Jobsheet_Sorting.pyg'.
 
-(./_minted-week7/F9C476D6EDD5AD34AC3118487C7B0C18F0D74698BD4FF33EEACB122081B66676.pygtex)
-\openout3 = `week7.pyg'.
+ (./_minted-Jobsheet_Sorting/C92A5B44566568F86F21A59A0E1E7A7C87493DF0EAC0FD1A3F6AD529D977CC44.pygtex)
+\openout3 = `Jobsheet_Sorting.pyg'.
 
- (./_minted-week7/FC5A1848D09FBD6BEC3F36B997D24D2FF0D74698BD4FF33EEACB122081B66676.pygtex) [10]
-\openout3 = `week7.pyg'.
+ (./_minted-Jobsheet_Sorting/D3F6D9FCC9256D8CAAA7E617575D548487493DF0EAC0FD1A3F6AD529D977CC44.pygtex [2])
+\openout3 = `Jobsheet_Sorting.pyg'.
 
- (./_minted-week7/4CFBF5696B0D546632C1D91450D524E2F0D74698BD4FF33EEACB122081B66676.pygtex
-Underfull \hbox (badness 10000) in paragraph at lines 522--1
+ (./_minted-Jobsheet_Sorting/BDFA5995BED9D400E18BFE13D6777E7B87493DF0EAC0FD1A3F6AD529D977CC44.pygtex)
+\openout3 = `Jobsheet_Sorting.pyg'.
 
+ (./_minted-Jobsheet_Sorting/55FBBF5936AD7F9DA79D89860C516C5587493DF0EAC0FD1A3F6AD529D977CC44.pygtex)
+\openout3 = `Jobsheet_Sorting.pyg'.
+
+ (./_minted-Jobsheet_Sorting/26CA1075BCBDE1F55C504884497815FA87493DF0EAC0FD1A3F6AD529D977CC44.pygtex [3])
+\openout3 = `Jobsheet_Sorting.pyg'.
+
+ (./_minted-Jobsheet_Sorting/149AD23C97C28D19F9047FFD1E9E4DCF87493DF0EAC0FD1A3F6AD529D977CC44.pygtex)
+\openout3 = `Jobsheet_Sorting.pyg'.
+
+ (./_minted-Jobsheet_Sorting/FDCE9F594EA9D700A8E0971872AF2D0387493DF0EAC0FD1A3F6AD529D977CC44.pygtex)
+\openout3 = `Jobsheet_Sorting.pyg'.
+
+ (./_minted-Jobsheet_Sorting/E8654A547796D6C772886AE11A532AEA87493DF0EAC0FD1A3F6AD529D977CC44.pygtex
+Overfull \hbox (2.66724pt too wide) in paragraph at lines 256--1
+[]\OT1/cmr/m/n/12 Go to \OT1/cmr/bx/n/12 High-Achiev-er-Stu-dent \OT1/cmr/m/n/12 class, add method se-lec-tion-Sort() there.
  []
 
 )
-\openout3 = `week7.pyg'.
+\openout3 = `Jobsheet_Sorting.pyg'.
 
- (./_minted-week7/C8EA2E5237CC054462433F94B8754BAAF0D74698BD4FF33EEACB122081B66676.pygtex [11])
-\openout3 = `week7.pyg'.
+ (./_minted-Jobsheet_Sorting/608377CFF9E5E20E1E7820BE57C587F487493DF0EAC0FD1A3F6AD529D977CC44.pygtex)
+\openout3 = `Jobsheet_Sorting.pyg'.
 
- (./_minted-week7/3560F326CEAAB46F53C86E9C2464E7F8F0D74698BD4FF33EEACB122081B66676.pygtex)
-\openout3 = `week7.pyg'.
+ (./_minted-Jobsheet_Sorting/19CCC2F378D3B1C1ED194B29F814244A87493DF0EAC0FD1A3F6AD529D977CC44.pygtex
+Overfull \hbox (3.32pt too wide) in paragraph at lines 282--1
+[]\OT1/cmr/m/n/12 Go to \OT1/cmr/bx/n/12 High-Achiev-er-Stu-dent \OT1/cmr/m/n/12 class, add method in-ser-tion-Sort() there.
+ []
 
- (./_minted-week7/BE970F4D687A726760EACFD24F31F48FF0D74698BD4FF33EEACB122081B66676.pygtex [12{c:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}])
-\openout3 = `week7.pyg'.
+[4])
+\openout3 = `Jobsheet_Sorting.pyg'.
 
- (./_minted-week7/751276CFDBF09DF659F18C026269EBC1F0D74698BD4FF33EEACB122081B66676.pygtex [13] [14])
-\openout3 = `week7.pyg'.
+ (./_minted-Jobsheet_Sorting/310BF8E5FA40B04E0CA6F4B3FAC4B54087493DF0EAC0FD1A3F6AD529D977CC44.pygtex)
+\openout3 = `Jobsheet_Sorting.pyg'.
 
- (./_minted-week7/F6284E4DD9B6F413C101AE32E41F4FE40BA4A3096758C877C42A7D9D39F27DF0.pygtex) [15] (./week7.aux)
-runsystem(del week7.pyg)...executed.
+ (./_minted-Jobsheet_Sorting/1F2CB788112723D685EFC1A26083B58687493DF0EAC0FD1A3F6AD529D977CC44.pygtex [5])
+\openout3 = `Jobsheet_Sorting.pyg'.
+
+ (./_minted-Jobsheet_Sorting/1ED8517D70497B249A17A7483728E0B487493DF0EAC0FD1A3F6AD529D977CC44.pygtex)
+\openout3 = `Jobsheet_Sorting.pyg'.
+
+ (./_minted-Jobsheet_Sorting/5791FC88353382EAF52BD4855DDBD4B587493DF0EAC0FD1A3F6AD529D977CC44.pygtex) [6]
+\openout3 = `Jobsheet_Sorting.pyg'.
+
+ (./_minted-Jobsheet_Sorting/6305B003FF181CC7192B89343526974587493DF0EAC0FD1A3F6AD529D977CC44.pygtex)
+Underfull \hbox (badness 2197) in paragraph at lines 410--410
+\OT1/cmr/m/n/12 price: int 
+ []
+
+\openout3 = `Jobsheet_Sorting.pyg'.
+
+(./_minted-Jobsheet_Sorting/1374CEF4E3D5424AFA4C14ADA7380DB387493DF0EAC0FD1A3F6AD529D977CC44.pygtex
+Underfull \hbox (badness 10000) in paragraph at lines 401--1
+
+ []
+
+[7])
+\openout3 = `Jobsheet_Sorting.pyg'.
+
+ (./_minted-Jobsheet_Sorting/5A9D673F72725B22EBD6346253B41A6087493DF0EAC0FD1A3F6AD529D977CC44.pygtex [8] [9])
+\openout3 = `Jobsheet_Sorting.pyg'.
+
+ (./_minted-Jobsheet_Sorting/E7565F0315AB441E47C8C060177F627187493DF0EAC0FD1A3F6AD529D977CC44.pygtex)
+Underfull \hbox (badness 10000) in paragraph at lines 524--526
+
+ []
+
+<images/figures/fig1.png, id=46, 176.91093pt x 243.91125pt>
+File: images/figures/fig1.png Graphic file (type png)
+<use images/figures/fig1.png>
+Package pdftex.def Info: images/figures/fig1.png  used on input line 527.
+(pdftex.def)             Requested size: 199.16928pt x 274.60417pt.
+
+Underfull \hbox (badness 1062) in paragraph at lines 541--541
+\OT1/cmr/m/n/12 p : int 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 529--558
+
+ []
+
+[10 <./images/figures/fig1.png>] [11] (./Jobsheet Sorting.aux)
+runsystem(del Jobsheet_Sorting.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 20706 strings out of 476017
- 450298 string characters out of 5793767
- 1867660 words of memory out of 5000000
- 40691 multiletter control sequences out of 15000+600000
- 518164 words of font info for 53 fonts, out of 8000000 for 9000
+ 20404 strings out of 476017
+ 444171 string characters out of 5793767
+ 1869660 words of memory out of 5000000
+ 40429 multiletter control sequences out of 15000+600000
+ 515248 words of font info for 43 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,11n,89p,737b,787s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on week7.pdf (16 pages, 270328 bytes).
+ 84i,11n,89p,734b,1176s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on "Jobsheet Sorting.pdf" (12 pages, 305142 bytes).
 PDF statistics:
- 103 PDF objects out of 1000 (max. 8388607)
- 66 compressed objects within 1 object stream
+ 81 PDF objects out of 1000 (max. 8388607)
+ 50 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 18 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 23 words of extra memory for PDF output out of 10000 (max. 10000000)
 

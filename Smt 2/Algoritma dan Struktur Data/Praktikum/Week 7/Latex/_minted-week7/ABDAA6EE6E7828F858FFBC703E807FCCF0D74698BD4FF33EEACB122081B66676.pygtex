@@ -1,7 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{k}{return}\PYG{+w}{ }\PYG{n}{mid}\PYG{p}{;}
-
-\PYG{k}{return}\PYG{+w}{ }\PYG{n}{findBinarySearch}\PYG{p}{(}\PYG{n}{find}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{left}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mid}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{);}
-
-\PYG{k}{return}\PYG{+w}{ }\PYG{n}{findBinarySearch}\PYG{p}{(}\PYG{n}{find}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mid}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{right}\PYG{p}{);}
-\end{Verbatim}
