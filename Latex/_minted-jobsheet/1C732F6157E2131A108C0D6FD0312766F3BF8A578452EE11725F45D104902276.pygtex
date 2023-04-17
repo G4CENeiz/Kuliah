@@ -1,4 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{n}{Square}\PYG{o}{[]}\PYG{+w}{ }\PYG{n}{squareArray}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{new}\PYG{+w}{ }\PYG{n}{Square}\PYG{o}{[}\PYG{l+m+mi}{100}\PYG{o}{]}\PYG{p}{;}
-\PYG{n}{squareArray}\PYG{o}{[}\PYG{l+m+mi}{5}\PYG{o}{]}\PYG{p}{.}\PYG{n+na}{side}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{20}\PYG{p}{;}
-\end{Verbatim}

@@ -1,3 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{n}{Rectangle}\PYG{o}{[]}\PYG{+w}{ }\PYG{n}{rectangleArray}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{new}\PYG{+w}{ }\PYG{n}{Rectangle}\PYG{o}{[}\PYG{l+m+mi}{3}\PYG{o}{]}\PYG{p}{;}
-\end{Verbatim}

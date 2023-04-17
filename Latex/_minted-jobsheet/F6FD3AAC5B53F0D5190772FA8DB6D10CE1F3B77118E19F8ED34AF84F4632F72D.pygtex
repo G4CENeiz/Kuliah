@@ -1,3 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{n}{Barang}\PYG{+w}{ }\PYG{n}{b3}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{new}\PYG{+w}{ }\PYG{n}{Barang}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}KTT Kang White\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}Keyboard Switch\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{9999}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{3\PYGZus{}000}\PYG{p}{);}
-\end{Verbatim}
