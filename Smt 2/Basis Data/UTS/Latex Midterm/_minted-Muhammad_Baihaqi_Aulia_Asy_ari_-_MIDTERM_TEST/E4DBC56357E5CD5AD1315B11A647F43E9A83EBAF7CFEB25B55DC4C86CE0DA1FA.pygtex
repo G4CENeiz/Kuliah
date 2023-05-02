@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{SELECT}\PYG{+w}{ }\PYG{n}{Dependent\PYGZus{}name}\PYG{+w}{ }\PYG{k}{FROM}\PYG{+w}{ }\PYG{n}{DEPENDENT}\PYG{+w}{ }\PYG{k}{WHERE}\PYG{+w}{ }\PYG{n}{Relationship}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}Spouse\PYGZsq{}}\PYG{p}{;}
+\end{Verbatim}

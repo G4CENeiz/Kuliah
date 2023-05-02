@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{SELECT}
+\PYG{+w}{    }\PYG{n}{Dependent\PYGZus{}name}
+\PYG{k}{FROM}\PYG{+w}{ }\PYG{n}{DEPENDENT}
+\PYG{k}{JOIN}\PYG{+w}{ }\PYG{n}{EMPLOYEE}
+\PYG{k}{ON}\PYG{+w}{ }\PYG{n}{DEPENDENT}\PYG{p}{.}\PYG{n}{Essn}\PYG{o}{=}\PYG{n}{EMPLOYEE}\PYG{p}{.}\PYG{n}{Ssn}
+\PYG{k}{JOIN}\PYG{+w}{ }\PYG{n}{PROJECT}
+\PYG{k}{ON}\PYG{+w}{ }\PYG{n}{PROJECT}\PYG{p}{.}\PYG{n}{Dnum}\PYG{o}{=}\PYG{n}{EMPLOYEE}\PYG{p}{.}\PYG{n}{Dno}
+\PYG{k}{WHERE}\PYG{+w}{ }\PYG{n}{Pname}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}Computerization\PYGZsq{}}\PYG{p}{;}
+\end{Verbatim}

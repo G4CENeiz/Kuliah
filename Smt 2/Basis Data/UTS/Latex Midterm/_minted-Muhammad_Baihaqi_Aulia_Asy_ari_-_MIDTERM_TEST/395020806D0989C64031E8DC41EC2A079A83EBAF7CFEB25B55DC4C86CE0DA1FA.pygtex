@@ -1,0 +1,18 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{ALTER}\PYG{+w}{ }\PYG{k}{TABLE}\PYG{+w}{ }\PYG{n}{Bus}
+\PYG{+w}{    }\PYG{k}{ADD}\PYG{+w}{ }\PYG{k}{FOREIGN}\PYG{+w}{ }\PYG{k}{KEY}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{Id}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{REFERENCES}\PYG{+w}{ }\PYG{n}{BusType}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{Id}\PYG{p}{);}
+\PYG{k}{ALTER}\PYG{+w}{ }\PYG{k}{TABLE}\PYG{+w}{ }\PYG{n}{Bus}
+\PYG{+w}{    }\PYG{k}{ADD}\PYG{+w}{ }\PYG{k}{FOREIGN}\PYG{+w}{ }\PYG{k}{KEY}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{Id}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{REFERENCES}\PYG{+w}{ }\PYG{n}{BusRoute}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{Id}\PYG{p}{);}
+\PYG{k}{ALTER}\PYG{+w}{ }\PYG{k}{TABLE}\PYG{+w}{ }\PYG{n}{Route}
+\PYG{+w}{    }\PYG{k}{ADD}\PYG{+w}{ }\PYG{k}{FOREIGN}\PYG{+w}{ }\PYG{k}{KEY}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{RouteNumber}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{REFERENCES}\PYG{+w}{ }\PYG{n}{BusRoute}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{Id}\PYG{p}{);}
+\PYG{k}{ALTER}\PYG{+w}{ }\PYG{k}{TABLE}\PYG{+w}{ }\PYG{n}{Route}
+\PYG{+w}{    }\PYG{k}{ADD}\PYG{+w}{ }\PYG{k}{FOREIGN}\PYG{+w}{ }\PYG{k}{KEY}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{RouteNumber}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{REFERENCES}\PYG{+w}{ }\PYG{n}{RouteStage}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{Id}\PYG{p}{);}
+\PYG{k}{ALTER}\PYG{+w}{ }\PYG{k}{TABLE}\PYG{+w}{ }\PYG{n}{Stage}
+\PYG{+w}{    }\PYG{k}{ADD}\PYG{+w}{ }\PYG{k}{FOREIGN}\PYG{+w}{ }\PYG{k}{KEY}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{StageId}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{REFERENCES}\PYG{+w}{ }\PYG{n}{RouteStage}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{Id}\PYG{p}{);}
+\PYG{k}{ALTER}\PYG{+w}{ }\PYG{k}{TABLE}\PYG{+w}{ }\PYG{n}{Stage}
+\PYG{+w}{    }\PYG{k}{ADD}\PYG{+w}{ }\PYG{k}{FOREIGN}\PYG{+w}{ }\PYG{k}{KEY}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{StageId}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{REFERENCES}\PYG{+w}{ }\PYG{n}{StageTown}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{Id}\PYG{p}{);}
+\PYG{k}{ALTER}\PYG{+w}{ }\PYG{k}{TABLE}\PYG{+w}{ }\PYG{n}{Driver}
+\PYG{+w}{    }\PYG{k}{ADD}\PYG{+w}{ }\PYG{k}{FOREIGN}\PYG{+w}{ }\PYG{k}{KEY}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{Id}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{REFERENCES}\PYG{+w}{ }\PYG{n}{Stage}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{StageId}\PYG{p}{);}
+\PYG{k}{ALTER}\PYG{+w}{ }\PYG{k}{TABLE}\PYG{+w}{ }\PYG{n}{Town}
+\PYG{+w}{    }\PYG{k}{ADD}\PYG{+w}{ }\PYG{k}{FOREIGN}\PYG{+w}{ }\PYG{k}{KEY}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{Id}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{REFERENCES}\PYG{+w}{ }\PYG{n}{StageTown}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{Id}\PYG{p}{);}
+\end{Verbatim}
