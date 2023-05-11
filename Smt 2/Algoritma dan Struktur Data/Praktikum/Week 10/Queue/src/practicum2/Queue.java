@@ -1,6 +1,8 @@
+package practicum2;
+
 public class Queue {
     int max, size, front, rear;
-    int[] Q;
+    Passengers[] Q;
     
     public Queue(int n) {
         max = n;
@@ -8,7 +10,7 @@ public class Queue {
     }
 
     public void create() {
-        Q = new int[max];
+        Q = new Passengers[max];
         size = 0;
         front = rear = -1;
     }
@@ -31,22 +33,22 @@ public class Queue {
 
     public void peek() {
         if (!isEmpty()) {
-            System.out.println("The first element : " + Q[front]);
+            System.out.println("The first element : " + Q[front].name + " " + Q[front].cityOrigin + " " + Q[front].cityDestination + " " + Q[front].ticketAmount + " " + Q[front].price);
         } else {
             System.out.println("Queue is still empty");
         }
     }
 
     public void print() {
-        if (!isEmpty()) {
+        if (isEmpty()) {
             System.out.println("Queue is still empty");
         } else {
             int i = front;
             while (i != rear) {
-                System.out.println(Q[i] + " ");
+                System.out.println("The first element : " + Q[i].name + " " + Q[i].cityOrigin + " " + Q[i].cityDestination + " " + Q[i].ticketAmount + " " + Q[i].price);
                 i = (i+1) % max;
             }
-            System.out.println(Q[i] + " ");
+            System.out.println(Q[i].name + " " + Q[i].cityOrigin + " " + Q[i].cityDestination + " " + Q[i].ticketAmount + " " + Q[i].price);
             System.out.println("Element amount : " + size);
         }
     }
@@ -61,8 +63,8 @@ public class Queue {
         }
     }
 
-    public void enqueue(int data) {
-        if (!isFull()) {
+    public void enqueue(Passengers data) {
+        if (isFull()) {
             System.out.println("Queue is already full");
         } else {
             if (isEmpty()) {
@@ -79,8 +81,8 @@ public class Queue {
         }
     }
 
-    public int dequeue() {
-        int data = 0;
+    public Passengers dequeue() {
+        Passengers data = new Passengers("", "", "", 0, 0);
         if (isEmpty()) {
             System.out.println("Queue is still empty");
         } else {

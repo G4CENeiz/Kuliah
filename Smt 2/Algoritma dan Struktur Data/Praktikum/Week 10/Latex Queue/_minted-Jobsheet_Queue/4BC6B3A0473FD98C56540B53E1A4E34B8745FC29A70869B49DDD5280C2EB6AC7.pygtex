@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{rear}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{n}{max}\PYG{+w}{ }\PYG{p}{)}
+\end{Verbatim}
