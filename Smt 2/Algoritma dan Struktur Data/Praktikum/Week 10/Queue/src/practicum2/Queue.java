@@ -39,6 +39,14 @@ public class Queue {
         }
     }
 
+    public void peekRear() {
+        if (!isEmpty()) {
+            System.out.println("The last element : " + Q[rear].name + " " + Q[rear].cityOrigin + " " + Q[rear].cityDestination + " " + Q[rear].ticketAmount + " " + Q[rear].price);
+        } else {
+            System.out.println("Queue is still empty");
+        }
+    }
+
     public void print() {
         if (isEmpty()) {
             System.out.println("Queue is still empty");

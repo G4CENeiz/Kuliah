@@ -8,7 +8,8 @@ public class QueueMain {
         System.out.println("1. Queue");
         System.out.println("2. Dequeue");
         System.out.println("3. Check first queue");
-        System.out.println("4. Check all queue");
+        System.out.println("4. Check last queue");
+        System.out.println("5. Check all queue");
         System.out.println("================================");
     }
 
@@ -53,10 +54,14 @@ public class QueueMain {
                     break;
                 
                 case 4:
-                    queuePassenger.print();
+                    queuePassenger.peekRear();
                     break;
                 
                 case 5:
+                    queuePassenger.print();
+                    break;
+                
+                case 6:
                     queuePassenger.clear();
                     break;
             }

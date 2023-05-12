@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.12)  12 MAY 2023 14:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.12)  12 MAY 2023 17:11
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"d:/Kuliah/Smt 2/Algoritma dan Struktur Data/Praktikum/Week 10/Latex Queue/Jobsheet Queue.tex"
-(d:/Kuliah/Smt 2/Algoritma dan Struktur Data/Praktikum/Week 10/Latex Queue/Jobsheet Queue.tex
+**"d:/Kuliah/Smt 2/Algoritma dan Struktur Data/Praktikum/Week 11/Latex Linked List/Jobsheet Template.tex"
+(d:/Kuliah/Smt 2/Algoritma dan Struktur Data/Praktikum/Week 11/Latex Linked List/Jobsheet Template.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-05-05> (c:/texlive/2023/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
@@ -272,7 +272,7 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@every@listing=\toks26
 \c@listing=\count324
 )
-runsystem(if not exist _minted-Jobsheet_Queue mkdir _minted-Jobsheet_Queue)...executed.
+runsystem(if not exist _minted-Jobsheet_Template mkdir _minted-Jobsheet_Template)...executed.
 
  (c:/texlive/2023/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (c:/texlive/2023/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (c:/texlive/2023/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (c:/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
 \pgfutil@everybye=\toks27
@@ -577,16 +577,16 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 ) (c:/texlive/2023/texmf-dist/tex/latex/tools/indentfirst.sty
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 )
-runsystem(for ^%i in (pygmentize.exe pygmentize.bat pygmentize.cmd) do set > Jobsheet_Queue.aex <nul: /p x=^%~$PATH:i>> Jobsheet_Queue.aex)...executed.
+runsystem(for ^%i in (pygmentize.exe pygmentize.bat pygmentize.cmd) do set > Jobsheet_Template.aex <nul: /p x=^%~$PATH:i>> Jobsheet_Template.aex)...executed.
 
-runsystem(del Jobsheet_Queue.aex)...executed.
+runsystem(del Jobsheet_Template.aex)...executed.
 
  (c:/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-04-19 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count357
 \l__pdf_internal_box=\box100
-) (./Jobsheet Queue.aux)
-\openout1 = `"Jobsheet Queue.aux"'.
+) (./Jobsheet Template.aux)
+\openout1 = `"Jobsheet Template.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 69.
 LaTeX Font Info:    ... okay on input line 69.
@@ -663,301 +663,20 @@ Package pdftex.def Info: images/polinema-logo.png  used on input line 79.
 (pdftex.def)             Requested size: 170.71652pt x 172.14148pt.
  [1
 
-{c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./images/polinema-logo.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 131--131
-[][]\OT1/cmr/m/n/12 max: int 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 131--131
-\OT1/cmr/m/n/12 size: int 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 131--131
-\OT1/cmr/m/n/12 front: int 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 131--131
-\OT1/cmr/m/n/12 rear: int 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 131--131
-[][]\OT1/cmr/m/n/12 Queue(max: int) 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 131--131
-\OT1/cmr/m/n/12 create(): void 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 131--131
-\OT1/cmr/m/n/12 isFull(): boolean 
- []
-
-
-Underfull \hbox (badness 7326) in paragraph at lines 131--131
-\OT1/cmr/m/n/12 isEmpty(): boolean 
- []
-
-
-Underfull \hbox (badness 2856) in paragraph at lines 131--131
-\OT1/cmr/m/n/12 enqueue(data: int): void 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 131--131
-\OT1/cmr/m/n/12 dequeue(): int 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 131--131
-\OT1/cmr/m/n/12 peek: void 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 131--131
-\OT1/cmr/m/n/12 print(): void 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 113--134
-
- []
-
-\openout3 = `Jobsheet_Queue.pyg'.
-
-(./_minted-Jobsheet_Queue/default.pygstyle) (./_minted-Jobsheet_Queue/D42F2D9ED4B57E992EE2268032EC614E8745FC29A70869B49DDD5280C2EB6AC7.pygtex
-LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 2.
-)
-\openout3 = `Jobsheet_Queue.pyg'.
-
- (./_minted-Jobsheet_Queue/0C7D8F4CC9863AF6321818C005390A138745FC29A70869B49DDD5280C2EB6AC7.pygtex [1])
-\openout3 = `Jobsheet_Queue.pyg'.
-
- (./_minted-Jobsheet_Queue/5EB067D4E42F253820B75D715D5997D98745FC29A70869B49DDD5280C2EB6AC7.pygtex)
-\openout3 = `Jobsheet_Queue.pyg'.
-
- (./_minted-Jobsheet_Queue/A43D2A87198F8E5FFC63700A1989E2178745FC29A70869B49DDD5280C2EB6AC7.pygtex)
-\openout3 = `Jobsheet_Queue.pyg'.
-
- (./_minted-Jobsheet_Queue/4DE3C83C7EC78ADD180C4F89640D39528745FC29A70869B49DDD5280C2EB6AC7.pygtex)
-\openout3 = `Jobsheet_Queue.pyg'.
-
- (./_minted-Jobsheet_Queue/10677B579DC802F18DAD04F8F542559F8745FC29A70869B49DDD5280C2EB6AC7.pygtex [2])
-\openout3 = `Jobsheet_Queue.pyg'.
-
- (./_minted-Jobsheet_Queue/D52DCFCB8E24BECF264D3300D21997CD8745FC29A70869B49DDD5280C2EB6AC7.pygtex)
-\openout3 = `Jobsheet_Queue.pyg'.
-
- (./_minted-Jobsheet_Queue/B1BFCF6BDC172B0CFEF2137C935D19598745FC29A70869B49DDD5280C2EB6AC7.pygtex [3])
-\openout3 = `Jobsheet_Queue.pyg'.
-
- (./_minted-Jobsheet_Queue/94A850F9606F859F50B3FCC631CA23378745FC29A70869B49DDD5280C2EB6AC7.pygtex)
-\openout3 = `Jobsheet_Queue.pyg'.
-
- (./_minted-Jobsheet_Queue/A1FC435F7AE518FEF50AC93016F4BB258745FC29A70869B49DDD5280C2EB6AC7.pygtex)
-\openout3 = `Jobsheet_Queue.pyg'.
-
- (./_minted-Jobsheet_Queue/473F149E37A6CACB10F48DB73595F4BB8745FC29A70869B49DDD5280C2EB6AC7.pygtex [4])
-\openout3 = `Jobsheet_Queue.pyg'.
-
- (./_minted-Jobsheet_Queue/F74AEB6EED0B4E7F8595D10EA79911168745FC29A70869B49DDD5280C2EB6AC7.pygtex)
-\openout3 = `Jobsheet_Queue.pyg'.
-
- (./_minted-Jobsheet_Queue/63A6B8365F3F85BBF2697DE256DB42938745FC29A70869B49DDD5280C2EB6AC7.pygtex [5])
-\openout3 = `Jobsheet_Queue.pyg'.
-
- (./_minted-Jobsheet_Queue/776F8375D8A49FD43F07CD8B5EFFCDD18745FC29A70869B49DDD5280C2EB6AC7.pygtex [6] [7])
-\openout3 = `Jobsheet_Queue.pyg'.
-
- (./_minted-Jobsheet_Queue/EBA76ABD8DA755660DC2EF522A099D538745FC29A70869B49DDD5280C2EB6AC7.pygtex [8] [9])
-\openout3 = `Jobsheet_Queue.pyg'.
-
- (./_minted-Jobsheet_Queue/6AC270F0F1988D081BD5D8D77D1F8D3703452E55CAF1BC9D81CF00D2C90FE719.pygtex
-Overfull \hbox (35.68022pt too wide) in paragraph at lines 2--2
-\OT1/cmtt/m/n/12 80d97a47d24665dc0bce7ab1e048ecbd\redhat.java\jdt_ws\Kuliah_28156aa7\bin^^M 
- []
-
-[10])
-\openout3 = `Jobsheet_Queue.pyg'.
-
- (./_minted-Jobsheet_Queue/A3D2C3A082BB48B214981BC7D9D9FA8A8745FC29A70869B49DDD5280C2EB6AC7.pygtex)
-\openout3 = `Jobsheet_Queue.pyg'.
-
- (./_minted-Jobsheet_Queue/75B82D1BE4A602E11502DC4CF5FD42998745FC29A70869B49DDD5280C2EB6AC7.pygtex)
-\openout3 = `Jobsheet_Queue.pyg'.
-
- (./_minted-Jobsheet_Queue/28C2A8F54D0654C569FA1AA18D143D368745FC29A70869B49DDD5280C2EB6AC7.pygtex)
-\openout3 = `Jobsheet_Queue.pyg'.
-
- (./_minted-Jobsheet_Queue/613477899E35060E72A215E1AFD654988745FC29A70869B49DDD5280C2EB6AC7.pygtex) [11]
-\openout3 = `Jobsheet_Queue.pyg'.
-
- (./_minted-Jobsheet_Queue/CD6B90C75BF8160E25079E0985D1A3C68745FC29A70869B49DDD5280C2EB6AC7.pygtex)
-Underfull \hbox (badness 10000) in paragraph at lines 579--579
-[][]\OT1/cmr/m/n/12 name: String 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 579--579
-\OT1/cmr/m/n/12 cityOrigin: String 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 579--579
-\OT1/cmr/m/n/12 cityDestination: String 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 579--579
-\OT1/cmr/m/n/12 ticketAmount: int 
- []
-
-[12]
-\openout3 = `Jobsheet_Queue.pyg'.
-
- (./_minted-Jobsheet_Queue/9321C36D354A17AFA92DE360D73EEF4E8745FC29A70869B49DDD5280C2EB6AC7.pygtex [13])
-\openout3 = `Jobsheet_Queue.pyg'.
-
- (./_minted-Jobsheet_Queue/0A61E6281DCDC10577BD3838E9D85C378745FC29A70869B49DDD5280C2EB6AC7.pygtex [14])
-\openout3 = `Jobsheet_Queue.pyg'.
-
- (./_minted-Jobsheet_Queue/DA9078C24FED3355D20C2C839B86CF1B8745FC29A70869B49DDD5280C2EB6AC7.pygtex)
-\openout3 = `Jobsheet_Queue.pyg'.
-
- (./_minted-Jobsheet_Queue/FEA5BBFDBC44125296545D106E6628DC8745FC29A70869B49DDD5280C2EB6AC7.pygtex)
-\openout3 = `Jobsheet_Queue.pyg'.
-
- (./_minted-Jobsheet_Queue/D7F00B9FE3AF6C3D5E193B9D4E42E2218745FC29A70869B49DDD5280C2EB6AC7.pygtex [15])
-\openout3 = `Jobsheet_Queue.pyg'.
-
- (./_minted-Jobsheet_Queue/318BE418D6C6A7E79960629E3B98E2DA8745FC29A70869B49DDD5280C2EB6AC7.pygtex [16])
-\openout3 = `Jobsheet_Queue.pyg'.
-
- (./_minted-Jobsheet_Queue/88A812B843FFFFC91E2108A7BD1EF1008745FC29A70869B49DDD5280C2EB6AC7.pygtex [17] [18] [19])
-\openout3 = `Jobsheet_Queue.pyg'.
-
- (./_minted-Jobsheet_Queue/DC21D93A17FC8617F1F12664883A05CD8745FC29A70869B49DDD5280C2EB6AC7.pygtex [20])
-\openout3 = `Jobsheet_Queue.pyg'.
-
- (./_minted-Jobsheet_Queue/91D861DBE780FBD7CDB459D8D5679F9503452E55CAF1BC9D81CF00D2C90FE719.pygtex [21] [22])
-\openout3 = `Jobsheet_Queue.pyg'.
-
- (./_minted-Jobsheet_Queue/84F79266F838C9D07A13632AB46AC1B58745FC29A70869B49DDD5280C2EB6AC7.pygtex)
-\openout3 = `Jobsheet_Queue.pyg'.
-
- (./_minted-Jobsheet_Queue/AD72AB2DAD36A295C01D8361162B7DC78745FC29A70869B49DDD5280C2EB6AC7.pygtex)
-\openout3 = `Jobsheet_Queue.pyg'.
-
- (./_minted-Jobsheet_Queue/D16418DFAED70F415AF7B5C9480BBCF98745FC29A70869B49DDD5280C2EB6AC7.pygtex [23])
-\openout3 = `Jobsheet_Queue.pyg'.
-
- (./_minted-Jobsheet_Queue/82AE062585CE42F185ACEB63542219768745FC29A70869B49DDD5280C2EB6AC7.pygtex)
-\openout3 = `Jobsheet_Queue.pyg'.
-
- (./_minted-Jobsheet_Queue/90EE7DD0FA4B71CC06DBF3CD77F385EB8745FC29A70869B49DDD5280C2EB6AC7.pygtex [24])
-Underfull \hbox (badness 10000) in paragraph at lines 1083--1083
-[][]\OT1/cmr/m/n/12 nim: String 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1083--1083
-\OT1/cmr/m/n/12 name: String 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1083--1083
-\OT1/cmr/m/n/12 classNumber: int 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1106--1106
-[][]\OT1/cmr/m/n/12 max: int 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1106--1106
-\OT1/cmr/m/n/12 front: int 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1106--1106
-\OT1/cmr/m/n/12 rear: int 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1106--1106
-\OT1/cmr/m/n/12 size: int 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1106--1106
-[][]\OT1/cmr/m/n/12 Queue(max: int) 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1106--1106
-\OT1/cmr/m/n/12 create(): void 
- []
-
-
-Underfull \hbox (badness 7326) in paragraph at lines 1106--1106
-\OT1/cmr/m/n/12 isEmpty(): boolean 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1106--1106
-\OT1/cmr/m/n/12 isFull(): boolean 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1106--1106
-\OT1/cmr/m/n/12 dequeue(): int 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1106--1106
-\OT1/cmr/m/n/12 print(): void 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1106--1106
-\OT1/cmr/m/n/12 peek(): void 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1106--1106
-\OT1/cmr/m/n/12 peekRear(): void 
- []
-
-[25]
-\openout3 = `Jobsheet_Queue.pyg'.
-
- (./_minted-Jobsheet_Queue/4CACD150BAAC6F144BD30D25F2C20EC88745FC29A70869B49DDD5280C2EB6AC7.pygtex [26{c:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}])
-\openout3 = `Jobsheet_Queue.pyg'.
-
- (./_minted-Jobsheet_Queue/37073C1588364B91D653863883D00B0E8745FC29A70869B49DDD5280C2EB6AC7.pygtex [27] [28] [29]) [30] (./Jobsheet Queue.aux)
-runsystem(del Jobsheet_Queue.pyg)...executed.
-
- ) 
+{c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./images/polinema-logo.png>] [1] (./Jobsheet Template.aux) ) 
 Here is how much of TeX's memory you used:
- 20476 strings out of 476047
- 451865 string characters out of 5794245
- 1867242 words of memory out of 5000000
- 40418 multiletter control sequences out of 15000+600000
- 518164 words of font info for 53 fonts, out of 8000000 for 9000
+ 20004 strings out of 476047
+ 427790 string characters out of 5794245
+ 1860242 words of memory out of 5000000
+ 40076 multiletter control sequences out of 15000+600000
+ 514151 words of font info for 38 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,11n,89p,1106b,927s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on "Jobsheet Queue.pdf" (31 pages, 299996 bytes).
+ 84i,11n,89p,539b,267s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on "Jobsheet Template.pdf" (2 pages, 201327 bytes).
 PDF statistics:
- 157 PDF objects out of 1000 (max. 8388607)
- 102 compressed objects within 2 object streams
+ 32 PDF objects out of 1000 (max. 8388607)
+ 19 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 

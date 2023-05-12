@@ -972,18 +972,100 @@ Check if the result match with following image:
     \mbox{}\\
     \texttt{Answer: }
     \mbox{}\\
+    Java return an error for an undefined constructor.
     \item Show the program code used for displaying the data retrieved / removed from the queue!
     \mbox{}\\
     \texttt{Answer: }
-    \mbox{}\\
+    \begin{minted}[autogobble,breaklines]{java}
+        public Passengers dequeue() {
+            Passengers data = new Passengers("", "", "", 0, 0);
+            if (isEmpty()) {
+                System.out.println("Queue is still empty");
+            } else {
+                data = Q[front];
+                size--;
+                if (isEmpty()) {
+                    front = rear = -1;
+                } else {
+                    if (front == max - 1) {
+                        front = 0;
+                    } else {
+                        front++;
+                    }
+                }
+            }
+            return data;
+        }
+    \end{minted}
     \item Modify the program by adding a method named \textbf{peekRear()} in Queue class to check the last position within the queue. Add a menu for the user to perform and explore your program as well
     \mbox{}\\
     \texttt{Answer: }
-    \mbox{}\\
+    \begin{minted}[autogobble,breaklines]{java}
+        public void peekRear() {
+            if (!isEmpty()) {
+                System.out.println("The last element : " + Q[rear].name + " " + Q[rear].cityOrigin + " " + Q[rear].cityDestination + " " + Q[rear].ticketAmount + " " + Q[rear].price);
+            } else {
+                System.out.println("Queue is still empty");
+            }
+        }
+    \end{minted}
     \item Ensure that the \textbf{peekRear()} function can be executed inside the program
     \mbox{}\\
     \texttt{Answer: }
-    \mbox{}\\
+    \begin{minted}[autogobble,breaklines]{java}
+        public static void menu() {
+            System.out.println("Choose menu: ");
+            System.out.println("1. Queue");
+            System.out.println("2. Dequeue");
+            System.out.println("3. Check first queue");
+            System.out.println("4. Check last queue");
+            System.out.println("5. Check all queue");
+            System.out.println("================================");
+        }
+    \end{minted}
+    \begin{minted}[autogobble,breaklines]{java}
+        switch (choose) {
+            case 1:
+                System.out.print("Name: ");
+                sc.nextLine();
+                String name = sc.nextLine();
+                System.out.print("City origin: ");
+                String cityOrigin = sc.nextLine();
+                System.out.print("City Destination: ");
+                String cityDestination = sc.nextLine();
+                System.out.print("Ticket Amount: ");
+                int ticket = sc.nextInt();
+                System.out.print("Price: ");
+                int price = sc.nextInt();
+                Passengers p = new Passengers(name, cityOrigin, cityDestination, ticket, price);
+                sc.nextLine();
+                queuePassenger.enqueue(p);
+                break;
+        
+            case 2:
+                Passengers data = queuePassenger.dequeue();
+                if (!"".equals(data.name) && !"".equals(data.cityOrigin) && !"".equals(data.cityDestination) && !"".equals(data.ticketAmount) && !"".equals(data.price)) {
+                    System.out.println("Data removed : " + data.name + " " + data.cityOrigin + " " + data.cityDestination + " " + data.ticketAmount + " " + data.price);
+                    break;
+                }
+            
+            case 3:
+                queuePassenger.peek();
+                break;
+            
+            case 4:
+                queuePassenger.peekRear();
+                break;
+            
+            case 5:
+                queuePassenger.print();
+                break;
+            
+            case 6:
+                queuePassenger.clear();
+                break;
+        }
+    \end{minted}
 \end{enumerate}
 
 \subsection{Assignments}
@@ -1033,5 +1115,149 @@ Check if the result match with following image:
         \item printStudents() method is used for displaying a student data in specified position in a queue
     \end{itemize}
 \end{enumerate}
+
+\begin{minted}[autogobble,breaklines]{java}
+    package assignment;
+
+    public class Student {
+        String name,
+        nim;
+        int classNumber;
+        double gpa;
+
+        public Student(String name, String nim, int classNumber, double gpa) {
+            this.name = name;
+            this.nim = nim;
+            this.classNumber = classNumber;
+            this.gpa = gpa;
+        }
+    }
+\end{minted}
+
+\begin{minted}[autogobble,breaklines]{java}
+    package assignment;
+    public class Queue {
+        int max,
+        front,
+        rear,
+        size;
+        
+        Student[] stdQueue;
+        public Queue(int max) {
+            this.max = max;
+        }
+
+        public void create() {
+            stdQueue = new Student[max];
+            size = 0;
+            front = rear = -1;
+        }
+
+        public boolean isEmpty() {
+            if (size == 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        public boolean isFull() {
+            if (size == max) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        public void peek() {
+            if (!isEmpty()) {
+                System.out.println("The first element : " + stdQueue[front].name + " " + stdQueue[front].nim + " " + stdQueue[front].classNumber + " " + stdQueue[front].gpa);
+            } else {
+                System.out.println("Queue is still empty");
+            }
+        }
+
+        public void peekRear() {
+            if (!isEmpty()) {
+                System.out.println("The last element : " + stdQueue[front].name + " " + stdQueue[front].nim + " " + stdQueue[front].classNumber + " " + stdQueue[front].gpa);
+            } else {
+                System.out.println("Queue is still empty");
+            }
+        }
+
+        public void peekPosition(String nim) {
+            boolean found = false;
+            for (int i = front; i < max; i = (i + 1) % max) {
+                if (stdQueue[i].nim == nim) {
+                    System.out.printf("student %s is in postion %d\n", nim, i);
+                    found = true;
+                }
+            }
+            if (!found) {
+                System.out.println("Student not found in queue");
+            }
+        }
+
+        public void print() {
+            if (isEmpty()) {
+                System.out.println("Queue is still empty");
+            } else {
+                int i = front;
+                while (i != rear) {
+                    System.out.println("The first element : " + stdQueue[front].name + " " + stdQueue[front].nim + " " + stdQueue[front].classNumber + " " + stdQueue[front].gpa);
+                    i = (i+1) % max;
+                }
+                System.out.println(stdQueue[front].name + " " + stdQueue[front].nim + " " + stdQueue[front].classNumber + " " + stdQueue[front].gpa);
+                System.out.println("Element amount : " + size);
+            }
+        }
+
+        public void printStudents(int position) {
+            for (int i = front; i < max; i = (i + 1) % max) {
+                if (i == position) {
+                    System.out.println("student in position #" + position+ " : " + stdQueue[front].name + " " + stdQueue[front].nim + " " + stdQueue[front].classNumber + " " + stdQueue[front].gpa);
+                }
+            }
+        }
+
+        public void enqueue(Student data) {
+            if (isFull()) {
+                System.out.println("Queue is already full");
+            } else {
+                if (isEmpty()) {
+                    front = rear = 0;
+                } else {
+                    if (rear == max - 1) {
+                        rear = 0;
+                    } else {
+                        rear++;
+                    }
+                }
+                stdQueue[rear] = data;
+                size++;
+            }
+        }
+
+        public Student dequeue() {
+            Student data = new Student("", "", 0, 0);
+            if (isEmpty()) {
+                System.out.println("Queue is still empty");
+            } else {
+                data = stdQueue[front];
+                size--;
+                if (isEmpty()) {
+                    front = rear = -1;
+                } else {
+                    if (front == max - 1) {
+                        front = 0;
+                    } else {
+                        front++;
+                    }
+                }
+            }
+            return data;
+        }
+    }
+\end{minted}
 
 \end{document}
