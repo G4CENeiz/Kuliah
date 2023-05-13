@@ -1,12 +1,12 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.12)  12 MAY 2023 17:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.4.8)  12 MAY 2023 21:42
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"d:/Kuliah/Smt 2/Algoritma dan Struktur Data/Praktikum/Week 11/Latex Linked List/Jobsheet Template.tex"
-(d:/Kuliah/Smt 2/Algoritma dan Struktur Data/Praktikum/Week 11/Latex Linked List/Jobsheet Template.tex
+**"d:/Kuliah/Smt 2/Algoritma dan Struktur Data/Praktikum/Week 11/Latex Linked List/Jobsheet Linked List.tex"
+(d:/Kuliah/Smt 2/Algoritma dan Struktur Data/Praktikum/Week 11/Latex Linked List/Jobsheet Linked List.tex
 LaTeX2e <2022-11-01> patch level 1
-L3 programming layer <2023-05-05> (c:/texlive/2023/texmf-dist/tex/latex/base/article.cls
+L3 programming layer <2023-03-30> (c:/texlive/2023/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
 (c:/texlive/2023/texmf-dist/tex/latex/base/size12.clo
 File: size12.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
@@ -272,7 +272,7 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@every@listing=\toks26
 \c@listing=\count324
 )
-runsystem(if not exist _minted-Jobsheet_Template mkdir _minted-Jobsheet_Template)...executed.
+runsystem(if not exist _minted-Jobsheet_Linked_List mkdir _minted-Jobsheet_Linked_List)...executed.
 
  (c:/texlive/2023/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (c:/texlive/2023/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (c:/texlive/2023/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (c:/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
 \pgfutil@everybye=\toks27
@@ -577,16 +577,16 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 ) (c:/texlive/2023/texmf-dist/tex/latex/tools/indentfirst.sty
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 )
-runsystem(for ^%i in (pygmentize.exe pygmentize.bat pygmentize.cmd) do set > Jobsheet_Template.aex <nul: /p x=^%~$PATH:i>> Jobsheet_Template.aex)...executed.
+runsystem(for ^%i in (pygmentize.exe pygmentize.bat pygmentize.cmd) do set > Jobsheet_Linked_List.aex <nul: /p x=^%~$PATH:i>> Jobsheet_Linked_List.aex)...executed.
 
-runsystem(del Jobsheet_Template.aex)...executed.
+runsystem(del Jobsheet_Linked_List.aex)...executed.
 
  (c:/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2023-04-19 L3 backend support: PDF output (pdfTeX)
+File: l3backend-pdftex.def 2023-03-30 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count357
 \l__pdf_internal_box=\box100
-) (./Jobsheet Template.aux)
-\openout1 = `"Jobsheet Template.aux"'.
+) (./Jobsheet Linked List.aux)
+\openout1 = `"Jobsheet Linked List.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 69.
 LaTeX Font Info:    ... okay on input line 69.
@@ -663,17 +663,17 @@ Package pdftex.def Info: images/polinema-logo.png  used on input line 79.
 (pdftex.def)             Requested size: 170.71652pt x 172.14148pt.
  [1
 
-{c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./images/polinema-logo.png>] [1] (./Jobsheet Template.aux) ) 
+{c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./images/polinema-logo.png>] [1] (./Jobsheet Linked List.aux) ) 
 Here is how much of TeX's memory you used:
- 20004 strings out of 476047
- 427790 string characters out of 5794245
- 1860242 words of memory out of 5000000
- 40076 multiletter control sequences out of 15000+600000
+ 20003 strings out of 476017
+ 427846 string characters out of 5793767
+ 1859660 words of memory out of 5000000
+ 40105 multiletter control sequences out of 15000+600000
  514151 words of font info for 38 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,11n,89p,539b,267s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,11n,89p,542b,267s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on "Jobsheet Template.pdf" (2 pages, 201327 bytes).
+Output written on "Jobsheet Linked List.pdf" (2 pages, 201327 bytes).
 PDF statistics:
  32 PDF objects out of 1000 (max. 8388607)
  19 compressed objects within 1 object stream
