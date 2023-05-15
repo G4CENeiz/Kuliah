@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{ndInput}\PYG{p}{.}\PYG{n+na}{next}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{temp}\PYG{p}{.}\PYG{n+na}{next}\PYG{p}{;}
+\PYG{n}{temp}\PYG{p}{.}\PYG{n+na}{next}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{ndInput}\PYG{p}{;}
+\end{Verbatim}

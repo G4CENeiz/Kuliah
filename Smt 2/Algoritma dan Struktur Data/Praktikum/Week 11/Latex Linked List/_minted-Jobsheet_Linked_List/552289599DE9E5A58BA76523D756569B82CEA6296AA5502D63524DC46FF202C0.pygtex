@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{addFirst}\PYG{p}{(}\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{input}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{Node}\PYG{+w}{ }\PYG{n}{ndInput}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{new}\PYG{+w}{ }\PYG{n}{Node}\PYG{p}{(}\PYG{n}{input}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kc}{null}\PYG{p}{);}
+\PYG{+w}{    }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{isEmpty}\PYG{p}{())}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{head}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{ndInput}\PYG{p}{;}
+\PYG{+w}{        }\PYG{n}{tail}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{ndInput}\PYG{p}{;}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{k}{else}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{ndInput}\PYG{p}{.}\PYG{n+na}{next}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{head}\PYG{p}{;}
+\PYG{+w}{        }\PYG{n}{head}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{ndInput}\PYG{p}{;}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

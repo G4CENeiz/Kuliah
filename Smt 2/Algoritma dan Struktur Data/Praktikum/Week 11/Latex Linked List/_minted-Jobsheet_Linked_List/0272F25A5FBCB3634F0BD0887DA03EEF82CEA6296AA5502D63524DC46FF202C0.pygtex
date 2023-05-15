@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{singLL}\PYG{p}{.}\PYG{n+na}{addFirst}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}a\PYGZdq{}}\PYG{p}{);}
+\PYG{n}{singLL}\PYG{p}{.}\PYG{n+na}{addLast}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}e\PYGZdq{}}\PYG{p}{);}
+\PYG{n}{singLL}\PYG{p}{.}\PYG{n+na}{insertAt}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}b\PYGZdq{}}\PYG{p}{)}
+\PYG{n}{singLL}\PYG{p}{.}\PYG{n+na}{insertAfter}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}b\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}c\PYGZdq{}}\PYG{p}{);}
+\PYG{n}{singLL}\PYG{p}{.}\PYG{n+na}{insertAfter}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}c\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}d\PYGZdq{}}\PYG{p}{);}
+\PYG{n}{singLL}\PYG{p}{.}\PYG{n+na}{print}\PYG{p}{();}
+\end{Verbatim}

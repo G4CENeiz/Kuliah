@@ -4,7 +4,7 @@
 
 %% Variables definition
 \newcommand{\vSubject}{Data Structure and Algorithm Practicum}
-\newcommand{\vSubtitle}{Chapter}
+\newcommand{\vSubtitle}{Linked List}
 \newcommand{\vName}{Muhammad Baihaqi Aulia Asy'ari}
 \newcommand{\vNIM}{2241720145}
 \newcommand{\vClass}{1I}
@@ -113,7 +113,7 @@ In this practicum, we will implement how to create single linked list with nodes
 
 \subsubsection{Steps}
 \begin{enumerate}
-    \item Create a new package named {week11}
+    \item Create a new package named \textbf{week11}
     \item Add these following classes:
 
     \begin{enumerate}
@@ -123,16 +123,378 @@ In this practicum, we will implement how to create single linked list with nodes
     \end{enumerate}
 
     \item Create Node class
-    \item Add these following attributes in class {SingleLinkedList}
-    \item For the next step, we will implement methods that are exist in {SingleLinkedList}
+    \begin{minted}[autogobble,breaklines]{java}
+        package labActivities;
+
+        public class Node {
+            int data;
+            Node next;
+
+            public Node(int data, Node next) {
+                this.data = data;
+                this.next = next;
+            }
+        }
+    \end{minted}
+    \item Add these following attributes in class \textbf{SingleLinkedList}
+    \begin{minted}[autogobble,breaklines]{java}
+        public class SingleLinkedList {
+            Node head;
+            Node tail;
+        }
+    \end{minted}
+    \item For the next step, we will implement methods that are exist in \textbf{SingleLinkedList}
+    \begin{minted}[autogobble,breaklines]{java}
+        public class SingleLinkedList {
+            Node head;
+            Node tail;
+        }
+    \end{minted}
     \item Add method isEmpty()
+    \begin{minted}[autogobble,breaklines]{java}
+        public boolean isEmpty() {
+            return head == null;
+        }
+    \end{minted}
     \item Implement this method to display the data with traverse process
-    \item Implement method addFirst()
-    \item Implement method addLast()
-    \item Implement method insertAfter (), to insert a node that stores data that were inputted by the user after data key
+    \begin{minted}[autogobble,breaklines]{java}
+        public void print() {
+            if (!isEmpty()) {
+                Node tmp = head;
+                System.out.print("Linked list content: \t");
+                while (tmp != null) {
+                    System.out.print(tmp.data + "\t");
+                    tmp = tmp.next;
+                }
+                System.out.println("");
+            } else {
+                System.out.println("Linked list is empty");
+            }
+        }
+    \end{minted}
+    \item Implement method \textbf{addFirst()}
+    \begin{minted}[autogobble,breaklines]{java}
+        public void addFirst(int input) {
+            Node ndInput = new Node(input, null);
+            if (isEmpty()) {
+                head = ndInput;
+                tail = ndInput;
+            } else {
+                ndInput.next = head;
+                head = ndInput;
+            }
+        }
+    \end{minted}
+    \item Implement method \textbf{addLast()}
+    \begin{minted}[autogobble,breaklines]{java}
+        public void addLast(int input) {
+            Node ndInput = new Node(input, null);
+            if (isEmpty()) {
+                head = ndInput;
+                tail = ndInput;
+            } else {
+                tail.next = ndInput;
+                tail = ndInput;
+            }
+        }
+    \end{minted}
+    \item Implement method \textbf{insertAfter()}, to insert a node that stores data that were inputted by the user after data \textbf{key}
+    \begin{minted}[autogobble,breaklines]{java}
+        public void insertAfter(int key, int input) {
+            Node ndInput = new Node(input, null);
+            Node temp = head;
+            do {
+                if (temp.data == key) {
+                    ndInput.next = temp.next;
+                    temp.next = ndInput;
+                    if (ndInput.next == null) tail = ndInput;
+                    break;
+                }
+                temp = temp.next;
+            } while (temp != null);
+        }
+    \end{minted}
     \item Add these following codes to add a node based on defined index
-    \item In class SLLMain, create main function and instantiate a new object from SingleLinkedList class
+    \begin{minted}[autogobble,breaklines]{java}
+        public void insertAt(int index, int input) {
+            if (index < 0) {
+                System.out.println("Wrong index");
+            } else if (index == 0) {
+                addFirst(input);
+            } else {
+                Node temp = head;
+                for (int i = 0; i < index - 1; i++) {
+                    temp = temp.next;
+                }
+                temp.next = new Node(input, temp.next);
+                if (temp.next.next == null) tail = temp.next;
+            }
+        }
+    \end{minted}
+    \item In class \textbf{SLLMain}, create main function and instantiate a new object from \textbf{SingleLinkedList} class
+    \begin{minted}[autogobble,breaklines]{java}
+        public class SLLMain {
+            public static void main(String[] args) {
+                SingleLinkedList singLL = new SingleLinkedList();
+            }
+        }
+    \end{minted}
     \item Add methods for inserting data, as well as displaying the data for each insert process so that we can track the changes
+    \begin{minted}[autogobble,breaklines]{java}
+        singLL.print();
+        singLL.addFirst(890);
+        singLL.print();
+        singLL.addLast(760);
+        singLL.print();
+        singLL.addFirst(700);
+        singLL.print();
+        singLL.insertAfter(700, 999);
+        singLL.print();
+        singLL.insertAt(3, 833);
+        singLL.print();
+    \end{minted}
+\end{enumerate}
+
+\subsubsection{Result}
+
+\begin{minted}[autogobble,breaklines,linenos]{text}
+    PS D:\Kuliah\Smt 2\Algoritma dan Struktur Data\Praktikum\Week 11\Linked List>  & 'C:\Program Files\Java\jdk-18.0.2.1\bin\java.exe' '-XX:+ShowCodeDetailsInExceptionMessages' '-cp' 'D:\Kuliah\Smt 2\Algoritma dan Struktur Data\Praktikum\Week 11\Linked List\bin' 'labActivities.SLLMain'
+    Linked list is empty
+    Linked list content:    890
+    Linked list content:    890     760
+    Linked list content:    700     890     760
+    Linked list content:    700     999     890     760
+    Linked list content:    700     999     890     833     760
+\end{minted}
+
+\subsubsection{Question}
+
+\begin{enumerate}
+    \item Why the output of the program in first line is “Linked list is empty”?
+    \item Please explain the usage of these following codes in:
+    \begin{minted}[autogobble,breaklines]{java}
+        ndInput.next = temp.next;
+        temp.next = ndInput;
+    \end{minted}
+    \item In \textbf{SingleLinkedList}, what is the usage of this following code in \textbf{insertAt}?
+    \begin{minted}[autogobble,breaklines]{java}
+        if (temp.next.next == null) tail =  temp.next;
+    \end{minted} 
+\end{enumerate}
+
+\subsection{Lab Activities 2}
+In this practicum, we will try to learn and implement how to access node elements, get index, and node removal in a Single Linked List
+
+\subsubsection{Steps}
+\begin{enumerate}
+    \item Implement methods to access data and index in linked list
+    \item Add methods to get data based on certain index from class \textbf{SingleLinkedList}
+    \begin{minted}[autogobble,breaklines]{java}
+        public int getData(int index) {
+            Node temp = head;
+            for (int i = 0; i < index; i++) {
+                temp = temp.next;
+            }
+            return temp.data;
+        }
+    \end{minted}
+    \item Implement method \textbf{indexOf}
+    \begin{minted}[autogobble,breaklines]{java}
+        public int indexOf(int key) {
+            Node temp = head;
+            int index = 0;
+            while (temp != null && temp.data != key) {
+                temp = temp.next;
+                index++;
+            }
+
+            if (temp == null) {
+                return -1;
+            } else {
+                return index;
+            }
+        }
+    \end{minted}
+    \item Add method \textbf{removeFirst()} in class \textbf{SingleLinkedList}
+    \begin{minted}[autogobble,breaklines]{java}
+        public void removeFirst() {
+            if (isEmpty()) {
+                System.out.println("Linked list is empty. Can not remove data");
+            } else if (head == tail) {
+                head = tail = null;
+            } else {
+                head = head.next;
+            }
+        }
+    \end{minted}
+    \item Add this method to remove data that is in the last of the list from class \textbf{SingleLinkedList}
+    \begin{minted}[autogobble,breaklines]{java}
+        public void removeLast() {
+            if (isEmpty()) {
+                System.out.println("Linked list is empty. Can not remove data");
+            } else if (head == tail) {
+                head = tail = null;
+            } else {
+                Node temp = head;
+                while (temp.next != tail) {
+                    temp = temp.next;
+                }
+                temp.next = null;
+                tail = temp;
+            }
+        }
+    \end{minted}
+    \item Next, we will implement method \textbf{remove()}
+    \begin{minted}[autogobble,breaklines]{java}
+        public void remove(int key) {
+            if (isEmpty()) {
+                System.out.println("Linked list is empty. Can not remove data");
+            } else {
+                Node temp = head;
+                while (temp != null) {
+                    if (temp.data == key && temp == head) {
+                        this.removeFirst();
+                        break;
+                    } else if (temp.next.data == key) {
+                        temp.next = temp.next.next;
+                        if (temp.next == null) {
+                            tail = temp;
+                        }
+                        break;
+                    }
+                    temp = temp.next;
+                }
+            }
+        }
+    \end{minted}
+    \item Create a method to remove a node based on defined index
+    \begin{minted}[autogobble,breaklines]{java}
+        public void removeAt(int index) {
+            if (index == 0) {
+                removeFirst();
+            } else {
+                Node temp = head;
+                for (int i = 0; i < index; i++) {
+                    temp = temp.next;
+                }
+                temp.next = temp.next.next;
+                if (temp.next == null) {
+                    tail = temp;
+                }
+            }
+        }
+    \end{minted}
+    \item Next, we will try to access and remove data in main method in class \textbf{SLLMain} by adding these codes
+    \begin{minted}[autogobble,breaklines]{java}
+        System.out.println("Data in the 1st index : " + singLL.getData(1));
+        System.out.println("Data 3 is in index : " + singLL.indexOf(760));
+        singLL.remove(999);
+        singLL.print();
+        singLL.removeAt(0);
+        singLL.print();
+        singLL.removeFirst();
+        singLL.print();
+        singLL.removeLast();
+        singLL.print();
+    \end{minted}
+    \item Method \textbf{SLLMain} becomes like this:
+    \begin{minted}[autogobble,breaklines]{java}
+        public class SLLMain {
+            public static void main(String[] args) {
+                SingleLinkedList singLL = new SingleLinkedList();
+
+                singLL.print();
+                singLL.addFirst(890);
+                singLL.print();
+                singLL.addLast(760);
+                singLL.print();
+                singLL.addFirst(700);
+                singLL.print();
+                singLL.insertAfter(700, 999);
+                singLL.print();
+                singLL.insertAt(3, 833);
+                singLL.print();
+
+                System.out.println("Data in the 1st index : " + singLL.getData(1));
+                System.out.println("Data 3 is in index : " + singLL.indexOf(760));
+                singLL.remove(999);
+                singLL.print();
+                singLL.removeAt(0);
+                singLL.print();
+                singLL.removeFirst();
+                singLL.print();
+                singLL.removeLast();
+                singLL.print();
+            }
+        }
+    \end{minted}
+    \item Execute the class \textbf{SLLMain}
+\end{enumerate}
+
+\subsubsection{Result}
+\begin{minted}[autogobble,breaklines]{text}
+    PS D:\Kuliah\Smt 2\Algoritma dan Struktur Data\Praktikum\Week 11\Linked List>  d:; cd 'd:\Kuliah\Smt 2\Algoritma dan Struktur Data\Praktikum\Week 11\Linked List'; & 'C:\Program Files\Java\jdk-18.0.2.1\bin\java.exe' '-XX:+ShowCodeDetailsInExceptionMessages' '-cp' 'D:\Kuliah\Smt 2\Algoritma dan Struktur Data\Praktikum\Week 11\Linked List\bin' 'labActivities.SLLMain' 
+    Linked list is empty
+    Linked list content:    890
+    Linked list content:    890     760
+    Linked list content:    700     890     760
+    Linked list content:    700     999     890     760
+    Linked list content:    700     999     890     833     760
+    Data in the 1st index : 999
+    Data 3 is in index : 4
+    Linked list content:    700     890     833     760
+    Linked list content:    890     833     760
+    Linked list content:    833     760
+    Linked list content:    833
+\end{minted}
+
+\subsubsection{Question}
+\begin{enumerate}
+    \item Why we use \textbf{break} keyword in remove function? Please explain
+    \item Please explain why we implement these following codes in method remove
+    \begin{minted}[autogobble,breaklines]{java}
+        else if (temp.next.data == key) {
+            temp.next = temp.next.next;
+        }
+    \end{minted}
+    \item What are the outputs of method indexOf? Please explain each of the output!
+\end{enumerate}
+
+\subsection{Assignments}
+\begin{enumerate}
+    \item Create a method \textbf{insertBefore()} to add node before the desired keyword
+    \begin{minted}[autogobble,breaklines]{java}
+        public void insertBefore(int key, int input) {
+            Node ndInput = new Node(input, null);
+            Node temp = head;
+            do {
+                if (temp.next.data == key) {
+                    ndInput.next = temp.next;
+                    temp.next = ndInput;
+                    if (temp.next == null) temp = head = ndInput;
+                    break;
+                }
+                temp = temp.next;
+            } while (temp != null);
+        }
+    \end{minted}
+    \item Implement the linked list from this following image. You may use \textbf{4} method of adding data we’ve learnt
+    \hbox{}\\
+    \includegraphics[width=\textwidth]{images/figures/fig1.jpeg}
+    \begin{minted}[autogobble,breaklines]{java}
+        singLL.addFirst("a");
+        singLL.addLast("e");
+        singLL.insertAt(1, "b")
+        singLL.insertAfter("b", "c");
+        singLL.insertAfter("c", "d");
+        singLL.print();
+    \end{minted}
+    \item Create this following \textbf{Stack} implementation using Linked List implementation
+    \hbox{}\\
+    \includegraphics[width=.2\textwidth]{images/figures/fig2.jpeg}
+    \includegraphics[width=.8\textwidth]{images/figures/fig3invert.jpg}
+    \item Create a program that helps bank customer using linked list with data are as follows: Name,address, and customerAccountNumber
+    \item Implement \textbf{Queue} in previous number with \textbf{linked list} concept
 \end{enumerate}
 
 \end{document}

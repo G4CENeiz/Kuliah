@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kd}{class} \PYG{n+nc}{SingleLinkedList}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{Node}\PYG{+w}{ }\PYG{n}{head}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{Node}\PYG{+w}{ }\PYG{n}{tail}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

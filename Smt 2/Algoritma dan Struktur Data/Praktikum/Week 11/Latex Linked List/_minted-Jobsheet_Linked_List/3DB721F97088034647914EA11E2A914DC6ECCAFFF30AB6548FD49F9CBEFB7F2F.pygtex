@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+PS D:\PYGZbs{}Kuliah\PYGZbs{}Smt 2\PYGZbs{}Algoritma dan Struktur Data\PYGZbs{}Praktikum\PYGZbs{}Week 11\PYGZbs{}Linked List\PYGZgt{}  \PYGZam{} \PYGZsq{}C:\PYGZbs{}Program Files\PYGZbs{}Java\PYGZbs{}jdk\PYGZhy{}18.0.2.1\PYGZbs{}bin\PYGZbs{}java.exe\PYGZsq{} \PYGZsq{}\PYGZhy{}XX:+ShowCodeDetailsInExceptionMessages\PYGZsq{} \PYGZsq{}\PYGZhy{}cp\PYGZsq{} \PYGZsq{}D:\PYGZbs{}Kuliah\PYGZbs{}Smt 2\PYGZbs{}Algoritma dan Struktur Data\PYGZbs{}Praktikum\PYGZbs{}Week 11\PYGZbs{}Linked List\PYGZbs{}bin\PYGZsq{} \PYGZsq{}labActivities.SLLMain\PYGZsq{}
+Linked list is empty
+Linked list content:    890
+Linked list content:    890     760
+Linked list content:    700     890     760
+Linked list content:    700     999     890     760
+Linked list content:    700     999     890     833     760
+\end{Verbatim}

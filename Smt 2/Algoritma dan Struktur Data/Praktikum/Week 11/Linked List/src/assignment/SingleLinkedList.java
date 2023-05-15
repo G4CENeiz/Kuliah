@@ -1,18 +1,18 @@
-package labActivities;
+package assignment;
 
 public class SingleLinkedList {
     Node head;
     Node tail;
 
     public boolean isEmpty() {
-        return head == null;
+        return head.equals(null);
     }
 
     public void print() {
         if (!isEmpty()) {
             Node tmp = head;
             System.out.print("Linked list content: \t");
-            while (tmp != null) {
+            while (!tmp.equals(null)) {
                 System.out.print(tmp.data + "\t");
                 tmp = tmp.next;
             }
@@ -22,7 +22,7 @@ public class SingleLinkedList {
         }
     }
 
-    public void addFirst(int input) {
+    public void addFirst(String input) {
         Node ndInput = new Node(input, null);
         if (isEmpty()) {
             head = ndInput;
@@ -33,7 +33,7 @@ public class SingleLinkedList {
         }
     }
 
-    public void addLast(int input) {
+    public void addLast(String input) {
         Node ndInput = new Node(input, null);
         if (isEmpty()) {
             head = ndInput;
@@ -44,21 +44,21 @@ public class SingleLinkedList {
         }
     }
 
-    public void insertAfter(int key, int input) {
+    public void insertAfter(String key, String input) {
         Node ndInput = new Node(input, null);
         Node temp = head;
         do {
-            if (temp.data == key) {
+            if (temp.data.equals(key)) {
                 ndInput.next = temp.next;
                 temp.next = ndInput;
-                if (ndInput.next == null) tail = ndInput;
+                if (ndInput.next.equals(null)) tail = ndInput;
                 break;
             }
             temp = temp.next;
-        } while (temp != null);
+        } while (!temp.equals(null));
     }
 
-    public void insertAt(int index, int input) {
+    public void insertAt(int index, String input) {
         if (index < 0) {
             System.out.println("Wrong index");
         } else if (index == 0) {
@@ -69,11 +69,11 @@ public class SingleLinkedList {
                 temp = temp.next;
             }
             temp.next = new Node(input, temp.next);
-            if (temp.next.next == null) tail = temp.next;
+            if (temp.next.next.equals(null)) tail = temp.next;
         }
     }
 
-    public int getData(int index) {
+    public String getData(int index) {
         Node temp = head;
         for (int i = 0; i < index; i++) {
             temp = temp.next;
@@ -81,15 +81,14 @@ public class SingleLinkedList {
         return temp.data;
     }
 
-    public int indexOf(int key) {
+    public int indexOf(String key) {
         Node temp = head;
         int index = 0;
-        while (temp != null && temp.data != key) {
+        while (!temp.equals(null) && !temp.data.equals(key)) {
             temp = temp.next;
             index++;
         }
-
-        if (temp == null) {
+        if (temp.equals(null)) {
             return -1;
         } else {
             return index;
@@ -99,7 +98,7 @@ public class SingleLinkedList {
     public void removeFirst() {
         if (isEmpty()) {
             System.out.println("Linked list is empty. Can not remove data");
-        } else if (head == tail) {
+        } else if (head.equals(tail)) {
             head = tail = null;
         } else {
             head = head.next;
@@ -109,11 +108,11 @@ public class SingleLinkedList {
     public void removeLast() {
         if (isEmpty()) {
             System.out.println("Linked list is empty. Can not remove data");
-        } else if (head == tail) {
+        } else if (head.equals(tail)) {
             head = tail = null;
         } else {
             Node temp = head;
-            while (temp.next != tail) {
+            while (!temp.next.equals(tail)) {
                 temp = temp.next;
             }
             temp.next = null;
@@ -121,16 +120,16 @@ public class SingleLinkedList {
         }
     }
 
-    public void remove(int key) {
+    public void remove(String key) {
         if (isEmpty()) {
             System.out.println("Linked list is empty. Can not remove data");
         } else {
             Node temp = head;
-            while (temp != null) {
-                if (temp.data == key && temp == head) {
+            while (!temp.equals(null)) {
+                if (temp.data.equals(key) && temp.equals(head)) {
                     this.removeFirst();
                     break;
-                } else if (temp.next.data == key) {
+                } else if (temp.next.data.equals(key)) {
                     temp.next = temp.next.next;
                     if (temp.next == null) {
                         tail = temp;
@@ -151,17 +150,17 @@ public class SingleLinkedList {
                 temp = temp.next;
             }
             temp.next = temp.next.next;
-            if (temp.next == null) {
+            if (temp.next.equals(null)) {
                 tail = temp;
             }
         }
     }
 
-    public void insertBefore(int key, int input) {
+    public void insertBefore(String key, String input) {
         Node ndInput = new Node(input, null);
         Node temp = head;
         do {
-            if (temp.next.data == key) {
+            if (temp.next.data.equals(key)) {
                 ndInput.next = temp.next;
                 temp.next = ndInput;
                 if (temp.next == null) temp = head = ndInput;

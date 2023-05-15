@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{else}\PYG{+w}{ }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{temp}\PYG{p}{.}\PYG{n+na}{next}\PYG{p}{.}\PYG{n+na}{data}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{n}{key}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{temp}\PYG{p}{.}\PYG{n+na}{next}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{temp}\PYG{p}{.}\PYG{n+na}{next}\PYG{p}{.}\PYG{n+na}{next}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

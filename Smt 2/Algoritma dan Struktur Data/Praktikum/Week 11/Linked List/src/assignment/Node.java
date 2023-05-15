@@ -1,10 +1,10 @@
-package labActivities;
+package assignment;
 
 public class Node {
-    int data;
+    String data;
     Node next;
 
-    public Node(int data, Node next) {
+    public Node(String data, Node next) {
         this.data = data;
         this.next = next;
     }

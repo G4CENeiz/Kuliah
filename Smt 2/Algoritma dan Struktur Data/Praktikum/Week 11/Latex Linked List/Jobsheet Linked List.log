@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.4.8)  12 MAY 2023 21:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.12)  15 MAY 2023 14:15
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -6,7 +6,7 @@ entering extended mode
 **"d:/Kuliah/Smt 2/Algoritma dan Struktur Data/Praktikum/Week 11/Latex Linked List/Jobsheet Linked List.tex"
 (d:/Kuliah/Smt 2/Algoritma dan Struktur Data/Praktikum/Week 11/Latex Linked List/Jobsheet Linked List.tex
 LaTeX2e <2022-11-01> patch level 1
-L3 programming layer <2023-03-30> (c:/texlive/2023/texmf-dist/tex/latex/base/article.cls
+L3 programming layer <2023-05-05> (c:/texlive/2023/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
 (c:/texlive/2023/texmf-dist/tex/latex/base/size12.clo
 File: size12.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
@@ -582,7 +582,7 @@ runsystem(for ^%i in (pygmentize.exe pygmentize.bat pygmentize.cmd) do set > Job
 runsystem(del Jobsheet_Linked_List.aex)...executed.
 
  (c:/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2023-03-30 L3 backend support: PDF output (pdfTeX)
+File: l3backend-pdftex.def 2023-04-19 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count357
 \l__pdf_internal_box=\box100
 ) (./Jobsheet Linked List.aux)
@@ -663,20 +663,135 @@ Package pdftex.def Info: images/polinema-logo.png  used on input line 79.
 (pdftex.def)             Requested size: 170.71652pt x 172.14148pt.
  [1
 
-{c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./images/polinema-logo.png>] [1] (./Jobsheet Linked List.aux) ) 
+{c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./images/polinema-logo.png>]
+\openout3 = `Jobsheet_Linked_List.pyg'.
+
+ (./_minted-Jobsheet_Linked_List/default.pygstyle) (./_minted-Jobsheet_Linked_List/3DD2ABC2AA3657B6925D75A5B8F74A6482CEA6296AA5502D63524DC46FF202C0.pygtex
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 2.
+)
+\openout3 = `Jobsheet_Linked_List.pyg'.
+
+ (./_minted-Jobsheet_Linked_List/DF01D7AD595610C9DCCE3FC5E8DD924482CEA6296AA5502D63524DC46FF202C0.pygtex)
+\openout3 = `Jobsheet_Linked_List.pyg'.
+
+ (./_minted-Jobsheet_Linked_List/DF01D7AD595610C9DCCE3FC5E8DD924482CEA6296AA5502D63524DC46FF202C0.pygtex
+Overfull \hbox (5.03479pt too wide) in paragraph at lines 146--1
+[]\OT1/cmr/m/n/12 For the next step, we will im-ple-ment meth-ods that are ex-ist in \OT1/cmr/bx/n/12 Sin-gleLinkedList 
+ []
+
+[1])
+\openout3 = `Jobsheet_Linked_List.pyg'.
+
+ (./_minted-Jobsheet_Linked_List/006CF50D03D0A5F3DAA5AE03368C7D6482CEA6296AA5502D63524DC46FF202C0.pygtex)
+\openout3 = `Jobsheet_Linked_List.pyg'.
+
+ (./_minted-Jobsheet_Linked_List/53149D1D43BF1DA19A87EA5C95E0382C82CEA6296AA5502D63524DC46FF202C0.pygtex)
+\openout3 = `Jobsheet_Linked_List.pyg'.
+
+ (./_minted-Jobsheet_Linked_List/552289599DE9E5A58BA76523D756569B82CEA6296AA5502D63524DC46FF202C0.pygtex)
+\openout3 = `Jobsheet_Linked_List.pyg'.
+
+ (./_minted-Jobsheet_Linked_List/45BE524800730DD6DF4C21B7E832685C82CEA6296AA5502D63524DC46FF202C0.pygtex [2])
+\openout3 = `Jobsheet_Linked_List.pyg'.
+
+ (./_minted-Jobsheet_Linked_List/6F216D1E665807B2DD469EF396D8DA9382CEA6296AA5502D63524DC46FF202C0.pygtex)
+\openout3 = `Jobsheet_Linked_List.pyg'.
+
+ (./_minted-Jobsheet_Linked_List/99827E2EF5D95B3D34C8C357F18B09E482CEA6296AA5502D63524DC46FF202C0.pygtex)
+\openout3 = `Jobsheet_Linked_List.pyg'.
+
+ (./_minted-Jobsheet_Linked_List/EA3EEB261A4E2428508C7A614F0DA19382CEA6296AA5502D63524DC46FF202C0.pygtex [3])
+\openout3 = `Jobsheet_Linked_List.pyg'.
+
+ (./_minted-Jobsheet_Linked_List/B233540551017E01BD110C6C9302925982CEA6296AA5502D63524DC46FF202C0.pygtex)
+\openout3 = `Jobsheet_Linked_List.pyg'.
+
+ (./_minted-Jobsheet_Linked_List/3DB721F97088034647914EA11E2A914DC6ECCAFFF30AB6548FD49F9CBEFB7F2F.pygtex)
+\openout3 = `Jobsheet_Linked_List.pyg'.
+
+ (./_minted-Jobsheet_Linked_List/743279FDE5DC125A0E26604DCDD3591182CEA6296AA5502D63524DC46FF202C0.pygtex [4])
+\openout3 = `Jobsheet_Linked_List.pyg'.
+
+ (./_minted-Jobsheet_Linked_List/7EA5F97D6E3FA94DB254A3ECB9A34EAA82CEA6296AA5502D63524DC46FF202C0.pygtex)
+\openout3 = `Jobsheet_Linked_List.pyg'.
+
+ (./_minted-Jobsheet_Linked_List/69081F68381E243489F97D9665C6A72B82CEA6296AA5502D63524DC46FF202C0.pygtex)
+\openout3 = `Jobsheet_Linked_List.pyg'.
+
+ (./_minted-Jobsheet_Linked_List/EB7565E3B92DD7228C6810E2FCC01EDD82CEA6296AA5502D63524DC46FF202C0.pygtex)
+\openout3 = `Jobsheet_Linked_List.pyg'.
+
+ (./_minted-Jobsheet_Linked_List/E21E95BAA8B286B82A45CEB72818C46182CEA6296AA5502D63524DC46FF202C0.pygtex [5])
+\openout3 = `Jobsheet_Linked_List.pyg'.
+
+ (./_minted-Jobsheet_Linked_List/EEA3D3008D2CCBB8606E6ACF7209AD4982CEA6296AA5502D63524DC46FF202C0.pygtex)
+\openout3 = `Jobsheet_Linked_List.pyg'.
+
+ (./_minted-Jobsheet_Linked_List/A1BB90642B7E0FA1B37C5323EECA2D0782CEA6296AA5502D63524DC46FF202C0.pygtex [6])
+\openout3 = `Jobsheet_Linked_List.pyg'.
+
+ (./_minted-Jobsheet_Linked_List/FCABA29943D0B93F9AB66A395D27535682CEA6296AA5502D63524DC46FF202C0.pygtex)
+\openout3 = `Jobsheet_Linked_List.pyg'.
+
+ (./_minted-Jobsheet_Linked_List/8A3162B6BDFF1A7D57F6A7A6B3F8E47082CEA6296AA5502D63524DC46FF202C0.pygtex)
+\openout3 = `Jobsheet_Linked_List.pyg'.
+
+ (./_minted-Jobsheet_Linked_List/35AE9FA78AAB8E2027B835020D7BD9EE82CEA6296AA5502D63524DC46FF202C0.pygtex [7])
+\openout3 = `Jobsheet_Linked_List.pyg'.
+
+ (./_minted-Jobsheet_Linked_List/08C650F3A06EE674BE691A0649C40791C6ECCAFFF30AB6548FD49F9CBEFB7F2F.pygtex [8])
+\openout3 = `Jobsheet_Linked_List.pyg'.
+
+ (./_minted-Jobsheet_Linked_List/338165B78A1B7D175DE4DD2EE352E20B82CEA6296AA5502D63524DC46FF202C0.pygtex)
+\openout3 = `Jobsheet_Linked_List.pyg'.
+
+ (./_minted-Jobsheet_Linked_List/655154C71AE319D302FA0393C0D6A57B82CEA6296AA5502D63524DC46FF202C0.pygtex)
+<images/figures/fig1.jpeg, id=44, 821.0675pt x 166.6225pt>
+File: images/figures/fig1.jpeg Graphic file (type jpg)
+<use images/figures/fig1.jpeg>
+Package pdftex.def Info: images/figures/fig1.jpeg  used on input line 483.
+(pdftex.def)             Requested size: 433.62001pt x 87.99423pt.
+\openout3 = `Jobsheet_Linked_List.pyg'.
+
+ (./_minted-Jobsheet_Linked_List/0272F25A5FBCB3634F0BD0887DA03EEF82CEA6296AA5502D63524DC46FF202C0.pygtex
+Overfull \hbox (29.3747pt too wide) in paragraph at lines 481--1
+[] 
+ []
+
+[9])
+<images/figures/fig2.jpeg, id=48, 145.54375pt x 175.65625pt>
+File: images/figures/fig2.jpeg Graphic file (type jpg)
+<use images/figures/fig2.jpeg>
+Package pdftex.def Info: images/figures/fig2.jpeg  used on input line 494.
+(pdftex.def)             Requested size: 86.72267pt x 104.66818pt.
+<images/figures/fig3invert.jpg, id=49, 336.50719pt x 68.50594pt>
+File: images/figures/fig3invert.jpg Graphic file (type jpg)
+<use images/figures/fig3invert.jpg>
+Package pdftex.def Info: images/figures/fig3invert.jpg  used on input line 495.
+(pdftex.def)             Requested size: 346.89732pt x 70.62148pt.
+
+Overfull \hbox (31.98576pt too wide) in paragraph at lines 492--496
+[] [] 
+ []
+
+[10 <./images/figures/fig1.jpeg> <./images/figures/fig2.jpeg> <./images/figures/fig3invert.jpg>] (./Jobsheet Linked List.aux)
+runsystem(del Jobsheet_Linked_List.pyg)...executed.
+
+ ) 
 Here is how much of TeX's memory you used:
- 20003 strings out of 476017
- 427846 string characters out of 5793767
- 1859660 words of memory out of 5000000
- 40105 multiletter control sequences out of 15000+600000
- 514151 words of font info for 38 fonts, out of 8000000 for 9000
+ 20313 strings out of 476047
+ 444329 string characters out of 5794245
+ 1865242 words of memory out of 5000000
+ 40290 multiletter control sequences out of 15000+600000
+ 515853 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,11n,89p,542b,267s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on "Jobsheet Linked List.pdf" (2 pages, 201327 bytes).
+ 84i,11n,89p,863b,793s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on "Jobsheet Linked List.pdf" (11 pages, 290621 bytes).
 PDF statistics:
- 32 PDF objects out of 1000 (max. 8388607)
- 19 compressed objects within 1 object stream
+ 84 PDF objects out of 1000 (max. 8388607)
+ 51 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 18 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 33 words of extra memory for PDF output out of 10000 (max. 10000000)
 
