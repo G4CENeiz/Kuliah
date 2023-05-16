@@ -1,3 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{k}{return}\PYG{+w}{ }\PYG{n}{lsum}\PYG{o}{+}\PYG{n}{rsum}\PYG{o}{+}\PYG{n}{arr}\PYG{o}{[}\PYG{n}{mid}\PYG{o}{]}\PYG{p}{;}
-\end{Verbatim}

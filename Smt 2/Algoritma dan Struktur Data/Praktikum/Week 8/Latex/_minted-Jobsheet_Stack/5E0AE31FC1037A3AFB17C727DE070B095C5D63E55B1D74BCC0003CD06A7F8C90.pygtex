@@ -1,5 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{n}{Postfix}\PYG{+w}{ }\PYG{n}{post}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{new}\PYG{+w}{ }\PYG{n}{Postfix}\PYG{p}{(}\PYG{n}{total}\PYG{p}{);}
-\PYG{n}{P}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{post}\PYG{p}{.}\PYG{n+na}{convert}\PYG{p}{(}\PYG{n}{Q}\PYG{p}{);}
-\PYG{n}{System}\PYG{p}{.}\PYG{n+na}{out}\PYG{p}{.}\PYG{n+na}{println}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Postfix : \PYGZdq{}}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{P}\PYG{p}{);}
-\end{Verbatim}

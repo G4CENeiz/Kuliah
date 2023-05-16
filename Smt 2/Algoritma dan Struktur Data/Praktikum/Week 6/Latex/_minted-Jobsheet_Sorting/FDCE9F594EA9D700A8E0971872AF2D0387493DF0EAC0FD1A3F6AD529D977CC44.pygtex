@@ -1,5 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{n}{System}\PYG{p}{.}\PYG{n+na}{out}\PYG{p}{.}\PYG{n+na}{println}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Student data after sorted in decending order in gpa: \PYGZdq{}}\PYG{p}{);}
-\PYG{n}{data}\PYG{p}{.}\PYG{n+na}{bubbleSort}\PYG{p}{();}
-\PYG{n}{data}\PYG{p}{.}\PYG{n+na}{display}\PYG{p}{();}
-\end{Verbatim}

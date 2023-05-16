@@ -1,7 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{n}{stk}\PYG{p}{.}\PYG{n+na}{push}\PYG{p}{(}\PYG{l+m+mi}{11}\PYG{p}{);}
-\PYG{n}{stk}\PYG{p}{.}\PYG{n+na}{push}\PYG{p}{(}\PYG{l+m+mi}{34}\PYG{p}{);}
-\PYG{n}{stk}\PYG{p}{.}\PYG{n+na}{pop}\PYG{p}{();}
-\PYG{n}{stk}\PYG{p}{.}\PYG{n+na}{peek}\PYG{p}{();}
-\PYG{n}{stk}\PYG{p}{.}\PYG{n+na}{print}\PYG{p}{();}
-\end{Verbatim}

@@ -1,3 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{temp}\PYG{p}{.}\PYG{n+na}{next}\PYG{p}{.}\PYG{n+na}{next}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{k+kc}{null}\PYG{p}{)}\PYG{+w}{ }\PYG{n}{tail}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{  }\PYG{n}{temp}\PYG{p}{.}\PYG{n+na}{next}\PYG{p}{;}
-\end{Verbatim}

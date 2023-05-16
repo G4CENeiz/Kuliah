@@ -1,8 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{n}{Students}\PYG{o}{[]}\PYG{+w}{ }\PYG{n}{listStd}\PYG{p}{;}
-\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{idx}\PYG{p}{;}
-
-\PYG{k+kd}{public}\PYG{+w}{ }\PYG{n+nf}{SearchStudent}\PYG{p}{(}\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{amount}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
-\PYG{+w}{    }\PYG{n}{listStd}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{new}\PYG{+w}{ }\PYG{n}{Students}\PYG{o}{[}\PYG{n}{amount}\PYG{o}{]}\PYG{p}{;}
-\PYG{p}{\PYGZcb{}}
-\end{Verbatim}

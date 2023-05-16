@@ -1,8 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{k+kn}{package}\PYG{+w}{ }\PYG{n+nn}{Sorting}\PYG{p}{;}
-
-\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kd}{class} \PYG{n+nc}{HighAchieverStudent}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
-\PYG{+w}{    }\PYG{n}{Student}\PYG{o}{[]}\PYG{+w}{ }\PYG{n}{list}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{new}\PYG{+w}{ }\PYG{n}{Student}\PYG{o}{[}\PYG{l+m+mi}{5}\PYG{o}{]}\PYG{p}{;}
-\PYG{+w}{    }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{idx}\PYG{p}{;}
-\PYG{p}{\PYGZcb{}}
-\end{Verbatim}

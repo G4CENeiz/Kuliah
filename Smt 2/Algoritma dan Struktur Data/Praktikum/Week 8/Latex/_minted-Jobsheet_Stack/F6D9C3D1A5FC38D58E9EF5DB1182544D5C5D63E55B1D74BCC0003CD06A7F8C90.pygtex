@@ -1,5 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{n}{stk}\PYG{p}{.}\PYG{n+na}{push}\PYG{p}{(}\PYG{l+m+mi}{15}\PYG{p}{);}
-\PYG{n}{stk}\PYG{p}{.}\PYG{n+na}{push}\PYG{p}{(}\PYG{l+m+mi}{27}\PYG{p}{);}
-\PYG{n}{stk}\PYG{p}{.}\PYG{n+na}{push}\PYG{p}{(}\PYG{l+m+mi}{13}\PYG{p}{);}
-\end{Verbatim}

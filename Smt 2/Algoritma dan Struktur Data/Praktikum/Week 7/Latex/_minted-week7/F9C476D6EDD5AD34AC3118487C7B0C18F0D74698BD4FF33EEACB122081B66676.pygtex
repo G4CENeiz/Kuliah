@@ -1,9 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{find}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{n}{listStd}\PYG{o}{[}\PYG{n}{mid}\PYG{o}{]}\PYG{p}{.}\PYG{n+na}{nim}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
-\PYG{+w}{        }\PYG{k}{return}\PYG{+w}{ }\PYG{n}{mid}\PYG{p}{;}
-\PYG{+w}{    }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{k}{else}\PYG{+w}{ }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{listStd}\PYG{o}{[}\PYG{n}{mid}\PYG{o}{]}\PYG{p}{.}\PYG{n+na}{nim}\PYG{+w}{ }\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{find}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
-\PYG{+w}{        }\PYG{k}{return}\PYG{+w}{ }\PYG{n}{findBinarySearch}\PYG{p}{(}\PYG{n}{find}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{left}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mid}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{);}
-\PYG{+w}{    }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{k}{else}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
-\PYG{+w}{        }\PYG{k}{return}\PYG{+w}{ }\PYG{n}{findBinarySearch}\PYG{p}{(}\PYG{n}{find}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mid}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{right}\PYG{p}{);}
-\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
-\end{Verbatim}
