@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.12)  15 MAY 2023 14:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.12)  16 MAY 2023 10:32
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -746,52 +746,78 @@ Overfull \hbox (5.03479pt too wide) in paragraph at lines 146--1
  (./_minted-Jobsheet_Linked_List/338165B78A1B7D175DE4DD2EE352E20B82CEA6296AA5502D63524DC46FF202C0.pygtex)
 \openout3 = `Jobsheet_Linked_List.pyg'.
 
- (./_minted-Jobsheet_Linked_List/655154C71AE319D302FA0393C0D6A57B82CEA6296AA5502D63524DC46FF202C0.pygtex)
-<images/figures/fig1.jpeg, id=44, 821.0675pt x 166.6225pt>
+ (./_minted-Jobsheet_Linked_List/6473EADDEB6F18445D45E10E547AA54B82CEA6296AA5502D63524DC46FF202C0.pygtex [9])
+<images/figures/fig1.jpeg, id=47, 821.0675pt x 166.6225pt>
 File: images/figures/fig1.jpeg Graphic file (type jpg)
 <use images/figures/fig1.jpeg>
-Package pdftex.def Info: images/figures/fig1.jpeg  used on input line 483.
+Package pdftex.def Info: images/figures/fig1.jpeg  used on input line 487.
 (pdftex.def)             Requested size: 433.62001pt x 87.99423pt.
 \openout3 = `Jobsheet_Linked_List.pyg'.
 
- (./_minted-Jobsheet_Linked_List/0272F25A5FBCB3634F0BD0887DA03EEF82CEA6296AA5502D63524DC46FF202C0.pygtex
-Overfull \hbox (29.3747pt too wide) in paragraph at lines 481--1
-[] 
+ (./_minted-Jobsheet_Linked_List/4BE129D5D086845D320AC53ADF576B8182CEA6296AA5502D63524DC46FF202C0.pygtex
+Overfull \hbox (29.3747pt too wide) in paragraph at lines 485--1
+[]
  []
 
-[9])
-<images/figures/fig2.jpeg, id=48, 145.54375pt x 175.65625pt>
+)
+\openout3 = `Jobsheet_Linked_List.pyg'.
+
+ (./_minted-Jobsheet_Linked_List/3A66152F33B438E2A411BD422AAB829B82CEA6296AA5502D63524DC46FF202C0.pygtex [10 <./images/figures/fig1.jpeg>] [11] [12] [13])
+\openout3 = `Jobsheet_Linked_List.pyg'.
+
+ (./_minted-Jobsheet_Linked_List/C72752F399DD9EA996DFE93FC387D2A482CEA6296AA5502D63524DC46FF202C0.pygtex [14])
+<images/figures/fig2.jpeg, id=64, 145.54375pt x 175.65625pt>
 File: images/figures/fig2.jpeg Graphic file (type jpg)
 <use images/figures/fig2.jpeg>
-Package pdftex.def Info: images/figures/fig2.jpeg  used on input line 494.
+Package pdftex.def Info: images/figures/fig2.jpeg  used on input line 700.
 (pdftex.def)             Requested size: 86.72267pt x 104.66818pt.
-<images/figures/fig3invert.jpg, id=49, 336.50719pt x 68.50594pt>
+<images/figures/fig3invert.jpg, id=65, 336.50719pt x 68.50594pt>
 File: images/figures/fig3invert.jpg Graphic file (type jpg)
 <use images/figures/fig3invert.jpg>
-Package pdftex.def Info: images/figures/fig3invert.jpg  used on input line 495.
+Package pdftex.def Info: images/figures/fig3invert.jpg  used on input line 701.
 (pdftex.def)             Requested size: 346.89732pt x 70.62148pt.
+\openout3 = `Jobsheet_Linked_List.pyg'.
 
-Overfull \hbox (31.98576pt too wide) in paragraph at lines 492--496
-[] [] 
+ (./_minted-Jobsheet_Linked_List/80292BE74D1ACDC1013E3286D7A4FAEC82CEA6296AA5502D63524DC46FF202C0.pygtex
+Overfull \hbox (31.98576pt too wide) in paragraph at lines 698--1
+[] []
  []
 
-[10 <./images/figures/fig1.jpeg> <./images/figures/fig2.jpeg> <./images/figures/fig3invert.jpg>] (./Jobsheet Linked List.aux)
+[15 <./images/figures/fig2.jpeg> <./images/figures/fig3invert.jpg>])
+\openout3 = `Jobsheet_Linked_List.pyg'.
+
+ (./_minted-Jobsheet_Linked_List/86890ECCBBAA9E70DF5ECB8B08D16BA682CEA6296AA5502D63524DC46FF202C0.pygtex)
+\openout3 = `Jobsheet_Linked_List.pyg'.
+
+ (./_minted-Jobsheet_Linked_List/A186CA78AD02561A21644EBC2CD809C382CEA6296AA5502D63524DC46FF202C0.pygtex)
+\openout3 = `Jobsheet_Linked_List.pyg'.
+
+ (./_minted-Jobsheet_Linked_List/A9D9194CD45C507B21E05AE8DAC5D87D82CEA6296AA5502D63524DC46FF202C0.pygtex [16])
+\openout3 = `Jobsheet_Linked_List.pyg'.
+
+ (./_minted-Jobsheet_Linked_List/F20BFBB04823F221D0D83B192C843CCC82CEA6296AA5502D63524DC46FF202C0.pygtex)
+\openout3 = `Jobsheet_Linked_List.pyg'.
+
+ (./_minted-Jobsheet_Linked_List/7E35C2F7AF01D871DF4A2EAA71D612BF82CEA6296AA5502D63524DC46FF202C0.pygtex [17] [18] [19] [20] [21])
+\openout3 = `Jobsheet_Linked_List.pyg'.
+
+ (./_minted-Jobsheet_Linked_List/675BDEA0D522A462EF7E94554F9B232682CEA6296AA5502D63524DC46FF202C0.pygtex) [22] (./Jobsheet Linked List.aux)
 runsystem(del Jobsheet_Linked_List.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 20313 strings out of 476047
- 444329 string characters out of 5794245
- 1865242 words of memory out of 5000000
- 40290 multiletter control sequences out of 15000+600000
+ 20367 strings out of 476047
+ 449396 string characters out of 5794245
+ 1867242 words of memory out of 5000000
+ 40317 multiletter control sequences out of 15000+600000
  515853 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,11n,89p,863b,793s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on "Jobsheet Linked List.pdf" (11 pages, 290621 bytes).
+Output written on "Jobsheet Linked List.pdf" (23 pages, 303920 bytes).
 PDF statistics:
- 84 PDF objects out of 1000 (max. 8388607)
- 51 compressed objects within 1 object stream
+ 122 PDF objects out of 1000 (max. 8388607)
+ 77 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  33 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -5,14 +5,14 @@ public class SingleLinkedList {
     Node tail;
 
     public boolean isEmpty() {
-        return head.equals(null);
+        return head == null;
     }
 
     public void print() {
         if (!isEmpty()) {
             Node tmp = head;
             System.out.print("Linked list content: \t");
-            while (!tmp.equals(null)) {
+            while (tmp != null) {
                 System.out.print(tmp.data + "\t");
                 tmp = tmp.next;
             }
@@ -158,15 +158,19 @@ public class SingleLinkedList {
 
     public void insertBefore(String key, String input) {
         Node ndInput = new Node(input, null);
-        Node temp = head;
-        do {
-            if (temp.next.data.equals(key)) {
-                ndInput.next = temp.next;
-                temp.next = ndInput;
-                if (temp.next == null) temp = head = ndInput;
-                break;
+        if (isEmpty()) {
+            head = tail = ndInput;
+        } else if (head.equals(tail)) {
+            ndInput.next = head;
+            head = ndInput;
+        } else {
+            Node temp = head;
+            while (!temp.next.equals(null)) {
+                if (temp.next.data.equals(key)) {
+                    temp.next = new Node(input, temp.next);
+                }
+                temp = temp.next;
             }
-            temp = temp.next;
-        } while (temp != null);
+        }
     }
 }
