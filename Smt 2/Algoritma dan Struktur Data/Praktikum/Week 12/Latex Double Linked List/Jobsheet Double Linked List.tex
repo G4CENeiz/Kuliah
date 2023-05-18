@@ -321,13 +321,36 @@ Compile the program and see if the result matches with following image
 \subsubsection{Questions}
 \begin{enumerate}
     \item What’s the difference between single linked list and double linked list?
+    \mbox{}\\
+    \texttt{Answer: }
+    \mbox{}\\
+    single linked list has tail and doesn't have prev in the node.
     \item In \textbf{Node class}, what is the usage of attribute next and prev ?
-    \item In constructor of \textbf{DoubleLinkedList} class. What’s the purpose of head and size attribute
-    in this following code?
+    \mbox{}\\
+    \texttt{Answer: }
+    \mbox{}\\
+    to access prev and next node so that the node can go both way in the linked list.
+    \item In constructor of \textbf{DoubleLinkedList} class. What’s the purpose of head and size attribute in this following code?
+    \mbox{}\\
+    \texttt{Answer: }
+    \mbox{}\\
+    head is use as a point of start of the linked list. and size is used to identify the linked list size to be able to insert data with index.
     \item In method \textbf{addFirst()}, why do we initialize the value of Node object to be null at first?
-    Node newNode = new Node(null, item, head);
+    \begin{minted}[autogobble,breaklines]{java}
+        Node newNode = new Node(null, item, head);
+    \end{minted}
+    \mbox{}\\
+    \texttt{Answer: }
+    \mbox{}\\
+    because the newNode will be placed at the head of the linked list. thus the Node prev is going to be null because it will be potition at head.
     \item In method \textbf{addLast()}, what’s the purpose of creating a node object by passing the \textbf{prev} parameter with \textbf{current} and \textbf{next} with \textbf{null} ?
-    Node newNode = new Node(current, item, null);
+    \begin{minted}[autogobble,breaklines]{java}
+        Node newNode = new Node(current, item, null);
+    \end{minted}
+    \mbox{}\\
+    \texttt{Answer: }
+    \mbox{}\\
+    because if the newNode is going to be placed at the last potition, the node current at the last potition is going to be need to be linked with the newNode prev Node. and because it is going to be placed in the last potition, the node next is going to be null.
 \end{enumerate}
 
 \subsection{Lab Activities 2}
@@ -462,9 +485,35 @@ Compile the program and see if the result matches with following image
 \subsubsection{Questions}
 \begin{enumerate}
     \item What’s the meaning of these statements in \textbf{removeFirst()} method?
+    \mbox{}\\
+    \texttt{Answer: }
+    \mbox{}\\
+    it remove node it the head potition.
     \item How do we detect the position of the data that are in the last index in method \textbf{removeLast()}?
+    \mbox{}\\
+    \texttt{Answer: }
+    \mbox{}\\
+    loop through the linked list until the node next is null.
     \item Explain why this program code is not suitable if we include it in \textbf{remove} command!
+    \begin{minted}[autogobble,breaklines]{java}
+        Node tmp = head.next;
+
+        head.next = tmp.next;
+        tmp.next.prev = head;
+    \end{minted}
+    \mbox{}\\
+    \texttt{Answer: }
+    \mbox{}\\
+    because even if it can readjust the linked list connection. it isn't dynamic as in can't do specific index.
     \item Explain what’s the function of this program code in method \textbf{remove}!
+    \begin{minted}[autogobble,breaklines]{java}
+        current.prev.next = current.next;
+        current.next.prev = current.prev;
+    \end{minted}
+    \mbox{}\\
+    \texttt{Answer: }
+    \mbox{}\\
+    to adjust the next and prev acording to the current next and prev perspective.
 \end{enumerate}
 
 \subsection{Lab Activities 3}
@@ -576,9 +625,43 @@ Compile the program and see if the result matches with following image
 \subsubsection{Questions}
 \begin{enumerate}
     \item What is the function of method \textbf{size()} in \textbf{DoubleLinkedList} class ?
+    \mbox{}\\
+    \texttt{Answer: }
+    \mbox{}\\
+    return the size/length of the linked list
     \item How do we set the index in double linked list so that it starts from 1st index instead of 0th index?
+    \mbox{}\\
+    \texttt{Answer: }
+    \mbox{}\\
+    set the linked list size starting value to 1
     \item Please explain the difference between method \textbf{Add()} in double linked list and single linked list !
+    \mbox{}\\
+    \texttt{Answer: }
+    \mbox{}\\
+    the SLL only need to readjust next and tail while DLL need to change head, next, prev, and next, prev of prev, and next.  
     \item What’s the logic difference of these 2 following codes?
+    \begin{enumerate}[label=(\alph*)]
+        \item -
+        \begin{minted}[autogobble,breaklines]{java}
+            public boolean isEmpty() {
+                if (size == 0) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        \end{minted}
+        \item -
+        \begin{minted}[autogobble,breaklines]{java}
+            public boolean isEmpty() {
+                return head == null;
+            }
+        \end{minted}
+    \end{enumerate}
+    \mbox{}\\
+    \texttt{Answer: }
+    \mbox{}\\
+    the former check the size which in any case can be set at any size, while the later check the head of the linked list being sure it has the value of null. the later having better assurance over the former because if head is null its guarantee that the linked list is empty;
 \end{enumerate}
 
 \subsection{Assignment}
