@@ -41,6 +41,7 @@ public class Main {
             join.addLast(temp.data);
             temp = temp.n;
         }
+        join.print();
     }
     //2.B. this will split sll to be 2 sll
     public static void split(SingleLinkedList l){
