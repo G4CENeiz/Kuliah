@@ -1,0 +1,288 @@
+\documentclass[12pt,titlepage]{article}
+\usepackage[margin=1.25in]{geometry}
+\usepackage{graphicx,amsmath,blindtext,minted}
+
+%% Variables definition
+\newcommand{\vSubject}{Data Structure and Algorithm Practicum}
+\newcommand{\vSubtitle}{Quiz 2}
+\newcommand{\vName}{Muhammad Baihaqi Aulia Asy'ari}
+\newcommand{\vNIM}{2241720145}
+\newcommand{\vClass}{1I}
+\newcommand{\vDepartment}{Information Technology}
+\newcommand{\vStudyProgram}{D4 Informatics Engineering}
+
+%% [START] Tikz related stuff
+\usepackage{tikz}
+\usetikzlibrary{svg.path,calc,shapes.geometric,shapes.misc}
+\tikzstyle{terminator} = [rectangle, draw, text centered, rounded corners = 1em, minimum height=2em]
+\tikzstyle{preparation} = [chamfered rectangle, chamfered rectangle sep=0.75em, draw, text centered, minimum height = 2em]
+\tikzstyle{process} = [rectangle, draw, text centered, minimum height=2em]
+\tikzstyle{decision} = [diamond, aspect=2, draw, text centered, minimum height=2em]
+\tikzstyle{data}=[trapezium, draw, text centered, trapezium left angle=60, trapezium right angle=120, minimum height=2em]
+\tikzstyle{connector} = [line width=0.25mm,->]
+%% [END] Tikz related stuff
+
+%% [START] Fancy header related stuff
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setlength{\headheight}{15pt} % compensate fancyhdr style
+\fancyhead{}
+\fancyfoot{}
+\fancyfoot[L]{\thepage}
+\fancyfoot[R]{\textit{\vSubject - \vSubtitle}}
+\renewcommand{\footrulewidth}{0.4pt}% default is 0pt, overline for footer
+%% [END] Fancy header related stuff
+
+%% [START] Custom tabular command related stuff
+\usepackage{tabularx}
+\newcommand{\details}[2]{
+    #1 & #2  \\
+}
+%% [END] Custom tabular command related stuff
+
+%% [START] Figure related stuff
+\newcommand{\image}[3][1]{
+    \begin{figure}[h]
+        \centering
+        \includegraphics[#1]{#2}
+        \caption{#3}
+        \label{#3}
+    \end{figure}
+}
+%% [END] Figure related stuff
+
+%%
+\usepackage{pgf-umlcd}
+
+\renewcommand{\umldrawcolor}{black}
+\renewcommand{\umlfillcolor}{white}
+%%
+
+%% [BEGIN] Custom enumerator
+\usepackage{enumitem}
+%% [END] Custom enumerator
+
+%% [BEGIN] Paragraph indent
+\usepackage{indentfirst}
+%% [END] Paragraph indent
+
+\begin{document}
+\begin{titlepage}
+    \centering
+    \vfill
+    {\bfseries\LARGE
+        \vSubject\\
+        \vskip0.25cm
+        \vSubtitle
+    }
+    \vfill
+    \includegraphics[width=6cm]{images/polinema-logo.png}
+    \vfill
+    {
+        \textbf{Name}\\
+        \vName\\
+        \vskip0.5cm
+        \textbf{NIM}\\
+        \vNIM\\
+        \vskip0.5cm
+        \textbf{Class}\\
+        \vClass\\
+        \vskip0.5cm
+        \textbf{Department}\\
+        \vDepartment\\
+        \vskip0.5cm
+        \textbf{Study Program}\\
+        \vStudyProgram
+    }
+\end{titlepage}
+
+\newpage
+
+\section{Code}
+\subsection{Node.java}
+\begin{minted}[autogobble,breaklines]{java}
+    /*
+    * To change this license header, choose License Headers in Project Properties.
+    * To change this template file, choose Tools | Templates
+    * and open the template in the editor.
+    */
+    package quiz2_baihaqi;
+
+    public class Node {
+        int data;
+        Node n;
+        Node p;
+        
+        Node(){
+            data=0;
+            n = p = null;
+        }
+        
+        Node(int data){
+            this.data = data;
+            n = p = null;
+        }
+        
+        Node(Node prev, int data, Node next){
+            this.data = data;
+            this.n = next;
+            this.p = prev;
+        }
+        
+    }
+\end{minted}
+\subsection{SingleLinkedList.java}
+\begin{minted}[autogobble,breaklines]{java}
+    package quiz2_baihaqi;
+
+    public class SingleLinkedList {
+        Node head, tail;
+        int size;
+        
+        SingleLinkedList(){
+            head = tail = null;
+            size=0;
+        }
+        boolean isEmpty(){
+            return size==0;
+        }
+        void addFirst(int data){
+            Node nu = new Node(data);
+            if(isEmpty()){
+                head = tail = nu;
+            }else{
+                nu.n = head;
+                head = nu;
+            }
+            size++;
+        } 
+        void deleteFirst(){
+            Node tmp = head.n;
+            head = head.n;
+            tmp = null;
+            size--;
+        }
+        void print(){
+            Node tmp = head;
+            while(tmp!=null){
+                System.out.print(""+tmp.data+"-");
+                tmp = tmp.n;
+            }
+            System.out.println("");
+        } 
+        //1.A. complete the missing code addLast
+        /**
+        * this method will add new node at the last
+        */
+        void addLast(int data){
+            Node nu = new Node(data);
+            if(isEmpty()){
+                head = tail = nu;
+            }else{
+            //complete here
+
+            /* Add tmp node for head reference */
+            Node tmp = head;
+            /* loop trough head to find tail */
+            while (tmp.n != null) {
+                tmp = tmp.n;
+            }
+            /* set the tmp.n and tail as nu */
+            tmp.n = nu;
+            tail = nu;
+            }
+            size++;
+        }
+        //1.B. complete the deleteLast
+        /**
+        * this method will remove tail
+        */
+        void deleteLast(){
+            /* create tmp */
+        Node tmp = head;
+        /* check if empty */
+        if (isEmpty()) {
+            System.out.println("Linked list is empty. can't remove");
+        } else if (head.n == null) {
+                /* do as the delete first do */
+                head = head.n;
+                tmp = null;
+                size--;
+        } else {
+            /* loop trough tmp to find second to last node */
+            while (tmp.n.n != null) {
+                tmp = tmp.n;
+            }
+            /* use the second to last node to delete the next/last node */
+            tmp.n = null;
+            tail = tmp;
+            size--;
+        }
+        }
+    }
+\end{minted}
+\subsection{Main.java}
+\begin{minted}[autogobble,breaklines]{java}
+    /*
+    * To change this license header, choose License Headers in Project Properties.
+    * To change this template file, choose Tools | Templates
+    * and open the template in the editor.
+    */
+    package quiz2_baihaqi;
+
+    public class Main {
+        public static void main(String[] args){
+            SingleLinkedList dll = new SingleLinkedList();
+            dll.addFirst(45);
+            dll.addFirst(10);
+            dll.addFirst(10);
+            dll.addFirst(15);
+            dll.addFirst(150);
+            dll.print();
+            dll.deleteFirst();
+            dll.print();
+            //continue to call addLast, deleteLast, 
+            dll.addLast(69);
+            dll.print();
+            dll.deleteLast();
+            dll.print();
+            //merge, split,
+            split(dll);
+            merge(dll, dll);
+        } 
+        //2.A.
+        public static void merge(SingleLinkedList l1,
+                SingleLinkedList l2){
+            //complete this method
+        }
+        //2.B. this will split sll to be 2 sll
+        public static void split(SingleLinkedList l){
+            //ex: 2,3,4,34,2,3,45,4 (original list)
+            //1-> 2,3,4,34
+            //2-> 2,3,45,4
+
+            /* Create list 1 and 2 */
+            SingleLinkedList l1 = new SingleLinkedList();
+            SingleLinkedList l2 = new SingleLinkedList();
+            /* Create Temp to loop trough */
+            Node temp = l.head;
+            /* Loop trough half the list and add data using the add function */
+            for (int i = 0; i < l.size/2; i++) {
+                l1.addLast(temp.data);
+                temp = temp.n;
+            }
+            /* Loop trough the rest of the list and add the the data using the add function */
+            while (temp != null) {
+                l2.addLast(temp.data);
+                temp = temp.n;
+            }
+            /* Print the data */
+            l1.print();
+            l2.print();
+        }
+    }
+\end{minted}
+\section{Running the program}
+\includegraphics[width=\textwidth]{images/figures/fig1.png}
+
+\end{document}
