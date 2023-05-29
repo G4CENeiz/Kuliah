@@ -29,6 +29,18 @@ public class Main {
     public static void merge(SingleLinkedList l1,
             SingleLinkedList l2){
         //complete this method
+        SingleLinkedList join = new SingleLinkedList();
+
+        Node temp = l1.head;
+        while (temp != null) {
+            join.addLast(temp.data);
+            temp = temp.n;
+        }
+        temp = l2.head;
+        while (temp != null) {
+            join.addLast(temp.data);
+            temp = temp.n;
+        }
     }
     //2.B. this will split sll to be 2 sll
     public static void split(SingleLinkedList l){
