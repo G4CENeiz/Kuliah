@@ -1,10 +1,10 @@
-package Assignment2;
+package Assignment3;
 
 public class Node {
-    String data;
+    Person data;
     Node prev, next;
 
-    public Node(Node prev, String data, Node next) {
+    public Node(Node prev, Person data, Node next) {
         this.data = data;
         this.prev = prev;
         this.next = next;

@@ -1,4 +1,4 @@
-package Assignment2;
+package Assignment3;
 
 public class DoubleLinkedList {
     Node head;
@@ -13,7 +13,7 @@ public class DoubleLinkedList {
         return head == null;
     }
 
-    public void addFirst(String item) {
+    public void addFirst(Person item) {
         if (isEmpty()) {
             head = new Node(null, item, null);
         } else {
@@ -22,6 +22,20 @@ public class DoubleLinkedList {
             head = newNode;
         }
         size++;
+    }
+
+    public void addLast(Person item) {
+        if (isEmpty()) {
+            addFirst(item);
+        } else {
+            Node current = head;
+            while (current.next != null) {
+                current = current.next;
+            }
+            Node newNode = new Node(current, item, null);
+            current.next = newNode;
+            size++;
+        }
     }
 
     public int size() {
@@ -36,10 +50,14 @@ public class DoubleLinkedList {
     public void print() {
         if (!isEmpty()) {
             Node temp = head;
+            int count = 0;
+            System.out.println("|No.   |Name    |");
             while (temp != null) {
-                System.out.print(temp.data + "\n");
+                System.out.printf("|%-6d|%-8s|\n", temp.data.queue, temp.data.name);
+                count++;
                 temp = temp.next;
             }
+            System.out.printf("Queue left : %d\n", count);
         } else {
             System.out.println("Linked list is empty");
         }
@@ -77,6 +95,6 @@ public class DoubleLinkedList {
         if (isEmpty()) {
             throw new Exception("Linked list still empty");
         }
-        return head.data;
+        return head.data.name;
     }
 }

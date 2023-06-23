@@ -671,20 +671,1562 @@ Compile the program and see if the result matches with following image
     \hbox{}\\\textbf{Add data in specified index and display the result}
     \hbox{}\\\textbf{Search Data}
     \hbox{}\\\textbf{Sorting Data}
+    
+    \texttt{Node.java}
+    \begin{minted}[autogobble,breaklines]{java}
+        package Assignment;
+
+        public class Node {
+            int data;
+            Node prev, next;
+
+            public Node(Node prev, int data, Node next) {
+                this.data = data;
+                this.prev = prev;
+                this.next = next;
+            }
+        }
+    \end{minted}
+
+    \texttt{DoubleLinkedList.java}
+    \begin{minted}[autogobble,breaklines]{java}
+        package Assignment;
+
+        public class DoubleLinkedList {
+            Node head;
+            int size;
+
+            public DoubleLinkedList() {
+                head = null;
+                size = 0;
+            }
+
+            public boolean isEmpty() {
+                return head == null;
+            }
+
+            public void addFirst(int item) {
+                if (isEmpty()) {
+                    head = new Node(null, item, null);
+                } else {
+                    Node newNode = new Node(null, item, head);
+                    head.prev = newNode;
+                    head = newNode;
+                }
+                size++;
+            }
+
+            public void addLast(int item) {
+                if (isEmpty()) {
+                    addFirst(item);
+                } else {
+                    Node current = head;
+                    while (current.next != null) {
+                        current = current.next;
+                    }
+                    Node newNode = new Node(current, item, null);
+                    current.next = newNode;
+                    size++;
+                }
+            }
+
+            public void add(int item, int index) throws Exception {
+                if (isEmpty()) {
+                    addFirst(item);
+                } else if (index < 0 || index > size) {
+                    throw new Exception("Index out of bound");
+                } else {
+                    Node current = head;
+                    int i = 0;
+                    while (i < index) {
+                        current = current.next;
+                        i++;
+                    }
+                    if (current.next == null) {
+                        Node newNode = new Node(null, item, current);
+                        current.prev = newNode;
+                        head = newNode;
+                    } else {
+                        Node newNode = new Node(current.prev, item, current);
+                        newNode.prev = current.prev;
+                        newNode.next = current;
+                        current.prev.next = newNode;
+                        current.prev = newNode;
+                    }
+                }
+                size++;
+            }
+
+            public int size() {
+                return size;
+            }
+
+            public void clear() {
+                head = null;
+                size = 0;
+            }
+
+            public void print() {
+                if (!isEmpty()) {
+                    Node temp = head;
+                    while (temp != null) {
+                        System.out.print(temp.data + "\n");
+                        temp = temp.next;
+                    }
+                    System.out.println("\n successfully added");
+                } else {
+                    System.out.println("Linked list is empty");
+                }
+            }
+
+            public void removeFirst() throws Exception {
+                if (isEmpty()) {
+                    throw new Exception("Linked list is still empty, cannot remove data");
+                } else if (size == 1) {
+                    removeLast();
+                } else {
+                    head = head.next;
+                    head.prev = null;
+                    size--;
+                }
+            }
+
+            public void removeLast() throws Exception {
+                if (isEmpty()) {
+                    throw new Exception("Linked list is still empty, cannot remove data");
+                } else if (head.next == null) {
+                    head = null;
+                    size--;
+                    return;
+                } 
+                Node current = head;
+                while (current.next.next != null) {
+                    current = current.next;
+                }
+                current.next = null;
+                size--;
+            }
+
+            public void remove(int index) throws Exception {
+                if (isEmpty() || index >= size) {
+                    throw new Exception("Index value is out of bound");
+                } else if (size == 0) {
+                    removeFirst();
+                } else {
+                    Node current = head;
+                    int i = 0;
+                    while (i < index) {
+                        current = current.next;
+                        i++;
+                    }
+                    if (current.next == null) {
+                        current.prev.next = null;
+                    } else if (current.prev == null) {
+                        current = current.next;
+                        current.prev = null;
+                        head = current;
+                    } else {
+                        current.prev.next = current.next;
+                        current.next.prev = current.prev;
+                    }
+                    size--;
+                }
+            }
+
+            public int getFirst() throws Exception {
+                if (isEmpty()) {
+                    throw new Exception("Linked list still empty");
+                }
+                return head.data;
+            }
+
+            public int getLast() throws Exception {
+                if (isEmpty()) {
+                    throw new Exception("Linked list still empty");
+                }
+                Node temp = head;
+                while (temp.next != null) {
+                    temp = temp.next;
+                }
+                return temp.data;
+            }
+
+            public int get(int index) throws Exception {
+                if (isEmpty()) {
+                    throw new Exception("Linked list still empty");
+                }
+                Node temp = head;
+                for (int i = 0; i < index; i++) {
+                    temp = temp.next;
+                }
+                return temp.data;
+            }
+
+            public int search(int key) throws Exception {
+                Node temp = head;
+                int i = 0;
+                while (i < size) {
+                    if (temp.data == key) {
+                        return i;
+                    }
+                    i++;
+                    temp = temp.next;
+                }
+                throw new Exception("Key value doesn't exist");
+            }
+
+            public void sort() throws Exception {
+                if (head == null || head.next == null) {
+                    return;
+                }
+                boolean swapped;
+                Node current;
+                Node last = null;
+                do {
+                    swapped = false;
+                    current = head;
+                    while (current.next != last) {
+                        if (current.data > current.next.data) {
+                            int temp = current.data;
+                            current.data = current.next.data;
+                            current.next.data = temp;
+                            swapped = true;
+                        }
+                        current = current.next;
+                    }
+                    last = current;
+                } while (swapped);
+            }
+        }
+
+    \end{minted}
+
+    \texttt{DoubleLinkedListMain.java}
+    \begin{minted}[autogobble,breaklines]{java}
+        package Assignment;
+
+        import java.util.Scanner;
+
+        public class DoubleLinkedListMain {
+            public static void displayMenu() {
+                System.out.println("=========================================");
+                System.out.println("Data manipulation with Double Linked List");
+                System.out.println("=========================================");
+                System.out.println("1. Add First");
+                System.out.println("2. Add Tail");
+                System.out.println("3. Add Data in the nth index");
+                System.out.println("4. Remove First");
+                System.out.println("5. Remove Tail");
+                System.out.println("6. Remove Data in the nth index");
+                System.out.println("7. Print");
+                System.out.println("8. Search Data");
+                System.out.println("9. Sort Data");
+                System.out.println("10. Exit");
+                System.out.println("=========================================");
+            }
+
+            public static void main(String[] args) throws Exception {
+                Scanner sc = new Scanner(System.in);
+                DoubleLinkedList dll = new DoubleLinkedList();
+                
+                boolean exit = false;
+                while (!exit) {
+                    int option;
+                    displayMenu();
+                    option = sc.nextInt();
+                    int dataAdd;
+                    int posAdd;
+                    int posDel;
+                    int search;
+
+                    switch (option) {
+                        case 1:
+                            System.out.println("Insert data in head position");
+                            dataAdd = sc.nextInt();
+                            dll.addFirst(dataAdd);
+                            break;
+                        case 2:
+                            System.out.println("Insert data in last position");
+                            dataAdd = sc.nextInt();
+                            dll.addLast(dataAdd);
+                            break;
+                        case 3:
+                            System.out.println("Insert Data");
+                            System.out.print("Data node: ");
+                            dataAdd = sc.nextInt();
+                            System.out.print("In index: ");
+                            posAdd = sc.nextInt();
+                            dll.add(dataAdd, posAdd);
+                            break;
+                        case 4:
+                            System.out.println("First Data deleted");
+                            System.out.println(dll.getFirst());
+                            dll.removeFirst();
+                            break;
+                        case 5:
+                            System.out.println("Last Data deleted");
+                            System.out.println(dll.getLast());
+                            dll.removeLast();
+                            break;
+                        case 6:
+                            System.out.println("Remove Data");
+                            System.out.println("In index: ");
+                            posDel = sc.nextInt();
+                            System.out.println("Data " + posDel + " deleted");
+                            System.out.println(dll.get(posDel));
+                            dll.remove(posDel);
+                            break;
+                        case 7:
+                            System.out.println("Print Data :");
+                            dll.print();
+                            break;
+                        case 8:
+                            System.out.print("Search Data :");
+                            search = sc.nextInt();
+                            System.out.printf("Data %d is in index-%d\n", search, dll.search(search));
+                            break;
+                        case 9:
+                            dll.sort();
+                            break;
+                        case 10:
+                            exit = true;
+                            break;
+                    }
+                }
+                
+                sc.close();
+            }
+        }
+
+    \end{minted}
+
+    \begin{minted}[autogobble,breaklines,linenos]{text}
+        PS D:\Kuliah\Smt 2\Algoritma dan Struktur Data\Praktikum\Week 12\Double Linked Lists>  d:; cd 'd:\Kuliah\Smt 2\Algoritma dan Struktur Data\Praktikum\Week 12\Double Linked Lists'; & 'C:\Program Files\Java\jdk-18.0.2.1\bin\java.exe' '-XX:+ShowCodeDetailsInExceptionMessages' '-cp' 'D:\Kuliah\Smt 2\Algoritma dan Struktur Data\Praktikum\Week 12\Double Linked Lists\bin' 'Assignment.DoubleLinkedListMain' 
+        =========================================
+        Data manipulation with Double Linked List
+        =========================================
+        1. Add First
+        2. Add Tail
+        3. Add Data in the nth index
+        4. Remove First
+        5. Remove Tail
+        6. Remove Data in the nth index
+        7. Print
+        8. Search Data
+        9. Sort Data
+        10. Exit
+        =========================================
+        1
+        Insert data in head position
+        34
+        =========================================
+        Data manipulation with Double Linked List
+        =========================================
+        1. Add First
+        2. Add Tail
+        3. Add Data in the nth index
+        4. Remove First
+        5. Remove Tail
+        6. Remove Data in the nth index
+        7. Print
+        8. Search Data
+        9. Sort Data
+        10. Exit
+        =========================================
+        2
+        Insert data in last position
+        10
+        =========================================
+        Data manipulation with Double Linked List
+        =========================================
+        1. Add First
+        2. Add Tail
+        3. Add Data in the nth index
+        4. Remove First
+        5. Remove Tail
+        6. Remove Data in the nth index
+        7. Print
+        8. Search Data
+        9. Sort Data
+        10. Exit
+        =========================================
+        3
+        Insert Data
+        Data node: 66
+        In index: 1
+        =========================================
+        Data manipulation with Double Linked List
+        =========================================
+        1. Add First
+        2. Add Tail
+        3. Add Data in the nth index
+        4. Remove First
+        5. Remove Tail
+        6. Remove Data in the nth index
+        7. Print
+        8. Search Data
+        9. Sort Data
+        10. Exit
+        =========================================
+        8
+        Search Data :66
+        Data 66 is in index-0
+        =========================================
+        Data manipulation with Double Linked List
+        =========================================
+        1. Add First
+        2. Add Tail
+        3. Add Data in the nth index
+        4. Remove First
+        5. Remove Tail
+        6. Remove Data in the nth index
+        7. Print
+        8. Search Data
+        9. Sort Data
+        10. Exit
+        =========================================
+        9
+        =========================================
+        Data manipulation with Double Linked List
+        =========================================
+        1. Add First
+        2. Add Tail
+        3. Add Data in the nth index
+        4. Remove First
+        5. Remove Tail
+        6. Remove Data in the nth index
+        7. Print
+        8. Search Data
+        9. Sort Data
+        10. Exit
+        =========================================
+        7
+        Print Data :
+        10
+        66
+
+        successfully added
+        =========================================
+        Data manipulation with Double Linked List
+        =========================================
+        1. Add First
+        2. Add Tail
+        3. Add Data in the nth index
+        4. Remove First
+        5. Remove Tail
+        6. Remove Data in the nth index
+        7. Print
+        8. Search Data
+        9. Sort Data
+        10. Exit
+        =========================================
+        7  
+        Print Data :
+        10
+        66
+
+        successfully added
+        =========================================
+        Data manipulation with Double Linked List
+        =========================================
+        1. Add First
+        2. Add Tail
+        3. Add Data in the nth index
+        4. Remove First
+        5. Remove Tail
+        6. Remove Data in the nth index
+        7. Print
+        8. Search Data
+        9. Sort Data
+        10. Exit
+        =========================================
+        10
+        PS D:\Kuliah\Smt 2\Algoritma dan Struktur Data\Praktikum\Week 12\Double Linked Lists>
+    \end{minted}
     \item We are required to create a program which Implement Stack using double linked list. The features are described in following illustrations:
     \hbox{}\\\textbf{Initial menu and add Data (push)}
-    \hbox{}\\\textbf{Print All Data}
-    \hbox{}\\\textbf{See the data on top of the stack}
-    \hbox{}\\\textbf{Pop the data from the top of the stack}
+    \begin{minted}[autogobble,breaklines,linenos]{text}
+        PS D:\Kuliah\Smt 2\Algoritma dan Struktur Data\Praktikum\Week 12\Double Linked Lists>  & 'C:\Program Files\Java\jdk-18.0.2.1\bin\java.exe' '-XX:+ShowCodeDetailsInExceptionMessages' '-cp' 'D:\Kuliah\Smt 2\Algoritma dan Struktur Data\Praktikum\Week 12\Double Linked Lists\bin' 'Assignment2.Main'
+        ****************
+        Library Data Book
+        ****************
+        1. Add new book
+        2. Get book from top
+        3. Peek book title from top
+        4. Info all books
+        5. Exit
+        ****************
+        1
+        ------------------------
+        Insert new book title
+        ------------------------
+        How to cuan
+    \end{minted}
+    \textbf{Print All Data}
+    \begin{minted}[autogobble,breaklines,linenos]{text}
+        ****************
+        Library Data Book
+        ****************
+        1. Add new book
+        2. Get book from top
+        3. Peek book title from top
+        4. Info all books
+        5. Exit
+        ****************
+        4
+        ------------------------
+        info all books
+        ------------------------
+        How to cuan
+    \end{minted}
+    \textbf{See the data on top of the stack}
+    \begin{minted}[autogobble,breaklines,linenos]{text}
+        ****************
+        Library Data Book
+        ****************
+        1. Add new book
+        2. Get book from top
+        3. Peek book title from top
+        4. Info all books
+        5. Exit
+        ****************
+        3
+        ------------------------
+        Peek book title from top
+        ------------------------
+        How to cuan
+    \end{minted}
+    \textbf{Pop the data from the top of the stack}
+    \begin{minted}[autogobble,breaklines,linenos]{text}
+        ****************
+        Library Data Book
+        ****************
+        1. Add new book
+        2. Get book from top
+        3. Peek book title from top
+        4. Info all books
+        5. Exit
+        ****************
+        2
+        ------------------------
+        Book on top has been removed
+        ------------------------
+        ****************
+        Library Data Book
+        ****************
+        1. Add new book
+        2. Get book from top
+        3. Peek book title from top
+        4. Info all books
+        5. Exit
+        ****************
+        4
+        ------------------------
+        info all books
+        ------------------------
+        Linked list is empty
+        ****************
+        Library Data Book
+        ****************
+        1. Add new book
+        2. Get book from top
+        3. Peek book title from top
+        4. Info all books
+        5. Exit
+        ****************
+        5
+    \end{minted}
+    \texttt{Node.java}
+    \begin{minted}[autogobble,breaklines]{java}
+        package Assignment2;
+
+        public class Node {
+            String data;
+            Node prev, next;
+
+            public Node(Node prev, String data, Node next) {
+                this.data = data;
+                this.prev = prev;
+                this.next = next;
+            }
+        }
+    \end{minted}
+    \texttt{DoubleLinkedList.java}
+    \begin{minted}[autogobble,breaklines]{java}
+        package Assignment2;
+
+        public class DoubleLinkedList {
+            Node head;
+            int size;
+
+            public DoubleLinkedList() {
+                head = null;
+                size = 0;
+            }
+
+            public boolean isEmpty() {
+                return head == null;
+            }
+
+            public void addFirst(String item) {
+                if (isEmpty()) {
+                    head = new Node(null, item, null);
+                } else {
+                    Node newNode = new Node(null, item, head);
+                    head.prev = newNode;
+                    head = newNode;
+                }
+                size++;
+            }
+
+            public int size() {
+                return size;
+            }
+
+            public void clear() {
+                head = null;
+                size = 0;
+            }
+
+            public void print() {
+                if (!isEmpty()) {
+                    Node temp = head;
+                    while (temp != null) {
+                        System.out.print(temp.data + "\n");
+                        temp = temp.next;
+                    }
+                } else {
+                    System.out.println("Linked list is empty");
+                }
+            }
+
+            public void removeFirst() throws Exception {
+                if (isEmpty()) {
+                    throw new Exception("Linked list is still empty, cannot remove data");
+                } else if (size == 1) {
+                    removeLast();
+                } else {
+                    head = head.next;
+                    head.prev = null;
+                    size--;
+                }
+            }
+
+            public void removeLast() throws Exception {
+                if (isEmpty()) {
+                    throw new Exception("Linked list is still empty, cannot remove data");
+                } else if (head.next == null) {
+                    head = null;
+                    size--;
+                    return;
+                } 
+                Node current = head;
+                while (current.next.next != null) {
+                    current = current.next;
+                }
+                current.next = null;
+                size--;
+            }
+
+            public String getFirst() throws Exception {
+                if (isEmpty()) {
+                    throw new Exception("Linked list still empty");
+                }
+                return head.data;
+            }
+        }
+    \end{minted}
+    \texttt{Main.java}
+    \begin{minted}[autogobble,breaklines]{java}
+        package Assignment2;
+
+        import java.util.Scanner;
+
+        public class Main {
+            static Scanner sc = new Scanner(System.in);
+            static DoubleLinkedList dll = new DoubleLinkedList();
+            public static void displayMenu() {
+                System.out.println("****************");
+                System.out.println("Library Data Book");
+                System.out.println("****************");
+                System.out.println("1. Add new book");
+                System.out.println("2. Get book from top");
+                System.out.println("3. Peek book title from top");
+                System.out.println("4. Info all books");
+                System.out.println("5. Exit");
+                System.out.println("****************");
+            }
+            
+            public static void add() throws Exception {
+                System.out.println("------------------------");
+                System.out.println("Insert new book title");
+                System.out.println("------------------------");
+                sc.nextLine();
+                String data = sc.nextLine();
+                dll.addFirst(data);
+                pivot();
+            }
+            
+            public static void pop() throws Exception {
+                System.out.println("------------------------");
+                System.out.println("Book on top has been removed");
+                System.out.println("------------------------");
+                dll.removeFirst();
+                pivot();
+            }
+
+            public static void peek() throws Exception {
+                System.out.println("------------------------");
+                System.out.println("Peek book title from top");
+                System.out.println("------------------------");
+                System.out.println(dll.getFirst());
+                pivot();
+            }
+
+            public static void print() throws Exception {
+                System.out.println("------------------------");
+                System.out.println("info all books");
+                System.out.println("------------------------");
+                dll.print();
+                pivot();
+            }
+
+            public static void exit() {
+                sc.close();
+            }
+            
+            public static void pivot() throws Exception {
+                displayMenu();
+                int option = sc.nextInt();
+                switch (option) {
+                    case 1 -> add();
+                    case 2 -> pop();
+                    case 3 -> peek();
+                    case 4 -> print();
+                    case 5 -> exit();
+                }
+            }
+            
+            public static void main(String[] args) throws Exception {
+                pivot();
+                sc.close();
+            }
+        }
+
+    \end{minted}
     \item Create a program that helps vaccination process by having a queue algorithm alongside with double linked list as follows \textbf{(the amount left of queue length in menu print(3) and recent vaccinated person in menu Remove data (2) should be displayed)}
     \hbox{}\\\textbf{Initial menu and adding a data}
-    \hbox{}\\\textbf{Print data (notice the highlighted red in the result)}
-    \hbox{}\\\textbf{Remove Data (the highlighted red must displayed in the console too)}
+    \begin{minted}[autogobble,breaklines,linenos]{text}
+        PS D:\Kuliah\Smt 2\Algoritma dan Struktur Data\Praktikum\Week 12\Double Linked Lists>  d:; cd 'd:\Kuliah\Smt 2\Algoritma dan Struktur Data\Praktikum\Week 12\Double Linked Lists'; & 'C:\Program Files\Java\jdk-18.0.2.1\bin\java.exe' '-XX:+ShowCodeDetailsInExceptionMessages' '-cp' 'D:\Kuliah\Smt 2\Algoritma dan Struktur Data\Praktikum\Week 12\Double Linked Lists\bin' 'Assignment3.Main' 
+        ++++++++++++++++++++++++++
+        Extravaganza Vaccine Queue
+        ++++++++++++++++++++++++++
+        1. Add vaccine queue
+        2. Remove vaccine queue
+        3. Display vaccine queue
+        4. Exit
+        ++++++++++++++++++++++++++
+        1
+        Add vaccine queue
+        Queue number : 123
+        Name : joko
+    \end{minted}
+    \textbf{Print data (notice the highlighted red in the result)}
+    \begin{minted}[autogobble,breaklines,linenos]{text}
+        ++++++++++++++++++++++++++
+        Extravaganza Vaccine Queue
+        ++++++++++++++++++++++++++
+        1. Add vaccine queue
+        2. Remove vaccine queue
+        3. Display vaccine queue
+        4. Exit
+        ++++++++++++++++++++++++++
+        3
+        current vaccine queue : 
+        |No.   |Name    |
+        |123   |joko    |
+        Queue left : 1
+    \end{minted}
+    \textbf{Remove Data (the highlighted red must displayed in the console too)}
+    \begin{minted}[autogobble,breaklines,linenos]{text}
+        ++++++++++++++++++++++++++
+        Extravaganza Vaccine Queue
+        ++++++++++++++++++++++++++
+        1. Add vaccine queue
+        2. Remove vaccine queue
+        3. Display vaccine queue
+        4. Exit
+        ++++++++++++++++++++++++++
+        2
+        joko has been vaccinated !
+        ++++++++++++++++++++++++++
+        Extravaganza Vaccine Queue
+        ++++++++++++++++++++++++++
+        1. Add vaccine queue
+        2. Remove vaccine queue
+        3. Display vaccine queue
+        4. Exit
+        ++++++++++++++++++++++++++
+        4
+    \end{minted}
+    \texttt{Person.java}
+    \begin{minted}[autogobble,breaklines]{java}
+        package Assignment3;
+
+        public class Person {
+            String name;
+            int queue;
+
+            public Person(String name, int queue) {
+                this.name = name;
+                this.queue = queue;
+            }
+        }
+    \end{minted}
+    \texttt{Node.java}
+    \begin{minted}[autogobble,breaklines]{java}
+        package Assignment3;
+
+        public class Node {
+            Person data;
+            Node prev, next;
+
+            public Node(Node prev, Person data, Node next) {
+                this.data = data;
+                this.prev = prev;
+                this.next = next;
+            }
+        }
+    \end{minted}
+    \texttt{DoubleLinkedList.java}
+    \begin{minted}[autogobble,breaklines]{java}
+        package Assignment3;
+
+        public class DoubleLinkedList {
+            Node head;
+            int size;
+
+            public DoubleLinkedList() {
+                head = null;
+                size = 0;
+            }
+
+            public boolean isEmpty() {
+                return head == null;
+            }
+
+            public void addFirst(Person item) {
+                if (isEmpty()) {
+                    head = new Node(null, item, null);
+                } else {
+                    Node newNode = new Node(null, item, head);
+                    head.prev = newNode;
+                    head = newNode;
+                }
+                size++;
+            }
+
+            public void addLast(Person item) {
+                if (isEmpty()) {
+                    addFirst(item);
+                } else {
+                    Node current = head;
+                    while (current.next != null) {
+                        current = current.next;
+                    }
+                    Node newNode = new Node(current, item, null);
+                    current.next = newNode;
+                    size++;
+                }
+            }
+
+            public int size() {
+                return size;
+            }
+
+            public void clear() {
+                head = null;
+                size = 0;
+            }
+
+            public void print() {
+                if (!isEmpty()) {
+                    Node temp = head;
+                    int count = 0;
+                    System.out.println("|No.   |Name    |");
+                    while (temp != null) {
+                        System.out.printf("|%-6d|%-8s|\n", temp.data.queue, temp.data.name);
+                        count++;
+                        temp = temp.next;
+                    }
+                    System.out.printf("Queue left : %d\n", count);
+                } else {
+                    System.out.println("Linked list is empty");
+                }
+            }
+
+            public void removeFirst() throws Exception {
+                if (isEmpty()) {
+                    throw new Exception("Linked list is still empty, cannot remove data");
+                } else if (size == 1) {
+                    removeLast();
+                } else {
+                    head = head.next;
+                    head.prev = null;
+                    size--;
+                }
+            }
+
+            public void removeLast() throws Exception {
+                if (isEmpty()) {
+                    throw new Exception("Linked list is still empty, cannot remove data");
+                } else if (head.next == null) {
+                    head = null;
+                    size--;
+                    return;
+                } 
+                Node current = head;
+                while (current.next.next != null) {
+                    current = current.next;
+                }
+                current.next = null;
+                size--;
+            }
+
+            public String getFirst() throws Exception {
+                if (isEmpty()) {
+                    throw new Exception("Linked list still empty");
+                }
+                return head.data.name;
+            }
+        }
+
+    \end{minted}
+    \texttt{Main.java}
+    \begin{minted}[autogobble,breaklines]{java}
+        package Assignment3;
+
+        import java.util.Scanner;
+
+        public class Main {
+            static Scanner sc = new Scanner(System.in);
+            static DoubleLinkedList dll = new DoubleLinkedList();
+            public static void displayMenu() {
+                System.out.println("++++++++++++++++++++++++++");
+                System.out.println("Extravaganza Vaccine Queue");
+                System.out.println("++++++++++++++++++++++++++");
+                System.out.println("1. Add vaccine queue");
+                System.out.println("2. Remove vaccine queue");
+                System.out.println("3. Display vaccine queue");
+                System.out.println("4. Exit");
+                System.out.println("++++++++++++++++++++++++++");
+            }
+            
+            public static void add() throws Exception {
+                System.out.println("Add vaccine queue");
+                System.out.print("Queue number : ");
+                int queueNumber = sc.nextInt();
+                System.out.print("Name : ");
+                sc.nextLine();
+                String name = sc.nextLine();
+                Person data = new Person(name, queueNumber);
+                dll.addFirst(data);
+                pivot();
+            }
+            
+            public static void pop() throws Exception {
+                System.out.printf("%s has been vaccinated !\n", dll.getFirst());
+                dll.removeLast();
+                pivot();
+            }
+
+            public static void print() throws Exception {
+                System.out.println("current vaccine queue : ");
+                dll.print();
+                pivot();
+            }
+
+            public static void exit() {
+                sc.close();
+            }
+            
+            public static void pivot() throws Exception {
+                displayMenu();
+                int option = sc.nextInt();
+                switch (option) {
+                    case 1 -> add();
+                    case 2 -> pop();
+                    case 3 -> print();
+                    case 4 -> exit();
+                }
+            }
+            
+            public static void main(String[] args) throws Exception {
+                pivot();
+                sc.close();
+            }
+        }
+    \end{minted}
     \item Create a program implementation that list students score. Each student’s data consist of their nim, name, and gpa. The program should implement double linked list and should be able to search based on NIM and sort the GPA in descending order. \textbf{Students class must be implemented in this program}
     \hbox{}\\\textbf{Initial menu and adding data}
-    \hbox{}\\\textbf{Printing data}
-    \hbox{}\\\textbf{Searching data}
-    \hbox{}\\\textbf{Sorting data}
+    \begin{minted}[autogobble,breaklines,linenos]{text}
+        PS D:\Kuliah\Smt 2\Algoritma dan Struktur Data\Praktikum\Week 12\Double Linked Lists>  d:; cd 'd:\Kuliah\Smt 2\Algoritma dan Struktur Data\Praktikum\Week 12\Double Linked Lists'; & 'C:\Program Files\Java\jdk-18.0.2.1\bin\java.exe' '-XX:+ShowCodeDetailsInExceptionMessages' '-cp' 'D:\Kuliah\Smt 2\Algoritma dan Struktur Data\Praktikum\Week 12\Double Linked Lists\bin' 'Assignment4.Main' 
+        =============================== 
+        Student Data Management System  
+        =============================== 
+        1. Add data from head
+        2. Add data from Tail
+        3. Add data in specific index   
+        4. Remove data from head        
+        5. Remove data from Tail        
+        6. Remove data in specific index
+        7. Print
+        8. Search by NIM
+        9. Sort by GPA - Desc
+        10. Exit
+        =============================== 
+        1
+        Insert NIM in head position
+        NIM  : 123
+        Name : Anang
+        GPA  : 2.77
+        =============================== 
+        Student Data Management System  
+        =============================== 
+        1. Add data from head
+        2. Add data from Tail
+        3. Add data in specific index   
+        4. Remove data from head
+        5. Remove data from Tail
+        6. Remove data in specific index
+        7. Print
+        8. Search by NIM
+        9. Sort by GPA - Desc
+        10. Exit
+        ===============================
+        2
+        Insert NIM in tail position
+        NIM  : 233
+        Name : Suparjo
+        GPA  : 3.67
+        =============================== 
+        Student Data Management System
+        ===============================
+        1. Add data from head
+        2. Add data from Tail
+        3. Add data in specific index
+        4. Remove data from head
+        5. Remove data from Tail
+        6. Remove data in specific index
+        7. Print
+        8. Search by NIM
+        9. Sort by GPA - Desc
+        10. Exit
+        ===============================
+        3
+        Insert student's data node
+        NIM  : 743
+        Name : Freddy
+        GPA  : 2.90
+        In index : 2
+    \end{minted}
+    \textbf{Printing data}
+    \begin{minted}[autogobble,breaklines,linenos]{text}
+        =============================== 
+        Student Data Management System
+        ===============================
+        1. Add data from head
+        2. Add data from Tail
+        3. Add data in specific index
+        4. Remove data from head
+        5. Remove data from Tail
+        6. Remove data in specific index
+        7. Print
+        8. Search by NIM
+        9. Sort by GPA - Desc
+        10. Exit
+        ===============================
+        7
+        ================================
+        NIM  : 123
+        Name : Anang
+        GPA  : 2.77
+        ================================
+        NIM  : 233
+        Name : Suparjo
+        GPA  : 3.67
+        ================================
+        NIM  : 743
+        Name : Freddy
+        GPA  : 2.90
+
+        All data printed successfully
+    \end{minted}
+    \textbf{Searching data}
+    \begin{minted}[autogobble,breaklines,linenos]{text}
+        ===============================
+        Student Data Management System
+        ===============================
+        1. Add data from head
+        2. Add data from Tail
+        3. Add data in specific index
+        4. Remove data from head
+        5. Remove data from Tail
+        6. Remove data in specific index
+        7. Print
+        8. Search by NIM
+        9. Sort by GPA - Desc
+        10. Exit
+        ===============================
+        8
+        Insert NIM to be searched : 233
+        Data 233 is in node - 1
+        Identity :
+        ================================
+        NIM  : 233
+        Name : Suparjo
+        GPA  : 3.67
+    \end{minted}
+    \textbf{Sorting data}
+    \begin{minted}[autogobble,breaklines,linenos]{text}
+        ===============================
+        Student Data Management System
+        ===============================
+        1. Add data from head
+        2. Add data from Tail
+        3. Add data in specific index
+        4. Remove data from head
+        5. Remove data from Tail
+        6. Remove data in specific index
+        7. Print
+        8. Search by NIM
+        9. Sort by GPA - Desc
+        10. Exit
+        ===============================
+        9
+        =============================== 
+        Student Data Management System
+        ===============================
+        1. Add data from head
+        2. Add data from Tail
+        3. Add data in specific index
+        4. Remove data from head
+        5. Remove data from Tail
+        6. Remove data in specific index
+        7. Print
+        8. Search by NIM
+        9. Sort by GPA - Desc
+        10. Exit
+        ===============================
+        7
+        ================================
+        NIM  : 233
+        Name : Suparjo
+        GPA  : 3.67
+        ================================
+        NIM  : 743
+        Name : Freddy
+        GPA  : 2.90
+        ================================
+        NIM  : 123
+        Name : Anang
+        GPA  : 2.77
+
+        All data printed successfully
+        ===============================
+        Student Data Management System
+        ===============================
+        1. Add data from head
+        2. Add data from Tail
+        3. Add data in specific index
+        4. Remove data from head
+        5. Remove data from Tail
+        6. Remove data in specific index
+        7. Print
+        8. Search by NIM
+        9. Sort by GPA - Desc
+        10. Exit
+        ===============================
+        10
+    \end{minted}
+
+    \texttt{Student.java}
+    \begin{minted}[autogobble,breaklines]{java}
+        package Assignment4;
+
+        public class Student {
+            String name;
+            int nim;
+            double gpa;
+
+            public Student(String name, int NIM, double GPA) {
+                this.name = name;
+                this.nim = NIM;
+                this.gpa = GPA;
+            }
+
+            public void print() {
+                System.out.println("================================");
+                System.out.printf("NIM  : %d\n", nim);
+                System.out.printf("Name : %s\n", name);
+                System.out.printf("GPA  : %.2f\n", gpa);
+            }
+        }
+    \end{minted}
+    \texttt{Node.java}
+    \begin{minted}[autogobble,breaklines]{java}
+        package Assignment4;
+
+        public class Node {
+            Student data;
+            Node prev, next;
+
+            public Node(Node prev, Student data, Node next) {
+                this.data = data;
+                this.prev = prev;
+                this.next = next;
+            }
+        }
+    \end{minted}
+    \texttt{DoubleLinkedList.java}
+    \begin{minted}[autogobble,breaklines]{java}
+        package Assignment4;
+
+        public class DoubleLinkedList {
+            Node head;
+            int size;
+
+            public DoubleLinkedList() {
+                head = null;
+                size = 0;
+            }
+
+            public boolean isEmpty() {
+                return head == null;
+            }
+
+            public void addFirst(Student item) {
+                if (isEmpty()) {
+                    head = new Node(null, item, null);
+                } else {
+                    Node newNode = new Node(null, item, head);
+                    head.prev = newNode;
+                    head = newNode;
+                }
+                size++;
+            }
+
+            public void addLast(Student item) {
+                if (isEmpty()) {
+                    addFirst(item);
+                } else {
+                    Node current = head;
+                    while (current.next != null) {
+                        current = current.next;
+                    }
+                    Node newNode = new Node(current, item, null);
+                    current.next = newNode;
+                    size++;
+                }
+            }
+
+            public void add(Student item, int index) throws Exception {
+                if (isEmpty()) {
+                    addFirst(item);
+                } else if (index < 0 || index > size) {
+                    throw new Exception("Index out of bound");
+                } else if (index == size) {
+                    addLast(item);
+                } else {
+                    Node current = head;
+                    int i = 0;
+                    while (i < index) {
+                        current = current.next;
+                        i++;
+                    }
+                    if (current.next == null) {
+                        Node newNode = new Node(null, item, current);
+                        current.prev = newNode;
+                        head = newNode;
+                    } else {
+                        Node newNode = new Node(current.prev, item, current);
+                        newNode.prev = current.prev;
+                        newNode.next = current;
+                        current.prev.next = newNode;
+                        current.prev = newNode;
+                    }
+                }
+                size++;
+            }
+
+            public int size() {
+                return size;
+            }
+
+            public void clear() {
+                head = null;
+                size = 0;
+            }
+
+            public void print() {
+                if (!isEmpty()) {
+                    Node temp = head;
+                    while (temp != null) {
+                        temp.data.print();
+                        temp = temp.next;
+                    }
+                    System.out.println("\nAll data printed successfully");
+                } else {
+                    System.out.println("Linked list is empty");
+                }
+            }
+
+            public void removeFirst() throws Exception {
+                if (isEmpty()) {
+                    throw new Exception("Linked list is still empty, cannot remove data");
+                } else if (size == 1) {
+                    removeLast();
+                } else {
+                    head = head.next;
+                    head.prev = null;
+                    size--;
+                }
+            }
+
+            public void removeLast() throws Exception {
+                if (isEmpty()) {
+                    throw new Exception("Linked list is still empty, cannot remove data");
+                } else if (head.next == null) {
+                    head = null;
+                    size--;
+                    return;
+                } 
+                Node current = head;
+                while (current.next.next != null) {
+                    current = current.next;
+                }
+                current.next = null;
+                size--;
+            }
+
+            public void remove(int index) throws Exception {
+                if (isEmpty() || index >= size) {
+                    throw new Exception("Index value is out of bound");
+                } else if (size == 0) {
+                    removeFirst();
+                } else {
+                    Node current = head;
+                    int i = 0;
+                    while (i < index) {
+                        current = current.next;
+                        i++;
+                    }
+                    if (current.next == null) {
+                        current.prev.next = null;
+                    } else if (current.prev == null) {
+                        current = current.next;
+                        current.prev = null;
+                        head = current;
+                    } else {
+                        current.prev.next = current.next;
+                        current.next.prev = current.prev;
+                    }
+                    size--;
+                }
+            }
+
+            public Student getFirst() throws Exception {
+                if (isEmpty()) {
+                    throw new Exception("Linked list still empty");
+                }
+                return head.data;
+            }
+
+            public Student getLast() throws Exception {
+                if (isEmpty()) {
+                    throw new Exception("Linked list still empty");
+                }
+                Node temp = head;
+                while (temp.next != null) {
+                    temp = temp.next;
+                }
+                return temp.data;
+            }
+
+            public Student get(int index) throws Exception {
+                if (isEmpty()) {
+                    throw new Exception("Linked list still empty");
+                }
+                Node temp = head;
+                for (int i = 0; i < index; i++) {
+                    temp = temp.next;
+                }
+                return temp.data;
+            }
+            public int search(int key) throws Exception {
+                Node temp = head;
+                int i = 0;
+                while (i < size) {
+                    if (temp.data.nim == key) {
+                        return i;
+                    }
+                    i++;
+                    temp = temp.next;
+                }
+                throw new Exception("Key value doesn't exist");
+            }
+
+            public void sort() throws Exception {
+                if (head == null || head.next == null) {
+                    return;
+                }
+                boolean swapped;
+                Node current;
+                Node last = null;
+                do {
+                    swapped = false;
+                    current = head;
+                    while (current.next != last) {
+                        if (current.data.gpa < current.next.data.gpa) {
+                            Student temp = current.data;
+                            current.data = current.next.data;
+                            current.next.data = temp;
+                            swapped = true;
+                        }
+                        current = current.next;
+                    }
+                    last = current;
+                } while (swapped);
+            }
+        }
+    \end{minted}
+    \texttt{Main.java}
+    \begin{minted}[autogobble,breaklines]{java}
+        package Assignment4;
+
+        import java.util.Scanner;
+
+        public class Main {
+            static Scanner sc = new Scanner(System.in);
+            static DoubleLinkedList dll = new DoubleLinkedList();
+
+            public static void displayMenu() {
+                System.out.println("=============================== ");
+                System.out.println("Student Data Management System  ");
+                System.out.println("=============================== ");
+                System.out.println("1. Add data from head           ");
+                System.out.println("2. Add data from Tail           ");
+                System.out.println("3. Add data in specific index   ");
+                System.out.println("4. Remove data from head        ");
+                System.out.println("5. Remove data from Tail        ");
+                System.out.println("6. Remove data in specific index");
+                System.out.println("7. Print                        ");
+                System.out.println("8. Search by NIM                ");
+                System.out.println("9. Sort by GPA - Desc           ");
+                System.out.println("10. Exit                        ");
+                System.out.println("=============================== ");
+            }
+
+            public static Student newStudent() {
+                System.out.print("NIM  : ");
+                int NIM = sc.nextInt();
+                System.out.print("Name : ");
+                sc.nextLine();
+                String name = sc.nextLine();
+                System.out.print("GPA  : ");
+                double GPA = sc.nextDouble();
+                Student data = new Student(name, NIM, GPA);
+                return data;
+            }
+
+            public static void addFirst() throws Exception {
+                System.out.println("Insert NIM in head position");
+                Student data = newStudent();
+                dll.addFirst(data);
+                pivot();
+            }
+
+            public static void addLast() throws Exception {
+                System.out.println("Insert NIM in tail position");
+                Student data = newStudent();
+                dll.addLast(data);
+                pivot();
+            }
+
+            public static void add() throws Exception {
+                System.out.println("Insert student's data node");
+                Student data = newStudent();
+                System.out.print("In index : ");
+                int index = sc.nextInt();
+                dll.add(data, index);
+                pivot();
+            }
+
+            public static void removeFirst() throws Exception {
+                System.out.println("Insert NIM in head position");
+                dll.removeFirst();
+                pivot();
+            }
+
+            public static void removeLast() throws Exception {
+                System.out.println("Insert NIM in tail position");
+                dll.removeLast();
+                pivot();
+            }
+            public static void remove() throws Exception {
+                System.out.println("Insert student's data node");
+                System.out.print("In index : ");
+                int index = sc.nextInt();
+                dll.remove(index);
+                pivot();
+            }
+
+            public static void print() throws Exception {
+                dll.print();
+                pivot();
+            }
+
+            public static void search() throws Exception {
+                System.out.print("Insert NIM to be searched : ");
+                int key = sc.nextInt();
+                System.out.printf("Data %d is in node - %d\n", key, dll.search(key));
+                System.out.println("Identity : ");
+                dll.get(dll.search(key)).print();
+                pivot();
+            }
+
+            public static void sort() throws Exception {
+                dll.sort();
+                pivot();
+            }
+
+            public static void exit() {
+                sc.close();
+            }
+
+            public static void pivot() throws Exception {
+                displayMenu();
+                int option = sc.nextInt();
+                switch (option) {
+                    case 1  -> addFirst();
+                    case 2  -> addLast();
+                    case 3  -> add();
+                    case 4  -> removeFirst();
+                    case 5  -> removeLast();
+                    case 6  -> remove();
+                    case 7  -> print();
+                    case 8  -> search();
+                    case 9  -> sort();
+                    case 10 -> exit();
+                }
+            }
+
+            public static void main(String[] args) throws Exception {
+                pivot();
+                sc.close();
+            }
+        }
+    \end{minted}
 \end{enumerate}
 
 \end{document}

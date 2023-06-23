@@ -1,4 +1,4 @@
-package Assignment;
+package Assignment4;
 
 public class DoubleLinkedList {
     Node head;
@@ -13,7 +13,7 @@ public class DoubleLinkedList {
         return head == null;
     }
 
-    public void addFirst(int item) {
+    public void addFirst(Student item) {
         if (isEmpty()) {
             head = new Node(null, item, null);
         } else {
@@ -24,7 +24,7 @@ public class DoubleLinkedList {
         size++;
     }
 
-    public void addLast(int item) {
+    public void addLast(Student item) {
         if (isEmpty()) {
             addFirst(item);
         } else {
@@ -38,11 +38,13 @@ public class DoubleLinkedList {
         }
     }
 
-    public void add(int item, int index) throws Exception {
+    public void add(Student item, int index) throws Exception {
         if (isEmpty()) {
             addFirst(item);
         } else if (index < 0 || index > size) {
             throw new Exception("Index out of bound");
+        } else if (index == size) {
+            addLast(item);
         } else {
             Node current = head;
             int i = 0;
@@ -78,10 +80,10 @@ public class DoubleLinkedList {
         if (!isEmpty()) {
             Node temp = head;
             while (temp != null) {
-                System.out.print(temp.data + "\n");
+                temp.data.print();
                 temp = temp.next;
             }
-            System.out.println("\n successfully added");
+            System.out.println("\nAll data printed successfully");
         } else {
             System.out.println("Linked list is empty");
         }
@@ -141,14 +143,14 @@ public class DoubleLinkedList {
         }
     }
 
-    public int getFirst() throws Exception {
+    public Student getFirst() throws Exception {
         if (isEmpty()) {
             throw new Exception("Linked list still empty");
         }
         return head.data;
     }
 
-    public int getLast() throws Exception {
+    public Student getLast() throws Exception {
         if (isEmpty()) {
             throw new Exception("Linked list still empty");
         }
@@ -159,7 +161,7 @@ public class DoubleLinkedList {
         return temp.data;
     }
 
-    public int get(int index) throws Exception {
+    public Student get(int index) throws Exception {
         if (isEmpty()) {
             throw new Exception("Linked list still empty");
         }
@@ -169,12 +171,11 @@ public class DoubleLinkedList {
         }
         return temp.data;
     }
-
     public int search(int key) throws Exception {
         Node temp = head;
         int i = 0;
         while (i < size) {
-            if (temp.data == key) {
+            if (temp.data.nim == key) {
                 return i;
             }
             i++;
@@ -194,8 +195,8 @@ public class DoubleLinkedList {
             swapped = false;
             current = head;
             while (current.next != last) {
-                if (current.data > current.next.data) {
-                    int temp = current.data;
+                if (current.data.gpa < current.next.data.gpa) {
+                    Student temp = current.data;
                     current.data = current.next.data;
                     current.next.data = temp;
                     swapped = true;
