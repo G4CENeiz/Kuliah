@@ -478,9 +478,109 @@ In this practicum, we will try to implement Binary search tree with basic operat
 \section{ASSIGNMENTS}
 \begin{enumerate}
     \item Create a method inside the \textbf{BinaryTree} class that will add nodes with recursive approach.
+    \begin{minted}[autogobble,breaklines]{java}
+        void addRecursive(int data) {
+            if (isEmpty()) {
+                root = new Node(data);
+            } else {
+                Node current = root;
+                addRecursiveNotNull(data, current);
+            }
+        }
+
+        private void addRecursiveNotNull(int data, Node current) {
+            if (data < current.data) {
+                addTraverseLeftBranch(data, current);
+            }
+            if (data > current.data) {
+                addTraverseRightBranch(data, current);
+            }
+        }
+
+        private void addTraverseLeftBranch(int data, Node current) {
+            if (current.left != null) {
+                current = current.left;
+                addRecursiveNotNull(data, current);
+            } else {
+                current.left = new Node(data);
+            }
+        }
+
+        private void addTraverseRightBranch(int data, Node current) {
+            if (current.right != null) {
+                current = current.right;
+                addRecursiveNotNull(data, current);
+            } else {
+                current.right = new Node(data);
+            }
+        }
+    \end{minted}
     \item Create a method in the \textbf{BinaryTree} class to display the smallest and largest values in the tree.
+    \begin{minted}[autogobble,breaklines]{java}
+        void printLargeAndSmall() {
+            Node current = root;
+            if (current.left == null && current.right == null) {
+                System.out.printf("%s: %d \n", "Smallest and Largest", current.data);
+            } else if (current.left == null) {
+                System.out.printf("%s: %d \n", "Smallest", current.data);
+                System.out.printf("%s: %d \n", "Largest", current.right.data);
+            } else if (current.right == null) {
+                System.out.printf("%s: %d \n", "Smallest", current.left.data);
+                System.out.printf("%s: %d \n", "Largest", current.data);
+            } else {
+                printSearch(current.left, true);
+                printSearch(current.right, false);
+            }
+        }
+
+        private void printSearch(Node current, boolean isLeft) {
+            if (isLeft && current.left != null) {
+                current = current.left;
+                printSearch(current, isLeft);
+            } else if (!isLeft && current.right != null) {
+                current = current.right;
+                printSearch(current, isLeft);
+            } else {
+                System.out.printf("%s: %d \n", isLeft ? "Smallest" : "Largest", current.data);
+            }
+        }
+    \end{minted}
     \item Create a method in the \textbf{BinaryTree} class to display the data in the leaf.
+    \begin{minted}[autogobble,breaklines]{java}
+        void printLeaf() {
+            Node current = root;
+            if (isEmpty()) {
+                System.out.println("is empty");
+            } else {
+                printLeafNotNull(current);
+            }
+        }
+
+        private void printLeafNotNull(Node current) {
+            if(current.left != null) printLeafNotNull(current.left);
+            if(current.right != null) printLeafNotNull(current.right);
+            if (current.left == null && current.right == null) System.out.print(current.data + ", ");
+        }
+    \end{minted}
     \item Create a method in the \textbf{BinaryTree} class to display the number of leaves in the tree.
+    \begin{minted}[autogobble,breaklines]{java}
+        int countLeaf() {
+            Node current = root;
+            if (isEmpty()) {
+                System.out.println("is empty");
+            } else {
+                return countLeafNotNull(current);
+            }
+            return 0;
+        }
+
+        private int countLeafNotNull(Node current) {
+            int left = current.left != null ? countLeafNotNull(current.left) : 0;
+            int right = current.right != null ? countLeafNotNull(current.right) : 0;
+            int currentData = current.left == null && current.right == null ? 1 : 0;
+            return left + right + currentData;
+        }
+    \end{minted}
     \item Modify the \textbf{BinaryTreeMain} class, so that it has a menu option:
     \begin{enumerate}[label=\alph*.]
         \item add
@@ -491,10 +591,135 @@ In this practicum, we will try to implement Binary search tree with basic operat
         \item traverse postOrder
         \item keluar
     \end{enumerate}
+    \begin{minted}[autogobble,breaklines]{java}
+        import java.util.Scanner;
+
+        public class BinaryTreeMain {
+            static Scanner sc = new Scanner(System.in);
+            static BinaryTree btTree = new BinaryTree();
+            
+            static void displayMenu() {
+                System.out.println("======================");
+                System.out.println("   Binary Tree Menu   ");
+                System.out.println("======================");
+                System.out.println("1. Add                ");
+                System.out.println("2. Delete             ");
+                System.out.println("3. Find               ");
+                System.out.println("4. Traverse inOrder   ");
+                System.out.println("5. Traverse preOrder  ");
+                System.out.println("6. Traverse postOrder ");
+                System.out.println("7. Exit               ");
+            }
+
+            static int getData() {
+                System.out.print("data(int): ");
+                return sc.nextInt();
+            }
+
+            static void add() {
+                System.out.println("add data to tree");
+                btTree.add(getData());
+            }
+
+            static void delete() {
+                System.out.println("delete data in tree by data");
+                btTree.delete(getData());
+            }
+
+            static void find() {
+                System.out.println("find data in tree");
+                btTree.find(getData());
+            }
+
+            static void traverseInOrder() {
+                System.out.println("traverse the tree in-order method");
+                btTree.traverseInOrder(btTree.root);
+            }
+            
+            static void traversePreOrder() {
+                System.out.println("traverse the tree in-order method");
+                btTree.traversePreOrder(btTree.root);
+            }
+            
+            static void traversePostOrder() {
+                System.out.println("traverse the tree in-order method");
+                btTree.traversePostOrder(btTree.root);
+            }
+
+            static void exit() {
+                sc.close();
+            }
+
+            static void pivot() {
+                displayMenu();
+                int option = sc.nextInt();
+                switch (option) {
+                    case 1 -> add();
+                    case 2 -> delete();
+                    case 3 -> find();
+                    case 4 -> traverseInOrder();
+                    case 5 -> traversePreOrder();
+                    case 6 -> traversePostOrder();
+                    case 7 -> exit();
+                }
+            }
+
+            public static void main(String[] args) {
+                BinaryTree bt = new BinaryTree();
+
+                bt.add(6);
+                bt.add(4);
+                bt.add(8);
+                bt.add(3);
+                bt.add(5);
+                bt.add(7);
+                bt.add(9);
+                bt.add(10);
+                bt.add(15);
+
+                bt.traversePreOrder(bt.root);
+                System.out.println();
+                bt.traverseInOrder(bt.root);
+                System.out.println();
+                bt.traversePostOrder(bt.root);
+                System.out.println();
+                System.out.println("Find " + bt.find(5));
+                bt.delete(8);
+                bt.traversePreOrder(bt.root);
+                System.out.println();
+
+                pivot();
+                sc.close();
+            }
+        }
+    \end{minted}
     \item Modify the \textbf{BinaryTreeArray} class, and add:
     \begin{enumerate}[label=\alph*.]
         \item Add add method (int data) to enter data into the tree
+        \begin{minted}[autogobble,breaklines]{java}
+            void add(int data) {
+                idxLast++;
+                this.data[idxLast] = data;
+            }
+        \end{minted}
         \item \textbf{traversePreOrder()} and \textbf{traversePostOrder()} methods
+        \begin{minted}[autogobble,breaklines]{java}
+            void traversePreOrder(int idxStart) {
+                if (idxStart <= idxLast) {
+                    System.out.print(data[idxStart]+" ");
+                    traversePreOrder(2*idxStart+1);
+                    traversePreOrder(2*idxStart+2);
+                }
+            }
+
+            void traversePostOrder(int idxStart) {
+                if (idxStart <= idxLast) {
+                    traversePostOrder(2*idxStart+1);
+                    traversePostOrder(2*idxStart+2);
+                    System.out.print(data[idxStart]+" ");
+                }
+            }
+        \end{minted}
     \end{enumerate}
 \end{enumerate}
 

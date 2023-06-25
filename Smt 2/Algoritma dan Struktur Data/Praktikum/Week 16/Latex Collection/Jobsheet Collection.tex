@@ -1,0 +1,216 @@
+\documentclass[12pt,titlepage]{article}
+\usepackage[margin=1.25in]{geometry}
+\usepackage{graphicx,amsmath,blindtext,minted}
+
+%% Variables definition
+\newcommand{\vSubject}{Data Structure and Algorithm Practicum}
+\newcommand{\vSubtitle}{Chapter}
+\newcommand{\vName}{Muhammad Baihaqi Aulia Asy'ari}
+\newcommand{\vNIM}{2241720145}
+\newcommand{\vClass}{1I}
+\newcommand{\vDepartment}{Information Technology}
+\newcommand{\vStudyProgram}{D4 Informatics Engineering}
+
+%% [START] Tikz related stuff
+\usepackage{tikz}
+\usetikzlibrary{svg.path,calc,shapes.geometric,shapes.misc}
+\tikzstyle{terminator} = [rectangle, draw, text centered, rounded corners = 1em, minimum height=2em]
+\tikzstyle{preparation} = [chamfered rectangle, chamfered rectangle sep=0.75em, draw, text centered, minimum height = 2em]
+\tikzstyle{process} = [rectangle, draw, text centered, minimum height=2em]
+\tikzstyle{decision} = [diamond, aspect=2, draw, text centered, minimum height=2em]
+\tikzstyle{data}=[trapezium, draw, text centered, trapezium left angle=60, trapezium right angle=120, minimum height=2em]
+\tikzstyle{connector} = [line width=0.25mm,->]
+%% [END] Tikz related stuff
+
+%% [START] Fancy header related stuff
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setlength{\headheight}{15pt} % compensate fancyhdr style
+\fancyhead{}
+\fancyfoot{}
+\fancyfoot[L]{\thepage}
+\fancyfoot[R]{\textit{\vSubject - \vSubtitle}}
+\renewcommand{\footrulewidth}{0.4pt}% default is 0pt, overline for footer
+%% [END] Fancy header related stuff
+
+%% [START] Custom tabular command related stuff
+\usepackage{tabularx}
+\newcommand{\details}[2]{
+    #1 & #2  \\
+}
+%% [END] Custom tabular command related stuff
+
+%% [START] Figure related stuff
+\newcommand{\image}[3][1]{
+    \begin{figure}[h]
+        \centering
+        \includegraphics[#1]{#2}
+        \caption{#3}
+        \label{#3}
+    \end{figure}
+}
+%% [END] Figure related stuff
+
+%%
+\usepackage{pgf-umlcd}
+
+\renewcommand{\umldrawcolor}{black}
+\renewcommand{\umlfillcolor}{white}
+%%
+
+%% [BEGIN] Custom enumerator
+\usepackage{enumitem}
+%% [END] Custom enumerator
+
+%% [BEGIN] Paragraph indent
+\usepackage{indentfirst}
+%% [END] Paragraph indent
+
+\begin{document}
+\begin{titlepage}
+    \centering
+    \vfill
+    {\bfseries\LARGE
+        \vSubject\\
+        \vskip0.25cm
+        \vSubtitle
+    }
+    \vfill
+    \includegraphics[width=6cm]{images/polinema-logo.png}
+    \vfill
+    {
+        \textbf{Name}\\
+        \vName\\
+        \vskip0.5cm
+        \textbf{NIM}\\
+        \vNIM\\
+        \vskip0.5cm
+        \textbf{Class}\\
+        \vClass\\
+        \vskip0.5cm
+        \textbf{Department}\\
+        \vDepartment\\
+        \vskip0.5cm
+        \textbf{Study Program}\\
+        \vStudyProgram
+    }
+\end{titlepage}
+
+\newpage
+
+\setcounter{section}{16}
+\subsection{Tujuan Praktikum}
+Setelah melakukan praktikum ini, mahasiswa mampu:
+\begin{enumerate}
+    \item memahami bentuk-bentuk collection dan hierarkinya;
+    \item menerapkan collection sesuai dengan fungsi dan jenisnya;
+    \item menyelesaikan kasus menggunakan collection yang sesuai.
+\end{enumerate}
+
+\subsection{Kegiatan Praktikum 1}
+\subsubsection{Percobaan 1}
+Pada percobaan 1 ini akan dicontohkan penggunaan collection untuk menambahkan sebuah elemen, mengakses elemen, dan menghapus sebuah elemen.
+\begin{enumerate}
+    \item Buatlah sebuah class ContohList yang main methode berisi kode program seperti di bawah ini
+    \begin{minted}[autogobble,fontsize=\small,breaklines]{java}
+        List l = new ArrayList<>();
+        l.add(1);
+        l.add(2);
+        l.add(3);
+        l.add("Cireng");
+        System.out.printf("Elemen 0: %d total elemen: %d elemen terakhir: %s\n", l.get(0), l.size(), l.get(l.size() - 1));
+        
+        l.add(4);
+        l.remove(0);
+        System.out.printf("Elemen 0: %d total elemen: %d elemen terakhir: %s\n", l.get(0), l.size(), l.get(l.size() - 1));
+    \end{minted}
+    \item Tambahkan kode program untuk menggunakan collection dengan aturan penulisan kode program seperti berikut
+    \begin{minted}[autogobble,fontsize=\small,breaklines]{java}
+        List<String> names = new LinkedList<>();
+        names.add("Noureen");
+        names.add("Akhleema");
+        names.add("Shannum");
+        names.add("Uwais");
+        names.add("Al-Qarni");
+        
+        System.out.printf("Elemen 0: %s total elemen: %d elemen terakhir: %s\n", names.get(0), names.size(), l.get(l.size() - 1));
+        names.set(0, "My Kid");
+        System.out.printf("Elemen 0: %s total elemen: %d elemen terakhir: %s\n", names.get(0), names.size(), l.get(l.size() - 1));
+        System.out.println("Names: " + names.toString());
+    \end{minted}
+\end{enumerate}
+
+\subsubsection{Verifikasi Hasil Percobaan}
+Verifikasi hasil kompilasi kode program Anda dengan gambar berikut ini.
+\begin{minted}[autogobble,breaklines,linenos]{text}
+    PS D:\Kuliah\Smt 2\Algoritma dan Struktur Data\Praktikum\Week 16\Collection>  & 'C:\Program Files\Java\jdk-18.0.2.1\bin\java.exe' '-XX:+ShowCodeDetailsInExceptionMessages' '-cp' 'D:\Kuliah\Smt 2\Algoritma dan Struktur Data\Praktikum\Week 16\Collection\bin' 'ContohList'
+    Elemen 0: 1 total elemen: 4 elemen terakhir: Cireng 
+    Elemen 0: 2 total elemen: 4 elemen terakhir: 4      
+    Elemen 0: Noureen total elemen: 5 elemen terakhir: 4
+    Elemen 0: My Kid total elemen: 5 elemen terakhir: 4 
+    Names: [My Kid, Akhleema, Shannum, Uwais, Al-Qarni]
+\end{minted}
+
+\subsubsection{Pertanyaan Percobaan}
+\begin{enumerate}
+    \item Perhatikan baris kode 25-36, mengapa semua jenis data bisa ditampung ke dalam sebuah Arraylist?
+    \item Modifikasi baris kode 25-36 seingga data yang ditampung hanya satu jenis atau spesifik tipe tertentu!
+    \item Ubah kode pada baris kode 38 menjadi seperti ini
+    \item Tambahkan juga baris berikut ini, untuk memberikan perbedaan dari tampilan yang sebelumnya
+    \item Dari penambahan kode tersebut, silakan dijalankan dan apakah yang dapat Anda jelaskan!
+\end{enumerate}
+
+\subsection{Kegiatan Praktikum 2}
+\subsubsection{Tahapan Percobaan}
+Pada praktikum 2 ini akan dibuat beberapa method untuk menampilkan beberapa cara yang dapat dilakukan untuk mengambil/menampilkan elemen pada sebuah collection. Silakan ikutilah Langkah-langkah di bawah ini
+\begin{enumerate}
+    \item Buatlah class dengan nama LoopCollection serta tambahkan method main yang isinya adalah sebagai berikut.
+    \item Tambahkan potongan kode berikut ini dari yang sebelumnya agar proses menampilkan elemen pada sebuah stack bervariasi.
+\end{enumerate}
+
+\subsubsection{Verifikasi Hasil Percobaan}
+Verifikasi hasil kompilasi kode program Anda dengan gambar berikut ini.
+
+\subsubsection{Pertanyaan Percobaan}
+\begin{enumerate}
+    \item Apakah perbedaan fungsi push() dan add() pada objek fruits?
+    \item Silakan hilangkan baris 43 dan 44, apakah yang akan terjadi? Mengapa bisa demikian?
+    \item Jelaskan fungsi dari baris 46-49?
+    \item Silakan ganti baris kode 25, Stack<String> menjadi List<String> dan apakah yang terjadi? Mengapa bisa demikian?
+    \item Ganti elemen terakhir dari dari objek fruits menjadi “Strawberry”!
+    \item Tambahkan 3 buah seperti “Mango”,”guava”, dan “avocado” kemudian dilakukan sorting!
+\end{enumerate}
+
+\subsection{Kegiatan Praktikum 3}
+\subsubsection{Tahapan Percobaan}
+Pada praktikum 3 ini dilakukan uji coba untuk mengimplementasikan sebuah collection untuk menampung objek yang dibuat sesuai kebutuhan. Objek tersebut adalah sebuah objek mahasiswa dengan fungsi-fungsi umum seperti menambahkan, menghapus, mengubah, dan mencari.
+\begin{enumerate}
+    \item Buatlah sebuah class Mahasiswa dengan attribute, kontruktor, dan fungsi sebagai berikut.
+    \item Selanjutnya, buatlah sebuah class ListMahasiswa yang memiliki attribute seperti di bawah ini
+    \item Method tambah(), hapus(), update(), dan tampil() secara berurut dibuat agar bisa melakukan operasi-operasi seperti yang telah disebutkan.
+    \item Untuk proses hapus, update membutuhkan fungsi pencarian terlebih dahulu yang potongan kode programnya adalah sebagai berikut
+    \item Pada class yang sama, tambahkan main method seperti potongan program berikut dan amati hasilnya!
+\end{enumerate}
+
+\subsubsection{Verifikasi Hasil Percobaan}
+Verifikasi hasil kompilasi kode program Anda dengan gambar berikut ini.
+
+\subsubsection{Pertanyaan Percobaan}
+\begin{enumerate}
+    \item Pada fungsi tambah() yang menggunakan unlimited argument itu menggunakan konsep apa? Dan kelebihannya apa?
+    \item Pada fungsi linearSearch() di atas, silakan diganti dengan fungsi binarySearch() dari collection!
+    \item Tambahkan fungsi sorting baik secara ascending ataupun descending pada class tersebut!
+\end{enumerate}
+
+\subsection{Tugas Praktikum}
+\begin{enumerate}
+    \item Buatlah implementasi program daftar nilai mahasiswa semester, minimal memiliki 3 class yaitu Mahasiswa, Nilai, dan Mata Kuliah. Data Mahasiswa dan Mata Kuliah perlu melalui penginputan data terlebih dahulu.
+    \mbox{}\\ \textbf{Ilustrasi Program} \mbox{}\\ 
+    \textit{Menu Awal dan Penambahan Data}
+    \textit{Tampil Nilai}
+    \textit{Pencarian Data Mahasiswa}
+    \textit{Pengurutan Data Nilai}
+    \item Tambahkan prosedur hapus data mahasiswa melalui implementasi Queue pada collections Tugas nomor 1!
+\end{enumerate}
+
+\end{document}
