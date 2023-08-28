@@ -1,0 +1,169 @@
+\documentclass[12pt,titlepage]{article}
+\usepackage[margin=1.25in]{geometry}
+\usepackage{graphicx,amsmath,blindtext,minted}
+
+%% Variables definition
+\newcommand{\vSubject}{Graphical User Interface}
+\newcommand{\vSubtitle}{Intro to GUI}
+\newcommand{\vName}{Muhammad Baihaqi Aulia Asy'ari}
+\newcommand{\vNIM}{2241720145}
+\newcommand{\vClass}{2I}
+\newcommand{\vDepartment}{Information Technology}
+\newcommand{\vStudyProgram}{D4 Informatics Engineering}
+
+%% [START] Tikz related stuff
+\usepackage{tikz}
+\usetikzlibrary{svg.path,calc,shapes.geometric,shapes.misc}
+\tikzstyle{terminator} = [rectangle, draw, text centered, rounded corners = 1em, minimum height=2em]
+\tikzstyle{preparation} = [chamfered rectangle, chamfered rectangle sep=0.75em, draw, text centered, minimum height = 2em]
+\tikzstyle{process} = [rectangle, draw, text centered, minimum height=2em]
+\tikzstyle{decision} = [diamond, aspect=2, draw, text centered, minimum height=2em]
+\tikzstyle{data}=[trapezium, draw, text centered, trapezium left angle=60, trapezium right angle=120, minimum height=2em]
+\tikzstyle{connector} = [line width=0.25mm,->]
+%% [END] Tikz related stuff
+
+%% [START] Fancy header related stuff
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setlength{\headheight}{15pt} % compensate fancyhdr style
+\fancyhead{}
+\fancyfoot{}
+\fancyfoot[L]{\thepage}
+\fancyfoot[R]{\textit{\vSubject - \vSubtitle}}
+\renewcommand{\footrulewidth}{0.4pt}% default is 0pt, overline for footer
+%% [END] Fancy header related stuff
+
+%% [START] Custom tabular command related stuff
+\usepackage{tabularx}
+\newcommand{\details}[2]{
+    #1 & #2  \\
+}
+%% [END] Custom tabular command related stuff
+
+%% [START] Figure related stuff
+\newcommand{\image}[3][1]{
+    \begin{figure}[h]
+        \centering
+        \includegraphics[#1]{#2}
+        \caption{#3}
+        \label{#3}
+    \end{figure}
+}
+%% [END] Figure related stuff
+
+%%
+\usepackage{pgf-umlcd}
+
+\renewcommand{\umldrawcolor}{black}
+\renewcommand{\umlfillcolor}{white}
+%%
+
+%% [BEGIN] Custom enumerator
+\usepackage{enumitem}
+%% [END] Custom enumerator
+
+%% [BEGIN] Paragraph indent
+\usepackage{indentfirst}
+%% [END] Paragraph indent
+
+%% [BEGIN] URL
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
+
+\urlstyle{same}
+%% [END] URL
+
+\begin{document}
+\begin{titlepage}
+    \centering
+    \vfill
+    {\bfseries\LARGE
+        \vSubject\\
+        \vskip0.25cm
+        \vSubtitle
+    }
+    \vfill
+    \includegraphics[width=6cm]{images/polinema-logo.png}
+    \vfill
+    {
+        \textbf{Name}\\
+        \vName\\
+        \vskip0.5cm
+        \textbf{NIM}\\
+        \vNIM\\
+        \vskip0.5cm
+        \textbf{Class}\\
+        \vClass\\
+        \vskip0.5cm
+        \textbf{Department}\\
+        \vDepartment\\
+        \vskip0.5cm
+        \textbf{Study Program}\\
+        \vStudyProgram
+    }
+\end{titlepage}
+
+\newpage
+
+\section{What is User Interface}
+To answer this question let's ask ChatGPT for its opinion on UI. ChatGPT, Explain to me like i am an old person. What is UI?
+
+\subsubsection*{ChatGPT}
+Well, dear friend, UI stands for "User Interface." It's a bit like the control panel or dashboard of a gadget, device, or computer program. You remember how back in the day, you used knobs, switches, and buttons on your radio or television to change channels or adjust the volume? That was a simple form of a user interface.
+
+In today's world, UI refers to the way we interact with technology. It includes all the visual elements like buttons, menus, and icons on a computer screen or a smartphone. You use these things to tell a computer program or a device what you want it to do. For example, when you tap on an icon on your phone to open an app or click on a button on a website to submit a form, you're using the UI to communicate with the technology.
+
+UI designers work hard to make sure that these interfaces are easy to understand and use, especially for folks like us who might not be as familiar with modern gadgets. They choose colors, shapes, and layouts that make it clear what each button does and how to navigate around. So, in a nutshell, UI is like the bridge that helps us communicate with and control the technology around us.
+
+\subsubsection*{In Summary}
+UI, or User Interface, is the way we interact with technology visually. It let us give commands and receive responses from devices and software. Designers make these interfaces easy to understand and use. A good UI enhances our experience by making tasks clear and efficient, acting as the vital link between us and technology.
+
+\newpage
+
+\section{What is User Experience}
+For this question, let's us use a more unreliable source. Wikipedia result for "User Experience" is as such
+
+\subsubsection*{Wikipedia}
+The user experience (UX) is how a user interacts with and experiences a product, system or service. It includes a person's perceptions of utility, ease of use, and efficiency. Improving user experience is important to most companies, designers, and creators when creating and refining products because negative user experience can diminish the use of the product and, therefore, any desired positive impacts; conversely, designing toward profitability often conflicts with ethical user experience objectives and even causes harm. User experience is subjective. However, the attributes that make up the user experience are objective.
+
+\subsubsection*{In summary}
+Unlike the literal definition of the phrase "User Experience", the term reference how the user experience the product rather than how experienced the user is with the product. UX focus on how to improve on how the user use the product and its flow. Despite User Experience being subjective, but what makes the user experience matter can be controlled and measured objectively. 
+
+\newpage
+
+\section{What is a Good User Interface}
+When we googled "What is a Good User Interface", the first thing that came up is as such.
+
+\subsubsection*{Google}
+A good graphical user interface should be easy to use and understand for everyone. A first step to designing inclusively is getting to know the users and understanding their needs. This helps UX designers create a product that is flexible, functional, and enjoyable for all.
+
+from \href{https://www.uxpin.com/studio/blog/good-ui-design-characteristics/#:~:text=A%20good%20graphical%20user%20interface,functional%2C%20and%20enjoyable%20for%20all.}{this link}
+ 
+\subsection*{Example}
+
+\includegraphics[width=0.95\textwidth]{images/figures/fig1.png}\\
+\href{https://www.youtube.com}{youtube.com}
+
+\newpage
+
+\section{What is a Good User Experience}
+We ask google again for some answer. the result is as such.
+
+\subsubsection*{Google}
+Good UX design means thinking like a user and providing a clear pathway to aid users in achieving goals when interacting with the product. Managing the user experience involves an 8-step design process: Interview stakeholders to understand user behavior and constraints and identify pain points.
+
+from \href{https://www.netsolutions.com/insights/good-ux-ui-design/#:~:text=Good%20UX%20design%20means%20thinking,constraints%20and%20identify%20pain%20points.}{this link}
+
+\subsection*{Example}
+
+\includegraphics[width=0.95\textwidth]{images/figures/fig2.png}\\
+\href{https://www.tradingview.com}{tradingview.com}
+
+\end{document}
