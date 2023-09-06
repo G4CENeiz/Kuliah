@@ -1,0 +1,9 @@
+person involved in a project
+1. Project owner
+2. stakeholder
+3. developer
+
+Project owner has idea -> sponsor fund the project -> project manager manage the team -> the Team works on the idea
+
+suppliers might have some level of involvement and are part of the stakeholder
+Anyone who has any kind of involvement with the project is part of the stakeholder
