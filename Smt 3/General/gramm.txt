@@ -1,0 +1,3 @@
+Mind yourself, this file is used to check my grammar with Grammarly in vscode.
+
+return is used to give a value when a method is called. The return keyword is used when a method data type is not void.
