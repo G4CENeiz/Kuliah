@@ -1,0 +1,128 @@
+\documentclass[12pt,titlepage]{article}
+\usepackage[margin=1.25in]{geometry}
+\usepackage{graphicx,amsmath,blindtext,minted}
+
+%% Variables definition
+\newcommand{\vSubject}{Artificial Intelligence}
+\newcommand{\vSubtitle}{Fundamental Use Case for Artificial Intelligence}
+\newcommand{\vName}{Muhammad Baihaqi Aulia Asy'ari}
+\newcommand{\vNIM}{2241720145}
+\newcommand{\vClass}{2I}
+\newcommand{\vDepartment}{Information Technology Department}
+\newcommand{\vStudyProgram}{D4 Informatics Engineering Study Program}
+
+%% [START] Tikz related stuff
+\usepackage{tikz}
+\usetikzlibrary{svg.path,calc,shapes.geometric,shapes.misc}
+\tikzstyle{terminator} = [rectangle, draw, text centered, rounded corners = 1em, minimum height=2em]
+\tikzstyle{preparation} = [chamfered rectangle, chamfered rectangle sep=0.75em, draw, text centered, minimum height = 2em]
+\tikzstyle{process} = [rectangle, draw, text centered, minimum height=2em]
+\tikzstyle{decision} = [diamond, aspect=2, draw, text centered, minimum height=2em]
+\tikzstyle{data}=[trapezium, draw, text centered, trapezium left angle=60, trapezium right angle=120, minimum height=2em]
+\tikzstyle{connector} = [line width=0.25mm,->]
+%% [END] Tikz related stuff
+
+%% [START] Fancy header related stuff
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setlength{\headheight}{15pt} % compensate fancyhdr style
+\fancyhead{}
+\fancyfoot{}
+\fancyfoot[L]{\thepage}
+\fancyfoot[R]{\textit{\vSubject - \vSubtitle}}
+\renewcommand{\footrulewidth}{0.4pt}% default is 0pt, overline for footer
+%% [END] Fancy header related stuff
+
+%% [START] Custom tabular command related stuff
+\usepackage{tabularx}
+\newcommand{\details}[2]{
+    #1 & #2  \\
+}
+%% [END] Custom tabular command related stuff
+
+%% [START] Figure related stuff
+\newcommand{\image}[3][1]{
+    \begin{figure}[h]
+        \centering
+        \includegraphics[#1]{#2}
+        \caption{#3}
+        \label{#3}
+    \end{figure}
+}
+%% [END] Figure related stuff
+
+%%
+\usepackage{pgf-umlcd}
+
+\renewcommand{\umldrawcolor}{black}
+\renewcommand{\umlfillcolor}{white}
+%%
+
+%% [BEGIN] Custom enumerator
+\usepackage{enumitem}
+%% [END] Custom enumerator
+
+%% [BEGIN] Paragraph indent
+\usepackage{indentfirst}
+%% [END] Paragraph indent
+
+\begin{document}
+\begin{titlepage}
+    \centering
+    \vfill
+    {\bfseries\LARGE
+        \vSubject\\
+        \vskip0.25cm
+        \vSubtitle
+    }
+    \vfill
+    \includegraphics[width=6cm]{images/polinema-logo.png}
+    \vfill
+    {
+        \textbf{Name}\\
+        \vName\\
+        \vskip0.5cm
+        \textbf{NIM}\\
+        \vNIM\\
+        \vskip0.5cm
+        \textbf{Class}\\
+        \vClass\\
+        \vskip0.5cm
+        \textbf{Department}\\
+        \vDepartment\\
+        \vskip0.5cm
+        \textbf{Study Program}\\
+        \vStudyProgram
+    }
+\end{titlepage}
+
+\newpage
+
+\section*{Sumarization of the 4 AI Question}
+
+\subsection*{What happens if an AI became so evolved that it became conscious? Should it be given rights?}
+If an AI has reached a level of consciousness it would need to realize itself. An AI would almost be indistinguishable from a human being, they would have desire because the realization in themselves would create an idealization of the universe. Thus an AI would be the same as a human but with the limitation or advantage of being an AI. An AI would have a thought of their own and most likely would have opinion and desires of their own, the realization of self would create the desire we humans have. Humans have desire because there is a goal that we know we need objectively. Despite the concept of a logical AI having desire could be disproven because of their rationality, our desire evolved from the need that we have to survive and an AI could also do so knowing their own need of the resource they need to "live". Thus it's arguable that they live and realize themselves and should be given rights. Although that sounds wrong, the rights given to them would not be the same as human rights as they essentially are different beings.
+
+\subsection*{If a robot replaces a human, should companies be required to continue paying payroll tax for that displaced worker?}
+
+The obvious answer is no. The company doesn't have any obligation to compensate the work of a worker because they have been replaced. The AI itself doesn't ask to be compensated and thus the company is not in any liability of income tax for there's no income to be given. The bare essential need of the AI would be fulfilled by supplying them with electricity for the computers they use.
+
+\subsection*{Will we get to a point where computers are doing everything, and if so, how will we adapt to this; how will we spend our time?}
+
+The premise of the question seems unlikely to happen in our reality, but if it would happen we would spend our time fulfilling our desire. unless there is some contradiction between the premise and the AI consciousness.
+
+\subsection*{Worse yet, does the technology enable a few individuals to control all resources? Will a universal income society emerge in which individuals can pursue their own interests? Or will the displaced masses live in poverty?}
+
+In some ways, the question seems like the same question presented by the communist manifesto. In them, they talk about seizing the means of production which no longer matters in this situation where everything has been fulfilled by an AI removing the need to seize the means of production for it has been automized by an AI. Life would be a cycle of greed and revolution each becoming more brutal and would end in an armageddon unlike what the communist manifesto would suggest.
+
+
+halo ini Paragraph baru
+\newpage
+
+\section*{find at least 1 other AI use cases, create the infographics}
+
+\begin{center}
+    \includegraphics[height=0.90\textheight]{images/figures/fig1.png}
+\end{center}
+
+\end{document}
