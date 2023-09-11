@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{SELECT}
+\PYG{+w}{    }\PYG{n}{Fname}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Lname}
+\PYG{k}{FROM}\PYG{+w}{ }\PYG{n}{DEPARTMENT}
+\PYG{k}{JOIN}\PYG{+w}{ }\PYG{n}{EMPLOYEE}
+\PYG{k}{ON}\PYG{+w}{ }\PYG{n}{DEPARTMENT}\PYG{p}{.}\PYG{n}{Mgr\PYGZus{}ssn}\PYG{o}{=}\PYG{n}{EMPLOYEE}\PYG{p}{.}\PYG{n}{Ssn}
+\PYG{k}{WHERE}\PYG{+w}{ }\PYG{n}{Dname}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}Research\PYGZsq{}}\PYG{p}{;}
+\end{Verbatim}

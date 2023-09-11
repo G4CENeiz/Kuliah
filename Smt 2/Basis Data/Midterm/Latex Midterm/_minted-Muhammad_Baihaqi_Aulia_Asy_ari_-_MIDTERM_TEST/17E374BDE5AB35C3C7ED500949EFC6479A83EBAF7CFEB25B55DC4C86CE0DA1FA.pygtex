@@ -1,7 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{k}{SELECT}
-\PYG{+w}{    }\PYG{n}{Fname}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Lname}
-\PYG{k}{FROM}\PYG{+w}{ }\PYG{n}{PROJECT}
-\PYG{k}{JOIN}\PYG{+w}{ }\PYG{n}{EMPLOYEE}\PYG{+w}{ }\PYG{k}{ON}\PYG{+w}{ }\PYG{n}{PROJECT}\PYG{p}{.}\PYG{n}{Dnum}\PYG{o}{=}\PYG{n}{EMPLOYEE}\PYG{p}{.}\PYG{n}{Dno}
-\PYG{k}{WHERE}\PYG{+w}{ }\PYG{n}{Pname}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}Newbenefits\PYGZsq{}}\PYG{p}{;}
-\end{Verbatim}

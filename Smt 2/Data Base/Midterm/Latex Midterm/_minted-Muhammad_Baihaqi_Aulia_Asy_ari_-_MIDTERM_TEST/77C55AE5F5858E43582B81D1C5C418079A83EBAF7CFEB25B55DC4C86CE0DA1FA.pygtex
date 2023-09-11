@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{SELECT}\PYG{+w}{ }\PYG{n}{Dname}\PYG{+w}{ }\PYG{k}{FROM}\PYG{+w}{ }\PYG{n}{DEPARTMENT}\PYG{+w}{ }\PYG{k}{WHERE}\PYG{+w}{ }\PYG{n}{Mgr\PYGZus{}start\PYGZus{}date}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}1988\PYGZhy{}04\PYGZhy{}05\PYGZsq{}}\PYG{p}{;}
+\end{Verbatim}

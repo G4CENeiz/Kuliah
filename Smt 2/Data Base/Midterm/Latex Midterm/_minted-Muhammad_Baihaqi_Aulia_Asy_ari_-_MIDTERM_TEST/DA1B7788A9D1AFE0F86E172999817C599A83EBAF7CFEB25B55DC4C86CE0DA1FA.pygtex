@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{CREATE}\PYG{+w}{ }\PYG{k}{DATABASE}\PYG{+w}{ }\PYG{n}{bus\PYGZus{}system}\PYG{p}{;}
+\PYG{n}{USE}\PYG{+w}{ }\PYG{n}{bus\PYGZus{}system}\PYG{p}{;}
+\end{Verbatim}

@@ -1,0 +1,62 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{CREATE}\PYG{+w}{ }\PYG{k}{TABLE}\PYG{+w}{ }\PYG{n}{Bus}
+\PYG{p}{(}
+\PYG{n}{Id}\PYG{+w}{                    }\PYG{n+nb}{INT}\PYG{+w}{         }\PYG{k}{NOT}\PYG{+w}{ }\PYG{k}{NULL}\PYG{+w}{ }\PYG{k}{PRIMARY}\PYG{+w}{ }\PYG{k}{KEY}\PYG{+w}{ }\PYG{n}{AUTO\PYGZus{}INCREMENT}\PYG{p}{,}
+\PYG{n}{RegistrationNumber}\PYG{+w}{    }\PYG{n+nb}{CHAR}\PYG{p}{(}\PYG{l+m+mi}{20}\PYG{p}{)}\PYG{+w}{    }\PYG{k}{NOT}\PYG{+w}{ }\PYG{k}{NULL}\PYG{p}{,}
+\PYG{n}{TypeId}\PYG{+w}{                }\PYG{n+nb}{INT}\PYG{+w}{         }\PYG{k}{NOT}\PYG{+w}{ }\PYG{k}{NULL}
+\PYG{p}{);}
+
+\PYG{k}{CREATE}\PYG{+w}{ }\PYG{k}{TABLE}\PYG{+w}{ }\PYG{n}{BusType}
+\PYG{p}{(}
+\PYG{n}{Id}\PYG{+w}{        }\PYG{n+nb}{INT}\PYG{+w}{ }\PYG{k}{NOT}\PYG{+w}{ }\PYG{k}{NULL}\PYG{+w}{ }\PYG{k}{PRIMARY}\PYG{+w}{ }\PYG{k}{KEY}\PYG{+w}{ }\PYG{n}{AUTO\PYGZus{}INCREMENT}\PYG{p}{,}
+\PYG{k}{Size}\PYG{+w}{      }\PYG{n+nb}{INT}\PYG{+w}{ }\PYG{k}{NOT}\PYG{+w}{ }\PYG{k}{NULL}\PYG{p}{,}
+\PYG{n}{Variant}\PYG{+w}{   }\PYG{n}{ENUM}\PYG{+w}{ }\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}single\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}double\PYGZsq{}}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{DEFAULT}\PYG{+w}{ }\PYG{l+s+ss}{\PYGZdq{}single\PYGZdq{}}
+\PYG{p}{);}
+
+\PYG{k}{CREATE}\PYG{+w}{ }\PYG{k}{TABLE}\PYG{+w}{ }\PYG{n}{BusRoute}
+\PYG{p}{(}
+\PYG{n}{Id}\PYG{+w}{            }\PYG{n+nb}{INT}\PYG{+w}{ }\PYG{k}{NOT}\PYG{+w}{ }\PYG{k}{NULL}\PYG{+w}{ }\PYG{k}{PRIMARY}\PYG{+w}{ }\PYG{k}{KEY}\PYG{+w}{ }\PYG{n}{AUTO\PYGZus{}INCREMENT}\PYG{p}{,}
+\PYG{n}{BusId}\PYG{+w}{         }\PYG{n+nb}{INT}\PYG{+w}{ }\PYG{k}{NOT}\PYG{+w}{ }\PYG{k}{NULL}\PYG{p}{,}
+\PYG{n}{RouteNumber}\PYG{+w}{   }\PYG{n+nb}{INT}\PYG{+w}{ }\PYG{k}{NOT}\PYG{+w}{ }\PYG{k}{NULL}
+\PYG{p}{);}
+
+\PYG{k}{CREATE}\PYG{+w}{ }\PYG{k}{TABLE}\PYG{+w}{ }\PYG{n}{Route}
+\PYG{p}{(}
+\PYG{n}{RouteNumber}\PYG{+w}{ }\PYG{n+nb}{INT}\PYG{+w}{ }\PYG{k}{NOT}\PYG{+w}{ }\PYG{k}{NULL}\PYG{+w}{ }\PYG{k}{PRIMARY}\PYG{+w}{ }\PYG{k}{KEY}\PYG{+w}{ }\PYG{n}{AUTO\PYGZus{}INCREMENT}
+\PYG{p}{);}
+
+\PYG{k}{CREATE}\PYG{+w}{ }\PYG{k}{TABLE}\PYG{+w}{ }\PYG{n}{RouteStage}
+\PYG{p}{(}
+\PYG{n}{Id}\PYG{+w}{        }\PYG{n+nb}{INT}\PYG{+w}{ }\PYG{k}{NOT}\PYG{+w}{ }\PYG{k}{NULL}\PYG{+w}{ }\PYG{k}{PRIMARY}\PYG{+w}{ }\PYG{k}{KEY}\PYG{+w}{ }\PYG{n}{AUTO\PYGZus{}INCREMENT}\PYG{p}{,}
+\PYG{n}{RouteId}\PYG{+w}{   }\PYG{n+nb}{INT}\PYG{+w}{ }\PYG{k}{NOT}\PYG{+w}{ }\PYG{k}{NULL}\PYG{p}{,}
+\PYG{n}{StageId}\PYG{+w}{   }\PYG{n+nb}{INT}\PYG{+w}{ }\PYG{k}{NOT}\PYG{+w}{ }\PYG{k}{NULL}
+\PYG{p}{);}
+
+\PYG{k}{CREATE}\PYG{+w}{ }\PYG{k}{TABLE}\PYG{+w}{ }\PYG{n}{Stage}
+\PYG{p}{(}
+\PYG{n}{StageId}\PYG{+w}{ }\PYG{n+nb}{INT}\PYG{+w}{ }\PYG{k}{NOT}\PYG{+w}{ }\PYG{k}{NULL}\PYG{+w}{ }\PYG{k}{PRIMARY}\PYG{+w}{ }\PYG{k}{KEY}\PYG{+w}{ }\PYG{n}{AUTO\PYGZus{}INCREMENT}
+\PYG{p}{);}
+
+\PYG{k}{CREATE}\PYG{+w}{ }\PYG{k}{TABLE}\PYG{+w}{ }\PYG{n}{StageTown}
+\PYG{p}{(}
+\PYG{n}{Id}\PYG{+w}{        }\PYG{n+nb}{INT}\PYG{+w}{ }\PYG{k}{NOT}\PYG{+w}{ }\PYG{k}{NULL}\PYG{+w}{ }\PYG{k}{PRIMARY}\PYG{+w}{ }\PYG{k}{KEY}\PYG{+w}{ }\PYG{n}{AUTO\PYGZus{}INCREMENT}\PYG{p}{,}
+\PYG{n}{StageId}\PYG{+w}{   }\PYG{n+nb}{INT}\PYG{+w}{ }\PYG{k}{NOT}\PYG{+w}{ }\PYG{k}{NULL}\PYG{p}{,}
+\PYG{n}{TownId}\PYG{+w}{    }\PYG{n+nb}{INT}\PYG{+w}{ }\PYG{k}{NOT}\PYG{+w}{ }\PYG{k}{NULL}
+\PYG{p}{);}
+
+\PYG{k}{CREATE}\PYG{+w}{ }\PYG{k}{TABLE}\PYG{+w}{ }\PYG{n}{Town}
+\PYG{p}{(}
+\PYG{n}{Id}\PYG{+w}{    }\PYG{n+nb}{INT}\PYG{+w}{             }\PYG{k}{NOT}\PYG{+w}{ }\PYG{k}{NULL}\PYG{+w}{ }\PYG{k}{PRIMARY}\PYG{+w}{ }\PYG{k}{KEY}\PYG{+w}{ }\PYG{n}{AUTO\PYGZus{}INCREMENT}\PYG{p}{,}
+\PYG{n}{Name}\PYG{+w}{  }\PYG{n+nb}{VARCHAR}\PYG{p}{(}\PYG{l+m+mi}{255}\PYG{p}{)}\PYG{+w}{    }\PYG{k}{NOT}\PYG{+w}{ }\PYG{k}{NULL}
+\PYG{p}{);}
+
+\PYG{k}{CREATE}\PYG{+w}{ }\PYG{k}{TABLE}\PYG{+w}{ }\PYG{n}{Driver}
+\PYG{p}{(}
+\PYG{n}{Id}\PYG{+w}{                }\PYG{n+nb}{INT}\PYG{+w}{             }\PYG{k}{NOT}\PYG{+w}{ }\PYG{k}{NULL}\PYG{+w}{ }\PYG{k}{PRIMARY}\PYG{+w}{ }\PYG{k}{KEY}\PYG{+w}{ }\PYG{n}{AUTO\PYGZus{}INCREMENT}\PYG{p}{,}
+\PYG{n}{Name}\PYG{+w}{              }\PYG{n+nb}{VARCHAR}\PYG{p}{(}\PYG{l+m+mi}{255}\PYG{p}{)}\PYG{+w}{    }\PYG{k}{NOT}\PYG{+w}{ }\PYG{k}{NULL}\PYG{p}{,}
+\PYG{n}{Address}\PYG{+w}{           }\PYG{n+nb}{VARCHAR}\PYG{p}{(}\PYG{l+m+mi}{255}\PYG{p}{)}\PYG{+w}{    }\PYG{k}{NOT}\PYG{+w}{ }\PYG{k}{NULL}\PYG{p}{,}
+\PYG{n}{EmployeeNumber}\PYG{+w}{    }\PYG{n+nb}{VARCHAR}\PYG{p}{(}\PYG{l+m+mi}{15}\PYG{p}{)}\PYG{+w}{     }\PYG{k}{NOT}\PYG{+w}{ }\PYG{k}{NULL}\PYG{p}{,}
+\PYG{n}{TelephoneNumber}\PYG{+w}{   }\PYG{n+nb}{VARCHAR}\PYG{p}{(}\PYG{l+m+mi}{13}\PYG{p}{)}\PYG{+w}{     }\PYG{k}{NOT}\PYG{+w}{ }\PYG{k}{NULL}\PYG{p}{,}
+\PYG{n}{StageId}\PYG{+w}{           }\PYG{n+nb}{INT}\PYG{+w}{             }\PYG{k}{NOT}\PYG{+w}{ }\PYG{k}{NULL}
+\PYG{p}{);}
+\end{Verbatim}

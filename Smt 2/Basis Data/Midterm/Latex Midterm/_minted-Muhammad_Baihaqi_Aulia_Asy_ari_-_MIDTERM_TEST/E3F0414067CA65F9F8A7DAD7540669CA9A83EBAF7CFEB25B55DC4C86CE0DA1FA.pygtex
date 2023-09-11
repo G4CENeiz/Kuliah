@@ -1,3 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{k}{SELECT}\PYG{+w}{ }\PYG{n}{Address}\PYG{+w}{ }\PYG{k}{FROM}\PYG{+w}{ }\PYG{n}{EMPLOYEE}\PYG{+w}{ }\PYG{k}{WHERE}\PYG{+w}{ }\PYG{n}{Fname}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}James\PYGZsq{}}\PYG{+w}{ }\PYG{k}{AND}\PYG{+w}{ }\PYG{n}{Lname}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}Borg\PYGZsq{}}\PYG{p}{;}
-\end{Verbatim}
