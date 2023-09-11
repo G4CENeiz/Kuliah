@@ -16,5 +16,9 @@ public class Barang {
         System.out.println("Harga Barang: Rp" + hargaDasar);
         System.out.println("Diskon      : " + diskon + "%");
         System.out.println("Harga Jual  : Rp" + hitungHargaJual());
+        
+        
+
+        
     }
 }
