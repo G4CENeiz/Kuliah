@@ -1,0 +1,22 @@
+h1{
+    text-align: center;
+    color: cornsilk;
+}
+
+h2{
+    text-align: center;
+}
+
+.box{
+    background: blue;
+    height: 200px;
+    width: 600px;
+    padding: 20px;
+}
+
+.box-dua{
+    background: red;
+    height: 100px;
+    width: 600px;
+    padding: 200px;
+}
