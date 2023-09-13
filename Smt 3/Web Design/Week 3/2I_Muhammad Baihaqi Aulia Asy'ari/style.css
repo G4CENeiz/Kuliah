@@ -1,0 +1,65 @@
+/* Add CSS for the rounded image */
+#author-image {
+    float: left;
+    margin-right: 20px;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    background: url('img/Butterfly_Chaos.png') center/cover;
+}
+
+/* Dark theme styles */
+body {
+    background-color: #111;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+#header {
+    background-color: #222;
+    padding: 20px;
+}
+
+/* #region Nav bar */
+#nav {
+    text-align: center;
+}
+
+.nav-button {
+    text-decoration: none;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 0 10px;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.nav-button:hover {
+    background-color: #555;
+}
+/* #endregion */
+#main {
+    padding: 20px;
+}
+
+#author-intro {
+    display: flex;
+    align-items: center;
+}
+
+#author-image {
+    border: 3px solid #fff;
+}
+
+#author-intro h2 {
+    font-size: 24px;
+}
+
+#footer {
+    background-color: #222;
+    padding: 10px;
+    text-align: center;
+}

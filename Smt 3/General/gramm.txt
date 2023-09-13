@@ -1,3 +1,3 @@
 Mind yourself, this file is used to check my grammar with Grammarly in vscode.
 
-return is used to give a value when a method is called. The return keyword is used when a method data type is not void.
+Hi, My name is Baihaqi also known on the internet with the pseudoname G4CE. I'm a student at Malang State Polytechnic, currently studying computer science. Upon graduation, I would graduate with a Bachelor of Applied Science in Computer Science. 
