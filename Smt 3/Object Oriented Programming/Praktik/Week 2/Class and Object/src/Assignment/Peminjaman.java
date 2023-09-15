@@ -14,6 +14,6 @@ public class Peminjaman {
     }
 
     public int hargaBayar(int lamaSewa) {
-        return lamaSewa * lamaSewa;
+        return lamaSewa * harga;
     }
 }

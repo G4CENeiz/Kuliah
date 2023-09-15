@@ -1,0 +1,123 @@
+\documentclass[12pt,titlepage]{article}
+\usepackage[margin=1.25in]{geometry}
+\usepackage{graphicx,amsmath,blindtext,minted}
+
+%% Variables definition
+\newcommand{\vSubject}{Information System Management}
+\newcommand{\vSubtitle}{Basic Concept of Information Technology}
+\newcommand{\vName}{Muhammad Baihaqi Aulia Asy'ari}
+\newcommand{\vNIM}{2241720145}
+\newcommand{\vClass}{2I}
+\newcommand{\vDepartment}{Information Technology}
+\newcommand{\vStudyProgram}{D4 Informatics Engineering}
+
+%% [START] Tikz related stuff
+\usepackage{tikz}
+\usetikzlibrary{svg.path,calc,shapes.geometric,shapes.misc}
+\tikzstyle{terminator} = [rectangle, draw, text centered, rounded corners = 1em, minimum height=2em]
+\tikzstyle{preparation} = [chamfered rectangle, chamfered rectangle sep=0.75em, draw, text centered, minimum height = 2em]
+\tikzstyle{process} = [rectangle, draw, text centered, minimum height=2em]
+\tikzstyle{decision} = [diamond, aspect=2, draw, text centered, minimum height=2em]
+\tikzstyle{data}=[trapezium, draw, text centered, trapezium left angle=60, trapezium right angle=120, minimum height=2em]
+\tikzstyle{connector} = [line width=0.25mm,->]
+%% [END] Tikz related stuff
+
+%% [START] Fancy header related stuff
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setlength{\headheight}{15pt} % compensate fancyhdr style
+\fancyhead{}
+\fancyfoot{}
+\fancyfoot[L]{\thepage}
+\fancyfoot[R]{\textit{\vSubject - \vSubtitle}}
+\renewcommand{\footrulewidth}{0.4pt}% default is 0pt, overline for footer
+%% [END] Fancy header related stuff
+
+%% [START] Custom tabular command related stuff
+\usepackage{tabularx}
+\newcommand{\details}[2]{
+    #1 & #2  \\
+}
+%% [END] Custom tabular command related stuff
+
+%% [START] Figure related stuff
+\newcommand{\image}[3][1]{
+    \begin{figure}[h]
+        \centering
+        \includegraphics[#1]{#2}
+        \caption{#3}
+        \label{#3}
+    \end{figure}
+}
+%% [END] Figure related stuff
+
+%%
+\usepackage{pgf-umlcd}
+
+\renewcommand{\umldrawcolor}{black}
+\renewcommand{\umlfillcolor}{white}
+%%
+
+%% [BEGIN] Custom enumerator
+\usepackage{enumitem}
+%% [END] Custom enumerator
+
+%% [BEGIN] Paragraph indent
+\usepackage{indentfirst}
+%% [END] Paragraph indent
+
+\begin{document}
+\begin{titlepage}
+    \centering
+    \vfill
+    {\bfseries\LARGE
+        \vSubject\\
+        \vskip0.25cm
+        \vSubtitle
+    }
+    \vfill
+    \includegraphics[width=6cm]{images/polinema-logo.png}
+    \vfill
+    {
+        \textbf{Name}\\
+        \vName\\
+        \vskip0.5cm
+        \textbf{NIM}\\
+        \vNIM\\
+        \vskip0.5cm
+        \textbf{Class}\\
+        \vClass\\
+        \vskip0.5cm
+        \textbf{Department}\\
+        \vDepartment\\
+        \vskip0.5cm
+        \textbf{Study Program}\\
+        \vStudyProgram
+    }
+\end{titlepage}
+
+\newpage
+
+When solving a problem, we can't just look for every minute detail. To solve a problem we must also look at its underlying systematic problem, looking at it in a systematic approach to better understand the underlying problem. this systematic approach would help us understand data and information as an information system, in which both are components of the information system. but when talking about information systems one must wonder what it takes to make an information system and everything surrounding the topic, in which information technology is the core of.
+
+many have tried defining information technology, various interpretations come up with the development of information technology. but in short information technology can be defined as technology that is bound with computer technology and communication technology, in other words, it is a combination of both technologies. computer technology helps in gathering, processing, structuring, storing, and manipulating data while communication technology helps in making computer technologies connected as needed for accessibility.
+
+The term "information technology" or IT became popular in the late 1970s. Before that, terms like "computer technology," "electronic data processing (EDP) were more well-known. The term "information technology" started to replace "management information systems," focusing more on technology itself. Information technology is a subsystem or a part of the information system. The term "information systems technology" also refers to the technology used by information systems and is similar in meaning to information technology. Computer systems are also considered information technology used in information systems. Information technology encompasses any technology that generates information, including computer and telecommunication technology, making computer systems a subsystem of information technology. The term "technology" often overlaps with "information systems" and can be a subject of debate. Some use the term "information technology" to describe a set of information systems, users, and management, while others see information technology as just a part of the information system.
+
+Information technology encompasses computer and communication technology, which can be categorized into six components: input technology, software technology, storage technology, output technology, and processing machine technology. Input technology involves equipment like keyboards and mice used to enter data into computer systems. Processing machine technology, known as the Central Processing Unit (CPU), handles data processing tasks. Storage technology is divided into internal memory (e.g., ROM and RAM) and external storage (e.g., hard disks, floppy disks, and flash drives), serving as temporary and permanent data storage, respectively. Output technology includes devices like screens, monitors, and printers that present processed information. Software technology, also known as software or programs, such as Microsoft Word and Adobe Photoshop, is essential for computer tasks, enabling the creation and manipulation of documents and images.
+
+An information technology system is shaped by the incorporation of information technology and comprises both tangible elements like computers and printers and intangible components like software. Essentially, it consists of data, hardware, software, network devices, and human expertise. These systems can be classified in multiple ways, including by their function (embedded, dedicated, or general-purpose), their alignment with specific business departments (accounting, marketing, production), their support for different management levels (transaction processing, decision support, executive information systems), and their size and request-handling methods (such as client-server systems).
+
+The role of information technology in today's society is significant as it acts as a key facilitator for various business activities, leading to fundamental changes in organizational structure and management. Information technology provides numerous conveniences, including ATM withdrawals, e-commerce transactions, and online banking. It essentially automates tasks and processes, enhancing human roles by providing essential information. Moreover, information technology plays a crucial role in restructuring human roles within organizations. Many companies make substantial investments in IT to boost competitiveness, reduce costs, and increase flexibility. IT also serves as a means for individuals and groups to collaborate across boundaries of distance, time, nationality, and other factors that might hinder the exchange of ideas.
+
+The evolution of information technology has significantly impacted various aspects of life, ushering in a new way of living known as "e-life." This term signifies that electronic needs now influence our daily existence.
+
+Following the industrial revolution, there was a shift in the global economy toward an industrialized model where capital became the most crucial factor of production. In recent times, human beings have moved into a central role in the production process, driven by knowledge-based and information-focused economies. Telecommunications and informatics play essential roles as enabling technologies.
+
+The rapid progress of information technology and telecommunications has led to more efficient approaches in producing, distributing, and consuming goods and services. This transformation has propelled society into an information-based economy. Information technology and telecommunications are expected to dominate future life, particularly in the field of education, where there is a shift towards more open and accessible forms of learning.
+
+The role of information technology in education is anticipated to evolve, becoming more open, bi-directional, diverse, multidisciplinary, and productivity-driven. However, it is essential to recognize that technology may also exacerbate societal inequalities.
+
+Information technology has become instrumental in human communication. Throughout history, humans have sought to create tools and systems for communication, ranging from cave paintings to telephones and the internet. These inventions collectively fall under the umbrella of "Information Technology" (IT), which stands for Information Technology.
+
+\end{document}
