@@ -1,0 +1,697 @@
+\documentclass[12pt,titlepage]{article}
+\usepackage[margin=1.25in]{geometry}
+\usepackage{graphicx,amsmath,blindtext,minted}
+
+%% Variables definition
+\newcommand{\vSubject}{Object Oriented Programming}
+\newcommand{\vSubtitle}{Encapsulation}
+\newcommand{\vName}{Muhammad Baihaqi Aulia Asy'ari}
+\newcommand{\vNIM}{2241720145}
+\newcommand{\vClass}{2I}
+\newcommand{\vDepartment}{Information Technology}
+\newcommand{\vStudyProgram}{D4 Informatics Engineering}
+
+%% [START] Tikz related stuff
+\usepackage{tikz}
+\usetikzlibrary{svg.path,calc,shapes.geometric,shapes.misc}
+\tikzstyle{terminator} = [rectangle, draw, text centered, rounded corners = 1em, minimum height=2em]
+\tikzstyle{preparation} = [chamfered rectangle, chamfered rectangle sep=0.75em, draw, text centered, minimum height = 2em]
+\tikzstyle{process} = [rectangle, draw, text centered, minimum height=2em]
+\tikzstyle{decision} = [diamond, aspect=2, draw, text centered, minimum height=2em]
+\tikzstyle{data}=[trapezium, draw, text centered, trapezium left angle=60, trapezium right angle=120, minimum height=2em]
+\tikzstyle{connector} = [line width=0.25mm,->]
+%% [END] Tikz related stuff
+
+%% [START] Fancy header related stuff
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setlength{\headheight}{15pt} % compensate fancyhdr style
+\fancyhead{}
+\fancyfoot{}
+\fancyfoot[L]{\thepage}
+\fancyfoot[R]{\textit{\vSubject - \vSubtitle}}
+\renewcommand{\footrulewidth}{0.4pt}% default is 0pt, overline for footer
+%% [END] Fancy header related stuff
+
+%% [START] Custom tabular command related stuff
+\usepackage{tabularx}
+\newcommand{\details}[2]{
+    #1 & #2  \\
+}
+%% [END] Custom tabular command related stuff
+
+%% [START] Figure related stuff
+\newcommand{\image}[3][1]{
+    \begin{figure}[h]
+        \centering
+        \includegraphics[#1]{#2}
+        \caption{#3}
+        \label{#3}
+    \end{figure}
+}
+%% [END] Figure related stuff
+
+%%
+\usepackage{pgf-umlcd}
+
+\renewcommand{\umldrawcolor}{black}
+\renewcommand{\umlfillcolor}{white}
+%%
+
+%% [BEGIN] Custom enumerator
+\usepackage{enumitem}
+%% [END] Custom enumerator
+
+%% [BEGIN] Paragraph indent
+\usepackage{indentfirst}
+%% [END] Paragraph indent
+
+\begin{document}
+\begin{titlepage}
+    \centering
+    \vfill
+    {\bfseries\LARGE
+        \vSubject\\
+        \vskip0.25cm
+        \vSubtitle
+    }
+    \vfill
+    \includegraphics[width=6cm]{images/polinema-logo.png}
+    \vfill
+    {
+        \textbf{Name}\\
+        \vName\\
+        \vskip0.5cm
+        \textbf{NIM}\\
+        \vNIM\\
+        \vskip0.5cm
+        \textbf{Class}\\
+        \vClass\\
+        \vskip0.5cm
+        \textbf{Department}\\
+        \vDepartment\\
+        \vskip0.5cm
+        \textbf{Study Program}\\
+        \vStudyProgram
+    }
+\end{titlepage}
+
+\newpage
+
+\setcounter{section}{2}
+\section{Experiment}
+\subsection{Experiment 1 - Encapsulation}
+
+\begin{minted}[autogobble,breaklines,linenos]{java}
+    package Experiment1;
+
+    public class Motor {
+        public int velocity = 0;
+        public boolean ignitionOn = false;
+
+        public void printStatus() {
+            if (ignitionOn == true) {
+                System.out.println("Ignition On");
+            } else {
+                System.out.println("Ignition Off");
+            }
+            System.out.println("Velocity " + velocity + "\n");
+        }
+    }
+\end{minted}
+
+\begin{minted}[autogobble,breaklines,linenos]{java}
+    package Experiment1;
+
+    public class MotorDemo {
+        public static void main(String[] args) {
+            Motor motor = new Motor();
+            motor.printStatus();
+            motor.velocity = 50;
+            motor.printStatus();
+        }
+    }
+\end{minted}
+
+\begin{minted}[autogobble,breaklines,linenos]{text}
+    PS D:\Kuliah>  & 'C:\Program Files\Java\jdk-18.0.2.1\bin\java.exe' '-XX:+ShowCodeDetailsInExceptionMessages' '-cp' 'C:\Users\G4CE-PC\AppData\Roaming\Code\User\workspaceStorage\ 80d97a47d24665dc0bce7ab1e048ecbd\redhat.java\jdt_ws\ Kuliah_28156aa7\bin' 'Experiment1.MotorDemo'
+    Ignition Off
+    Velocity 0  
+
+    Ignition Off
+    Velocity 50 
+\end{minted}
+
+\newpage
+
+\subsection{Experiment 2 - Access Modifier}
+
+\begin{minted}[autogobble,breaklines,linenos]{java}
+    package Experiment2;
+
+    public class Motor {
+        private int velocity = 0;
+        private boolean ignitionOn = false;
+
+        public void turnIgnitionOn() {
+            ignitionOn = true;
+        }
+
+        public void turnIgnitionOff() {
+            ignitionOn = false;
+            velocity = 0;
+        }
+
+        public void increaseSpeed() {
+            if (ignitionOn == true) {
+                velocity += 5;
+            } else {
+                System.out.println("Can't increase the velocity because the ignition is off\n");
+            }
+        }
+
+        public void decreaseSpeed() {
+            if (ignitionOn == true) {
+                velocity -= 5;
+            } else {
+                System.out.println("Can't decrease the velocity because the ignition is off\n");
+            }
+        }
+
+        public void printStatus() {
+            if (ignitionOn == true) {
+                System.out.println("Ignition On");
+            } else {
+                System.out.println("Ignition Off");
+            }
+            System.out.println("Velocity " + velocity + "\n");
+        }
+    }
+
+\end{minted}
+
+\begin{minted}[autogobble,breaklines,linenos]{java}
+    package Experiment2;
+
+    public class MotorDemo {
+        public static void main(String[] args) {
+            Motor motor = new Motor();
+            motor.printStatus();
+            motor.increaseSpeed();
+
+            motor.turnIgnitionOn();
+            motor.printStatus();
+
+            motor.increaseSpeed();
+            motor.printStatus();
+
+            motor.increaseSpeed();
+            motor.printStatus();
+
+            motor.increaseSpeed();
+            motor.printStatus();
+
+            motor.turnIgnitionOff();
+            motor.printStatus();
+        }
+    }
+
+\end{minted}
+
+\begin{minted}[autogobble,breaklines,linenos]{text}
+    PS D:\Kuliah>  d:; cd 'd:\Kuliah'; & 'C:\Program Files\Java\jdk-18.0.2.1\bin\java.exe' '-XX:+ShowCodeDetailsInExceptionMessages' '-cp' 'C:\Users\G4CE-PC\AppData\Roaming\Code\User\workspaceStorage\ 80d97a47d24665dc0bce7ab1e048ecbd\redhat.java\jdt_ws\ Kuliah_28156aa7\bin' 'Experiment2.MotorDemo' 
+    Ignition Off
+    Velocity 0
+
+    Can't increase the velocity because the ignition is off
+
+    Ignition On
+    Velocity 0
+
+    Ignition On
+    Velocity 5
+
+    Ignition On
+    Velocity 10
+
+    Ignition On
+    Velocity 15
+
+    Ignition Off
+    Velocity 0
+
+\end{minted}
+
+\subsection{Question}
+\begin{enumerate}
+    \item Pada class TestMobil, saat kita menambah kecepatan untuk pertama kalinya, mengapa muncul peringatan “Kecepatan tidak bisa bertambah karena Mesin Off!”? \\
+    \texttt{Answer:} Because increasing velocity has the requirement for the ignition to be On before the velocity can be increase
+    \item Mengapat atribut kecepatan dan kontakOn diset private? \\
+    \texttt{Answer:} So as not to be improperly manipulate both variables 
+    \item Ubah class Motor sehingga kecepatan maksimalnya adalah 100!
+    \begin{minted}[autogobble,breaklines,linenos]{java}
+        public void increaseSpeed() {
+            if (ignitionOn == true) {
+                if (velocity == 100) {
+                    System.out.println("Maximum velocity has been reached");
+                } else {
+                    velocity += 5;
+                }
+            } else {
+                System.out.println("Can't increase the velocity because the ignition is off\n");
+            }
+        }
+    \end{minted}
+\end{enumerate}
+
+\newpage
+
+\subsection{Experiment 3 - Getter and Setter}
+
+\begin{minted}[autogobble,breaklines,linenos]{java}
+    package Experiment3;
+
+    public class Member {
+        private String name;
+        private String address;
+        private float balance;
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public void setAddress(String address) {
+            this.address = address;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public String getAddress() {
+            return address;
+        }
+
+        public float getBalance() {
+            return balance;
+        }
+
+        public void deposit(float cash) {
+            balance += cash;
+        }
+
+        public void withdraw(float cash) {
+            balance -= cash;
+        }
+    }
+
+\end{minted}
+
+\begin{minted}[autogobble,breaklines,linenos]{java}
+    package Experiment3;
+
+    public class CooperativeDemo {
+        public static void main(String[] args) {
+            Member member1 = new Member();
+            member1.setName("Iwan Setiawan");
+            member1.setAddress("Jalan Sukarno Hatta no 10");
+            member1.deposit(100_000);
+            System.out.println("Balance " + member1.getName() + " : Rp " + member1.getBalance());
+            
+            member1.withdraw(5_000);
+            System.out.println("Balance " + member1.getName() + " : Rp " + member1.getBalance());
+        }
+    }
+
+\end{minted}
+
+\begin{minted}[autogobble,breaklines,linenos]{text}
+    PS D:\Kuliah>  d:; cd 'd:\Kuliah'; & 'C:\Program Files\Java\jdk-18.0.2.1\bin\java.exe' '-XX:+ShowCodeDetailsInExceptionMessages' '-cp' 'C:\Users\G4CE-PC\AppData\Roaming\Code\User\workspaceStorage\ 80d97a47d24665dc0bce7ab1e048ecbd\redhat.java\jdt_ws\ Kuliah_28156aa7\bin' 'Experiment3.CooperativeDemo'
+    Balance Iwan Setiawan : Rp 100000.0
+    Balance Iwan Setiawan : Rp 95000.0
+\end{minted}
+
+\newpage
+
+\subsection{Experiment 4 - Constructor, Instantiation}
+
+\begin{minted}[autogobble,breaklines,linenos]{java}
+    package Experiment4;
+
+    public class CooperativeDemo {
+        public static void main(String[] args) {
+            Member member1 = new Member();
+            System.out.println("Balance " + member1.getName() + " : Rp " + member1.getBalance());
+            
+            member1.setName("Iwan Setiawan");
+            member1.setAddress("Jalan Sukarno Hatta no 10");
+            member1.deposit(100_000);
+            System.out.println("Balance " + member1.getName() + " : Rp " + member1.getBalance());
+            
+            member1.withdraw(5_000);
+            System.out.println("Balance " + member1.getName() + " : Rp " + member1.getBalance());
+        }
+    }
+
+\end{minted}
+
+\begin{minted}[autogobble,breaklines,linenos]{text}
+    PS D:\Kuliah>  d:; cd 'd:\Kuliah'; & 'C:\Program Files\Java\jdk-18.0.2.1\bin\java.exe' '-XX:+ShowCodeDetailsInExceptionMessages' '-cp' 'C:\Users\G4CE-PC\AppData\Roaming\Code\User\workspaceStorage\ 80d97a47d24665dc0bce7ab1e048ecbd\redhat.java\jdt_ws\ Kuliah_28156aa7\bin' 'Experiment4.CooperativeDemo' 
+    Balance null : Rp 0.0
+    Balance Iwan Setiawan : Rp 100000.0
+    Balance Iwan Setiawan : Rp 95000.0
+\end{minted}
+
+\begin{minted}[autogobble,breaklines,linenos]{java}
+    package Experiment4;
+
+    public class Member {
+        private String name;
+        private String address;
+        private float balance;
+
+        Member(String name, String address) {
+            this.name = name;
+            this.address = address;
+            this.balance = 0;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public void setAddress(String address) {
+            this.address = address;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public String getAddress() {
+            return address;
+        }
+
+        public float getBalance() {
+            return balance;
+        }
+
+        public void deposit(float cash) {
+            balance += cash;
+        }
+
+        public void withdraw(float cash) {
+            balance -= cash;
+        }
+    }
+
+\end{minted}
+
+\begin{minted}[autogobble,breaklines,linenos]{java}
+    package Experiment4;
+
+    public class CooperativeDemo {
+        public static void main(String[] args) {
+            Member member1 = new Member("Iwan", "Jalan Mawar");
+            System.out.println("Balance " + member1.getName() + " : Rp " + member1.getBalance());
+
+            member1.setName("Iwan Setiawan");
+            member1.setAddress("Jalan Sukarno Hatta no 10");
+            member1.deposit(100_000);
+            System.out.println("Balance " + member1.getName() + " : Rp " + member1.getBalance());
+            
+            member1.withdraw(5_000);
+            System.out.println("Balance " + member1.getName() + " : Rp " + member1.getBalance());
+        }
+    }
+
+\end{minted}
+
+\begin{minted}[autogobble,breaklines,linenos]{text}
+    PS D:\Kuliah>  d:; cd 'd:\Kuliah'; & 'C:\Program Files\Java\jdk-18.0.2.1\bin\java.exe' '-XX:+ShowCodeDetailsInExceptionMessages' '-cp' 'C:\Users\G4CE-PC\AppData\Roaming\Code\User\workspaceStorage\ 80d97a47d24665dc0bce7ab1e048ecbd\redhat.java\jdt_ws\ Kuliah_28156aa7\bin' 'Experiment4.CooperativeDemo' 
+    Balance Iwan : Rp 0.0
+    Balance Iwan Setiawan : Rp 100000.0
+    Balance Iwan Setiawan : Rp 95000.0
+\end{minted}
+
+\newpage
+
+\subsection{Question - Experiment 3 and 4}
+
+\begin{enumerate}
+    \item Apa yang dimaksud getter dan setter? \\ 
+    \texttt{Answer:} getter and setter are methods inside of a class use to access an attribute of a class.
+    \item Apa kegunaan dari method getSimpanan()? \\ 
+    \texttt{Answer:} the method is used to get the value of balance attribute inside of the object.
+    \item Method apa yang digunakan untk menambah saldo? \\ 
+    \texttt{Answer:} the deposit()/setor() is used to add the balance of the object
+    \item Apa yand dimaksud konstruktor? \\ 
+    \texttt{Answer:} constructor is a way to set the value of attributes inside of an object while instantiating it. 
+    \item Sebutkan aturan dalam membuat konstruktor? \\ 
+    \texttt{Answer:} the name of the constructor must be the same as its class name, constructor method can't have a return type
+    \item Apakah boleh konstruktor bertipe private? \\ 
+    \texttt{Answer:} in theory a constructor could have private modifier as it is technically a method specialized to instantiate an object.
+    \item Kapan menggunakan parameter dengan passsing parameter? \\ 
+    \texttt{Answer:} it is used when the object attributes need to be set right before it is being used.
+    \item Apa perbedaan atribut class dan instansiasi atribut? \\ 
+    \texttt{Answer:} class attribute can be used among other class, while attribute instantiation is an attribute that can be use by the instance of an object.
+    \item Apa perbedaan class method dan instansiasi method?  \\ 
+    \texttt{Answer:} same as the previous question, the former can be used class wide while the later only can be use by the instance of the object.
+\end{enumerate}
+
+\newpage
+
+\setcounter{section}{4}
+\section{Assignment}
+\begin{enumerate}
+    \item Cobalah program dibawah ini dan tuliskan hasil outputnya
+    \begin{minted}[autogobble,breaklines,linenos]{java}
+        package Assignment;
+
+        public class EncapDemo {
+            private String name;
+            private int age;
+
+            public String getName() {
+                return name;
+            }
+
+            public void setName(String newName) {
+                name = newName;
+            }
+
+            public int getAge() {
+                return age;
+            }
+
+            public void setAge(int newAge) {
+                if (newAge > 30) {
+                    age = 30;
+                } else {
+                    age = newAge;
+                }
+            }
+        }
+
+    \end{minted}
+    \begin{minted}[autogobble,breaklines,linenos]{java}
+        package Assignment;
+
+        public class EncapTest {
+            public static void main(String[] args) {
+                EncapDemo encap = new EncapDemo();
+                encap.setName("James");
+                encap.setAge(35);
+
+                System.out.println("Name : " + encap.getName());
+                System.out.println("Age : " + encap.getAge());
+            }
+        }
+
+    \end{minted}
+    \texttt{Answer:} 
+    \begin{minted}[autogobble,breaklines,linenos]{text}
+        PS D:\Kuliah>  & 'C:\Program Files\Java\jdk-18.0.2.1\bin\java.exe' '-XX:+ShowCodeDetailsInExceptionMessages' '-cp' 'C:\Users\G4CE-PC\AppData\Roaming\Code\User\workspaceStorage\ 80d97a47d24665dc0bce7ab1e048ecbd\redhat.java\jdt_ws\ Kuliah_28156aa7\bin' 'Assignment.EncapTest'
+        Name : James
+        Age : 30
+    \end{minted}
+    \item Pada program diatas, pada class EncapTest kita mengeset age dengan nilai 35, namun pada saat ditampilkan ke layar nilainya 30, jelaskan mengapa. \\ 
+    \texttt{Answer:} because in the setAge method in the if else condition, the age set into 30 if the newAge value is over 30.
+    \item Ubah program diatas agar atribut age dapat diberi nilai maksimal 30 dan minimal 18. \\ 
+    \texttt{Answer:} 
+    \begin{minted}[autogobble,breaklines,linenos]{java}
+        public void setAge(int newAge) {
+            if (newAge > 30) {
+                age = 30;
+            } else if (newAge < 18) {
+                age = 18;
+            } else {
+                age = newAge;
+            }
+        }
+    \end{minted}
+    \item Pada sebuah sistem informasi koperasi simpan pinjam, terdapat class Anggota yang memiliki atribut antara lain nomor KTP, nama, limit peminjaman, dan jumlah pinjaman. Anggota dapat meminjam uang dengan batas limit peminjaman yang ditentukan. Anggota juga dapat mengangsur pinjaman. Ketika Anggota tersebut mengangsur pinjaman, maka jumlah pinjaman akan berkurang sesuai dengan nominal yang diangsur. Buatlah class Anggota tersebut, berikan atribut, method dan konstruktor sesuai dengan kebutuhan. Uji dengan TestKoperasi berikut ini untuk memeriksa apakah class Anggota yang anda buat telah sesuai dengan yang diharapkan.
+    \begin{minted}[autogobble,breaklines,linenos]{java}
+        package Assignment;
+
+        public class TestKoperasi{
+            public static void main(String[] args) {
+                Anggota donny = new Anggota("111333444", "Donny", 5_000_000);
+                
+                System.out.println("Nama Anggota: " + donny.getNama());
+                System.out.println("Limit Pinjaman: " + donny.getLimitPinjaman());
+                
+                System.out.println("\nMeminjam uang 10.000.000...");
+                donny.pinjam(10_000_000);
+                System.out.println("Jumlah pinjaman saat ini: " + donny.getJumlahPinjaman());
+                
+                System.out.println("\nMeminjam uang 4.000.000...");
+                donny.pinjam(4_000_000);
+                System.out.println("Jumlah pinjaman saat ini: " + donny.getJumlahPinjaman());
+                
+                System.out.println("\nMembayar angsuran 1.000.000");
+                donny.angsur(1_000_000);
+                System.out.println("Jumlah pinjaman saat ini: " + donny.getJumlahPinjaman());
+
+                System.out.println("\nMembayar angsuran 3.000.000");
+                donny.angsur(3000000);
+                System.out.println("Jumlah pinjaman saat ini: " + donny.getJumlahPinjaman());
+            }
+        }
+
+    \end{minted}
+    \texttt{Answer:} 
+    \begin{minted}[autogobble,breaklines,linenos]{java}
+        package Assignment;
+
+        public class Anggota {
+            private String noKTP;
+            private String nama;
+            private int limitPinjaman;
+            private int jumlahPinjaman;
+
+            Anggota(String noKTP, String nama, int limitPinjaman) {
+                this.noKTP = noKTP;
+                this.nama = nama;
+                this.limitPinjaman = limitPinjaman;
+                this.jumlahPinjaman = 0;
+            }
+
+            public String getNoKTP() {
+                return noKTP;
+            }
+
+            public String getNama() {
+                return nama;
+            }
+
+            public int getLimitPinjaman() {
+                return limitPinjaman;
+            }
+
+            public int getJumlahPinjaman() {
+                return jumlahPinjaman;
+            }
+
+            public void pinjam(int uang) {
+                if (uang > limitPinjaman) {
+                    System.out.println("Maaf, jumlah pinjaman melebihi limit");
+                } else {
+                    jumlahPinjaman += uang;
+                }
+            }
+
+            public void angsur(int uang) {
+                jumlahPinjaman -= uang;
+            }
+        }
+
+    \end{minted}
+    \item Modifikasi soal no. 4 agar nominal yang dapat diangsur minimal adalah 10\% dari jumlah pinjaman saat ini. Jika mengangsur kurang dari itu, maka muncul peringatan “Maaf, angsuran harus 10\% dari jumlah pinjaman”. \\ 
+    \texttt{Answer:} 
+    \begin{minted}[autogobble,breaklines,linenos]{java}
+        public void angsur(int uang) {
+            if (uang < jumlahPinjaman * 0.1) {
+                System.out.println("Maaf, angsuran harus 10% dari jumlah pinjaman");
+            } else {
+                jumlahPinjaman -= uang;
+            }
+        }
+    \end{minted}
+    \item Modifikasi class TestKoperasi, agar jumlah pinjaman dan angsuran dapat menerima input dari console. \\ 
+    \texttt{Answer:} 
+    \begin{minted}[autogobble,breaklines,linenos]{java}
+        package Assignment;
+
+        import java.util.Scanner;
+
+        public class TestKoperasi{
+            static Scanner input = new Scanner(System.in);
+            static Anggota donny = new Anggota("111333444", "Donny", 5_000_000);
+            public static void main(String[] args) {
+                
+                System.out.println("Nama Anggota: " + donny.getNama());
+                System.out.println("Limit Pinjaman: " + donny.getLimitPinjaman());
+                
+                System.out.println("\nMeminjam uang 10.000.000...");
+                donny.pinjam(10_000_000);
+                System.out.println("Jumlah pinjaman saat ini: " + donny.getJumlahPinjaman());
+                
+                System.out.println("\nMeminjam uang 4.000.000...");
+                donny.pinjam(4_000_000);
+                System.out.println("Jumlah pinjaman saat ini: " + donny.getJumlahPinjaman());
+                
+                System.out.println("\nMembayar angsuran 1.000.000");
+                donny.angsur(1_000_000);
+                System.out.println("Jumlah pinjaman saat ini: " + donny.getJumlahPinjaman());
+
+                System.out.println("\nMembayar angsuran 3.000.000");
+                donny.angsur(3000000);
+                System.out.println("Jumlah pinjaman saat ini: " + donny.getJumlahPinjaman());
+
+                goToMenu();
+
+                input.close();
+            }
+
+            public static void goToMenu() {
+                System.out.println("Menu Transaksi Koperasi");
+                System.out.println("1. Pinjam");
+                System.out.println("2. Angsur");
+                System.out.print("Menu: ");
+                int menu = input.nextInt();
+                switch (menu) {
+                    case 1:
+                        goToPinjam();
+                        break;
+                    
+                    case 2:
+                        goToAngsur();
+                        break;
+                
+                    default:
+                        System.out.println("Tolong masukan nilai yang valid");
+                        goToMenu();
+                        break;
+                }
+            }
+
+            public static void goToPinjam() {
+                System.out.print("\nMasukkan jumlah yang ingin dipinjam : ");
+                donny.pinjam(input.nextInt());
+                System.out.println("Jumlah pinjaman saat ini: " + donny.getJumlahPinjaman());
+                goToMenu();
+            }
+
+            public static void goToAngsur() {
+                System.out.print("\nMasukkan jumlah yang ingin diangsur : ");
+                donny.angsur(input.nextInt());
+                System.out.println("Jumlah pinjaman saat ini: " + donny.getJumlahPinjaman());
+                goToMenu();
+            }
+        }
+
+    \end{minted}
+\end{enumerate}
+
+\end{document}
