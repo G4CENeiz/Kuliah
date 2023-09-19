@@ -109,8 +109,24 @@
 
 \subsection*{Practicum 3}
 
+\subsubsection*{1. Embed Javascript}
 \begin{enumerate}
-    \subsubsection*{1. Embed Javascript}
+    \item both script in head and body executed in top down order. 
+    \item i think the body is better because then the whole html (atleast the part that are about to be manipulated by the javascript) finish load. in result the javascript executed faster because it doesnt need to wait for the html element it about to use to load first. 
+\end{enumerate}
+
+\subsubsection*{2. Inline Javascript}
+\begin{enumerate}
+    \item both anchor creat an alert in the browser. 
+    \item one use the href to run the javascript, the other use onclick attribute. 
+\end{enumerate}
+
+\subsubsection*{3. External Javascript}
+\begin{enumerate}
+    \item the alert load in first, but after inspecting the page, the html is partially loaded up to the script tag.
+    \item the script did not load like before.
+    \subsection*{Practicum 4}
+    \item an alert show up uppon the page load.
     \item 
 \end{enumerate}
 
