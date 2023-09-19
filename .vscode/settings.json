@@ -1,0 +1,9 @@
+{
+    "grammarly.selectors": [
+        {
+            "language": "latex",
+            "scheme": "file",
+            "pattern": "Smt 3/Web Design/Week 4/Latex Javascript/TI 2I_Muhammad Baihaqi Aulia Asy'ari.tex"
+        }
+    ]
+}
