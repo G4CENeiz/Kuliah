@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Percabangan Ternary</title>
+</head>
+<body>
+    <script>
+        var username = prompt("Username:");
+        var password = prompt("Password:");
+
+        if (username == "mahasiswa") {
+            if (password == "kopi") {
+                document.write("<h2>Selamat Datang</h2>");
+            } else {
+                document.write("<p>Password salah, coba lagi!</p>");
+            }
+        } else {
+            document.write("<p>Anda tidak terdaftar!</p>");
+        }
+    </script>
+</body>
+</html>
