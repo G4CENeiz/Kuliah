@@ -109,14 +109,130 @@
         \item - \\ \includegraphics[width=.8\textwidth]{images/figures/fig1.png} \\ there are various aritmathic operators in php including specialized squaring operators which not many languages have. 
         \item - \\ \includegraphics[width=.8\textwidth]{images/figures/fig2.png} \\ you can compare the value of variable.
         \item - \\ \includegraphics[width=.8\textwidth]{images/figures/fig3.png} \\ logical operators can be used as boolean condition.
+        \newpage
         \item - \\ \includegraphics[width=.8\textwidth]{images/figures/fig4.png} \\ assignment operators can simplify the usage of aritmathic operators. 
         \item - \\ \includegraphics[width=.8\textwidth]{images/figures/fig5.png} \\ there are operators to identify whether or not a variable is identical to another. 
         \item - \\ \includegraphics[width=.8\textwidth]{images/figures/fig6.png} \\ \includegraphics[width=.8\textwidth]{images/figures/fig7.png} \\ -
     \end{enumerate}
+    \newpage
     \section*{Practicum 4  - PHP control structure}
     \item -
     \begin{enumerate}[label*=\arabic*.]
         \item - \\ \includegraphics[width=.8\textwidth]{images/figures/fig8.png} \\ the control structure goes over the condition of each if clause.
+        \item - \\ \includegraphics[width=.8\textwidth]{images/figures/fig9.png} \\ the code just basically imitate division using looping
+        \newpage
+        \item - \\ \includegraphics[width=.8\textwidth]{images/figures/fig10.png} \\ the code is using for loop to multiply to a limit set by how many land they have.
+        \item - \\ \includegraphics[width=.8\textwidth]{images/figures/fig11.png} \\ it sums up every element in the array using foreach.
+        \newpage
+        \item - \\ \includegraphics[width=.8\textwidth]{images/figures/fig12.png} \\ it uses the foreach to call every element and filters it through the if clause.
+        \item - \\ \includegraphics[width=.8\textwidth]{images/figures/fig13.png}
+        \begin{minted}[autogobble,breaklines,linenos]{php}
+            <?php
+            $studentScore = [85, 92, 78, 64, 90, 75, 88, 79, 70, 96];
+            $studentScoreSum = 0;
+            $ignoreFirst = 2;
+            $ignoreLast = 2;
+
+            foreach ($studentScore as $score) {
+                echo "$score, ";
+                }
+                
+                echo "<br>";
+                
+                sort($studentScore);
+                
+                foreach ($studentScore as $score) {
+                    echo "$score, ";
+                    }
+                    
+                    echo "<br>";
+                    
+                    for ($k = 0 + $ignoreFirst; $k < count($studentScore) - $ignoreLast; $k++) { 
+                        $studentScoreSum += $studentScore[$k];
+                        }
+            
+                        $meanScore = $studentScoreSum / (count($studentScore) - $ignoreFirst - $ignoreLast);
+                        
+                        echo "the mean score of studdent excluding the first two top student and bottom: $meanScore";
+            ?>
+        \end{minted}
+        \item - \\ \includegraphics[width=.8\textwidth]{images/figures/fig14.png}
+        \begin{minted}[autogobble,breaklines,linenos]{php}
+            <?php
+            $price = 120_000;
+            $minDiscountPrice = 100_000;
+            $discount = 0.8;
+            
+            echo "Price: $price <br>";
+            
+            if ($price >= $minDiscountPrice) {
+                $discountedPrice = $price * (1 - $discount);
+                $price *= $discount;
+            }
+            
+            echo "Discount: $discountedPrice <br>";
+            echo "Total: $price <br>";
+            ?>
+        \end{minted}
+        \item - \\ \includegraphics[width=.8\textwidth]{images/figures/fig15.png}
+        \begin{minted}[autogobble,breaklines,linenos]{php}
+            <?php
+            $score = 600;
+            echo "Total skor pemain adalah: $score <br>";
+            
+            $prizeStatus = ($score > 500) ? "YA" : "TIDAK" ;
+            echo "Apakah pemain mendapatkan hadiah tambahan? $prizeStatus <br>";
+            
+            $score = 500;
+            echo "Total skor pemain adalah: $score <br>";
+            
+            $prizeStatus = ($score > 500) ? "YA" : "TIDAK" ;
+            echo "Apakah pemain mendapatkan hadiah tambahan? $prizeStatus <br>";
+            ?>
+        \end{minted}
+    \end{enumerate}
+    \newpage
+    \section*{Practicum 5  - Array in PHP}
+    \item -
+    \begin{enumerate}[label*=\arabic*.]
+        \item - \\ \includegraphics[width=.8\textwidth]{images/figures/fig16.png} \\ array element can be added with assignment operators because aparently array in php is dynamic size.
+        \item - \\ \includegraphics[width=.8\textwidth]{images/figures/fig17.png} \\ you can iterate through multidimensional array using foreach.
+        \newpage
+        \item - \\ \includegraphics[width=.8\textwidth]{images/figures/fig18.png} \\ iterating to associative array with multidimensional array value using foreach.
+        \item - \\ \includegraphics[width=.8\textwidth]{images/figures/fig19.png}
+        \begin{minted}[autogobble,breaklines,linenos]{php}
+            <?php
+            $daftarNilai = [
+                'Matematika' => [
+                    ['Alice', 85],
+                    ['Bob', 92],
+                    ['Charlie', 78],
+                    ['David', 64],
+                    ['Eva', 90],
+                ],
+            ];
+
+            $mataKuliah = 'Matematika';
+
+            $studentCount = count($daftarNilai[$mataKuliah]);
+
+            $scoreSum = 0;
+
+            foreach ($daftarNilai[$mataKuliah] as $nilai) {
+                $scoreSum += $nilai[1];
+            }
+
+            $averageScore = $scoreSum/$studentCount;
+
+            echo "Daftar mahasiswa dengan nilai lebih dari rata rata di mata kuliah $mataKuliah ($averageScore): <br>";
+
+            foreach ($daftarNilai[$mataKuliah] as $nilai) {
+                if ($nilai[1] > $averageScore) {
+                    echo "Nama: {$nilai[0]}, Nilai: {$nilai[1]} <br>";
+                }
+            }
+            ?>
+        \end{minted}
     \end{enumerate}
 \end{enumerate}
 
