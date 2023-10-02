@@ -1,0 +1,151 @@
+\documentclass[12pt,titlepage]{article}
+\usepackage[margin=1.25in]{geometry}
+\usepackage{graphicx,amsmath,blindtext,minted}
+
+%% Variables definition
+\newcommand{\vSubject}{Information System Management}
+\newcommand{\vSubtitle}{Concept of Fact, Data, Information and Information System Management Concept}
+\newcommand{\vName}{Muhammad Baihaqi Aulia Asy'ari}
+\newcommand{\vNIM}{2241720145}
+\newcommand{\vClass}{2I}
+\newcommand{\vDepartment}{Information Technology}
+\newcommand{\vStudyProgram}{D4 Informatics Engineering}
+
+%% [START] Tikz related stuff
+\usepackage{tikz}
+\usetikzlibrary{svg.path,calc,shapes.geometric,shapes.misc}
+\tikzstyle{terminator} = [rectangle, draw, text centered, rounded corners = 1em, minimum height=2em]
+\tikzstyle{preparation} = [chamfered rectangle, chamfered rectangle sep=0.75em, draw, text centered, minimum height = 2em]
+\tikzstyle{process} = [rectangle, draw, text centered, minimum height=2em]
+\tikzstyle{decision} = [diamond, aspect=2, draw, text centered, minimum height=2em]
+\tikzstyle{data}=[trapezium, draw, text centered, trapezium left angle=60, trapezium right angle=120, minimum height=2em]
+\tikzstyle{connector} = [line width=0.25mm,->]
+%% [END] Tikz related stuff
+
+%% [START] Fancy header related stuff
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setlength{\headheight}{15pt} % compensate fancyhdr style
+\fancyhead{}
+\fancyfoot{}
+\fancyfoot[L]{\thepage}
+\fancyfoot[R]{\textit{\vSubject - \vSubtitle}}
+\renewcommand{\footrulewidth}{0.4pt}% default is 0pt, overline for footer
+%% [END] Fancy header related stuff
+
+%% [START] Custom tabular command related stuff
+\usepackage{tabularx}
+\newcommand{\details}[2]{
+    #1 & #2  \\
+}
+%% [END] Custom tabular command related stuff
+
+%% [START] Figure related stuff
+\newcommand{\image}[3][1]{
+    \begin{figure}[h]
+        \centering
+        \includegraphics[#1]{#2}
+        \caption{#3}
+        \label{#3}
+    \end{figure}
+}
+%% [END] Figure related stuff
+
+%%
+\usepackage{pgf-umlcd}
+
+\renewcommand{\umldrawcolor}{black}
+\renewcommand{\umlfillcolor}{white}
+%%
+
+%% [BEGIN] Custom enumerator
+\usepackage{enumitem}
+%% [END] Custom enumerator
+
+%% [BEGIN] Paragraph indent
+\usepackage{indentfirst}
+%% [END] Paragraph indent
+
+\begin{document}
+\begin{titlepage}
+    \centering
+    \vfill
+    {\bfseries\LARGE
+        \vSubject\\
+        \vskip0.25cm
+        \vSubtitle
+    }
+    \vfill
+    \includegraphics[width=6cm]{images/polinema-logo.png}
+    \vfill
+    {
+        \textbf{Name}\\
+        \vName\\
+        \vskip0.5cm
+        \textbf{NIM}\\
+        \vNIM\\
+        \vskip0.5cm
+        \textbf{Class}\\
+        \vClass\\
+        \vskip0.5cm
+        \textbf{Department}\\
+        \vDepartment\\
+        \vskip0.5cm
+        \textbf{Study Program}\\
+        \vStudyProgram
+    }
+\end{titlepage}
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+\section{Concept of Fact, Data and Information}
+
+\subsection{Basic Concept of Fact}
+\subsubsection{Definition of Fact}
+The word "Fact" came from the latin word "factum" which mean deed, done, or achieve. A fact is something that 
+\subsubsection{The Meaning of Fact and Theory in Sciences}
+\subsubsection{Definition of Fact and Theory}
+\subsubsection{Theory as a Tool of Sciences}
+\subsubsection{Relation Between Theory and Fact}
+
+\subsection{Basic Concept of Data}
+\subsubsection{Definition of Data}
+\subsubsection{Data Classification}
+\subsubsection{Value and Quantity of Data}
+
+\subsection{Basic Concept of Information}
+\subsubsection{Definition of Information}
+\subsubsection{The Essence of Information}
+\subsubsection{Information Data Source}
+\subsubsection{The Function of Information}
+\subsubsection{Value and Quantity of Information}
+\subsubsection{Information Characteristics}
+\subsubsection{Benefits of Information}
+\subsubsection{The need for Information}
+\subsubsection{Types of Information}
+\subsubsection{Characteristics of a Good Information}
+\subsubsection{Category of Information}
+
+\newpage
+
+\section{Concept of Information System Management}
+
+\subsection{Essence of Information System Management}
+\subsubsection{Definition of Information System Management}
+\subsubsection{Boundaries of Information System Management}
+
+\subsection{The Scope and Benefits of Information System Management}
+\subsubsection{The Scope of Information System Management}
+\subsubsection{The Benefits of Information System Management}
+
+\subsection{Structure and Component of Information System Management}
+\subsubsection{Functional Components of Information System Management}
+\subsubsection{Building Block of Information System Management}
+\subsubsection{Physical Components of Information System Management}
+\subsubsection{Structure of Information System Management}
+
+\end{document}
