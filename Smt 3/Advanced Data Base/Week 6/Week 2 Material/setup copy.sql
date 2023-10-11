@@ -5,7 +5,6 @@
 -- Create empty database TSQL
 ---------------------------------------------------------------------
 
-/*
 -- 1. Connect to your on-premises SQL Server instance, master database
 
 -- 2. Run the following code to create an empty database called TSQL
@@ -26,7 +25,6 @@ USE TSQL;
 GO
 
 -- 3. Proceed to next section 
-*/
 
 ---------------------------------------------------------------------
 -- Section C - for both on-premises SQL Server and SQL Azure
