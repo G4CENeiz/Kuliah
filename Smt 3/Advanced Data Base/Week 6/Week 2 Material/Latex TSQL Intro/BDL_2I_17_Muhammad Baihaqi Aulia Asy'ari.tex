@@ -99,4 +99,70 @@ SELECT, Sorting, Filtering, Grouping and Union Operator}
 
 \newpage
 
+\begin{enumerate}
+    \section*{Practicum - Part 1}
+    \item The difference is that the first query select every part using the wildcard symbol and the second query declared every column to be displayed sequentially
+    \section*{Practicum - Part 2}
+    \item Yes, because the query ask for the data in column country on every row. \\
+    \includegraphics[height=.76\textheight]{images/figures/fig1.png}
+    \newpage
+    \item No, the difference is how the 4th step query result is unique and there is no duplicate data. From the experiment it can be concluded that the DISTINCT keyword is used to query data without any duplicate data. \\
+    \includegraphics[height=.8\textheight]{images/figures/fig2.png}
+    \newpage
+    \section*{Practicum - Part 3}
+    \item The column name of the query is different. The AS keyword is used to make an alias to the name of the table and column such that you can represent the table/column with the alias declared with the AS keyword. \\
+    \resizebox{.9\textwidth}{!}{
+        \includegraphics[height=\textheight]{images/figures/fig3_a.png}
+        \includegraphics[height=\textheight]{images/figures/fig3_b.png}
+    }
+    \newpage
+    \section*{Practicum - Part 4}
+    \item step 3 query has an extra column of category name. CASE keyword seems to work like switch case, for multiple similar condition to output different result. \\
+    \resizebox{.9\textwidth}{!}{
+        \includegraphics[height=\textheight]{images/figures/fig4_a.png}
+        \includegraphics[height=\textheight]{images/figures/fig4_b.png}
+    }
+    \newpage
+    \item An extra column detailing if the product is a champaign product or not\\
+    \includegraphics[width=.9\textwidth]{images/figures/fig5.png}
+    \newpage
+    \item 12 row affected
+    \begin{minted}[autogobble,breaklines,linenos]{sql}
+        SELECT
+            p.categoryid , p.productname,
+            CASE
+                    WHEN p.categoryid = 1 THEN 'Beverages'
+                    WHEN p.categoryid = 2 THEN 'Condiments'
+                    WHEN p.categoryid = 3 THEN 'Confections'
+                    WHEN p.categoryid = 4 THEN 'Dairy Products'
+                    WHEN p.categoryid = 5 THEN 'Grains/Cereals'
+                    WHEN p.categoryid = 6 THEN 'Meat/Poultry'
+                    WHEN p.categoryid = 7 THEN 'Produce'
+                    WHEN p.categoryid = 8 THEN 'Seafood'
+                    ELSE 'Other'
+            END AS categoryname,
+            CASE
+                    WHEN p.categoryid IN (1, 7, 8) THEN 'Champaign Products'
+                    ELSE 'Non-Champaign Products'
+            END AS iscampaign
+        FROM [Production].[Products] AS p
+        WHERE p.categoryid = 8;
+    \end{minted}
+    \resizebox{.9\textwidth}{!}{
+        \includegraphics[height=\textheight]{images/figures/fig6_a.png}
+        \includegraphics[height=\textheight]{images/figures/fig6_b.png}
+    }
+    \newpage
+    \item -
+    \begin{minted}[autogobble,breaklines,linenos]{sql}
+        SELECT
+            h.firstname AS FIRST_NAME,
+            h.lastname AS LAST_NAME,
+            h.city AS CITY,
+            h.country AS COUNTRY
+        FROM [HR].[Employees] AS h
+        WHERE h.city = 'Seattle' AND h.country = 'USA';
+    \end{minted}
+    \end{enumerate}
+
 \end{document}
