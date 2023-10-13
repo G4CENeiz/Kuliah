@@ -1,0 +1,337 @@
+\documentclass[12pt,titlepage]{article}
+\usepackage[margin=1.25in]{geometry}
+\usepackage{graphicx,amsmath,blindtext,minted}
+
+%% Variables definition
+\newcommand{\vSubject}{Information System Management}
+\newcommand{\vSubtitle}{Chapter 8}
+\newcommand{\vSubsubtitle}{The Concept of Information System-based Decision Making}
+\newcommand{\vName}{Muhammad Baihaqi Aulia Asy'ari}
+\newcommand{\vNIM}{2241720145}
+\newcommand{\vClass}{2I}
+\newcommand{\vDepartment}{Information Technology}
+\newcommand{\vStudyProgram}{D4 Informatics Engineering}
+
+%% [START] Tikz related stuff
+\usepackage{tikz}
+\usetikzlibrary{svg.path,calc,shapes.geometric,shapes.misc}
+\tikzstyle{terminator} = [rectangle, draw, text centered, rounded corners = 1em, minimum height=2em]
+\tikzstyle{preparation} = [chamfered rectangle, chamfered rectangle sep=0.75em, draw, text centered, minimum height = 2em]
+\tikzstyle{process} = [rectangle, draw, text centered, minimum height=2em]
+\tikzstyle{decision} = [diamond, aspect=2, draw, text centered, minimum height=2em]
+\tikzstyle{data}=[trapezium, draw, text centered, trapezium left angle=60, trapezium right angle=120, minimum height=2em]
+\tikzstyle{connector} = [line width=0.25mm,->]
+%% [END] Tikz related stuff
+
+%% [START] Fancy header related stuff
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setlength{\headheight}{15pt} % compensate fancyhdr style
+\fancyhead{}
+\fancyfoot{}
+\fancyfoot[L]{\thepage}
+\fancyfoot[R]{\textit{\vSubject - \vSubtitle}}
+\renewcommand{\footrulewidth}{0.4pt}% default is 0pt, overline for footer
+%% [END] Fancy header related stuff
+
+%% [START] Custom tabular command related stuff
+\usepackage{tabularx}
+\newcommand{\details}[2]{
+    #1 & #2  \\
+}
+%% [END] Custom tabular command related stuff
+
+%% [START] Figure related stuff
+\newcommand{\image}[3][1]{
+    \begin{figure}[h]
+        \centering
+        \includegraphics[#1]{#2}
+        \caption{#3}
+        \label{#3}
+    \end{figure}
+}
+%% [END] Figure related stuff
+
+%%
+\usepackage{pgf-umlcd}
+
+\renewcommand{\umldrawcolor}{black}
+\renewcommand{\umlfillcolor}{white}
+%%
+
+%% [BEGIN] Custom enumerator
+\usepackage{enumitem}
+%% [END] Custom enumerator
+
+%% [BEGIN] Paragraph indent
+\usepackage{indentfirst}
+%% [END] Paragraph indent
+
+\renewcommand{\thesection}{\Alph{section}}
+
+\begin{document}
+\begin{titlepage}
+    \centering
+    \vfill
+    {\bfseries\LARGE
+        \vSubject\\
+        \vskip0.25cm
+        \vSubtitle
+        \vskip0.25cm
+        \vSubsubtitle
+    }
+    \vfill
+    \includegraphics[width=6cm]{images/polinema-logo.png}
+    \vfill
+    {
+        \textbf{Group Members}\\
+        \vspace{0.5cm}
+        \begin{tabular}{l l}
+            Muhammad Baihaqi Aulia Asy'ari & \textbf{2241720145} \\
+            Davis Maulana Hermanto & \textbf{2241720255} \\
+            Dicha Zelianivan Arkana & \textbf{2241720002} \\
+            Sri Kresna Maha Dewa & \textbf{2241720244} \\
+            Steven Christian Susanto & \textbf{2241720003} \\
+            Yanuar Thaif Chalil Candra & \textbf{2241720004}\\
+        \end{tabular}
+        \vskip0.5cm
+        \textbf{Class}\\
+        \vClass\\
+        \vskip0.5cm
+        \textbf{Department}\\
+        \vDepartment\\
+        \vskip0.5cm
+        \textbf{Study Program}\\
+        \vStudyProgram
+    }
+\end{titlepage}
+
+\newpage
+
+\section{The concept of information system-based decision making}
+\subsection{Understanding Decision Making}
+\noindent
+In general, decision making is an effort to solve problems by choosing available solution alternatives.\\\\
+Optional:\\\\
+In essence, decision-making is a systematic approach to the nature of a problem, gathering facts and data, making a mature determination of the generated alternatives, and taking action that, by calculation, is deemed the most appropriate. In other words, decision-making is a technique to solve problems using scientific techniques.
+\subsection{Decision Making Techniques} \noindent
+\begin{center}
+    \includegraphics[width=.9\textwidth]{images/figures/fig1.png}
+\end{center}
+Herbert A. Simon (1973) proposed three stages, namely:
+\begin{enumerate}
+    \item \textbf{Understanding}\\
+    The investigation process involves examining data, either in a predetermined way or in a special way.
+    \item \textbf{Design}\\
+    The management information system must contain a decision model to process data and initiate alternatives.
+    \item \textbf{Selection}\\
+    The management information system becomes more effective if the design results can be presented in the form of a decision. Based on its nature, the decision-making system is divided into two, namely open or closed. The closed decision-making system is considered to know all alternatives and the consequences of each alternative, while the open decision assumes that it does not know all alternatives and all results.
+    There are several forms of decision-making techniques, including:
+    \begin{enumerate}[label=\arabic*.]
+        \item \textbf{Creative Techniques}
+        \begin{enumerate}[label=\alph*.]
+            \item \textbf{Brainstorming}\\
+            Aims to excavate and achieve maximum creativity from a group by giving members the opportunity to present their ideas.
+            \item \textbf{Synectics}\\
+            Based on the assumption that the creative process can be explained and taught, it's intended to enhance the creative output of both individuals and groups.
+            \item \textbf{Participatory Techniques}\\
+            Individuals or groups are involved in the decision-making process, including modern techniques, the Delphi technique, and the nominal technique.
+        \end{enumerate}
+        \item \textbf{Delphi Technique}\\
+        The Delphi technique or process was first developed by N.C. Dalkey, Helmer, and colleagues in the 1950s and 1960s at the Rand Corporation. The Delphi technique falls under modern decision-making techniques that stimulate creativity by using considerations based on other people's ideas to achieve consensus in group decision-making. This technique is also one of the participatory techniques in strategic decision-making.        
+        \item \textbf{Nominal Group Technique}\\
+        The Nominal Group Technique (NGT) is a participatory technique in decision-making that is less frequently used compared to the suggestion contribution technique. This method was developed by Delbecq and Van de Ven in 1968. The technique is intended as a way to gather individual views and assessments in an atmosphere of uncertainty and disagreement about the core issue of a problem, and then find the best solution.
+    \end{enumerate}
+\end{enumerate}
+\subsection{Decision Making Measurement Scale} \noindent
+In essence, decision-making is seen as a process in an effort to find a way out of a problem. The quantitative benchmarks regarding cost benefits aim to facilitate the comparison between the effectiveness of various alternative ways of handling in the decision situation. This measurement scale is arranged in order of increasing restrictions. The intended measurement scales are:
+\begin{enumerate}[label=\arabic*.]
+    \item \textbf{Nominal Scale}\\
+    The nominal scale is the measurement with the lowest level. Here, an object is classified with symbols or numbers that are both qualitative and quantitative. Decision-making with a nominal scale is challenging because this scale shows the value hierarchy of several decision alternatives. This scale only shows differences between groups.
+    \item \textbf{Ordinal Scale}\\
+    The ordinal scale is a qualitative measurement scale that indicates a hierarchy of preference associated with a specified objective or condition.
+    \item \textbf{Interval Scale}\\
+    The interval scale is a scale that has the characteristics of an ordinal scale, where the difference between each number or preference hierarchy of that scale is known and then measured.
+    \item \textbf{Ratio Scale}\\
+    The ratio scale is an interval scale that has a definite zero point. In this scale, the comparison of each measurement unit point is free.
+    \item \textbf{Absolute Scale}\\
+    The absolute scale is a clear, tangible, and directly comparable quantitative measure. Structures or decision conditions are commonly found in corrective-type decisions, with a ratio or absolute measurement scale.
+\end{enumerate}
+
+\newpage
+\section{Basic Concepts of Management Decision Making}
+\subsection{Basis and Factors for Decision Making}
+\begin{itemize}
+    \item \textbf{Intuition:} decisions based on subjective feelings.
+    \item \textbf{Experience:} decisions based on someone's experience.
+    \item \textbf{Authority:} decisions based on the authority someone has.
+    \item \textbf{Facts:} decisions based on empirical data and facts.
+    \item \textbf{Rational:} decisions based on rational and logical considerations.
+    \item \textbf{Factors in decision making:}
+    \begin{itemize}
+        \item Internal conditions of the organization.
+        \item Availability of required information.
+        \item External conditions of the organization.
+        \item Personality and competence of the decision maker.
+    \end{itemize}
+\end{itemize}
+\subsection{Quantitative Methods in Decision Making}
+\begin{itemize}
+    \item \textbf{Concept of operations research:}
+    \begin{itemize}
+        \item Operations research is a quantitative approach in decision-making that uses scientific methods, mathematical models, and computers. 
+        \item Operations research has seven main characteristics, namely:
+        \begin{itemize}
+            \item Focused on decision-making.
+            \item Use of scientific methods.
+            \item Use of mathematical models.
+            \item Economic effectiveness.
+            \item Reliance on computers.
+            \item Team approach.
+            \item System organization.
+        \end{itemize}
+        \item Operations research has five stages of approach, namely:
+        \begin{itemize}
+            \item Problem diagnosis.
+            \item Problem formulation.
+            \item Model creation.
+            \item Model analysis.
+            \item Implementation of findings.
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{Operations Research Model:}
+    \begin{itemize}
+        \item The operations research model is a simplification of reality used to understand and solve problems.
+        \item Operations research models can be grouped into two types, namely normative and descriptive models.
+        \item Normative models depict what should be done.
+        \item Descriptive models depict things as they are.
+        \item Some commonly used operations research models include:
+        \begin{itemize}
+            \item Linear programming.
+            \item Queue theory.
+            \item Network analysis.
+            \item Game theory.
+            \item Markov chain model.
+            \item Dynamic programming.
+            \item Simulation.
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{Applications of Operations Research:}
+    \begin{itemize}
+        \item Operations research can be applied to various problems, including:
+        \begin{itemize}
+            \item Inventory problems.
+            \item Allocation problems.
+            \item Queue problems.
+            \item Sequencing problems.
+            \item Routing problems.
+            \item Replacement problems.
+            \item Competition problems.
+            \item Search problems.
+        \end{itemize}
+    \end{itemize}
+\end{itemize}
+Here are some examples of the application of operations research in the real world:
+\begin{itemize}
+    \item Manufacturing companies use operations research to determine the number of products that should be produced, how much raw material needs to be purchased, and how to arrange production lines.
+    \item Service companies use operations research to determine the number of staff needed, work schedules, and delivery routes.
+    \item Governments use operations research to determine budget allocation, transportation planning, and natural resource management.
+\end{itemize}
+Operations research is a powerful tool that can help organizations make better and more efficient decisions.
+\subsection{Decision-making process}
+\begin{itemize}
+    \item \textbf{Herbert A. Simon} divides the decision-making process into three stages:
+    \begin{itemize}
+        \item Intelligence: Investigating the internal and external environment to identify problems and gather information about the problem.
+        \item Design: Determining various alternatives to solve the problem and analyzing those alternatives.
+        \item Choice: Selecting the best alternative to solve the problem.
+    \end{itemize}
+    \item \textbf{Scott and Mitchell} divide the decision-making process into four stages:
+    \begin{itemize}
+        \item Searching/finding objectives: Identifying the goals to be achieved.
+        \item Objective formulation: Defining the goals specifically and measurably.
+        \item Alternative selection: Identifying and evaluating alternatives to achieve the objectives.
+        \item Evaluating outcomes: Measuring the success of the decisions made.
+    \end{itemize}
+    \item \textbf{Elbing} divides the decision-making process into five stages:
+    \begin{itemize}
+        \item Identification and diagnosis of the problem: Determining the problem and its causes.
+        \item Collection and analysis of relevant data: Gathering information relevant to solving the problem.
+        \item Development and evaluation of alternatives: Determining alternatives to solve the problem and evaluating those alternatives.
+        \item Selection of the best alternative: Choosing the best alternative to solve the problem.
+        \item Decision implementation and evaluation of results: Executing the decision and evaluating the outcome.
+    \end{itemize}
+    \item \textbf{Eilon} divides the decision-making process into eight stages:
+    \begin{itemize}
+        \item Input of information: Collecting relevant information.
+        \item Analysis of available information: Analyzing the information available.
+        \item Specification of performance and cost benchmarks: Determining benchmarks to assess alternatives.
+        \item Creation of a model about the decision situation: Creating a model to depict the decision situation.
+        \item Formulation of various alternatives (strategies) available to the decision-maker: Determining alternatives to solve the problem.
+        \item Forecasting the results of each alternative: Estimating the outcomes of each alternative.
+        \item Detailing the selection criteria among various alternatives: Determining criteria to choose the best alternative.
+        \item Explanation of the decision situation resolution: Explaining the decision taken.
+    \end{itemize}
+\end{itemize}
+In summary, the decision-making process is a series of activities to choose the best alternative to solve a problem. There are various decision-making process models that can be used, depending on the complexity of the problem faced.
+\newpage
+\section{Management Decision Type}
+\begin{itemize}
+    \item \textbf{Programmed Decision}: A decision that is made over and over again routinely so it can be programmed. This kind of decision is made in the lower level of management.
+    \item \textbf{Half/Partially Programmed Decision}: This means that half of it can be programmed, half is repetitive/routine, and the other is unstructured. This decision is intricate and needs detailed analysis.
+    \item \textbf{Unprogrammed / Unstructured Decision}: This decision isn't repetitive and doesn't always occur. This kind of decision is made in the upper level of management.
+\end{itemize}
+\section{Mechanism, Stage, and Model of Decision Making in an Organization}
+\subsection{Decision Making Mechanism in an Organization}
+Decision making mechanism is a set of activities that is done in order to solve a
+problem. Here are a few things that need to be considered when making a
+decision:
+\begin{itemize}
+    \item Understanding and Problem Formulation
+    \item Collection and analysis of relevant data
+    \item Choosing the best alternative
+    \item Decision Implementation
+    \item Evaluation
+\end{itemize}
+\subsection{Decision Making Stage}
+\begin{itemize}
+    \item \textbf{Stage 1}\\
+    Understanding and Problem Formulation. Managers identifies the problem by systematically testing the causal relationship, and searching for a oddity or changes that is “normal”.
+    \item \textbf{Stage 2}\\
+    Collection and analysis of relevant data. Managers determine the data needed to make informed decisions.
+    \item \textbf{Stage 3}\\
+    Development of alternatives. Managers needs to pick an alternative that is good enough even if its not perfect or ideal.
+    \item \textbf{Stage 4}\\
+    Alternatives evaluation. Managers needs to evaluate to determine the effectiveness of each chosen alternatives.
+    \item \textbf{Stage 5}\\
+    Choosing the best alternative. The alternative selected will be based on the amount of information for managers and the manager’s imperfect policy.
+    \item \textbf{Stage 6}\\
+    Decision implementation. The managers needs to make a plan to take care of the problems that occur in the decision implementation.
+    \item \textbf{Stage 7}\\
+    Results evaluation. Managers must evaluate to make sure the implementation is carried out smoothly and decisions produce the desired results.
+\end{itemize}
+\subsection{Other types of Decision Making Models}
+\begin{itemize}
+    \item \textbf{Mintzberg Decision Making Model:} There is three stages in this model (1. Implementation, 2. Development, 3. Selection).
+    \item \textbf{Rational Decision Making Model:} The decision is divided into two types, the first is programmed (repetitive), the second is not programmed (unorganized).
+    \item \textbf{Classic Decision Making Model:} This model assumed that decision is a rational process where decision is taken from one of the best alternative.
+    \item \textbf{Behavioral Decision Making Model:} This model is based on giving satisfaction.
+    \newpage
+    \item \textbf{Carnegie Decision Making Model:} This model recognizes satisfaction, limited rationality, and coalition organizations.
+    \begin{center}
+        \includegraphics[width=.9\textwidth]{images/figures/fig2.png}
+    \end{center}
+    \item \textbf{Benefit Based Decision Making Model:} 
+    \begin{enumerate}
+        \item quality of decisions
+        \item creativity decision
+        \item acceptance of decision
+        \item understanding of decision
+        \item decision considerations
+        \item decision accuracy
+    \end{enumerate}
+    \item \textbf{Problem Based Decision Making Model}
+    \item \textbf{Field Based Decision Making Model}
+    \item \textbf{Problem Tree Decision Making Model}
+\end{itemize}
+\end{document}
