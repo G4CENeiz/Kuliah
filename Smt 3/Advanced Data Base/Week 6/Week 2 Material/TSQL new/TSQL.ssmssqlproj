@@ -25,6 +25,30 @@
           <AssociatedConnUserName />
           <FullPath>practicum_prep.sql</FullPath>
         </FileNode>
+        <FileNode Name="Practicum1.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:HAQI-G4CE:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>HAQI-G4CE</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Practicum1.sql</FullPath>
+        </FileNode>
+        <FileNode Name="practicum2.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:HAQI-G4CE:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>HAQI-G4CE</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>practicum2.sql</FullPath>
+        </FileNode>
+        <FileNode Name="practicum3.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:HAQI-G4CE:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>HAQI-G4CE</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>practicum3.sql</FullPath>
+        </FileNode>
+        <FileNode Name="practicum4.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:HAQI-G4CE:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>HAQI-G4CE</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>practicum4.sql</FullPath>
+        </FileNode>
         <FileNode Name="setup.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:HAQI-G4CE:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>HAQI-G4CE</AssociatedConnSrvName>
