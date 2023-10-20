@@ -4,8 +4,7 @@
 
 %% Variables definition
 \newcommand{\vSubject}{Advandce Database}
-\newcommand{\vSubtitle}{TSQL and Statement
-SELECT, Sorting, Filtering, Grouping and Union Operator}
+\newcommand{\vSubtitle}{Intro to TSQL and TSQL Statement}
 \newcommand{\vName}{Muhammad Baihaqi Aulia Asy'ari}
 \newcommand{\vNIM}{2241720145}
 \newcommand{\vClass}{2I}
@@ -129,7 +128,7 @@ SELECT, Sorting, Filtering, Grouping and Union Operator}
     \item 12 row affected
     \begin{minted}[autogobble,breaklines,linenos]{sql}
         SELECT
-            p.categoryid , p.productname,
+        p.categoryid , p.productname,
             CASE
                     WHEN p.categoryid = 1 THEN 'Beverages'
                     WHEN p.categoryid = 2 THEN 'Condiments'
@@ -163,6 +162,20 @@ SELECT, Sorting, Filtering, Grouping and Union Operator}
         FROM [HR].[Employees] AS h
         WHERE h.city = 'Seattle' AND h.country = 'USA';
     \end{minted}
-    \end{enumerate}
+    \section*{Practicum - Part 5}
+    \item -
+    \begin{minted}[autogobble,breaklines,linenos]{sql}
+        [custid], [companyname], [contactname], [address], [city], [country], [phone]
+        FROM Sales.[Customers]
+        WHERE
+        [country] = N'Brazil' OR
+        [country] = N'UK' OR
+        [country] = N'USA';
+    \end{minted}
+    \item -
+    \begin{center}
+        \includegraphics[height=.45\textheight]{images/figures/fig8.png}
+    \end{center}
+\end{enumerate}
 
 \end{document}
