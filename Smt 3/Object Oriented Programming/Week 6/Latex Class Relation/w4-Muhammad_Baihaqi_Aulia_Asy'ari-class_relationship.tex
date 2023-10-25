@@ -1,0 +1,594 @@
+\documentclass[12pt,titlepage]{article}
+\usepackage[margin=1.25in]{geometry}
+\usepackage{graphicx,amsmath,blindtext,minted}
+
+%% Variables definition
+\newcommand{\vSubject}{Object Oriented Programming}
+\newcommand{\vSubtitle}{Class Relation}
+\newcommand{\vName}{Muhammad Baihaqi Aulia Asy'ari}
+\newcommand{\vNIM}{2241720145}
+\newcommand{\vClass}{2I}
+\newcommand{\vDepartment}{Information Technology}
+\newcommand{\vStudyProgram}{D4 Informatics Engineering}
+
+%% [START] Tikz related stuff
+\usepackage{tikz}
+\usetikzlibrary{svg.path,calc,shapes.geometric,shapes.misc}
+\tikzstyle{terminator} = [rectangle, draw, text centered, rounded corners = 1em, minimum height=2em]
+\tikzstyle{preparation} = [chamfered rectangle, chamfered rectangle sep=0.75em, draw, text centered, minimum height = 2em]
+\tikzstyle{process} = [rectangle, draw, text centered, minimum height=2em]
+\tikzstyle{decision} = [diamond, aspect=2, draw, text centered, minimum height=2em]
+\tikzstyle{data}=[trapezium, draw, text centered, trapezium left angle=60, trapezium right angle=120, minimum height=2em]
+\tikzstyle{connector} = [line width=0.25mm,->]
+%% [END] Tikz related stuff
+
+%% [START] Fancy header related stuff
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setlength{\headheight}{15pt} % compensate fancyhdr style
+\fancyhead{}
+\fancyfoot{}
+\fancyfoot[L]{\thepage}
+\fancyfoot[R]{\textit{\vSubject - \vSubtitle}}
+\renewcommand{\footrulewidth}{0.4pt}% default is 0pt, overline for footer
+%% [END] Fancy header related stuff
+
+%% [START] Custom tabular command related stuff
+\usepackage{tabularx}
+\newcommand{\details}[2]{
+    #1 & #2  \\
+}
+%% [END] Custom tabular command related stuff
+
+%% [START] Figure related stuff
+\newcommand{\image}[3][1]{
+    \begin{figure}[h]
+        \centering
+        \includegraphics[#1]{#2}
+        \caption{#3}
+        \label{#3}
+    \end{figure}
+}
+%% [END] Figure related stuff
+
+%%
+\usepackage{pgf-umlcd}
+
+\renewcommand{\umldrawcolor}{black}
+\renewcommand{\umlfillcolor}{white}
+%%
+
+%% [BEGIN] Custom enumerator
+\usepackage{enumitem}
+%% [END] Custom enumerator
+
+%% [BEGIN] Paragraph indent
+\usepackage{indentfirst}
+%% [END] Paragraph indent
+
+\begin{document}
+\begin{titlepage}
+    \centering
+    \vfill
+    {\bfseries\LARGE
+        \vSubject\\
+        \vskip0.25cm
+        \vSubtitle
+    }
+    \vfill
+    \includegraphics[width=6cm]{images/polinema-logo.png}
+    \vfill
+    {
+        \textbf{Name}\\
+        \vName\\
+        \vskip0.5cm
+        \textbf{NIM}\\
+        \vNIM\\
+        \vskip0.5cm
+        \textbf{Class}\\
+        \vClass\\
+        \vskip0.5cm
+        \textbf{Department}\\
+        \vDepartment\\
+        \vskip0.5cm
+        \textbf{Study Program}\\
+        \vStudyProgram
+    }
+\end{titlepage}
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+\section{Experiment 1}
+\noindent \texttt{Processor.java}
+\begin{minted}[autogobble,breaklines,linenos]{java}
+    package classrelationship.experiment1;
+
+    public class Processor {
+        private String brand;
+        private double cache;
+
+        public Processor() {
+        }
+
+        public Processor(String brand, double cache) {
+            this.brand = brand;
+            this.cache = cache;
+        }
+
+        public void setBrand(String brand) {
+            this.brand = brand;
+        }
+
+        public String getBrand() {
+            return brand;
+        }
+
+        public void setCache(double cache) {
+            this.cache = cache;
+        }
+
+        public double getCache() {
+            return cache;
+        }
+
+        public void info() {
+            System.out.printf("Merk Processor = %s\n", brand);
+            System.out.printf("Cache Memory = %.2f\n", cache);
+        }
+    }
+\end{minted}
+
+\newpage
+\noindent \texttt{Laptop.java}
+\begin{minted}[autogobble,breaklines,linenos]{java}
+    package classrelationship.experiment1;
+
+    public class Laptop {
+        private String brand;
+        private Processor processor;
+
+        public Laptop() {
+        }
+
+        public Laptop(String brand, Processor processor) {
+            this.brand = brand;
+            this.processor = processor;
+        }
+
+        public void setBrand(String brand) {
+            this.brand = brand;
+        }
+
+        public void setProcessor(Processor processor) {
+            this.processor = processor;
+        }
+
+        public void info() {
+            System.out.println("Merk Laptop = " + brand);
+            processor.info();
+        }
+    }
+\end{minted}
+
+\newpage
+\noindent \texttt{MainExperiment1.java}
+\begin{minted}[autogobble,breaklines,linenos]{java}
+    package classrelationship.experiment1;
+
+    public class MainExperiment1 {
+        public static void main(String[] args) {
+            Processor processor = new Processor("Intel i5", 3);
+            Laptop laptop = new Laptop("Thinkpad", processor);
+
+            laptop.info();
+
+            Processor p1 = new Processor();
+            p1.setBrand("Intel i5");
+            p1.setCache(4);
+            Laptop l1 = new Laptop();
+            l1.setBrand("Thinkpad");
+            l1.setProcessor(p1);
+            l1.info();
+        }
+    }
+\end{minted}
+
+\noindent \texttt{Terminal}
+\begin{minted}[autogobble,breaklines,linenos]{text}
+    PS D:\Kuliah>  & 'C:\Program Files\Java\jdk-18.0.2.1\bin\java.exe' '-XX:+ShowCodeDetailsInExceptionMessages' '-cp' 'C:\Users\G4CE-PC\AppData\Roaming\Code\User\workspaceStorage\ 80d97a47d24665dc0bce7ab1e048ecbd\redhat.java\jdt_ws\ Kuliah_28156aa7\bin' 'classrelationship.experiment1.MainExperiment1'
+    Merk Laptop = Thinkpad
+    Merk Processor = Intel i5
+    Cache Memory = 3.00
+    Merk Laptop = Thinkpad
+    Merk Processor = Intel i5
+    Cache Memory = 4.00
+\end{minted}
+
+\newpage
+\subsection{Question}
+Berdasarkan percobaan 1, jawablah pertanyaan-pertanyaan yang terkait:
+\begin{enumerate}
+    \item Di dalam \textit{class} \texttt{Processor} dan \textit{class} \texttt{Laptop} , terdapat method \textit{setter} dan \textit{getter} untuk masing-masing atributnya. Apakah gunanya \textit{method setter} dan \textit{getter} tersebut ?
+    \item Di dalam \textit{class} \texttt{Processor} dan \textit{class} \texttt{Laptop}, masing-masing terdapat konstruktor default dan konstruktor berparameter. Bagaimanakah beda penggunaan dari kedua jenis konstruktor tersebut ?
+    \item Perhatikan \textit{class} \texttt{Laptop}, di antara 2 atribut yang dimiliki (\textit{merk} dan \textit{proc}), atribut manakah yang bertipe \textit{object} ?
+    \item Perhatikan \textit{class} \texttt{Laptop}, pada baris manakah yang menunjukan bahwa \textit{class} \texttt{Laptop} memiliki relasi dengan \textit{class} \texttt{Processor} ?
+    \item Perhatikan pada \textit{class} \texttt{Laptop} , Apakah guna dari sintaks \texttt{proc.info()} ?
+    \item Pada \textit{class} \texttt{MainPercobaan1}, terdapat baris kode:
+    \begin{minted}[autogobble,breaklines]{java}
+        Laptop l = new Laptop("Thinkpad", p);
+    \end{minted}
+    Apakah \texttt{p} tersebut ?\\
+    Dan apakah yang terjadi jika baris kode tersebut diubah menjadi:
+    \begin{minted}[autogobble,breaklines]{java}
+        Laptop l = new Laptop("Thinkpad", new Processor("Intel i5", 3));
+    \end{minted}
+    Bagaimanakah hasil program saat dijalankan, apakah ada perubahan ?
+\end{enumerate}
+
+\newpage
+\subsection{Answer}
+\begin{enumerate}
+    \item To set or get a value that has to follow a certain rule (encapsulation) and to set a value when the default constructor is used.
+    \item Default constructor makes us declare the value of the object's attribute using the setter. The parametric constructor set the value accordingly in the instantiation of the object.
+    \item proc is the object attribute. The attribute derived from the Processor class.
+    \item The line where it state the attribute of class Laptop uses the Processor class as an object attribute. In my instance is in line 5 of the class Laptop.java .
+    \item It is used to call the method info() in the Laptop class which give description on the instance of said Laptop object.
+    \item The p is variable used to store the instance of the Processor object that has been instantiated. Nothing will change in the eyes of the users if that method of instantiation is used.
+\end{enumerate}
+
+\newpage
+\section{Experiment 2}
+
+\noindent \texttt{Car.java}
+\begin{minted}[autogobble,breaklines,linenos]{java}
+    package classrelationship.experiment2;
+
+    public class Car {
+        private String brand;
+        private int cost;
+
+        public Car() {
+        }
+
+        public void setBrand(String brand) {
+            this.brand = brand;
+        }
+
+        public String getBrand() {
+            return brand;
+        }
+
+        public void setCost(int cost) {
+            this.cost = cost;
+        }
+
+        public int getCost() {
+            return cost;
+        }
+
+        public int calculateCarCost(int day) {
+            return cost * day;
+        }
+    }
+\end{minted}
+
+\newpage
+\noindent \texttt{Driver.java}
+\begin{minted}[autogobble,breaklines,linenos]{java}
+    package classrelationship.experiment2;
+
+    public class Driver {
+        private String name;
+        private int cost;
+
+        public Driver() {
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public void setCost(int cost) {
+            this.cost = cost;
+        }
+
+        public int getCost() {
+            return cost;
+        }
+
+        public int calculateDriverCost(int day) {
+            return cost * day;
+        }
+    }
+\end{minted}
+
+\newpage
+\noindent \texttt{User.java}
+\begin{minted}[autogobble,breaklines,linenos]{java}
+    package classrelationship.experiment2;
+
+    public class User {
+        private String name;
+        private Car car;
+        private Driver driver;
+        private int day;
+
+        public User() {
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public void setCar(Car car) {
+            this.car = car;
+        }
+
+        public Car getCar() {
+            return car;
+        }
+
+        public void setDriver(Driver driver) {
+            this.driver = driver;
+        }
+
+        public Driver getDriver() {
+            return driver;
+        }
+
+        public void setDay(int day) {
+            this.day = day;
+        }
+
+        public int getDay() {
+            return day;
+        }
+
+        public int calulateTotalCost() {
+            return car.calculateCarCost(day) + driver.calculateDriverCost(day);
+        }
+    }
+\end{minted}
+
+\noindent \texttt{MainExperiment2.java}
+\begin{minted}[autogobble,breaklines,linenos]{java}
+    package classrelationship.experiment2;
+
+    public class MainExperiment2 {
+        public static void main(String[] args) {
+            Car car = new Car();
+            car.setBrand("Avanza");
+            car.setCost(350_000);
+
+            Driver driver = new Driver();
+            driver.setName("John Doe");
+            driver.setCost(200_000);
+
+            User user = new User();
+            user.setName("Jane Doe");
+            user.setCar(car);
+            user.setDriver(driver);
+            user.setDay(2);
+            
+            System.out.println("Total Cost = " + user.calulateTotalCost());
+        }
+    }
+\end{minted}
+
+\noindent \texttt{Terminal}
+\begin{minted}[autogobble,breaklines,linenos]{text}
+    PS D:\Kuliah>  & 'C:\Program Files\Java\jdk-18.0.2.1\bin\java.exe' '-XX:+ShowCodeDetailsInExceptionMessages' '-cp' 'C:\Users\G4CE-PC\AppData\Roaming\Code\User\workspaceStorage\ 80d97a47d24665dc0bce7ab1e048ecbd\redhat.java\jdt_ws\ Kuliah_28156aa7\bin' 'classrelationship.experiment2.MainExperiment2'
+    Total Cost = 1100000
+\end{minted}
+
+\newpage
+\subsection{Question}
+\begin{enumerate}
+    \item Perhatikan class Pelanggan. Pada baris program manakah yang menunjukan bahwa class Pelanggan memiliki relasi dengan class Mobil dan class Sopir ?
+    \item Perhatikan method hitungBiayaSopir pada class Sopir, serta method\\ hitungBiayaMobil pada class Mobil. Mengapa menurut Anda method tersebut harus memiliki argument hari ?
+    \item Perhatikan kode dari class Pelanggan. Untuk apakah perintah\\ mobil.hitungBiayaMobil(hari) dan sopir.hitungBiayaSopir(hari) ?
+    \item Perhatikan class MainPercobaan2. Untuk apakah sintaks p.setMobil(m) dan p.setSopir(s) ?
+    \item Perhatikan class MainPercobaan2. Untuk apakah proses p.hitungBiayaTotal() tersebut ?
+    \item Perhatikan class MainPercobaan2, coba tambahkan pada baris terakhir dari method main dan amati perubahan saat di‑run!
+    \begin{minted}[autogobble,breaklines]{java}
+        System.out.println(p.getMobil().getMerk());
+    \end{minted}
+    Jadi untuk apakah sintaks p.getMobil().getMerk() yang ada di dalam method main tersebut?
+\end{enumerate}
+
+\subsection{Answer}
+\begin{enumerate}
+    \item On the line where it's declaring the attribute as an object of Car and Driver. In this case, line 5 and 6.
+    \item Because both class don't have and don't know how many day it will be. The day attribute is owned by the User class.
+    \item To get the calculation on the cost of the car rent and the driver fee.
+    \item To set the User attribute using the instantiated car object and driver object.
+    \item To get the sum of all cost for the user.
+    \item To get the brand name of the car used by the user.
+\end{enumerate}
+
+\newpage
+\section{Experiment 3}
+
+\noindent \texttt{Employee.java}
+\begin{minted}[autogobble,breaklines,linenos]{java}
+    package classrelationship.experiment3;
+
+    public class Employee {
+        private String nip;
+        private String name;
+
+        public Employee(String nip, String name) {
+            this.nip = nip;
+            this.name = name;
+        }
+
+        public void setNip(String nip) {
+            this.nip = nip;
+        }
+
+        public String getNip() {
+            return nip;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public String info() {
+            String info = "";
+            info += "NIP: " + this.nip + "\n";
+            info += "Name: " + this.name + "\n";
+            return info;
+        }
+    }
+\end{minted}
+
+\newpage
+\noindent \texttt{Train.java}
+\begin{minted}[autogobble,breaklines,linenos]{java}
+    package classrelationship.experiment3;
+
+    public class Train {
+        private String name;
+        private String classification;
+        private Employee conductor;
+        private Employee assitant;
+
+        public Train(String name, String classification, Employee conductor) {
+            this.name = name;
+            this.classification = classification;
+            this.conductor = conductor;
+        }
+
+        public Train(String name, String classification, Employee conductor, Employee assistant) {
+            this.name = name;
+            this.classification = classification;
+            this.conductor = conductor;
+            this.assitant = assistant;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public void setClassification(String classification) {
+            this.classification = classification;
+        }
+
+        public String getClassification() {
+            return classification;
+        }
+
+        public void setConductor(Employee conductor) {
+            this.conductor = conductor;
+        }
+
+        public Employee getConductor() {
+            return conductor;
+        }
+
+        public void setAssitant(Employee assitant) {
+            this.assitant = assitant;
+        }
+
+        public Employee getAssitant() {
+            return assitant;
+        }
+
+        public String info() {
+            String info = "";
+            info += "Name     : " + this.name + "\n";
+            info += "Class    : " + this.classification + "\n";
+            info += "Conductor: " + this.conductor.info() + "\n";
+            info += "Assistant: " + this.assitant.info() + "\n";
+            return info;
+        }
+    }
+\end{minted}
+
+\noindent \texttt{MainExperiment3.java}
+\begin{minted}[autogobble,breaklines,linenos]{java}
+    package classrelationship.experiment3;
+
+    public class MainExperiment3 {
+        public static void main(String[] args) {
+            Employee conductor = new Employee("1234", "Spongebob Squarepants");
+            Employee assistant = new Employee("4567", "Patrick Star");
+            Train train = new Train("New Style", "Bussiness", conductor, assistant);
+            System.out.println(train.info());
+        }
+    }
+\end{minted}
+
+\newpage
+\noindent \texttt{Terminal}
+\begin{minted}[autogobble,breaklines,linenos]{text}
+    PS D:\Kuliah>  & 'C:\Program Files\Java\jdk-18.0.2.1\bin\java.exe' '-XX:+ShowCodeDetailsInExceptionMessages' '-cp' 'C:\Users\G4CE-PC\AppData\Roaming\Code\User\workspaceStorage\ 80d97a47d24665dc0bce7ab1e048ecbd\redhat.java\jdt_ws\ Kuliah_28156aa7\bin' 'classrelationship.experiment3.MainExperiment3'
+    Name     : New Style       
+    Class    : Bussiness       
+    Conductor: NIP: 1234       
+    Name: Spongebob Squarepants
+
+    Assistant: NIP: 4567       
+    Name: Patrick Star
+\end{minted}
+
+\subsection{Question}
+\begin{enumerate}
+    \item Di dalam method info() pada class KeretaApi, baris this.masinis.info() dan this.asisten.info() digunakan untuk apa?
+    \item Buatlah main program baru dengan nama class MainPertanyaan pada package yang sama. Tambahkan kode berikut pada method main() !
+    \begin{minted}[autogobble,breaklines]{java}
+        Pegawai masinis = new Pegawai("1234", "Spongebob Squarepants");
+        KeretaApi keretaApi = new KeretaApi("Gaya Baru", "Bisnis", masinis);
+        System.out.println(keretaApi.info());
+    \end{minted} 
+    \item Apa hasil output dari main program tersebut ? Mengapa hal tersebut dapat terjadi ?
+    \item Perbaiki class KeretaApi sehingga program dapat berjalan !
+\end{enumerate}
+
+\subsection{Answer}
+\begin{enumerate}
+    \item To get the info of the object in a form of a String to be append in the info String of the Train info method.
+    \item \texttt{MainQuestion.java}
+    \begin{minted}[autogobble,breaklines,linenos]{java}
+        package classrelationship.experiment3;
+
+        public class MainQuestion {
+            public static void main(String[] args) {
+                Employee conductor = new Employee("1234", "Spongebob Squarepants");
+                Train train = new Train("New Style", "Bussiness", conductor);
+                System.out.println(train.info());
+            }
+        }
+    \end{minted}
+    \item \texttt{Terminal}
+    \begin{minted}[autogobble,breaklines,linenos]{text}
+        PS D:\Kuliah>  & 'C:\Program Files\Java\jdk-18.0.2.1\bin\java.exe' '-XX:+ShowCodeDetailsInExceptionMessages' '-cp' 'C:\Users\G4CE-PC\AppData\Roaming\Code\User\ workspaceStorage\80d97a47d24665dc0bce7ab1e048ecbd\ redhat.java\jdt_ws\Kuliah_28156aa7\bin' 'classrelationship.experiment3.MainQuestion'
+        Exception in thread "main" java.lang.NullPointerException: Cannot invoke "classrelationship.experiment3.Employee.info()" because "this.assitant" is null
+            at classrelationship.experiment3.Train.info (Train.java:59)
+            at classrelationship.experiment3.MainQuestion.main (MainQuestion.java:7) 
+    \end{minted}
+    Because on the Train info() method it also ask for the data of the assistant which is nonexistance in this instance.
+\end{enumerate}
+
+\end{document}
