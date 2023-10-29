@@ -1,0 +1,188 @@
+\documentclass[12pt,titlepage]{article}
+\usepackage[margin=1.25in]{geometry}
+\usepackage{graphicx,amsmath,blindtext,minted}
+
+%% Variables definition
+\newcommand{\vSubject}{Artificial Intelligence}
+\newcommand{\vSubtitle}{Midterm}
+\newcommand{\vName}{Muhammad Baihaqi Aulia Asy'ari}
+\newcommand{\vNIM}{2241720145}
+\newcommand{\vClass}{2I}
+\newcommand{\vDepartment}{Information Technology}
+\newcommand{\vStudyProgram}{D4 Informatics Engineering}
+
+%% [START] Tikz related stuff
+\usepackage{tikz}
+\usetikzlibrary{svg.path,calc,shapes.geometric,shapes.misc}
+\tikzstyle{terminator} = [rectangle, draw, text centered, rounded corners = 1em, minimum height=2em]
+\tikzstyle{preparation} = [chamfered rectangle, chamfered rectangle sep=0.75em, draw, text centered, minimum height = 2em]
+\tikzstyle{process} = [rectangle, draw, text centered, minimum height=2em]
+\tikzstyle{decision} = [diamond, aspect=2, draw, text centered, minimum height=2em]
+\tikzstyle{data}=[trapezium, draw, text centered, trapezium left angle=60, trapezium right angle=120, minimum height=2em]
+\tikzstyle{connector} = [line width=0.25mm,->]
+%% [END] Tikz related stuff
+
+%% [START] Fancy header related stuff
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setlength{\headheight}{15pt} % compensate fancyhdr style
+\fancyhead{}
+\fancyfoot{}
+\fancyfoot[L]{\thepage}
+\fancyfoot[R]{\textit{\vSubject - \vSubtitle}}
+\renewcommand{\footrulewidth}{0.4pt}% default is 0pt, overline for footer
+%% [END] Fancy header related stuff
+
+%% [START] Custom tabular command related stuff
+\usepackage{tabularx}
+\newcommand{\details}[2]{
+    #1 & #2  \\
+}
+%% [END] Custom tabular command related stuff
+
+%% [START] Figure related stuff
+\newcommand{\image}[3][1]{
+    \begin{figure}[h]
+        \centering
+        \includegraphics[#1]{#2}
+        \caption{#3}
+        \label{#3}
+    \end{figure}
+}
+%% [END] Figure related stuff
+
+%%
+\usepackage{pgf-umlcd}
+
+\renewcommand{\umldrawcolor}{black}
+\renewcommand{\umlfillcolor}{white}
+%%
+
+%% [BEGIN] Custom enumerator
+\usepackage{enumitem}
+%% [END] Custom enumerator
+
+%% [BEGIN] Paragraph indent
+\usepackage{indentfirst}
+%% [END] Paragraph indent
+
+\begin{document}
+\begin{titlepage}
+    \centering
+    \vfill
+    {\bfseries\LARGE
+        \vSubject\\
+        \vskip0.25cm
+        \vSubtitle
+    }
+    \vfill
+    \includegraphics[width=6cm]{images/polinema-logo.png}
+    \vfill
+    {
+        \textbf{Name}\\
+        \vName\\
+        \vskip0.5cm
+        \textbf{NIM}\\
+        \vNIM\\
+        \vskip0.5cm
+        \textbf{Class}\\
+        \vClass\\
+        \vskip0.5cm
+        \textbf{Department}\\
+        \vDepartment\\
+        \vskip0.5cm
+        \textbf{Study Program}\\
+        \vStudyProgram
+    }
+\end{titlepage}
+
+\newpage
+
+\section*{Case Study}
+\noindent
+You are a real estate businessman. You have several units of houses, land, and shophouses spread across Malang City, and property acquisition plans are seen as future prospects. As a businessman your goal is to get good sales, and good profits.
+To achieve that goal, you have several strategies that are divided into the following catgories:
+\begin{enumerate}
+    \item Determine the best selling price for each unit
+    \item Determine the target marketing on social media
+    \item Choose the right location for the property unit to be acquired
+    \item Determine the specifications for the house
+    \item Choose the priority of the unit owned, between a house, land, or shophouse
+\end{enumerate}
+Your job is to choose one of the five strategies above!
+
+\subsection*{Question}
+\begin{enumerate}
+    \item From one of the strategies you choose, define a clear problem with machine learning as the solution approach (\textbf{10 points})
+    \item Develop a data ingestion strategy, determine what data will be processed, where it will come from (\textbf{10 points})
+    \item Make a sample data, at least 20 items (\textbf{20 points})
+    \item What kind of machine learning model/method will be used? (\textbf{10 points})
+    \item Explain whether the method is supervised or unsupervised? (\textbf{10 points})
+    \item Explain why do you choose this model? (\textbf{20 points})
+    \item Explain the machine learning method that will be used! (\textbf{20 points})
+\end{enumerate}
+
+\subsection*{Answer}
+\begin{enumerate}
+    \item the data quality may be a problem because it may be insufficient and too old. not only that the fluctuability of the market would make it hard to maintain the model.
+    \item Historical Property Sales Data, Demographic Data, Amenities and Infrastructure Data, Crime Rates Data, Future Development Plans, School and Education Quality, Cost of Living Data. all the data can be provided by the land developer and/or BPS.
+    \item -\\
+    \resizebox{.9\textwidth}{!}{
+        \begin{tabular}{|l|l|l|l|l|}
+            \hline
+            Sub-    &   Appraised\textunderscore    &   Crime\textunderscore    &   Education\textunderscore    &   Cost\textunderscore of\textunderscore\\
+            District        &   Price   &   Rate        &   Quality     & Living\textunderscore\\
+            & (Rp million) & per 1000 & (out of 10) & Index\\
+            &&people&& (out of 100) \\
+            \hline
+            Klojen          &   1275    &   7   &   8.2 &   66\\
+            \hline
+            Blimbing        &   1290    &   6.5 &   8.1 &   65\\
+            \hline
+            Lowokwaru       &   1310    &   7.5 &   8   &   68\\
+            \hline
+            Kedungkandang   &   1260    &   7.3 &   7.8 &   67\\
+            \hline
+            Sukun           &   1305    &   7.1 &   8   &   66\\
+            \hline
+            Klojen          &   1285    &   7   &   8.3 &   66\\
+            \hline
+            Blimbing        &   1295    &   6.8 &   8   &   65\\
+            \hline
+            Lowokwaru       &   1320    &   7.4 &   8.2 &   68\\
+            \hline
+            Kedungkandang   &   1265    &   7   &   7.7 &   67\\
+            \hline
+            Sukun           &   1315    &   7.2 &   8.1 &   66\\
+            \hline
+            Klojen          &   1278    &   7   &   8.3 &   66\\
+            \hline
+            Blimbing        &   1302    &   6.6 &   8.1 &   65\\
+            \hline
+            Lowokwaru       &   1318    &   7.6 &   8.2 &   68\\
+            \hline
+            Kedungkandang   &   1270    &   7.2 &   7.8 &   67\\
+            \hline
+            Sukun           &   1312    &   7   &   8   &   66\\
+            \hline
+            Klojen          &   1280    &   7.1 &   8.2 &   66\\
+            \hline
+            Blimbing        &   1298    &   6.7 &   8   &   65\\
+            \hline
+            Lowokwaru       &   1315    &   7.5 &   8.3 &   68\\
+            \hline
+            Kedungkandang   &   1267    &   7.1 &   7.9 &   67\\
+            \hline
+            Sukun           &   1310    &   7.3 &   8.1 &   66\\
+            \hline
+        \end{tabular}
+    }
+    \newpage
+    \item Using the Multiple Linear Regression model to predict property prices. This model is chosen because it can effectively account for how several factors — such as Crime Rate, Education Quality, and Cost of Living — jointly influence the property's appraised value. It operates under the assumption that each factor has a linear relationship with the price.
+    \item The approach is Supervised Learning because we're using known input data (features) and corresponding output data (property prices) to train our model on their relationship.
+    \item Multiple Linear Regression is selected for its interpretability, simplicity, and as an initial benchmark; its transparent nature allows stakeholders to understand how individual factors influence property prices, and its straightforwardness offers a starting point before exploring more intricate models.
+    \item Multiple Linear Regression predicts the property price by assuming a linear relationship between it and several influencing factors. It uses an equation linking the dependent variable (price) to independent variables (features like Crime Rate). During training, the model adjusts its internal parameters to minimize the difference between its predictions and actual prices, and once trained, it predicts prices for new data based on the learned relationships.
+\end{enumerate}
+
+
+\end{document}
