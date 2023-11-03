@@ -589,6 +589,527 @@ Berdasarkan percobaan 1, jawablah pertanyaan-pertanyaan yang terkait:
             at classrelationship.experiment3.MainQuestion.main (MainQuestion.java:7) 
     \end{minted}
     Because on the Train info() method it also ask for the data of the assistant which is nonexistance in this instance.
+    \item part of \texttt{Train.java}
+    \begin{minted}[autogobble,breaklines,linenos]{java}
+        public String info() {
+            String info = "";
+            info += "Name     : " + this.name + "\n";
+            info += "Class    : " + this.classification + "\n";
+            info += "Conductor: " + this.conductor.info() + "\n";
+            if (assitant != null) {
+                info += "Assistant: " + this.assitant.info() + "\n";
+            }
+            return info;
+        }
+    \end{minted}
+    One way to make it work is to only print assistant info if assistant is not null in the info method
 \end{enumerate}
 
+\newpage
+\section{Experiment 4}
+\texttt{Passenger.java}
+\begin{minted}[autogobble,breaklines,linenos]{java}
+    package classrelationship.experiment4;
+
+    public class Passenger {
+        private String IDCard;
+        private String name;
+
+        public Passenger(String IDCard, String name) {
+            this.IDCard = IDCard;
+            this.name = name;
+        }
+
+        public void setIDCard(String iDCard) {
+            IDCard = iDCard;
+        }
+
+        public String getIDCard() {
+            return IDCard;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public String info() {
+            String info = "";
+            info += String.format("ID Card: %s %n", IDCard);
+            info += String.format("Name: %s %n", name);
+            return info;
+        }
+    }
+\end{minted}
+\texttt{Seat.java}
+\begin{minted}[autogobble,breaklines,linenos]{java}
+    package classrelationship.experiment4;
+
+    public class Seat {
+        private String seatNumber;
+        private Passenger passenger;
+
+        public Seat(String seatNumber) {
+            this.seatNumber = seatNumber;
+        }
+
+        public void setSeatNumber(String seatNumber) {
+            this.seatNumber = seatNumber;
+        }
+
+        public String getSeatNumber() {
+            return seatNumber;
+        }
+
+        public void setPassenger(Passenger passenger) {
+            this.passenger = passenger;
+        }
+
+        public Passenger getPassenger() {
+            return passenger;
+        }
+
+        public String info() {
+            String info = "";
+            info += String.format("Seat Number: %s %n", seatNumber);
+            if (this.passenger != null) {
+                info += String.format("Passenger: %s %n", passenger);
+            }
+            return info;
+        }
+    }
+\end{minted}
+\texttt{Carriage.java}
+\begin{minted}[autogobble,breaklines,linenos]{java}
+    package classrelationship.experiment4;
+
+    public class Carriage {
+        private String code;
+        private Seat[] seats;
+        
+        private void initSeat() {
+            for (int i = 0; i < seats.length; i++) {
+                this.seats[i] = new Seat(String.valueOf(i + 1));
+            }
+        }
+
+        public Carriage(String code, int amount) {
+            this.code = code;
+            this.seats = new Seat[amount];
+            this.initSeat();
+        }
+
+        public void setCode(String code) {
+            this.code = code;
+        }
+
+        public String getCode() {
+            return code;
+        }
+
+        public void setPassenger(Passenger passenger, int number) {
+            this.seats[number-1].setPassenger(passenger);
+        }
+
+        public Seat[] getSeats() {
+            return seats;
+        }
+
+        public String info() {
+            String info = "";
+            info += String.format("Code: %s %n", code);
+            for (Seat seat : seats) {
+                info += seat.info();
+            }
+            return info;
+        }
+    }
+\end{minted}
+\texttt{MainExperiment4.java}
+\begin{minted}[autogobble,breaklines,linenos]{java}
+    package classrelationship.experiment4;
+
+    public class MainExperiment4 {
+        public static void main(String[] args) {
+            Passenger p = new Passenger("12345", "Mr. Krab");
+            Carriage carriage = new Carriage("A", 10);
+            carriage.setPassenger(p, 1);
+            System.out.println(carriage.info());
+        }
+    }
+\end{minted}
+\texttt{Terminal}
+\begin{minted}[autogobble,breaklines,linenos]{text}
+PS D:\Kuliah>  d:; cd 'd:\Kuliah'; & 'C:\Program Files\Java\jdk-18.0.2.1\bin\java.exe' '-XX:+ShowCodeDetailsInExceptionMessages' '-cp' 'C:\Users\G4CE-PC\AppData\Roaming\Code\User\workspaceStorage\ 80d97a47d24665dc0bce7ab1e048ecbd\redhat.java\jdt_ws\ Kuliah_28156aa7\bin' 'classrelationship.experiment4.MainExperiment4' 
+Code: A 
+Seat Number: 1
+Passenger: ID Card: 12345
+Name: Mr. Krab
+
+Seat Number: 2
+Seat Number: 3
+Seat Number: 4
+Seat Number: 5
+Seat Number: 6
+Seat Number: 7
+Seat Number: 8
+Seat Number: 9
+Seat Number: 10
+\end{minted}
+
+\newpage
+
+\subsection{Question}
+\begin{enumerate}
+    \item Pada main program dalam class MainPercobaan4, berapakah jumlah kursi dalam Gerbong A ?
+    \item Perhatikan potongan kode pada method info() dalam class Kursi. Apa maksud kode tersebut ?
+    \begin{minted}[autogobble,breaklines]{java}
+        ...
+        if (this.penumpang != null) {
+            info += "Penumpang: " + penumpang.info() + "\n";
+        }
+        ...
+    \end{minted}
+    \item Mengapa pada method setPenumpang() dalam class Gerbong, nilai nomor dikurangi dengan angka 1 ?
+    \item Instansiasi objek baru budi dengan tipe Penumpang, kemudian masukkan objek baru tersebut pada gerbong dengan gerbong.setPenumpang(budi, 1). Apakah yang terjadi ?
+    \item Modifikasi program sehingga tidak diperkenankan untuk menduduki kursi yang sudah ada penumpang lain !
+\end{enumerate}
+
+\subsection{Answer}
+\begin{enumerate}
+    \item There are 10 seats in the carriage.
+    \item If the passenger variable is not null add passenger info into variable info
+    \item Because array index start at 0 and to adjust with the size of the array with the index, when we enter the index we decrease the number by 1.
+    \item Mr. Krab is replaced with budi.
+    \item -
+    \begin{minted}[autogobble,breaklines]{java}
+        public void setPassenger(Passenger passenger, int number) {
+            if (seats[number-1] == null) {
+                this.seats[number-1].setPassenger(passenger);
+            } else {
+                System.out.println("Seat is occupied");
+            }
+        }
+    \end{minted}
+\end{enumerate}
+
+\newpage
+
+\section{Assignment}
+\noindent
+Berdasarkan latihan di pertemuan teori, rancang dengan class diagram, kemudian implementasikan ke dalam program! Studi kasus harus mewakili relasi class dari percobaan-percobaan yang telah dilakukan pada materi ini, setidaknya melibatkan minimal 4 class (class yang berisi main tidak dihitung).
+\newpage
+\includegraphics[height=.9\textwidth,angle=90]{images/figures/fig1.drawio.png}
+\newpage
+
+\texttt{Lecturer.java}
+\begin{minted}[autogobble,breaklines,linenos]{java}
+    package classrelationship.assignment;
+
+    public class Lecturer {
+        private String name;
+        private String NIDN;
+
+        public Lecturer(String name, String NIDN) {
+            this.name = name;
+            this.NIDN = NIDN;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public void setNIDN(String NIDN) {
+            this.NIDN = NIDN;
+        }
+
+        public String getNIDN() {
+            return NIDN;
+        }
+
+        public String info() {
+            String info = "";
+            info += String.format("Name: %s %n", getName());
+            info += String.format("NIDN: %s %n", getNIDN());
+            return info;
+        }
+    }
+\end{minted}
+\texttt{Student.java}
+\begin{minted}[autogobble,breaklines,linenos]{java}
+    package classrelationship.assignment;
+
+    public class Student {
+        private String name;
+        private String NIM;
+
+        public Student(String name, String NIM) {
+            this.name = name;
+            this.NIM = NIM;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public void setNIM(String NIM) {
+            this.NIM = NIM;
+        }
+
+        public String getNIM() {
+            return NIM;
+        }
+
+        public String info() {
+            String info = "";
+            info += String.format("Name: %s %n", name);
+            info += String.format("NIM : %s %n", NIM);
+            return info;
+        }
+    }
+\end{minted}
+\texttt{Classroom.java}
+\begin{minted}[autogobble,breaklines,linenos]{java}
+    package classrelationship.assignment;
+
+    public class Classroom {
+        private String roomID;
+        private int start;
+        private int end;
+
+        public Classroom(String roomID, int start, int end) {
+            this.roomID = roomID;
+            this.start = start;
+            this.end = end;
+        }
+        
+        public void setRoomID(String roomID) {
+            this.roomID = roomID;
+        }
+
+        public String getRoomID() {
+            return roomID;
+        }
+
+        public void setStart(int start) {
+            this.start = start;
+        }
+
+        public int getStart() {
+            return start;
+        }
+
+        public void setEnd(int end) {
+            this.end = end;
+        }
+
+        public int getEnd() {
+            return end;
+        }
+
+        public String info() {
+            String info = "";
+            info += String.format("Room ID: %s %n", roomID);
+            info += String.format("Session: %d - %d %n", start, end);
+            return info;
+        }
+    }
+\end{minted}
+\texttt{Course.java}
+\begin{minted}[autogobble,breaklines,linenos]{java}
+    package classrelationship.assignment;
+
+    public class Course {
+        private String name;
+        private String code;
+        private Classroom classroom;
+        private Lecturer lecturer;
+
+        public Course(String name, String code, Classroom classroom, Lecturer lecturer) {
+            this.name = name;
+            this.code = code;
+            this.classroom = classroom;
+            this.lecturer = lecturer;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public void setCode(String code) {
+            this.code = code;
+        }
+
+        public String getCode() {
+            return code;
+        }
+
+        public void setClassroom(Classroom classroom) {
+            this.classroom = classroom;
+        }
+
+        public Classroom getClassroom() {
+            return classroom;
+        }
+
+        public void setLecturer(Lecturer lecturer) {
+            this.lecturer = lecturer;
+        }
+
+        public Lecturer getLecturer() {
+            return lecturer;
+        }
+
+        public String info() {
+            String info = "";
+            info += String.format("Course Name: %s %n", name);
+            info += String.format("Course Code: %s %n", code);
+            info += String.format("Classroom  : %n%s", classroom.info());
+            info += String.format("Lecturer   : %n%s", lecturer.info());
+            return info;
+        }
+    }
+\end{minted}
+\texttt{ClassGroup.java}
+\begin{minted}[autogobble,breaklines,linenos]{java}
+    package classrelationship.assignment;
+
+    import java.util.ArrayList;
+    import java.util.List;
+
+    public class ClassGroup {
+        private int grade;
+        private char letterName;
+        private List<Student> students = new ArrayList<Student>();
+        private List<Course> courses = new ArrayList<Course>();
+
+        public ClassGroup(int grade, char letterName) {
+            this.grade = grade;
+            this.letterName = letterName;
+        }
+
+        public void setGrade(int grade) {
+            this.grade = grade;
+        }
+
+        public int getGrade() {
+            return grade;
+        }
+
+        public void setLetterName(char letterName) {
+            this.letterName = letterName;
+        }
+
+        public char getLetterName() {
+            return letterName;
+        }
+
+        public void setStudent(Student students) {
+            this.students.add(students);
+        }
+
+        public List<Student> getStudents() {
+            return students;
+        }
+
+        public void setCourse(Course course) {
+            this.courses.add(course);
+        }
+
+        public List<Course> getCourses() {
+            return courses;
+        }
+
+        public String info() {
+            String info = "";
+            info += String.format("Class       : %d%c %n", grade, letterName);
+            info += String.format("Student List: %n");
+            for (Student student : students) {
+                info += student.info();
+            }
+            info += String.format("Course List : %n");
+            for (Course course : courses) {
+                info += course.info();
+            }
+            return info;
+        }
+    }
+\end{minted}
+\texttt{MainAssignment.java}
+\begin{minted}[autogobble,breaklines,linenos]{java}
+    package classrelationship.assignment;
+
+    public class MainAssignment {
+        public static void main(String[] args) {
+            ClassGroup internationalClassGroup = new ClassGroup(2, 'I');
+            internationalClassGroup.setStudent(new Student("Alpha", "2241720001"));
+            internationalClassGroup.setStudent(new Student("Beta", "2241720002"));
+            internationalClassGroup.setStudent(new Student("Charlie", "2241720003"));
+            internationalClassGroup.setStudent(new Student("Delta", "2241720004"));
+            internationalClassGroup.setStudent(new Student("Echo", "2241720005"));
+            internationalClassGroup.setStudent(new Student("Foxtrot", "2241720006"));
+
+            Lecturer lecturer = new Lecturer("Vipkas Al Hadid Firdaus, S.T., M.T.", "0005059104");
+            Classroom LSI2 = new Classroom("LSI2_6T", 8, 11);
+            Course OOP = new Course("Object Oriented Programming", "RTI223007", LSI2, lecturer);
+            internationalClassGroup.setCourse(OOP);
+
+            Classroom LERP = new Classroom("LERP_7T", 8, 11);
+            Course PracticumOOP = new Course("Practicum Object Oriented Programming", "RTI223008", LERP, lecturer);
+            internationalClassGroup.setCourse(PracticumOOP);
+
+            System.out.println(internationalClassGroup.info());
+        }
+    }
+\end{minted}
+\texttt{Terminal}
+\begin{minted}[autogobble,breaklines,linenos]{text}
+    PS D:\Kuliah>  d:; cd 'd:\Kuliah'; & 'C:\Program Files\Java\jdk-18.0.2.1\bin\java.exe' '-XX:+ShowCodeDetailsInExceptionMessages' '-cp' 'C:\Users\G4CE-PC\AppData\Roaming\Code\User\workspaceStorage\ 80d97a47d24665dc0bce7ab1e048ecbd\redhat.java\jdt_ws\ Kuliah_28156aa7\bin' 'classrelationship.assignment.MainAssignment' 
+    Class       : 2I 
+    Student List:
+    Name: Alpha
+    NIM : 2241720001
+    Name: Beta
+    NIM : 2241720002
+    Name: Charlie
+    NIM : 2241720003
+    Name: Delta
+    NIM : 2241720004
+    Name: Echo
+    NIM : 2241720005
+    Name: Foxtrot
+    NIM : 2241720006
+    Course List :
+    Course Name: Object Oriented Programming
+    Course Code: RTI223007
+    Classroom  :
+    Room ID: LSI2_6T
+    Session: 8 - 11
+    Lecturer   :
+    Name: Vipkas Al Hadid Firdaus, S.T., M.T.
+    NIDN: 0005059104
+    Course Name: Practicum Object Oriented Programming
+    Course Code: RTI223008
+    Classroom  :
+    Room ID: LERP_7T
+    Session: 8 - 11
+    Lecturer   :
+    Name: Vipkas Al Hadid Firdaus, S.T., M.T.
+    NIDN: 0005059104
+\end{minted}
 \end{document}

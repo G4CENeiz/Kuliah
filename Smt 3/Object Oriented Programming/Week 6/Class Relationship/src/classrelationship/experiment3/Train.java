@@ -56,7 +56,9 @@ public class Train {
         info += "Name     : " + this.name + "\n";
         info += "Class    : " + this.classification + "\n";
         info += "Conductor: " + this.conductor.info() + "\n";
-        info += "Assistant: " + this.assitant.info() + "\n";
+        if (assitant != null) {
+            info += "Assistant: " + this.assitant.info() + "\n";
+        }
         return info;
     }
 }
