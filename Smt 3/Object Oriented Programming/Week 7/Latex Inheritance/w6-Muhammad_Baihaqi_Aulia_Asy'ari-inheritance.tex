@@ -1,0 +1,606 @@
+\documentclass[12pt,titlepage]{article}
+\usepackage[margin=1.25in]{geometry}
+\usepackage{graphicx,amsmath,blindtext,minted}
+
+%% Variables definition
+\newcommand{\vSubject}{Object Oriented Programming}
+\newcommand{\vSubtitle}{Inheritance}
+\newcommand{\vName}{Muhammad Baihaqi Aulia Asy'ari}
+\newcommand{\vNIM}{2241720145}
+\newcommand{\vClass}{2I}
+\newcommand{\vDepartment}{Information Technology}
+\newcommand{\vStudyProgram}{D4 Informatics Engineering}
+
+%% [START] Tikz related stuff
+\usepackage{tikz}
+\usetikzlibrary{svg.path,calc,shapes.geometric,shapes.misc}
+\tikzstyle{terminator} = [rectangle, draw, text centered, rounded corners = 1em, minimum height=2em]
+\tikzstyle{preparation} = [chamfered rectangle, chamfered rectangle sep=0.75em, draw, text centered, minimum height = 2em]
+\tikzstyle{process} = [rectangle, draw, text centered, minimum height=2em]
+\tikzstyle{decision} = [diamond, aspect=2, draw, text centered, minimum height=2em]
+\tikzstyle{data}=[trapezium, draw, text centered, trapezium left angle=60, trapezium right angle=120, minimum height=2em]
+\tikzstyle{connector} = [line width=0.25mm,->]
+%% [END] Tikz related stuff
+
+%% [START] Fancy header related stuff
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setlength{\headheight}{15pt} % compensate fancyhdr style
+\fancyhead{}
+\fancyfoot{}
+\fancyfoot[L]{\thepage}
+\fancyfoot[R]{\textit{\vSubject - \vSubtitle}}
+\renewcommand{\footrulewidth}{0.4pt}% default is 0pt, overline for footer
+%% [END] Fancy header related stuff
+
+%% [START] Custom tabular command related stuff
+\usepackage{tabularx}
+\newcommand{\details}[2]{
+    #1 & #2  \\
+}
+%% [END] Custom tabular command related stuff
+
+%% [START] Figure related stuff
+\newcommand{\image}[3][1]{
+    \begin{figure}[h]
+        \centering
+        \includegraphics[#1]{#2}
+        \caption{#3}
+        \label{#3}
+    \end{figure}
+}
+%% [END] Figure related stuff
+
+%%
+\usepackage{pgf-umlcd}
+
+\renewcommand{\umldrawcolor}{black}
+\renewcommand{\umlfillcolor}{white}
+%%
+
+%% [BEGIN] Custom enumerator
+\usepackage{enumitem}
+%% [END] Custom enumerator
+
+%% [BEGIN] Paragraph indent
+\usepackage{indentfirst}
+%% [END] Paragraph indent
+
+\begin{document}
+\begin{titlepage}
+    \centering
+    \vfill
+    {\bfseries\LARGE
+        \vSubject\\
+        \vskip0.25cm
+        \vSubtitle
+    }
+    \vfill
+    \includegraphics[width=6cm]{images/polinema-logo.png}
+    \vfill
+    {
+        \textbf{Name}\\
+        \vName\\
+        \vskip0.5cm
+        \textbf{NIM}\\
+        \vNIM\\
+        \vskip0.5cm
+        \textbf{Class}\\
+        \vClass\\
+        \vskip0.5cm
+        \textbf{Department}\\
+        \vDepartment\\
+        \vskip0.5cm
+        \textbf{Study Program}\\
+        \vStudyProgram
+    }
+\end{titlepage}
+
+\newpage
+
+\section{Experiment 1}
+\texttt{ClassA.java}
+\begin{minted}[autogobble,breaklines,linenos]{java}
+    package experiment1;
+
+    public class ClassA {
+        public int x;
+        public int y;
+
+        public void getValue() {
+            System.out.println(String.format("Value of x: %d", x));
+            System.out.println(String.format("Value of y: %d", y));
+        }
+    }
+\end{minted}
+\texttt{ClassB.java}
+\begin{minted}[autogobble,breaklines,linenos]{java}
+    package experiment1;
+
+    public class ClassB {
+        public int z;
+
+        public void getZValue() {
+            System.out.println(String.format("Value of Z: %d", z));
+        }
+
+        public void getSum() {
+            System.out.println(String.format("Sum: %d", (x+y+z)));
+        }
+    }
+\end{minted}
+\texttt{Experiment1.java}
+\begin{minted}[autogobble,breaklines,linenos]{java}
+    package experiment1;
+
+    public class Experiment1 {
+        public static void main(String[] args) {
+            ClassB calculate = new ClassB();
+            calculate.x = 20;
+            calculate.y = 30;
+            calculate.z = 5;
+            calculate.getValue();
+            calculate.getZValue();
+            calculate.getSum();
+        }
+    }
+\end{minted}
+\texttt{Terminal}
+\begin{minted}[autogobble,breaklines,linenos]{text}
+    PS D:\Kuliah>  & 'C:\Program Files\Java\jdk-18.0.2.1\bin\java.exe' '-XX:+ShowCodeDetailsInExceptionMessages' '-cp' 'C:\Users\G4CE-PC\AppData\Roaming\Code\User\workspaceStorage\ 80d97a47d24665dc0bce7ab1e048ecbd\redhat.java\jdt_ws\ Kuliah_28156aa7\bin' 'experiment1.Eperiment1'
+    Exception in thread "main" java.lang.Error: Unresolved compilation problems: 
+            x cannot be resolved or is not a field
+            y cannot be resolved or is not a field
+            The method getValue() is undefined for the type ClassB
+
+            at experiment1.Eperiment1.main(Eperiment1.java:6)
+\end{minted}
+
+\subsection{Question}
+\begin{enumerate}
+    \item Pada percobaan 1 diatas program yang dijalankan terjadi error, kemudian perbaiki sehingga program tersebut bisa dijalankan dan tidak error!
+    \item Jelaskan apa penyebab program pada percobaan 1 ketika dijalankan terdapat error!
+\end{enumerate}
+
+\subsection{Answer}
+\begin{enumerate}
+    \item -
+    \begin{minted}[autogobble,breaklines]{java}
+        package experiment1;
+    
+        public class ClassB extends ClassA {
+            ...
+        }
+    \end{minted}
+    \item Because the ClassB haven't inherit ClassA yet. ClassB was missing the attributes and methods from ClassA and thus it can't use anything from ClassA.
+\end{enumerate}
+
+\newpage
+
+\section{Experiment 2}
+\texttt{ClassA.java}
+\begin{minted}[autogobble,breaklines,linenos]{java}
+    package experiment2;
+
+    public class ClassA {
+        public int x;
+        public int y;
+
+        public void setX(int x) {
+            this.x = x;
+        }
+
+        public void setY(int y) {
+            this.y = y;
+        }
+
+        public void getValue() {
+            System.out.println(String.format("Value of x: %d", x));
+            System.out.println(String.format("Value of y: %d", y));
+        }
+    }
+\end{minted}
+\texttt{ClassB.java}
+\begin{minted}[autogobble,breaklines,linenos]{java}
+    package experiment2;
+
+    public class ClassB extends ClassA {
+        public int z;
+
+        public void setZ(int z) {
+            this.z = z;
+        }
+
+        public void getZValue() {
+            System.out.println(String.format("Value of Z: %d", z));
+        }
+
+        public void getSum() {
+            System.out.println(String.format("Sum: %d", (x+y+z)));
+        }
+    }
+\end{minted}
+
+\newpage
+\texttt{Experiment2.java}
+\begin{minted}[autogobble,breaklines,linenos]{java}
+    package experiment2;
+
+    public class Experiment2 {
+        public static void main(String[] args) {
+            ClassB calculate = new ClassB();
+            calculate.setX(20);
+            calculate.setY(30);
+            calculate.setZ(5);
+            calculate.getValue();
+            calculate.getZValue();
+            calculate.getSum();
+        }
+    }
+\end{minted}
+\texttt{Terminal}
+\begin{minted}[autogobble,breaklines,linenos]{text}
+    PS D:\Kuliah>  d:; cd 'd:\Kuliah'; & 'C:\Program Files\Java\jdk-18.0.2.1\bin\java.exe' '-XX:+ShowCodeDetailsInExceptionMessages' '-cp' 'C:\Users\G4CE-PC\AppData\Roaming\Code\User\workspaceStorage\80d97a47d24665dc0bce7ab1e048ecbd\redhat.java\jdt_ws\Kuliah_28156aa7\bin' 'experiment2.Eperiment2'
+    Exception in thread "main" java.lang.Error: Unresolved compilation problems: 
+            The method setX(int) is undefined for the type ClassB
+            The method setY(int) is undefined for the type ClassB
+            The method getValue() is undefined for the type ClassB
+
+            at experiment2.Eperiment2.main(Eperiment2.java:6)
+\end{minted}
+
+\newpage
+\subsection{Question}
+\begin{enumerate}
+    \item Pada percobaan 2 diatas program yang dijalankan terjadi error, kemudian perbaiki sehingga program tersebut bisa dijalankan dan tidak error!
+    \item Jelaskan apa penyebab program pada percobaan 1 ketika dijalankan terdapat error!
+\end{enumerate}
+
+\subsection{Answer}
+\begin{enumerate}
+    \item -
+    \begin{minted}[autogobble,breaklines]{java}
+        package experiment2;
+    
+        public class ClassB extends ClassA {
+            ...
+        }
+    \end{minted}
+    \item Because the ClassB haven't inherit ClassA yet. ClassB was missing the attributes and methods from ClassA and thus it can't use anything from ClassA.
+\end{enumerate}
+
+\section{Experiment 3}
+\texttt{Circle.java}
+\begin{minted}[autogobble,breaklines,linenos]{java}
+    package experiment3;
+
+    public class Circle {
+        protected double phi;
+        protected int r;
+    }
+\end{minted}
+
+\texttt{Tube.java}
+\begin{minted}[autogobble,breaklines,linenos]{java}
+    package experiment3;
+
+    public class Tube extends Circle {
+        protected int t;
+        
+        public void setSuperPhi(double phi) {
+            super.phi = phi;
+        }
+        
+        public void setSuperR(int r) {
+            super.r = r;
+        }
+
+        public void setT(int t) {
+            this.t = t;
+        }
+
+        public void volume() {
+            double volume = super.phi * super.r * super.r * this.t;
+            String text = String.format("Volume Tabung adalah: %.1f", volume);
+            System.out.println(text);
+        }
+    }
+\end{minted}
+
+\texttt{Experiment3.java}
+\begin{minted}[autogobble,breaklines,linenos]{java}
+    package experiment3;
+
+    public class Experiment3 {
+        public static void main(String[] args) {
+            Tube tube = new Tube();
+            tube.setSuperPhi(3.14);
+            tube.setSuperR(10);
+            tube.setT(3);
+            tube.volume();
+        }
+    }
+\end{minted}
+
+\texttt{Terminal}
+\begin{minted}[autogobble,breaklines,linenos]{text}
+    PS D:\Kuliah>  d:; cd 'd:\Kuliah'; & 'C:\Program Files\Java\jdk-18.0.2.1\bin\java.exe' '-XX:+ShowCodeDetailsInExceptionMessages' '-cp' 'C:\Users\G4CE-PC\AppData\Roaming\Code\User\workspaceStorage\ 80d97a47d47d24665dc0bce7ab1e048ecbd\redhat.java\jdt_ws\ Kuliah_28156aa7\bin' 'experiment3.Experiment3'
+    Volume Tabung adalah: 942.0
+\end{minted}
+
+\newpage
+\subsection{Question}
+\begin{enumerate}
+    \item Jelaskan fungsi “super” pada potongan program berikut di class Tabung!
+    \begin{minted}[autogobble,breaklines]{java}
+        public void setSuperPhi(double phi) {
+            super.phi = phi;
+        }
+        
+        public void setSuperR(int r) {
+            super.r = r;
+        }
+    \end{minted}
+    \item Jelaskan fungsi “super” dan “this” pada potongan program berikut di class Tabung!
+    \begin{minted}[autogobble,breaklines,linenos]{java}
+        public void volume() {
+            double volume = super.phi * super.r * super.r * this.t;
+            String text = String.format("Volume Tabung adalah: %.1f", volume);
+            System.out.println(text);
+        }
+    \end{minted}
+    \item Jelaskan mengapa pada class Tabung tidak dideklarasikan atribut “phi” dan “r” tetapi class tersebut dapat mengakses atribut tersebut!
+\end{enumerate}
+\subsection{Answer}
+\begin{enumerate}
+    \item It is used to access the parent class attributes and ansign value to it.
+    \item It is used to distinguished the attributes of the parent class and the child class.
+    \item Because the attribute "phi" and "r" have protected modifier which makes it accessable in the subclass. 
+\end{enumerate}
+
+\newpage
+\section{Experiment 4}
+
+\texttt{.java}
+\begin{minted}[autogobble,breaklines,linenos]{java}
+    package experiment4;
+
+    public class ClassA {
+        ClassA() {
+            System.out.println("Constructor A runned");
+        }
+    }
+\end{minted}
+
+\texttt{.java}
+\begin{minted}[autogobble,breaklines,linenos]{java}
+    package experiment4;
+
+    public class ClassB extends ClassA {
+        ClassB() {
+            System.out.println("Constructor B runned");
+        }
+    }
+\end{minted}
+
+\texttt{.java}
+\begin{minted}[autogobble,breaklines,linenos]{java}
+    package experiment4;
+
+    public class ClassC extends ClassB {
+        ClassC() {
+            System.out.println("Constructor C runned");
+        }
+    }
+\end{minted}
+
+\texttt{.java}
+\begin{minted}[autogobble,breaklines,linenos]{java}
+    package experiment4;
+
+    public class ClassC extends ClassB {
+        ClassC() {
+            System.out.println("Constructor C runned");
+        }
+    }
+\end{minted}
+
+\newpage
+
+\texttt{Terminal}
+\begin{minted}[autogobble,breaklines,linenos]{text}
+    PS D:\Kuliah>  d:; cd 'd:\Kuliah'; & 'C:\Program Files\Java\jdk-18.0.2.1\bin\java.exe' '-XX:+ShowCodeDetailsInExceptionMessages' '-cp' 'C:\Users\G4CE-PC\AppData\Roaming\Code\User\workspaceStorage\ 80d97a47d24665dc0bce7ab1e048ecbd\redhat.java\jdt_ws\ Kuliah_28156aa7\bin' 'experiment4.Experiment4'
+    Constructor A runned
+    Constructor B runned
+    Constructor C runned
+\end{minted}
+
+\subsection{Question}
+\begin{enumerate}
+    \item Pada percobaan 4 sebutkan mana class yang termasuk superclass dan subclass, kemudian jelaskan alasannya!
+    \item Ubahlah isi konstruktor default ClassC seperti berikut:
+    \begin{minted}[autogobble,breaklines]{java}
+        package experiment4;
+
+        public class ClassC extends ClassB {
+            ClassC() {
+                super();
+                System.out.println("Constructor C runned");
+            }
+        }
+    \end{minted}
+    Tambahkan kata super() di baris Pertaman dalam konstruktor defaultnya. Coba jalankan kembali class Percobaan4 dan terlihat tidak ada perbedaan dari hasil outputnya!
+    \newpage
+    \item Ublah isi konstruktor default ClassC seperti berikut:
+    \begin{minted}[autogobble,breaklines]{java}
+        package experiment4;
+
+        public class ClassC extends ClassB {
+            ClassC() {
+                System.out.println("Constructor C runned");
+                super();
+            }
+        }
+    \end{minted}
+    Ketika mengubah posisi super() dibaris kedua dalam kontruktor defaultnya dan terlihat ada error. Kemudian kembalikan super() kebaris pertama seperti sebelumnya, maka errornya akan hilang.
+    Perhatikan hasil keluaran ketika class Percobaan4 dijalankan. Kenapa bisa tampil output seperti berikut pada saat instansiasi objek test dari class ClassC
+    \begin{minted}[autogobble,breaklines,linenos]{text}
+        PS D:\Kuliah>  d:; cd 'd:\Kuliah'; & 'C:\Program Files\Java\jdk-18.0.2.1\bin\java.exe' '-XX:+ShowCodeDetailsInExceptionMessages' '-cp' 'C:\Users\G4CE-PC\AppData\Roaming\Code\User\workspaceStorage\ 80d97a47d24665dc0bce7ab1e048ecbd\redhat.java\jdt_ws\ Kuliah_28156aa7\bin' 'experiment4.Experiment4'
+        Constructor A runned
+        Constructor B runned
+        Constructor C runned
+    \end{minted}
+    Jelaskan bagaimana urutan proses jalannya konstruktor saat objek test dibuat!
+    \item Apakah fungsi super() pada potongan program dibawah ini di ClassC!
+    \begin{minted}[autogobble,breaklines]{java}
+        package experiment4;
+
+        public class ClassC extends ClassB {
+            ClassC() {
+                super();
+                System.out.println("Constructor C runned");
+            }
+        }
+    \end{minted}
+\end{enumerate}
+
+\newpage
+\subsection{Answer}
+\begin{enumerate}
+    \item Class A is a superclass of ClassB. ClassB is a subclass of ClassA and a superclass of ClassC. ClassC is a subclass of ClassB.
+    \item -
+    \begin{minted}[autogobble,breaklines]{text}
+        PS D:\Kuliah>  d:; cd 'd:\Kuliah'; & 'C:\Program Files\Java\jdk-18.0.2.1\bin\java.exe' '-XX:+ShowCodeDetailsInExceptionMessages' '-cp' 'C:\Users\G4CE-PC\AppData\Roaming\Code\User\workspaceStorage\ 80d97a47d24665dc0bce7ab1e048ecbd\redhat.java\jdt_ws\ Kuliah_28156aa7\bin' 'experiment4.Experiment4' 
+        Constructor A runned
+        Constructor B runned
+        Constructor C runned
+    \end{minted}
+    \item Normally when ClassC is instantiated, because it is a subclass of ClassB, the Constructor for ClassB is runned. But because the ClassC constructor run SysOut first and then the super constructor after that, it return an error. Normally super constructor need to be run first before anything could happend since it would need the superclass to be ready first.
+    \item It instantiate the superclass of the class. In this case it instantiate the ClassB to inherit its property.
+\end{enumerate}
+
+\newpage
+\section{Assignment}
+\noindent
+Buatlah sebuah program dengan konsep pewarisan seperti pada class diagram berikut ini. Kemudian buatlah instansiasi objek untuk menampilkan data nama pegawai dan gaji yang didapatkannya.
+\begin{center}
+    \includegraphics[width=.75\textwidth]{images/figures/fig1.drawio.png}
+\end{center}
+\texttt{MainJoin.java}
+\begin{minted}[autogobble,breaklines,linenos]{java}
+    package assignment;
+
+    import java.util.ArrayList;
+    import java.util.List;
+    import java.util.Locale;
+
+    class EmployeeMain {
+        private String nip;
+        private String name;
+        private String address;
+
+        public EmployeeMain(String nip, String name, String address) {
+            this.nip = nip;
+            this.name = name;
+            this.address = address;
+        }
+
+        public String getNip() {
+            return nip;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public String getAddress() {
+            return address;
+        }
+
+        public int getSalary() {
+            return 0;
+        }
+    }
+
+    class LecturerMain extends EmployeeMain {
+        private int creditCount;
+        private int creditTariff;
+
+        public LecturerMain(String nip, String name, String address) {
+            super(nip, name, address);
+        }
+
+        public void setCreditCount(int creditCount) {
+            this.creditCount = creditCount;
+        }
+
+        public void setCreditTariff(int creditTariff) {
+            this.creditTariff = creditTariff;
+        }
+
+        @Override
+        public int getSalary() {
+            return creditCount * creditTariff;
+        }
+    }
+
+    class SalaryListMain {
+        public List<EmployeeMain> employeeList;
+
+        public SalaryListMain() {
+            this.employeeList = new ArrayList<EmployeeMain>();
+        }
+
+        public void addEmployee(EmployeeMain employee) {
+            this.employeeList.add(employee);
+        }
+
+        public void printSalaryList() {
+            System.out.println("Employee salary list:");
+            for (EmployeeMain employee : this.employeeList) {
+                System.out.println(String.format(Locale.ITALY,"%s: Rp %,d", employee.getName(), employee.getSalary()));
+            }
+        }
+    }
+
+    public class MainJoin {
+        public static void main(String[] args) {
+            SalaryListMain list = new SalaryListMain();
+            LecturerMain lecturer1 = new LecturerMain(
+                "230001",
+                "Alpha",
+                "Home"
+            );
+            lecturer1.setCreditCount(18);
+            lecturer1.setCreditTariff(50_000);
+            LecturerMain lecturer2 = new LecturerMain(
+                "230002",
+                "Beta",
+                "Home"
+            );
+            lecturer2.setCreditCount(19);
+            lecturer2.setCreditTariff(45_000);
+            LecturerMain lecturer3 = new LecturerMain(
+                "230003",
+                "Charlie",
+                "Home"
+            );
+            lecturer3.setCreditCount(22);
+            lecturer3.setCreditTariff(47_500);
+            list.addEmployee(lecturer1);
+            list.addEmployee(lecturer2);
+            list.addEmployee(lecturer3);
+            list.printSalaryList();
+        }
+    }
+\end{minted}
+\texttt{Terminal}
+\begin{minted}[autogobble,breaklines,linenos]{text}
+    PS D:\Kuliah>  & 'C:\Program Files\Java\jdk-18.0.2.1\bin\java.exe' '-XX:+ShowCodeDetailsInExceptionMessages' '-cp' 'C:\Users\G4CE-PC\AppData\Roaming\Code\User\workspaceStorage\ 80d97a47d24665dc0bce7ab1e048ecbd\redhat.java\jdt_ws\ Kuliah_28156aa7\bin' 'assignment.MainJoin'
+    Employee salary list:
+    Alpha: Rp 900.000    
+    Beta: Rp 855.000     
+    Charlie: Rp 1.045.000
+\end{minted}
+
+\end{document}
