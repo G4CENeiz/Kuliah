@@ -1,0 +1,370 @@
+\documentclass[12pt,titlepage]{article}
+\usepackage[margin=1.25in]{geometry}
+\usepackage{graphicx,amsmath,blindtext,minted}
+
+%% Variables definition
+\newcommand{\vSubject}{Object Oriented Programming}
+\newcommand{\vSubtitle}{Midterm}
+\newcommand{\vName}{Muhammad Baihaqi Aulia Asy'ari}
+\newcommand{\vNIM}{2241720145}
+\newcommand{\vClass}{2I}
+\newcommand{\vDepartment}{Information Technology}
+\newcommand{\vStudyProgram}{D4 Informatics Engineering}
+
+%% [START] Tikz related stuff
+\usepackage{tikz}
+\usetikzlibrary{svg.path,calc,shapes.geometric,shapes.misc}
+\tikzstyle{terminator} = [rectangle, draw, text centered, rounded corners = 1em, minimum height=2em]
+\tikzstyle{preparation} = [chamfered rectangle, chamfered rectangle sep=0.75em, draw, text centered, minimum height = 2em]
+\tikzstyle{process} = [rectangle, draw, text centered, minimum height=2em]
+\tikzstyle{decision} = [diamond, aspect=2, draw, text centered, minimum height=2em]
+\tikzstyle{data}=[trapezium, draw, text centered, trapezium left angle=60, trapezium right angle=120, minimum height=2em]
+\tikzstyle{connector} = [line width=0.25mm,->]
+%% [END] Tikz related stuff
+
+%% [START] Fancy header related stuff
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setlength{\headheight}{15pt} % compensate fancyhdr style
+\fancyhead{}
+\fancyfoot{}
+\fancyfoot[L]{\thepage}
+\fancyfoot[R]{\textit{\vSubject - \vSubtitle}}
+\renewcommand{\footrulewidth}{0.4pt}% default is 0pt, overline for footer
+%% [END] Fancy header related stuff
+
+%% [START] Custom tabular command related stuff
+\usepackage{tabularx}
+\newcommand{\details}[2]{
+    #1 & #2  \\
+}
+%% [END] Custom tabular command related stuff
+
+%% [START] Figure related stuff
+\newcommand{\image}[3][1]{
+    \begin{figure}[h]
+        \centering
+        \includegraphics[#1]{#2}
+        \caption{#3}
+        \label{#3}
+    \end{figure}
+}
+%% [END] Figure related stuff
+
+%%
+\usepackage{pgf-umlcd}
+
+\renewcommand{\umldrawcolor}{black}
+\renewcommand{\umlfillcolor}{white}
+%%
+
+%% [BEGIN] Custom enumerator
+\usepackage{enumitem}
+%% [END] Custom enumerator
+
+%% [BEGIN] Paragraph indent
+\usepackage{indentfirst}
+%% [END] Paragraph indent
+
+\begin{document}
+\begin{titlepage}
+    \centering
+    \vfill
+    {\bfseries\LARGE
+        \vSubject\\
+        \vskip0.25cm
+        \vSubtitle
+    }
+    \vfill
+    \includegraphics[width=6cm]{images/polinema-logo.png}
+    \vfill
+    {
+        \textbf{Name}\\
+        \vName\\
+        \vskip0.5cm
+        \textbf{NIM}\\
+        \vNIM\\
+        \vskip0.5cm
+        \textbf{Class}\\
+        \vClass\\
+        \vskip0.5cm
+        \textbf{Department}\\
+        \vDepartment\\
+        \vskip0.5cm
+        \textbf{Study Program}\\
+        \vStudyProgram
+    }
+\end{titlepage}
+
+\newpage
+
+\section*{Question}
+
+\subsection*{Soal 1: Penulisan Class}
+\noindent
+Berdasarkan contoh class ClassA di bawah ini, jelaskan apakah penulisan source code pada contoh class tersebut sudah benar. Jika tidak, apa yang perlu diperbaiki?
+\begin{minted}[autogobble,breaklines]{java}
+    public class ClassA {
+        float f1 = 0.15f;
+
+        float hitung() {
+            float x = 2f * f1;
+        }
+    }
+\end{minted}
+
+\subsection*{Soal 2: Perhitungan Jumlah Elemen Array 2 Dimensi}
+\noindent
+Pada class SoalArray1, terdapat array 2 dimensi dengan ukuran 3x3. Tuliskan code Java untuk menghitung jumlah total elemen array tersebut dengan menggunakan perulangan.
+\begin{minted}[autogobble,breaklines]{java}
+    public class SoalArray1 {
+        public static void main(String[] args) {
+            int[][] arrayInt = {{1, 1, 4}, {2, 1, 2}, {3, 2, 1}};
+            // hitung jumlah elemen array 2 dimensi
+            // gunakan perulangan
+        }
+    }
+\end{minted}
+
+\subsection*{Soal 3: Pewarisan Atribut dan Method}
+\noindent
+Pada source code yang diberikan, class ClassY merupakan turunan dari class Class. Sebutkan atribut dan method apa saja yang diwarisi oleh ClassY dari kelas induknya (class Class). Jelaskan juga apa output dari code yang ditulis pada class ClassY dan bagaimana nilai tersebut diperoleh.
+\begin{minted}[autogobble,breaklines]{java}
+    public class Class {
+        int a = 2;
+        int x = 0;
+
+        int hitung() {
+            x = x + 5 * a;
+            return x;
+        }
+    }
+
+    public class ClassY extends Class {
+        int b = 5;
+        int y = 0;
+
+        int hitungY() {
+            y = hitung() * b;
+            return y;
+        }
+
+        public static void main(String[] args) {
+            ClassY cy = new ClassY();
+            System.out.println(cy.hitungY());
+        }
+    }
+\end{minted}
+
+\subsection*{Soal 4: Class Mahasiswa dengan Constructor}
+\noindent
+Dalam class Mahasiswa, lengkapi code dengan:\\
+a. Menambahkan constructor untuk mengisi atribut nim, nama, alamat, dan jenisKelamin.\\
+b. Membuat objek mahasiswa dan mengisi atribut nim, nama, alamat, dan jenisKelamin melalui constructor.
+\begin{minted}[autogobble,breaklines]{java}
+    public class Mahasiswa {
+        String nim, nama, alamat;
+        char jenisKelamin;
+
+            // a. Tambahkan constructor
+            // Gunakan constructor untuk
+            // mengisi atribut nim, nama, alamat, jenisKelamin
+
+        public static void main(String[] args) {
+            // b. Buat objek mahasiswa
+            // Isi atribut nim, nama, alamat, jenisKelamin
+            // lewat constructor
+        }
+    }
+\end{minted}
+
+\subsection*{Soal 5: OOP Buku $\rightarrow$ Penulis}
+\noindent
+Perhatikan class diagaram berikut dan Buatlah Source code dalam Bahasa java berdasarkan class diagram tersebut
+\begin{center}
+    \includegraphics[width=.55\textwidth]{images/figures/fig1.png}
+\end{center}
+
+\newpage
+
+\section*{Answer}
+
+\subsection*{Question 1:}
+\noindent
+No, the "hitung" method does not have a return value.
+\begin{minted}[autogobble,breaklines]{java}
+    public class ClassA {
+        float f1 = 0.15f;
+
+        float hitung() {
+            float x = 2f * f1;
+            return x;
+        }
+    }
+\end{minted}
+
+\subsection*{Question 2:}
+\noindent
+\begin{minted}[autogobble,breaklines]{java}
+    package question2;
+
+    public class SoalArray1 {
+        public static void main(String[] args) {
+            int[][] arrayInt = {{1, 1, 4}, {2, 1, 2}, {3, 2, 1}};
+            // hitung jumlah elemen array 2 dimensi
+            // gunakan perulangan
+            int[] rowSum = new int[arrayInt.length];
+            int sumAll = 0;
+            for (int i = 0; i < arrayInt.length; i++) {
+                for (int num : arrayInt[i]) {
+                    rowSum[i] += num;
+                }
+            }
+            for (int row : rowSum) {
+                sumAll += row;
+            }
+            for (int i = 0; i < rowSum.length; i++) {
+                System.out.println(String.format("Row %d sum: %d", i, rowSum[i]));
+            }
+            System.out.println(String.format("Sum of all: %d", sumAll));
+        }
+    }
+\end{minted}
+
+\newpage
+
+\subsection*{Question 3:}
+\noindent
+The ClassY inherited the atribbutes a and x and the method hitung() that return and integer. The output is as such because the hitungY() method is calling the hitung() method, which return the integer 10. Then the return the value of 10 multiplied by the value of the atribbute b, which is 5, returning the value 50. 
+\begin{minted}[autogobble,breaklines]{text}
+    PS D:\Kuliah>  & 'C:\Program Files\Java\jdk-18.0.2.1\bin\java.exe' '-XX:+ShowCodeDetailsInExceptionMessages' '-cp' 'C:\Users\G4CE-PC\AppData\Roaming\Code\User\workspaceStorage\ 80d97a47d24665dc0bce7ab1e048ecbd\redhat.java\jdt_ws\ Kuliah_28156aa7\bin' 'question3.ClassY'
+    50
+\end{minted}
+
+\subsection*{Question 4:}
+\noindent
+\begin{minted}[autogobble,breaklines]{java}
+    package question4;
+
+    public class Student {
+        String nim, name, address;
+        char gender;
+
+        public Student() {
+        }
+
+        // item a.
+        public Student(String nim, String name, String address, char gender) {
+            this.nim = nim;
+            this.name = name;
+            this.address = address;
+            this.gender = gender;
+        }
+
+        public static void main(String[] args) {
+            // item b.
+            Student student = new Student("220001", "Alpha", "Home", 'M');
+        }
+    }
+\end{minted}
+
+\newpage
+
+\subsection*{Question 5:}
+\noindent
+\texttt{Main.java}
+\begin{minted}[autogobble,breaklines]{java}
+    package question5;
+
+    public class Main {
+        public static void main(String[] args) {
+            Writer writer = new Writer();
+            writer.setName("Alpha");
+            writer.setAddress("Home");
+
+            Book book = new Book();
+            book.setWriter(writer);
+            book.setISBN("RandomStrings");
+            book.setTitle("How to be Alpha");
+            book.setPrice(5_000_000);
+
+            System.out.println(book.getWriter().getName());
+            System.out.println(book.getWriter().getAddress());
+            System.out.println(book.getTitle());
+            System.out.println(book.getISBN());
+            System.out.println(book.getPrice());
+        }
+    }
+
+    class Writer {
+        private String name;
+        private String address;
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public String getAddress() {
+            return address;
+        }
+
+        public void setAddress(String address) {
+            this.address = address;
+        }
+    }
+
+    class Book {
+        private String ISBN;
+        private String title;
+        private Writer writer;
+        private int price;
+
+        public String getISBN() {
+            return ISBN;
+        }
+
+        public void setISBN(String iSBN) {
+            ISBN = iSBN;
+        }
+
+        public String getTitle() {
+            return title;
+        }
+
+        public void setTitle(String title) {
+            this.title = title;
+        }
+
+        public int getPrice() {
+            return price;
+        }
+
+        public void setPrice(int price) {
+            this.price = price;
+        }
+
+        public Writer getWriter() {
+            return writer;
+        }
+
+        public void setWriter(Writer writer) {
+            this.writer = writer;
+        }
+    }
+\end{minted}
+
+\texttt{Terminal}
+\begin{minted}[autogobble,breaklines,linenos]{text}
+    PS D:\Kuliah>  d:; cd 'd:\Kuliah'; & 'C:\Program Files\Java\jdk-18.0.2.1\bin\java.exe' '-XX:+ShowCodeDetailsInExceptionMessages' '-cp' 'C:\Users\G4CE-PC\AppData\Roaming\Code\User\workspaceStorage\ 80d97a47d24665dc0bce7ab1e048ecbd\redhat.java\jdt_ws\ Kuliah_28156aa7\bin' 'question5.Main' 
+    Alpha
+    Home
+    How to be Alpha
+    RandomStrings
+    5000000
+\end{minted}
+
+\end{document}
