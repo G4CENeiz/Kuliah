@@ -102,6 +102,375 @@
     \item The text in the function printed in the page. Text was defined in the function and the function was called after it was defined.
     \item The function was called twice and each call has their own name and greetings. The first call was directly written in the parameters. The second call was represented by a stored variables.
     \item The default parameter will be used if the parameter with default value are not inlcuded in the method call.
+    \item When the function is called it subtitute it self with the return value.
+    \item A function can call other function and get its return value if available.
+    \item It print "Halo dunia!" on the page and doesnt stop printing.
+    \item It loops just like a normal for loop.
+    \item It print every item with the key "nama" as an item of unordered list.
+    \item -
+    \begin{minted}[autogobble,breaklines]{php}
+        <?php
+            // Experiment 9 - recursive tiered menu case study code challenge
+            $menu = [
+                [
+                    "name" => "Dashboard"
+                ],
+                [
+                    "name" => "News",
+                    "subMenu" => [
+                        [
+                            "name" => "Touring",
+                            "subMenu" => [
+                                [
+                                    "name" => "Beach"
+                                ],
+                                [
+                                    "name" => "Mountain"
+                                ]
+                            ]
+                        ],
+                        [
+                            "name" => "Culinary"
+                        ],
+                        [
+                            "name" => "Entertainment"
+                        ]
+                    ]
+                ],
+                [
+                    "name" => "About"
+                ],
+                [
+                    "name" => "Contact"
+                ]
+            ];
+            function showTieredMenu(array $menu) {
+                echo "<ul>";
+                foreach ($menu as $key => $item) {
+                    echo "<li>{$item['name']}</li>";
+                    if (array_key_exists('subMenu', $item)) {
+                        showTieredMenu($item['subMenu']);
+                    }
+                }
+                echo "</ul>";
+            }
+            showTieredMenu($menu);
+        ?>
+    \end{minted}
+    \item With the str function we can get information and transform of the str.
+    \item -
+    \begin{enumerate}[label=\alph*.]
+        \item The double quote mark will always interpreted new line escape string as a new line.
+        \item While the single quotation mark will take things too literal.
+        \item Here is the same case as point a.
+        \item Here is the same case as point b.
+        \item This case is similar to point a. but it is an example of indent escape string
+        \item This case is similar to point b. but it is an example of indent escape string not being recognize.
+        \item Here is an escape string meant to give clarity to the code that the part with $\backslash$" is a literal double quotation mark string.
+        \item This is a simalar case to point g. but it is protrayed in single quotation mark for string with single quotation mark.
+    \end{enumerate}
+    \item The string message reversed.
+    \item It now reversed the word but did not change the sequence of the word in the sentence.
+    \item In my opinion, inline PHP is better because then you'll get the HTML emmet autocorrect instead of writing every element in HTML as strings.
+    \item The enitity with tag number is way more reliable than using the enitity alias.
+    \item The date function can be use to get the current date and format it to whatever you like. It also can be use to get the day in the week.
+    \item The date function can be us to get the current time in any timezone.
 \end{enumerate}
+
+\texttt{function.php}
+\begin{minted}[autogobble,breaklines,linenos]{php}
+    <?php
+    // ! Experiment 1 - default function
+    // Membuat fungsi
+    // function perkenalan()
+    // {
+    //     echo "Assalamualaikum, ";
+    //     echo "Perkenalkan, nama saya Elok<br/>"; // Tulis sesuai nama kalian
+    //     echo "Senang berkenalan dengan Anda<br/>";
+    // }
+    // 
+    // memamnggil fungsi yang sudah dibuat
+    // perkenalan();
+
+
+    // ! Experiment 2 - parametric function
+    // Membuat fungsi
+    // function perkenalan($name, $greeting)
+    // {
+    //     echo $greeting.", ";
+    //     echo "Perkenalkan, nama saya ".$name."<br>";
+    //     echo "Senang berkenalan dengan Anda<br>";
+    // }
+
+    // Memanggil fungsi yang sudah dibuat
+    // perkenalan("Hamdana", "Hallo");
+
+    // echo "<hr>";
+
+    // $saya = "Elok";
+    // $ucapanSalam = "Selamat Pagi";
+
+    // Memanggil lagi
+    // perkenalan($saya, $ucapanSalam);
+
+    // ! Experiment 3 - parametric function with default value
+    // Membuat fungsi
+    // function perkenalan($name, $greeting="Assalamualaikum")
+    // {
+    //     echo $greeting.", ";
+    //     echo "Perkenalkan, nama saya ".$name."<br>";
+    //     echo "Senang berkenalan dengan Anda<br>";
+    // }
+
+    // Memanggil fungsi yang sudah dibuat
+    // perkenalan("Hamdana", "Hallo");
+
+    // echo "<hr>";
+
+    // $saya = "Elok";
+    // $ucapanSalam = "Selamat Pagi";
+
+    // Memanggil lagi tanpa mengisi parameter salam
+    // perkenalan($saya);
+
+    // ! Experiment 4 - function with return value
+    // // Membuat fungsi
+    // function hitungUmur($tahun_lahir, $tahun_sekarang) {
+    //     $umur = $tahun_sekarang - $tahun_lahir;
+    //     return $umur;
+    // }
+
+    // echo "Umur saya adalah ". hitungUmur(2004, 2023) ." tahun";
+
+    // ! Experiment 5 - function in a function
+    // membuat fungsi
+    // function hitungUmur($tahun_lahir, $tahun_sekarang) {
+    //     $umur = $tahun_sekarang - $tahun_lahir;
+    //     return $umur;
+    // }
+
+    // function perkenalan($name, $greeting="Assalamualaikum")
+    // {
+    //     echo $greeting.", ";
+    //     echo "Perkenalkan, nama saya ".$name."<br>";
+    //     echo "Saya berusia ". hitungUmur(2004, 2023) ." tahun<br>";
+    //     echo "Senang berkenalan dengan Anda<br>";
+    // }
+    // perkenalan("Elok");
+    ?>
+\end{minted}
+
+\texttt{recursive.php}
+\begin{minted}[autogobble,breaklines,linenos]{php}
+    <?php
+    // ! Experiment 6 - recursive function
+    // function tampilkanHaloDunia() {
+    //     echo "Halo dunia! <br>";
+    //     tampilkanHaloDunia();
+    // }
+
+    // tampilkanHaloDunia();
+
+    // ! Experiment 7 - recursive looping
+
+    // for-loop looping method
+    // for ($i=1; $i <= 25; $i++) { 
+    //     echo "Perulangan ke-{$i} <br>";
+    // }
+
+    // recursive looping method
+    // function tampilkanAngka(int $jumlah, int $indeks = 1) {
+    //     echo "Perulangan ke-{$indeks} <br>";
+
+    //     if ($indeks < $jumlah) {
+    //         tampilkanAngka($jumlah, $indeks + 1);
+    //     }
+    // }
+
+    // tampilkanAngka(20);
+
+    // ! Experiment 8 - recursive tiered menu case study
+    // $menu = [
+    //     [
+    //         "name" => "Dashboard"
+    //     ],
+    //     [
+    //         "name" => "News",
+    //         "subMenu" => [
+    //             [
+    //                 "name" => "Touring",
+    //                 "subMenu" => [
+    //                     [
+    //                         "name" => "Beach"
+    //                     ],
+    //                     [
+    //                         "name" => "Mountain"
+    //                     ]
+    //                 ]
+    //             ],
+    //             [
+    //                 "name" => "Culinary"
+    //             ],
+    //             [
+    //                 "name" => "Entertainment"
+    //             ]
+    //         ]
+    //     ],
+    //     [
+    //         "name" => "About"
+    //     ],
+    //     [
+    //         "name" => "Contact"
+    //     ]
+    // ];
+
+    // function showTieredMenu(array $menu) {
+    //     echo "<ul>";
+    //     foreach ($menu as $key => $item) {
+    //         echo "<li>{$item['name']}</li>";
+    //     }
+    //     echo "</ul>";
+    // }
+
+    // showTieredMenu($menu);
+
+    // ! Experiment 9 - recursive tiered menu case study code challenge
+    // $menu = [
+    //     [
+    //         "name" => "Dashboard"
+    //     ],
+    //     [
+    //         "name" => "News",
+    //         "subMenu" => [
+    //             [
+    //                 "name" => "Touring",
+    //                 "subMenu" => [
+    //                     [
+    //                         "name" => "Beach"
+    //                     ],
+    //                     [
+    //                         "name" => "Mountain"
+    //                     ]
+    //                 ]
+    //             ],
+    //             [
+    //                 "name" => "Culinary"
+    //             ],
+    //             [
+    //                 "name" => "Entertainment"
+    //             ]
+    //         ]
+    //     ],
+    //     [
+    //         "name" => "About"
+    //     ],
+    //     [
+    //         "name" => "Contact"
+    //     ]
+    // ];
+
+    // function showTieredMenu(array $menu) {
+    //     echo "<ul>";
+    //     foreach ($menu as $key => $item) {
+    //         echo "<li>{$item['name']}</li>";
+    //         if (array_key_exists('subMenu', $item)) {
+    //             showTieredMenu($item['subMenu']);
+    //         }
+    //     }
+    //     echo "</ul>";
+    // }
+
+    // showTieredMenu($menu);
+    ?>
+\end{minted}
+
+\texttt{string.php}
+\begin{minted}[autogobble,breaklines,linenos]{php}
+    <?php
+    // ! Experiment 10 - string function
+    // $loremIpsum = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad neque aliquam mollitia obcaecati, maxime omnis consequuntur animi ducimus dignissimos, nisi perspiciatis magnam consequatur dolore corporis.";
+    // echo "<p>{$loremIpsum}</p>";
+    // echo "Panjang Karakter: " . strlen($loremIpsum) . "<br>";
+    // echo "Panjang Kata: " . str_word_count($loremIpsum) . "<br>";
+    // echo "<p>" . strtoupper($loremIpsum) . "</p>";
+    // echo "<p>" . strtolower($loremIpsum) . "</p>";
+        
+    // ! Experiment 11 - escape character
+    // echo "Baris\nbaru <br>"; // soal 10.a
+    // echo 'Baris\nbaru <br>'; // soal 10.b
+    // echo "Halo\nDunia <br>"; // soal 10.c
+    // echo 'Halo\nDunia <br>'; // soal 10.d
+        
+    // echo "<pre>Halo\tDunia!</pre>"; // soal 10.e
+    // echo '<pre>Halo\tDunia!</pre>'; // soal 10.f
+        
+    // echo "Katakanlah \"Tidak pada narkoba!\" <br>"; // soal 10.g
+    // echo 'Katakanlah \'Tidak pada narkoba!\' <br>'; // soal 10.h
+        
+    // ! Experiment 12 - string reversing
+    // $message = "Saya arek Malang";
+    // echo strrev($message) . "<br>";
+        
+    // ! Experiment 13 - string reversing per word
+    // $message = "Saya arek Malang";
+    // $messagePerWord = explode(" ", $message);
+    // $messagePerWord = array_map(fn($message) => strrev($message), $messagePerWord);
+    // $message = implode(" ", $messagePerWord);
+
+    // echo $message , "<br>";
+    ?>
+\end{minted}
+
+\texttt{enitities.html}
+\begin{minted}[autogobble,breaklines,linenos]{html}
+    <!-- ! Experiment 14 - HTML entities -->
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <title>Entities HTML</title>
+        </head>
+        <body>
+            <p>It&#39; time to read a HTML5 book</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;Keuntungan dari menggunakan nama entities: Sebuah nama entitas mudah diingat. Kerugian dari menggunakan nama entities: Browser mungkin tidak mendukung semua nama entitas, tetapi dukungan untuk nomor lebih baik.</p>
+            <p>&#169; 2023 jti.com</p>
+        </body>
+    </html>
+\end{minted}
+
+\texttt{date.php}
+\begin{minted}[autogobble,breaklines,linenos]{php}
+    <!-- // ! Experiment 15 - date function -->
+    <!DOCTYPE html>
+    <html>
+        <head>
+        </head>
+        <body>
+            <h3> Date </h3>
+            <?php
+                echo "Today is " . date("Y/m/d") . "<br>";
+                echo "Today is " . date("Y.m.d") . "<br>";
+                echo "Today is " . date("Y-m-d") . "<br>";
+                echo "Today is " . date("l");
+            ?>
+        </body>
+    </html>
+\end{minted}
+
+\texttt{time.php}
+\begin{minted}[autogobble,breaklines,linenos]{php}
+    <!-- // ! Experiment 16 - date function for time -->
+    <!DOCTYPE html>
+    <html>
+        <head>
+        </head>
+        <body>
+            <h3> Time </h3>
+            <?php
+                date_default_timezone_set("asia/jakarta");
+                echo date("h:i:sa");
+            ?>
+        </body>
+    </html>
+\end{minted}
 
 \end{document}
