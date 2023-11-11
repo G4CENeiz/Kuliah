@@ -3,8 +3,8 @@
 \usepackage{graphicx,amsmath,blindtext,minted}
 
 %% Variables definition
-\newcommand{\vSubject}{Data Structure and Algorithm Practicum}
-\newcommand{\vSubtitle}{Chapter}
+\newcommand{\vSubject}{Web Design and Development}
+\newcommand{\vSubtitle}{PHP02}
 \newcommand{\vName}{Muhammad Baihaqi Aulia Asy'ari}
 \newcommand{\vNIM}{2241720145}
 \newcommand{\vClass}{2I}
@@ -97,5 +97,96 @@
 \end{titlepage}
 
 \newpage
+
+\begin{enumerate}
+    \item -
+    \begin{minted}[autogobble,breaklines]{html}
+        <!-- // ! Experiment 1 - Indexed Array -->
+        <!DOCTYPE html>
+        <html>
+            <head>
+            </head>
+            <body>
+                <h2>Indexed Array</h2>
+                <?php
+                $listLecturer = ["Alpha", "Bravo", "Charlie"];
+        
+                // echo $listLecturer[2] . "<br>";
+                // echo $listLecturer[0] . "<br>";
+                // echo $listLecturer[1] . "<br>";
+                
+                // looping method
+                for ($i=0; $i < sizeof($listLecturer); $i++) { 
+                    echo $listLecturer[$i] . "<br>";
+                }
+                ?>
+            </body>
+        </html>
+    \end{minted}
+    \includegraphics[width=.9\textwidth]{images/figures/fig1.png}
+    
+    \newpage
+    
+    \item -
+    \begin{minted}[autogobble,breaklines]{html}        
+        <!-- // ! Experiment 2 - Associative Array -->
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title></title>
+            <style>
+                html {
+                    border: 3px solid black;
+                }
+                table, th, td {
+                    border: 1px solid black;
+                    border-collapse: collapse;
+                }
+            </style>
+        </head>
+        <body>
+            <table>
+                <tr>
+                    <th>Property</th>
+                    <th>Value</th>
+                </tr>
+                <?php
+                $lecturer = [
+                    'name' => 'Alpha',
+                    'domicile' => 'Home',
+                    'gender' => 'is a gamelan instrument'
+                ];
+
+                // manual
+                // echo "Name : {$lecturer['name']} <br>";
+                // echo "Domicile : {$lecturer['domicile']} <br>";
+                // echo "Gender : {$lecturer['gender']} <br>";
+
+                // looping method
+                foreach ($lecturer as $key => $item) {
+                    echo "<tr>";
+                    echo "<td>{$key}</td>";
+                    echo "<td>{$item}</td>";
+                    echo "</tr>";
+                }
+                ?>
+            </table>
+        </body>
+        </html>
+    \end{minted}
+    \includegraphics[width=.9\textwidth]{images/figures/fig2.png}
+    \item - \\ \includegraphics[width=.9\textwidth]{images/figures/fig3.png} \\ You can access multidimentional array with n-dinmension amount of index.
+    
+    \newpage
+    
+    \item - \\ \includegraphics[width=.9\textwidth]{images/figures/fig4.png} \\ A function can be use to execute a sequence of code at will
+    \item - \\ \includegraphics[width=.9\textwidth]{images/figures/fig5.png} \\ You can use a parameter as a variable to be use inside the function. When the function gets called, you can pass the parameter directly or pass it through a variable
+    
+    \newpage
+
+    \item - \\ \includegraphics[width=.9\textwidth]{images/figures/fig6.png} \\ Same as before, the only diffrence is that if the function call doesnt inlcude the greetings parameter, it will use the default value set by the function declaration 
+\end{enumerate}
 
 \end{document}
