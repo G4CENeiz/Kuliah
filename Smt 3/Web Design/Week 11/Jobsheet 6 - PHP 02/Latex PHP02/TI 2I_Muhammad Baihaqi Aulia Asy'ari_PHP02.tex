@@ -187,6 +187,65 @@
     \newpage
 
     \item - \\ \includegraphics[width=.9\textwidth]{images/figures/fig6.png} \\ Same as before, the only diffrence is that if the function call doesnt inlcude the greetings parameter, it will use the default value set by the function declaration 
+    \item - \\ \includegraphics[width=.9\textwidth]{images/figures/fig7.png} \\ The result of the function can be used by calling the function
+    
+    \newpage
+    
+    \item - \\ \includegraphics[width=.9\textwidth]{images/figures/fig8.png} \\ The introduction function can use the return value from calculateAge function
+    \item - \\ \includegraphics[width=.9\textwidth]{images/figures/fig9.png} \\ The function print the text non-stop
+    
+    \newpage
+
+    \item - \\ \includegraphics[width=.9\textwidth]{images/figures/fig10.png} \\ The function print the text as long as the index is less than the amount by calling itself and increasing the index in the next function call
+    \item - \\ \includegraphics[width=.9\textwidth]{images/figures/fig11.png}
+    
+    \newpage
+
+    \item - \\ \includegraphics[width=.9\textwidth]{images/figures/fig12.png}
+    \begin{minted}[autogobble,breaklines]{php}
+        <?php
+        function showTieredMenu(array $menu) {
+            echo "<ul>";
+            foreach ($menu as $key => $item) {
+                echo"<li>{$item['name']}</li>";
+                if (array_key_exists('subMenu', $item)) {
+                    showTieredMenu($item['subMenu']);
+                }
+            }
+            echo "</ul>";
+        }
+        
+        showTieredMenu($menu);
+        ?>
+    \end{minted}
+    
+    \newpage
+
+    \item - \\ \includegraphics[width=.85\textwidth]{images/figures/fig13.png} \\ The are muultiple function that can be used to manipulate string
+    \item - \\ \includegraphics[width=.85\textwidth]{images/figures/fig14.png}
+    \begin{enumerate}[label=\alph*.]
+        \item The double quote mark will always interpreted new line escape string as a new line.
+        \item While the single quotation mark will take things too literal.
+        \item Here is the same case as point a.
+        \item Here is the same case as point b.
+        \item This case is similar to point a. but it is an example of indent escape string
+        \item This case is similar to point b. but it is an example of indent escape string not being recognize.
+        \item Here is an escape string meant to give clarity to the code that the part with $\backslash$" is a literal double quotation mark string.
+        \item This is a simalar case to point g. but it is protrayed in single quotation mark for string with single quotation mark.
+    \end{enumerate}
+    
+    \newpage
+
+    \item - \\ \includegraphics[width=.9\textwidth]{images/figures/fig15.png} \\ The message string is reversed
+    \item - \\ \includegraphics[width=.9\textwidth]{images/figures/fig16.png} \\ The message string is reversed but with out reversing the sequence of the word
+    
+    \newpage
+
+    \item - \\ \includegraphics[width=.9\textwidth]{images/figures/fig17.png} \\ In my opinion, it is easier to write PHP inside HTML rather than HTML in PHP because it is harder to "write" HTML syntax inside PHP
+    \item - \\ \includegraphics[width=.9\textwidth]{images/figures/fig18.png} \\ HTML entities with number is more reliable than entities name
+    
+    \newpage
+    
 \end{enumerate}
 
 \end{document}
