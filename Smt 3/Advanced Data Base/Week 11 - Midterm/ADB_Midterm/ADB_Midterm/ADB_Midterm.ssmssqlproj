@@ -19,11 +19,29 @@
     </LogicalFolder>
     <LogicalFolder Name="Queries" Type="0" Sorted="true">
       <Items>
+        <FileNode Name="Create_Table.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:HAQI-G4CE:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>HAQI-G4CE</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Create_Table.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Insert_Data.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:HAQI-G4CE:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>HAQI-G4CE</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Insert_Data.sql</FullPath>
+        </FileNode>
         <FileNode Name="Library_Inventory.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:HAQI-G4CE:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>HAQI-G4CE</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>Library_Inventory.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Query_Data.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:HAQI-G4CE:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>HAQI-G4CE</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Query_Data.sql</FullPath>
         </FileNode>
       </Items>
     </LogicalFolder>
