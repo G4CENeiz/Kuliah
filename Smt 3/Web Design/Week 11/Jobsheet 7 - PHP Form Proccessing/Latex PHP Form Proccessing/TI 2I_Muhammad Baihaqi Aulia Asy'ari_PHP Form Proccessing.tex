@@ -3,8 +3,8 @@
 \usepackage{graphicx,amsmath,blindtext,minted}
 
 %% Variables definition
-\newcommand{\vSubject}{Data Structure and Algorithm Practicum}
-\newcommand{\vSubtitle}{Chapter}
+\newcommand{\vSubject}{Web Design and Development}
+\newcommand{\vSubtitle}{PHP Form Proccessing}
 \newcommand{\vName}{Muhammad Baihaqi Aulia Asy'ari}
 \newcommand{\vNIM}{2241720145}
 \newcommand{\vClass}{2I}
@@ -66,6 +66,10 @@
 \usepackage{indentfirst}
 %% [END] Paragraph indent
 
+%% [BEGIN] enumii
+\renewcommand{\labelenumii}{\arabic{enumi}.\arabic{enumii}}
+%% [END] enumii
+
 \begin{document}
 \begin{titlepage}
     \centering
@@ -97,5 +101,28 @@
 \end{titlepage}
 
 \newpage
+
+\begin{enumerate}
+    \item -
+    \begin{enumerate}
+        \item - \\ \includegraphics[width=.85\textwidth]{images/figures/fig1.1.png} \\ Isset can check wether or not a variable has been set
+        \item - \\ \includegraphics[width=.85\textwidth]{images/figures/fig1.2.png} \\ Isset can check the existence of a value of a certain key in an assosiative array
+    \end{enumerate}
+
+    \newpage
+
+    \item -
+    \begin{enumerate}
+        \item - \\ \includegraphics[width=.85\textwidth]{images/figures/fig2.1.png} \\ The empty() function return a boolean value after checking if the variable in the parameter is empty or not
+        \item - \\ \includegraphics[width=.85\textwidth]{images/figures/fig2.2.png} \\ The empty() function return a boolean value after checking if the variable in the parameter is undefined or not
+    \end{enumerate}
+
+    \newpage
+
+    \item -
+    \begin{enumerate}
+        \item - \\ \includegraphics[width=.85\textwidth]{images/figures/fig3.1_a.png} \\ \includegraphics[width=.85\textwidth]{images/figures/fig3.1_b.png} \\ When a post form is submited the action can process the data posted by the form
+    \end{enumerate}
+\end{enumerate}
 
 \end{document}
