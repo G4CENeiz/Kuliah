@@ -1,0 +1,173 @@
+\documentclass[12pt,titlepage]{article}
+\usepackage[margin=1.25in]{geometry}
+\usepackage{graphicx,amsmath,blindtext,minted}
+
+%% Variables definition
+\newcommand{\vSubject}{Project Management}
+\newcommand{\vSubtitle}{Quiz 2}
+\newcommand{\vName}{Muhammad Baihaqi Aulia Asy'ari}
+\newcommand{\vNIM}{2241720145}
+\newcommand{\vClass}{2I}
+\newcommand{\vDepartment}{Information Technology}
+\newcommand{\vStudyProgram}{D4 Informatics Engineering}
+
+%% [START] Tikz related stuff
+\usepackage{tikz}
+\usetikzlibrary{svg.path,calc,shapes.geometric,shapes.misc}
+\tikzstyle{terminator} = [rectangle, draw, text centered, rounded corners = 1em, minimum height=2em]
+\tikzstyle{preparation} = [chamfered rectangle, chamfered rectangle sep=0.75em, draw, text centered, minimum height = 2em]
+\tikzstyle{process} = [rectangle, draw, text centered, minimum height=2em]
+\tikzstyle{decision} = [diamond, aspect=2, draw, text centered, minimum height=2em]
+\tikzstyle{data}=[trapezium, draw, text centered, trapezium left angle=60, trapezium right angle=120, minimum height=2em]
+\tikzstyle{connector} = [line width=0.25mm,->]
+%% [END] Tikz related stuff
+
+%% [START] Fancy header related stuff
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setlength{\headheight}{15pt} % compensate fancyhdr style
+\fancyhead{}
+\fancyfoot{}
+\fancyfoot[L]{\thepage}
+\fancyfoot[R]{\textit{\vSubject - \vSubtitle}}
+\renewcommand{\footrulewidth}{0.4pt}% default is 0pt, overline for footer
+%% [END] Fancy header related stuff
+
+%% [START] Custom tabular command related stuff
+\usepackage{tabularx}
+\newcommand{\details}[2]{
+    #1 & #2  \\
+}
+%% [END] Custom tabular command related stuff
+
+%% [START] Figure related stuff
+\newcommand{\image}[3][1]{
+    \begin{figure}[h]
+        \centering
+        \includegraphics[#1]{#2}
+        \caption{#3}
+        \label{#3}
+    \end{figure}
+}
+%% [END] Figure related stuff
+
+%%
+\usepackage{pgf-umlcd}
+
+\renewcommand{\umldrawcolor}{black}
+\renewcommand{\umlfillcolor}{white}
+%%
+
+%% [BEGIN] Custom enumerator
+\usepackage{enumitem}
+%% [END] Custom enumerator
+
+%% [BEGIN] Paragraph indent
+\usepackage{indentfirst}
+%% [END] Paragraph indent
+
+\usepackage{array}
+
+\begin{document}
+\begin{titlepage}
+    \centering
+    \vfill
+    {\bfseries\LARGE
+        \vSubject\\
+        \vskip0.25cm
+        \vSubtitle
+    }
+    \vfill
+    \includegraphics[width=6cm]{images/polinema-logo.png}
+    \vfill
+    {
+        \textbf{Group Members}\\
+        \vspace{0.5cm}
+        \begin{tabular}{l l}
+            Dicha Zelianivan Arkana         & \textbf{2241720002} \\
+            Davis Maulana Hermanto          & \textbf{2241720255} \\
+            Muhammad Baihaqi Aulia Asy'ari  & \textbf{2241720145} \\
+            Sri Kresna Maha Dewa            & \textbf{2241720244} \\
+            Steven Christian Susanto        & \textbf{2241720003} \\
+            Yanuar Thaif Chalil Candra      & \textbf{2241720004} \\            
+        \end{tabular}
+        \vskip0.5cm
+        \textbf{Class}\\
+        \vClass\\
+        \vskip0.5cm
+        \textbf{Department}\\
+        \vDepartment\\
+        \vskip0.5cm
+        \textbf{Study Program}\\
+        \vStudyProgram
+    }
+\end{titlepage}
+
+\newpage
+
+\section*{Quiz 2 - Project Management}
+\subsection*{Question}
+\noindent
+Based on the project you planned at the beginning (the project you proposed during the Midterm Exam), answer the following questions:
+\begin{enumerate}
+    \item What will you do to manage Human Resources in your project. Explain in full!
+    \item What do you do to manage the Communications in your project. Explain in full!
+    \item Is there a connection between HR management and communication in implementing the software development project you are carrying out? Explain in detail!
+\end{enumerate}
+\subsection*{Answer}
+\begin{enumerate}
+    \item To ease personnel management, we plan to use a Responsibility Assignment Matrix (RAM) using RACI chart format based on the Work Breakdown Structure (WBS) we have previously made. This way, we can make sure everyone knows what they're supposed to be doing and balance the workload fairly and efficiently. \\
+    \resizebox{.93\textwidth}{!}{
+        \begin{tabular}{|l|l|l|l|l|l|l|}
+            \hline
+            \textbf{Task/Role} & \textbf{Project Manager} & \textbf{Developer 1} & \textbf{Developer 2} & \textbf{UI/UX Desginer} & \textbf{QA/Tester 1} & \textbf{QA/Tester 2} \\
+            \hline
+        \end{tabular}
+    }
+    \item -
+    \item -
+\end{enumerate}
+\resizebox{\textwidth}{!}{
+    \begin{tabular}[c]{|l|*{6}{p{1.5cm}|}}
+        \hline
+        \textbf{Task/Role} & \textbf{PM} & \textbf{Dev 1} & \textbf{Dev 2} & \textbf{UI/UX} & \textbf{QA 1} & \textbf{QA 2} \\
+        \hline
+        Design Architecture: UX & & & & & & \\
+        \hline
+        Design Architecture: Wireframe & & & & & & \\
+        \hline
+        Design Architecture: Mapping UI & & & & & & \\
+        \hline
+        Web Structure: Frontend & & & & & & \\
+        \hline
+        Web Structure: Backend & & & & & & \\
+        \hline
+        Documentation & & & & & & \\
+        \hline
+        Control a scope creep & & & & & & \\
+        \hline
+        Change management processes & & & & & & \\
+        \hline
+        Quality Management: Unit Testing & & & & & & \\
+        \hline
+        Quality Management: System Testing & & & & & & \\
+        \hline
+        Lesson Learned & & & & & & \\
+        \hline
+        Project Report & & & & & & \\
+        \hline
+        Product Delivery & & & & & & \\
+        \hline
+        Project Close-out Meeting & & & & & & \\
+        \hline
+    \end{tabular}
+}
+Legend: \\
+A = Project Manager \\
+B = Developer 1 \\
+C = Developer 2 \\
+D = UI/UX Desginer \\
+E = QA/Tester 1 \\
+F = QA/Tester 2 \\
+
+\end{document}
