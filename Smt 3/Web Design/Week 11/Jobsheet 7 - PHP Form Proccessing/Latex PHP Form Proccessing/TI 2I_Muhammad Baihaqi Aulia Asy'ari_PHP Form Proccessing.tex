@@ -122,6 +122,108 @@
     \item -
     \begin{enumerate}
         \item - \\ \includegraphics[width=.85\textwidth]{images/figures/fig3.1_a.png} \\ \includegraphics[width=.85\textwidth]{images/figures/fig3.1_b.png} \\ When a post form is submited the action can process the data posted by the form
+        
+        \newpage
+        
+        \item - \\ \includegraphics[width=.85\textwidth]{images/figures/fig3.2_a.png} \\ \includegraphics[width=.85\textwidth]{images/figures/fig3.2_b.png} \\ \includegraphics[width=.85\textwidth]{images/figures/fig3.2_c.png} \\ Now when a post form is submited the action call the self php
+    \end{enumerate}
+    
+    \newpage
+
+    \item -
+    \begin{enumerate}
+        \item -
+        \begin{minted}[autogobble,breaklines]{php}
+            <!-- // ! Experiment 4 - HTML Injection -->
+            <!-- // * 4.1 -->
+            <!DOCTYPE html>
+            <html>
+                <head>
+                    <title>Secure HTML</title>
+                    <style>
+                        html {
+                            border: 3px solid black;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <h2>Secure HTML</h2>
+                    <?php
+                    $input;
+                    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+                        if (empty($input)) {
+                            $input = $_POST['input'];
+                            $input = htmlspecialchars($input, ENT_QUOTES, 'UTF-8');
+                            echo $input;
+                        }
+                    }
+                    ?>
+                    <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="post">
+                        <label for="input">Input:</label>
+                        <input type="text" name="input" id="input">
+                        <input type="submit" value="Submit">
+                    </form>
+                </body>
+            </html>
+        \end{minted}
+        
+        \newpage
+
+        \includegraphics[width=.85\textwidth]{images/figures/fig4.1_a.png} \\ 
+        \includegraphics[width=.85\textwidth]{images/figures/fig4.1_b.png} \\ 
+        with the htmlspecialchars() function the html is now protected from injection
+        
+        \newpage
+
+        \item -
+        \begin{minted}[autogobble,breaklines]{php}
+            <!-- // * 4.2 -->
+            <head>
+                <title>Secure HTML</title>
+                <style>
+                    html {
+                        border: 3px solid black;
+                    }
+                </style>
+            </head>
+            <h2>Secure HTML</h2>
+            <?php
+            $email;
+            if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+                $email = $_POST['email'];
+                if (isset($input)) {
+                    if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                        echo $email;
+                    } else {
+                        echo "Email invalid";
+                    }
+                }
+            }
+            ?>
+            <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="post">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email">
+                <input type="submit" value="Submit">
+            </form>
+        \end{minted}
+
+        \newpage
+
+        \includegraphics[width=.85\textwidth]{images/figures/fig4.2_a.png} \\
+        \includegraphics[width=.85\textwidth]{images/figures/fig4.2_b.png} \\
+        
+        \newpage
+        
+        \includegraphics[width=.85\textwidth]{images/figures/fig4.2_c.png} \\
+        \includegraphics[width=.85\textwidth]{images/figures/fig4.2_d.png} \\
+        If an email is invalid it return false which we can use to print out an error message
+    \end{enumerate}
+
+    \newpage
+
+    \item -
+    \begin{enumerate}
+        \item - \\ \includegraphics[width=.85\textwidth]{images/figures/fig5.1.png} \\ The RegEx allows us to check whether or not a certain letter or group of letter exist in a variable
     \end{enumerate}
 \end{enumerate}
 
