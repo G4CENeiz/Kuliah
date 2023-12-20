@@ -469,4 +469,93 @@
 % \chapter{Software Testing Document}
 %     \section{Blackbox Test Result}
 %     \section{Quality Test Result}
+\chapter{Risk Management}
+    \section{Team Coordination}
+        \subsection{Problem Description}
+        Communication within the team has been inconsistent, leading to misunderstandings, delays, and a lack of clarity on project goals. Team members are not always on the same page, and this has resulted in decreased efficiency and productivity.
+        \subsection{Solution}
+        Develop a comprehensive communication management plan that outlines clear channels, frequency, and methods of communication within the team. This plan should also define roles and responsibilities for communication, ensuring that everyone understands their part in keeping the team informed and aligned.
+        \section{Time Constraint}
+        \subsection{Problem Description}
+        The project is currently grappling with significant time constraints, creating challenges in meeting deadlines, maintaining a sustainable work pace, and ensuring overall project quality. The existing timeline limitations risk causing bottlenecks and increasing stress among team members.
+        \subsection{Solution}
+        To address the time constraint challenge, we propose the creation of a dedicated, centralized role responsible for managing time-related aspects of the project. This time coordinator will focus on optimizing schedules, prioritizing tasks, and acting as a communication hub for time-sensitive issues. By clearly defining responsibilities, providing necessary training, integrating with project management tools, and establishing regular monitoring, this centralized role aims to enhance time management, reduce individual stress, and improve overall decision-making, ensuring the project stays on track and meets its goals within the specified time frame.
+        \section{Mismatch Expectation}
+        \subsection{Problem Description}
+        There have been instances where team members had differing expectations regarding project deliverables, timelines, and quality standards. This has led to confusion and rework, impacting the overall project timeline.
+        \subsection{Solution}
+        Utilize the developed communication management plan to ensure that expectations are aligned across all team members. Regular updates, clear documentation, and transparent communication will contribute to a shared understanding of project goals and individual responsibilities.
+\chapter{Communication Management}
+    \section{Formulation of the Problem}
+    The project has encountered significant challenges in both team coordination and managing expectations, revealing critical gaps in the current communication framework. These challenges, as outlined in the Team Coordination and Mismatched Expectations sections, highlight the need for a strategic approach to communication management.
+        \subsection{Team Coordination:}
+        In the absence of a structured communication strategy, team coordination has suffered. Inconsistent communication channels and undefined roles have led to a lack of clarity regarding individual responsibilities, resulting in a fragmented team environment. The consequence has been a decrease in overall team efficiency and productivity, with critical information being overlooked and a disconnect among team members.
+        \subsection{Mismatched Expectations:}
+        Mismatched expectations have emerged as a consequence of the inadequate communication structure. Differing interpretations of project deliverables, timelines, and quality standards have caused confusion and, in some instances, necessitated rework. The absence of a standardized communication plan has allowed discrepancies to persist, impeding seamless task execution and compromising the project timeline.
+    \section{Solution}
+    To address these challenges and enhance team coordination and expectation alignment, the proposed solution involves the creation and implementation of two essential tools: the RACI (Responsible, Accountable, Consulted, Informed) Chart and the Resource Allocation Histogram.
+    \newpage
+        \subsection{RACI Chart:}
+        The RACI chart will clarify roles and responsibilities within the team. By clearly defining who is Responsible, Accountable, Consulted, and Informed for each task or process, the chart ensures that team members understand their roles in communication and decision-making. This will mitigate the issues of undefined roles and inconsistent communication channels, fostering a more organized and efficient team environment.
+        \resizebox{\textwidth}{!}{
+            \begin{tabular}[c]{|l|*{6}{p{1.5cm}|}}
+                \hline
+                \textbf{Task/Role} & \textbf{PM} & \textbf{Dev 1} & \textbf{Dev 2} & \textbf{UI/UX} & \textbf{QA 1} & \textbf{QA 2} \\
+                \hline
+                Design Architecture: UX & A & C & C & R & I & I \\
+                \hline
+                Design Architecture: Wireframe & A & C & C & R & I & I \\
+                \hline
+                Design Architecture: Mapping UI & A & C & C & R & I & I \\
+                \hline
+                Web Structure: Frontend & A & C & R & I & I & I \\
+                \hline
+                Web Structure: Backend & A & R & C & I & I & I \\
+                \hline
+                Documentation & A & R & C & I & I & I\\
+                \hline
+                Control a scope creep & R & I & I & I & C & A \\
+                \hline
+                Change management processes & R & I & I & I & A & C \\
+                \hline
+                Quality Management: Unit Testing & A & C & C & I & I & R \\
+                \hline
+                Quality Management: System Testing & A & C & C & I & R & I \\
+                \hline
+                Lesson Learned & R & I & I & I & C & A \\
+                \hline
+                Project Report & R & I & I & I & A & C \\
+                \hline
+                Product Delivery & R & A & C & I & I & I \\
+                \hline
+                Project Close-out Meeting & R & C & A & I & I & I \\
+                \hline
+            \end{tabular}
+        }
+        \subsection{Resource Allocation Histogram:}
+        The Resource Allocation Histogram will serve as a visual representation of resource utilization over time. By graphically depicting the allocation of team members to specific tasks and projects, this tool ensures a balanced distribution of resources, preventing bottlenecks and overloads. This, in turn, contributes to smoother communication flows and enhances overall team coordination.
+        \\ \includegraphics[width=\textwidth]{images/figures/resource-allocation-histogram.jpg}
+    \section{Evaluation}
+    As we assess the effectiveness of the proposed solutions—RACI Chart and Resource Allocation Histogram—it becomes apparent that leveraging GitHub Issues and Pull Requests as communication records could have provided additional benefits and streamlined communication within the team.
+        \subsection{Evaluation Criteria}
+        \begin{enumerate}[label=\roman*.]
+            \item Clarity and Accessibility
+            \begin{itemize}
+                \item RACI Chart and Resource Allocation Histogram: These tools enhance clarity regarding roles, responsibilities, and resource allocation. However, they may not provide real-time accessibility to detailed communication records.
+                \item GitHub Issues and Pull Requests: GitHub's platform allows for the creation of detailed Issues and Pull Requests, providing a centralized and easily accessible repository for communication records. This promotes transparency and ensures that team members can review communication threads at any point in the project.
+            \end{itemize}
+            \item Integration with Workflows
+            \begin{itemize}
+                \item RACI Chart and Resource Allocation Histogram: These tools may require manual updates and may not seamlessly integrate with existing project workflows.
+                \item GitHub Issues and Pull Requests: GitHub Issues and Pull Requests are integrated into the development workflow. Team members can link discussions directly to code changes, making it an integral part of the development process. This ensures that communication is tightly coupled with the actual work being done.
+            \end{itemize}
+            \item Documentation and Versioning
+            \begin{itemize}
+                \item RACI Chart and Resource Allocation Histogram: While these tools offer a level of documentation, they may lack versioning and detailed contextual information about specific decisions and changes.
+                \item GitHub Issues and Pull Requests: GitHub provides detailed documentation of discussions, decisions, and changes made during the project. The versioning feature allows for a historical record of communication, providing context for future reference and audits.
+            \end{itemize}
+        \end{enumerate}
+        \newpage
+        \subsection{Conclusion}
+        While the RACI Chart and Resource Allocation Histogram contribute to improved team coordination and role definition, the integration of GitHub Issues and Pull Requests as communication records offers a more comprehensive solution. GitHub's platform not only facilitates real-time collaboration but also seamlessly integrates with development workflows, providing detailed documentation and versioning capabilities. Considering the dynamic nature of projects, the use of GitHub for communication records enhances transparency, accessibility, and collaboration, making it a more effective solution for comprehensive communication management within the team. Future project iterations may benefit from adopting GitHub as a central hub for communication and task management.
 \end{document}
