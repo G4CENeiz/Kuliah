@@ -1,0 +1,668 @@
+\documentclass[12pt,titlepage]{article}
+\usepackage[margin=1.25in]{geometry}
+\usepackage{graphicx,amsmath,blindtext,minted}
+
+%% Variables definition
+\newcommand{\vSubject}{Object Oriented Programming}
+\newcommand{\vSubtitle}{Polymorphism}
+\newcommand{\vName}{Muhammad Baihaqi Aulia Asy'ari}
+\newcommand{\vNIM}{2241720145}
+\newcommand{\vClass}{2I}
+\newcommand{\vDepartment}{Information Technology}
+\newcommand{\vStudyProgram}{D4 Informatics Engineering}
+
+%% [START] Tikz related stuff
+\usepackage{tikz}
+\usetikzlibrary{svg.path,calc,shapes.geometric,shapes.misc}
+\tikzstyle{terminator} = [rectangle, draw, text centered, rounded corners = 1em, minimum height=2em]
+\tikzstyle{preparation} = [chamfered rectangle, chamfered rectangle sep=0.75em, draw, text centered, minimum height = 2em]
+\tikzstyle{process} = [rectangle, draw, text centered, minimum height=2em]
+\tikzstyle{decision} = [diamond, aspect=2, draw, text centered, minimum height=2em]
+\tikzstyle{data}=[trapezium, draw, text centered, trapezium left angle=60, trapezium right angle=120, minimum height=2em]
+\tikzstyle{connector} = [line width=0.25mm,->]
+%% [END] Tikz related stuff
+
+%% [START] Fancy header related stuff
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setlength{\headheight}{15pt} % compensate fancyhdr style
+\fancyhead{}
+\fancyfoot{}
+\fancyfoot[L]{\thepage}
+\fancyfoot[R]{\textit{\vSubject - \vSubtitle}}
+\renewcommand{\footrulewidth}{0.4pt}% default is 0pt, overline for footer
+%% [END] Fancy header related stuff
+
+%% [START] Custom tabular command related stuff
+\usepackage{tabularx}
+\newcommand{\details}[2]{
+    #1 & #2  \\
+}
+%% [END] Custom tabular command related stuff
+
+%% [START] Figure related stuff
+\newcommand{\image}[3][1]{
+    \begin{figure}[h]
+        \centering
+        \includegraphics[#1]{#2}
+        \caption{#3}
+        \label{#3}
+    \end{figure}
+}
+%% [END] Figure related stuff
+
+%%
+\usepackage{pgf-umlcd}
+
+\renewcommand{\umldrawcolor}{black}
+\renewcommand{\umlfillcolor}{white}
+%%
+
+%% [BEGIN] Custom enumerator
+\usepackage{enumitem}
+%% [END] Custom enumerator
+
+%% [BEGIN] Paragraph indent
+\usepackage{indentfirst}
+%% [END] Paragraph indent
+
+\begin{document}
+\begin{titlepage}
+    \centering
+    \vfill
+    {\bfseries\LARGE
+        \vSubject\\
+        \vskip0.25cm
+        \vSubtitle
+    }
+    \vfill
+    \includegraphics[width=6cm]{images/polinema-logo.png}
+    \vfill
+    {
+        \textbf{Name}\\
+        \vName\\
+        \vskip0.5cm
+        \textbf{NIM}\\
+        \vNIM\\
+        \vskip0.5cm
+        \textbf{Class}\\
+        \vClass\\
+        \vskip0.5cm
+        \textbf{Department}\\
+        \vDepartment\\
+        \vskip0.5cm
+        \textbf{Study Program}\\
+        \vStudyProgram
+    }
+\end{titlepage}
+
+\newpage
+
+\setcounter{section}{3}
+
+\section{Experiment 1 - Basic Form of Polymorphism}
+\subsection{Experiment Step}
+
+\texttt{Employee.java}
+\begin{minted}[autogobble,breaklines,linenos]{java}
+    package polymorphism.experiment1;
+
+    public class Employee {
+        protected String name;
+
+        public String getEmployeeInfo() {
+            return "Name = " + name;
+        }
+    }
+\end{minted}
+
+\texttt{Payable.java}
+\begin{minted}[autogobble,breaklines,linenos]{java}
+    package polymorphism.experiment1;
+
+    public interface Payable {
+        public int getPaymentAmount();
+    }
+\end{minted}
+
+\texttt{InternshipEmployee.java}
+\begin{minted}[autogobble,breaklines,linenos]{java}
+    package polymorphism.experiment1;
+
+    public class InternshipEmployee extends Employee {
+        private int length;
+
+        public InternshipEmployee(String name, int length) {
+            this.length = length;
+            this.name = name;
+        }
+
+        public int getLength() {
+            return length;
+        }
+
+        public void setLength(int length) {
+            this.length = length;
+        }
+
+        @Override
+        public String getEmployeeInfo() {
+            String info = super.getEmployeeInfo() + "\n";
+            info += "Registered as internship employee for " + length + " month/s\n";
+            return info;
+        }
+    }
+\end{minted}
+
+\texttt{PermanentEmployee.java}
+\begin{minted}[autogobble,breaklines,linenos]{java}
+    package polymorphism.experiment1;
+
+    public class PermanentEmployee extends Employee implements Payable {
+        private int salary;
+
+        public PermanentEmployee(String name, int salary) {
+            this.name = name;
+            this.salary = salary;
+        }
+
+        public int getSalary() {
+            return salary;
+        }
+
+        public void setSalary(int salary) {
+            this.salary = salary;
+        }
+
+        @Override
+        public int getPaymentAmount() {
+            return (int) (salary + 0.05 * salary);
+        }
+
+        @Override
+        public String getEmployeeInfo() {
+            String info = super.getEmployeeInfo() + "\n";
+            info += "Registered as permanent emplyee with salary " + salary + "\n";
+            return info;
+        }
+    }
+\end{minted}
+
+\texttt{ElectricityBill.java}
+\begin{minted}[autogobble,breaklines,linenos]{java}
+    package polymorphism.experiment1;
+
+    public class ElectricityBill implements Payable {
+        private int kwh;
+        private String category;
+
+        public ElectricityBill(int kwh, String category) {
+            this.kwh = kwh;
+            this.category = category;
+        }
+
+        public int getKwh() {
+            return kwh;
+        }
+
+        public void setKwh(int kwh) {
+            this.kwh = kwh;
+        }
+
+        public String getCategory() {
+            return category;
+        }
+
+        public void setCategory(String category) {
+            this.category = category;
+        }
+
+        @Override
+        public int getPaymentAmount() {
+            return kwh + getBasePrice();
+        }
+
+        public int getBasePrice() {
+            int bPrice = 0;
+            switch (category) {
+                case "R-1": bPrice = 100;break;
+                case "R-2": bPrice = 200;break;
+            }
+            return bPrice;
+        }
+
+        public String getBillInfo() {
+            return  "kWH = " + kwh + "\n" +
+                    "Category = " + category + "(" + getBasePrice() + " per kWH)\n";
+        }
+    }
+\end{minted}
+
+\texttt{Tester1.java}
+\begin{minted}[autogobble,breaklines,linenos]{java}
+    package polymorphism.experiment1;
+
+    public class Tester1 {
+        public static void main(String[] args) {
+            PermanentEmployee pEmp = new PermanentEmployee("Alpha", 420);
+            InternshipEmployee iEmp = new InternshipEmployee("Bravo", 6);
+            ElectricityBill eBill = new ElectricityBill(5, "A-1");
+            Employee e;
+            Payable p;
+            e = pEmp;
+            e = iEmp;
+            p = pEmp;
+            p = eBill;
+        }
+    }
+\end{minted}
+
+\subsection{Questions}
+\begin{enumerate}
+    \item Class apa sajakah yang merupakan turunan dari class Employee?
+    \item Class apa sajakah yang implements ke interface Payable?
+    \item Perhatikan class Tester1, baris ke-10 dan 11. Mengapa e, bisa diisi dengan objek pEmp (merupakan objek dari class PermanentEmployee) dan objek iEmp (merupakan objek dari class InternshipEmploye) ?
+    \item Perhatikan class Tester1, baris ke-12 dan 13. Mengapa p, bisa diisi dengan objek pEmp (merupakan objek dari class PermanentEmployee) dan objek eBill (merupakan objek dari class ElectricityBill) ?
+    \item Coba tambahkan sintaks:\\
+    p = iEmp;\\
+    e = eBill;\\
+    pada baris 14 dan 15 (baris terakhir dalam method main) ! Apa yang menyebabkan error?
+    \item Ambil kesimpulan tentang konsep/bentuk dasar polimorfisme!
+\end{enumerate}
+
+\subsection{Answers}
+\begin{enumerate}
+    \item InternshipEmployee and PermanentEmployee.
+    \item PermanentEmployee and ElectricityBill.
+    \item Because both are subclass of Employee.
+    \item Because both implements the interface Payable.
+    \item The iEmp does not implements the interface Payable and the eBill is not a subclass or does not extends the class Employee.
+    \item Polymorphism allow an object to take form of the superclass or its interface.
+\end{enumerate}
+
+\section{Experiment 2 - Virtual Method Invocation}
+\subsection{Experiment Step}
+\texttt{Tester2.java}
+\begin{minted}[autogobble,breaklines,linenos]{java}
+    package polymorphism.experiment1;
+
+    public class Tester2 {
+        public static void main(String[] args) {
+            PermanentEmployee pEmp = new PermanentEmployee("Alpha", 420);
+            Employee e;
+            e = pEmp;
+            System.out.println("" + e.getEmployeeInfo());
+            System.out.println("------------------");
+            System.out.println("" + pEmp.getEmployeeInfo());
+        }
+    }
+\end{minted}
+
+\texttt{Terminal}
+\begin{minted}[autogobble,breaklines,linenos]{text}
+    PS D:\Kuliah>  & 'C:\Program Files\Java\jdk-18.0.2.1\bin\java.exe' '-XX:+ShowCodeDetailsInExceptionMessages' '-cp' 'C:\Users\G4CE-PC\AppData\Roaming\Code\User\workspaceStorage\ 80d97a47d24665dc0bce7ab1e048ecbd\redhat.java\jdt_ws\ Kuliah_28156aa7\bin' 'polymorphism.experiment1.Tester2'     
+    Name = Alpha
+    Registered as permanent emplyee with salary 420
+
+    ------------------
+    Name = Alpha
+    Registered as permanent emplyee with salary 420
+\end{minted}
+\subsection{Questions}
+\begin{enumerate}
+    \item Perhatikan class Tester2 di atas, mengapa pemanggilan e.getEmployeeInfo() pada baris 8 dan pEmp.getEmployeeInfo() pada baris 10 menghasilkan hasil sama? 
+    \item Mengapa pemanggilan method e.getEmployeeInfo() disebut sebagai pemanggilan method virtual (virtual method invication), sedangkan pEmp .getEmployeeInfo() tidak?
+    \item Jadi apakah yang dimaksud dari virtual method invocation? Mengapa disebut virtual?
+\end{enumerate}
+\subsection{Answers}
+\begin{enumerate}
+    \item Because despite the e is an object of Employee, the method being called still came from the pEmp object that it is declared from.
+    \item Because when the e.getEmployeeInfo() is compiled as the Employee method, the JVM recognize that the object e is an object of PermanentEmployee in which it used that method instead of what is already compiled.
+    \item it is when the method compiled followed what the Class declared but in the run time used what has been declared by the Object being casted.
+\end{enumerate}
+
+\newpage
+\section{Experiment 3 - Heterogenous Collection}
+\subsection{Experiment Step}
+\texttt{Tester3.java}
+\begin{minted}[autogobble,breaklines,linenos]{java}
+    package polymorphism.experiment1;
+
+    public class Tester3 {
+        public static void main(String[] args) {
+            PermanentEmployee pEmp = new PermanentEmployee("Alpha", 420);
+            InternshipEmployee iEmp = new InternshipEmployee("Bravo", 6);
+            ElectricityBill eBill = new ElectricityBill(5, "A-1");
+            Employee[] e = {pEmp, iEmp};
+            Payable[] p = {pEmp, eBill};
+            Employee[] e2 = {pEmp, iEmp, eBill};
+        }
+    }
+\end{minted}
+
+\texttt{Terminal}
+\begin{minted}[autogobble,breaklines,linenos]{text}
+    PS D:\Kuliah>  d:; cd 'd:\Kuliah'; & 'C:\Program Files\Java\jdk-18.0.2.1\bin\java.exe' '-XX:+ShowCodeDetailsInExceptionMessages' '-cp' 'C:\Users\G4CE-PC\AppData\Roaming\Code\User\workspaceStorage\ 80d97a47d24665dc0bce7ab1e048ecbd\redhat.java\jdt_ws\ Kuliah_28156aa7\bin' 'polymorphism.experiment1.Tester3'
+    Exception in thread "main" java.lang.Error: Unresolved compilation problem: 
+            Type mismatch: cannot convert from ElectricityBill to Employee      
+    
+            at polymorphism.experiment1.Tester3.main(Tester3.java:10)
+\end{minted}
+\subsection{Questions}
+\begin{enumerate}
+    \item Perhatikan array e pada baris ke-8, mengapa ia bisa diisi dengan objek-objek dengan tipe yang berbeda, yaitu objek pEmp (objek dari PermanentEmployee) dan objek iEmp (objek dari InternshipEmployee) ?
+    \item Perhatikan juga baris ke-9, mengapa array p juga biisi dengan objek-objek dengan tipe yang berbeda, yaitu objek pEmp (objek dari PermanentEmployee) dan objek eBill (objek dari ElectricityBilling) ?
+    \item Perhatikan baris ke-10, mengapa terjadi error?
+\end{enumerate}
+\subsection{Answers}
+\begin{enumerate}
+    \item Because all of them are based on the class Employee.
+    \item Because all of them implements the interface Payable.
+    \item Because the ElectricityBill is not a subclass of Employee.
+\end{enumerate}
+
+\section{Experiment 4 - Polymorphic Arguments, \\ instanceof and object casting}
+\subsection{Experiment Step}
+\texttt{Owner.java}
+\begin{minted}[autogobble,breaklines,linenos]{java}
+    package polymorphism.experiment1;
+
+    public class Owner {
+        public void pay(Payable p) {
+            System.out.println("Total payment = " + p.getPaymentAmount());
+            if (p instanceof ElectricityBill) {
+                ElectricityBill eb = (ElectricityBill) p;
+                System.out.println("" + eb.getBillInfo());
+            } else if (p instanceof PermanentEmployee) {
+                PermanentEmployee pe = (PermanentEmployee) p;
+                pe.getEmployeeInfo();
+                System.out.println("" + pe.getEmployeeInfo());
+            }
+        }
+
+        public void showMyEmployee(Employee e) {
+            System.out.println("" + e.getEmployeeInfo());
+            if (e instanceof PermanentEmployee) {
+                System.out.println("You have to pay her/him monthly!!!");
+            } else {
+                System.out.println("No need to pay him/her :)");
+            }
+        }
+    }
+\end{minted}
+
+\texttt{Tester4.java}
+\begin{minted}[autogobble,breaklines,linenos]{java}
+    package polymorphism.experiment1;
+
+    public class Tester4 {
+        public static void main(String[] args) {
+            Owner ow = new Owner();
+            ElectricityBill eBill = new ElectricityBill(5, "R-1");
+            ow.pay(eBill);
+            System.out.println("------------------------------");
+            
+            PermanentEmployee pEmp = new PermanentEmployee("Alpha", 420);
+            ow.pay(pEmp);
+            System.out.println("------------------------------");
+            
+            InternshipEmployee iEmp = new InternshipEmployee("Bravo", 6);
+            ow.showMyEmployee(pEmp);
+            System.out.println("------------------------------");
+            ow.showMyEmployee(iEmp);
+        }
+    }
+\end{minted}
+\subsection{Questions}
+\begin{enumerate}
+    \item Perhatikan class Tester4 baris ke-7 dan baris ke-11, mengapa pemanggilan ow.pay(eBill) dan ow.pay(pEmp) bisa dilakukan, padahal jika diperhatikan method pay() yang ada di dalam class Owner memiliki argument/parameter bertipe Payable? Jika diperhatikan lebih detil eBill merupakan objek dari ElectricityBill dan pEmp merupakan objek dari PermanentEmployee?
+    \item Jadi apakah tujuan membuat argument bertipe Payable pada method pay() yang ada di dalam class Owner?
+    \item Coba pada baris terakhir method main() yang ada di dalam class Tester4 ditambahkan perintah ow.pay(iEmp);
+    \begin{minted}[autogobble,breaklines,linenos]{java}
+        package polymorphism.experiment1;
+    
+        public class Tester4 {
+            public static void main(String[] args) {
+                Owner ow = new Owner();
+                ElectricityBill eBill = new ElectricityBill(5, "R-1");
+                ow.pay(eBill);
+                System.out.println("------------------------------");
+                
+                PermanentEmployee pEmp = new PermanentEmployee("Alpha", 420);
+                ow.pay(pEmp);
+                System.out.println("------------------------------");
+                
+                InternshipEmployee iEmp = new InternshipEmployee("Bravo", 6);
+                ow.showMyEmployee(pEmp);
+                System.out.println("------------------------------");
+                ow.showMyEmployee(iEmp);
+
+                ow.pay(iEmp);
+            }
+        }
+    \end{minted}
+    Mengapa terjadi error?
+    \item Perhatikan class Owner, diperlukan untuk apakah sintaks p instanceof ElectricityBill pada baris ke-6 ?
+    \item Perhatikan kembali class Owner baris ke-7, untuk apakah casting objek disana (ElectricityBill eb = (ElectricityBill) p) diperlukan ? Mengapa objek p yang bertipe Payable harus di-casting ke dalam objek eb yang bertipe ElectricityBill ?
+\end{enumerate}
+\subsection{Answers}
+\begin{enumerate}
+    \item Correct assessment, but those classes also implements the interface Payable which made them pass-able as an argument fot the method pay.
+    \item So that only class that implements the interface Payable can use the method pay().
+    \item Because the iEmp object are not based on a class that implements the interface Payable.
+    \item It is used to identify whether or not the object p is an instance of ElectricityBill.
+    \item So that the object p can use the method of its instance.
+\end{enumerate}
+
+\newpage
+
+\section{Assignment}
+
+\texttt{Destroyable.java}
+\begin{minted}[autogobble,breaklines,linenos]{java}
+    package polymorphism.assignment;
+
+    public interface Destroyable {
+        public void destroyed();
+    }
+\end{minted}
+
+\texttt{Zombie.java}
+\begin{minted}[autogobble,breaklines,linenos]{java}
+    package polymorphism.assignment;
+
+    public class Zombie implements Destroyable {
+        protected int health;
+        protected int level;
+
+        public void heal() {
+            
+        }
+
+        @Override
+        public void destroyed() {
+            
+        }
+
+        public String getZombieInfo() {
+            return "";
+        }
+    }
+\end{minted}
+
+\texttt{Barrier.java}
+\begin{minted}[autogobble,breaklines,linenos]{java}
+    package polymorphism.assignment;
+
+    public class Barrier implements Destroyable {
+        private int strength;
+
+        public Barrier(int strength) {
+            this.strength = strength;
+        }
+
+        public void setStrength(int strength) {
+            this.strength = strength;
+        }
+
+        public int getStrength() {
+            return strength;
+        }
+
+        @Override
+        public void destroyed() {
+            strength -= 9;
+        }
+
+        public String getBarrierInfo() {
+            return String.format("Barrier Strength = %d%n", strength);
+        }
+    }
+\end{minted}
+
+\texttt{WalkingZombie.java}
+\begin{minted}[autogobble,breaklines,linenos]{java}
+    package polymorphism.assignment;
+
+    public class WalkingZombie extends Zombie {
+        public WalkingZombie(int health, int level) {
+            this.health = health;
+            this.level = level;
+        }
+
+        @Override
+        public void heal() {
+            if (level == 1) {
+                health += health * 0.1;
+            } else if (level == 2) {
+                health += health * 0.3;
+            } else if (level == 3) {
+                health += health * 0.4;
+            }
+        }
+
+        @Override
+        public void destroyed() {
+            health -= Math.floor(health * 0.2);
+        }
+
+        @Override
+        public String getZombieInfo() {
+            String info = "Walking Zombie Data = \n";
+            info += String.format("Health = %d %n", health);
+            info += String.format("Level = %d %n", level);
+            return info;
+        }
+    }
+\end{minted}
+
+\texttt{JumpingZombie.java}
+\begin{minted}[autogobble,breaklines,linenos]{java}
+    package polymorphism.assignment;
+
+    public class JumpingZombie extends Zombie {
+        public JumpingZombie(int health, int level) {
+            this.health = health;
+            this.level = level;
+        }
+
+        @Override
+        public void heal() {
+            if (level == 1) {
+                health += health * 0.3;
+            } else if (level == 2) {
+                health += health * 0.4;
+            } else if (level == 3) {
+                health += health * 0.5;
+            }
+        }
+
+        @Override
+        public void destroyed() {
+            health -= Math.floor(health * 0.1);
+        }
+
+        @Override
+        public String getZombieInfo() {
+            String info = "Jumping Zombie Data = \n";
+            info += String.format("Health = %d %n", health);
+            info += String.format("Level = %d %n", level);
+            return info;
+        }
+    }
+\end{minted}
+
+\texttt{Plant.java}
+\begin{minted}[autogobble,breaklines,linenos]{java}
+    package polymorphism.assignment;
+
+    public class Plant {
+        public void doDestroy(Destroyable d) {
+            if (d instanceof WalkingZombie) {
+                WalkingZombie wz = (WalkingZombie) d;
+                wz.destroyed();
+            } else if (d instanceof JumpingZombie) {
+                JumpingZombie jz = (JumpingZombie) d;
+                jz.destroyed();
+            } else if (d instanceof Barrier) {
+                Barrier b = (Barrier) d;
+                b.destroyed();
+            }
+        }
+    }
+\end{minted}
+
+\texttt{Tester.java}
+\begin{minted}[autogobble,breaklines,linenos]{java}
+    package polymorphism.assignment;
+
+    public class Tester {
+        public static void main(String[] args) {
+            WalkingZombie wz = new WalkingZombie(100, 1);
+            JumpingZombie jz = new JumpingZombie(100, 2);
+            Barrier b = new Barrier(100);
+            Plant p = new Plant();
+
+            System.out.println("" + wz.getZombieInfo());
+            System.out.println("" + jz.getZombieInfo());
+            System.out.println("" + b.getBarrierInfo());
+            System.out.println("------------------------");
+            for (int i = 0; i < 4; i++) {
+                p.doDestroy(wz);
+                p.doDestroy(jz);
+                p.doDestroy(b);
+            }
+            System.out.println("" + wz.getZombieInfo());
+            System.out.println("" + jz.getZombieInfo());
+            System.out.println("" + b.getBarrierInfo());
+        }
+    }
+\end{minted}
+
+\texttt{Terminal}
+\begin{minted}[autogobble,breaklines,linenos]{text}
+    PS D:\Kuliah>  d:; cd 'd:\Kuliah'; & 'C:\Program Files\Java\jdk-18.0.2.1\bin\java.exe' '-XX:+ShowCodeDetailsInExceptionMessages' '-cp' 'C:\Users\G4CE-PC\AppData\Roaming\Code\User\workspaceStorage\ 80d97a47d24665dc0bce7ab1e048ecbd\redhat.java\jdt_ws\ Kuliah_28156aa7\bin' 'polymorphism.assignment.Tester' 
+    Walking Zombie Data = 
+    Health = 100
+    Level = 1
+    
+    Jumping Zombie Data = 
+    Health = 100
+    Level = 2
+    
+    Barrier Strength = 100
+    
+    ------------------------
+    Walking Zombie Data =
+    Health = 42
+    Level = 1
+    
+    Jumping Zombie Data =
+    Health = 66
+    Level = 2
+    
+    Barrier Strength = 64
+    
+\end{minted}
+
+\end{document}
