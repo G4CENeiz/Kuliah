@@ -1,0 +1,335 @@
+\documentclass[12pt,titlepage]{article}
+\usepackage[margin=1.25in]{geometry}
+\usepackage{graphicx,amsmath,blindtext,minted}
+
+%% Variables definition
+\newcommand{\vSubject}{Object Oriented Programming}
+\newcommand{\vSubtitle}{Quiz 2}
+\newcommand{\vName}{Muhammad Baihaqi Aulia Asy'ari}
+\newcommand{\vNIM}{2241720145}
+\newcommand{\vClass}{2I}
+\newcommand{\vDepartment}{Information Technology}
+\newcommand{\vStudyProgram}{D4 Informatics Engineering}
+
+%% [START] Tikz related stuff
+\usepackage{tikz}
+\usetikzlibrary{svg.path,calc,shapes.geometric,shapes.misc}
+\tikzstyle{terminator} = [rectangle, draw, text centered, rounded corners = 1em, minimum height=2em]
+\tikzstyle{preparation} = [chamfered rectangle, chamfered rectangle sep=0.75em, draw, text centered, minimum height = 2em]
+\tikzstyle{process} = [rectangle, draw, text centered, minimum height=2em]
+\tikzstyle{decision} = [diamond, aspect=2, draw, text centered, minimum height=2em]
+\tikzstyle{data}=[trapezium, draw, text centered, trapezium left angle=60, trapezium right angle=120, minimum height=2em]
+\tikzstyle{connector} = [line width=0.25mm,->]
+%% [END] Tikz related stuff
+
+%% [START] Fancy header related stuff
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setlength{\headheight}{15pt} % compensate fancyhdr style
+\fancyhead{}
+\fancyfoot{}
+\fancyfoot[L]{\thepage}
+\fancyfoot[R]{\textit{\vSubject - \vSubtitle}}
+\renewcommand{\footrulewidth}{0.4pt}% default is 0pt, overline for footer
+%% [END] Fancy header related stuff
+
+%% [START] Custom tabular command related stuff
+\usepackage{tabularx}
+\newcommand{\details}[2]{
+    #1 & #2  \\
+}
+%% [END] Custom tabular command related stuff
+
+%% [START] Figure related stuff
+\newcommand{\image}[3][1]{
+    \begin{figure}[h]
+        \centering
+        \includegraphics[#1]{#2}
+        \caption{#3}
+        \label{#3}
+    \end{figure}
+}
+%% [END] Figure related stuff
+
+%%
+\usepackage{pgf-umlcd}
+
+\renewcommand{\umldrawcolor}{black}
+\renewcommand{\umlfillcolor}{white}
+%%
+
+%% [BEGIN] Custom enumerator
+\usepackage{enumitem}
+%% [END] Custom enumerator
+
+%% [BEGIN] Paragraph indent
+\usepackage{indentfirst}
+%% [END] Paragraph indent
+
+\begin{document}
+\begin{titlepage}
+    \centering
+    \vfill
+    {\bfseries\LARGE
+        \vSubject\\
+        \vskip0.25cm
+        \vSubtitle
+    }
+    \vfill
+    \includegraphics[width=6cm]{images/polinema-logo.png}
+    \vfill
+    {
+        \textbf{Name}\\
+        \vName\\
+        \vskip0.5cm
+        \textbf{NIM}\\
+        \vNIM\\
+        \vskip0.5cm
+        \textbf{Class}\\
+        \vClass\\
+        \vskip0.5cm
+        \textbf{Department}\\
+        \vDepartment\\
+        \vskip0.5cm
+        \textbf{Study Program}\\
+        \vStudyProgram
+    }
+\end{titlepage}
+
+\newpage
+
+\section{Quiz 2 Object Oriented Programming}
+\begin{enumerate}
+    \item \texttt{Student.java}
+    \begin{minted}[autogobble,breaklines,linenos]{java}
+        import java.util.List;
+
+        public class Student {
+            // defining class fields
+            private String name;
+            private int nim;
+            private List<Double> grades;
+
+            // defining constructor
+            public Student(String name, int nim, List<Double> grades) {
+                this.name = name;
+                this.nim = nim;
+                this.grades = grades;
+            }
+
+            // field getter setter
+            public void setName(String name) {
+                this.name = name;
+            }
+
+            public String getName() {
+                return name;
+            }
+
+            public void setNim(int nim) {
+                this.nim = nim;
+            }
+
+            public int getNim() {
+                return nim;
+            }
+
+            public void setGrade(List<Double> grades) {
+                this.grades = grades;
+            }
+
+            public List<Double> getGrade() {
+                return grades;
+            }
+
+            // defining method to calculate GPA
+            public double calcualteGPA() {
+                double sum = 0;
+                for (double grade : getGrade()) {
+                    sum += grade;
+                }
+                return sum/getGrade().size();
+            }
+
+            // overload method with new param
+            public double calcualteGPA(List<Double> credits) {
+                double sum = 0;
+                for (int i = 0; i < getGrade().size(); i++) {
+                    sum += getGrade().get(i) * credits.get(i);
+                }
+                return sum/getGrade().size();
+            }
+        }
+    \end{minted}
+    \item \texttt{Subject.java}
+    \begin{minted}[autogobble,breaklines,linenos]{java}
+        import java.util.List;
+
+        public class Subject {
+            // defining class fields
+            private String subjectName;
+            private double credit;
+            private List<Double> studentsGrade;
+
+            // defining constructor
+            public Subject(String subjectName, double credit, List<Double> studentsGrade) {
+                this.subjectName = subjectName;
+                this.credit = credit;
+                this.studentsGrade = studentsGrade;
+            }
+
+            // field getter setter
+            public void setSubjectName(String subjectName) {
+                this.subjectName = subjectName;
+            }
+
+            public String getSubjectName() {
+                return subjectName;
+            }
+
+            public void setCredit(double credit) {
+                this.credit = credit;
+            }
+
+            public double getCredit() {
+                return credit;
+            }
+
+            public void setStudentsGrade(List<Double> studentsGrade) {
+                this.studentsGrade = studentsGrade;
+            }
+
+            public List<Double> getStudentsGrade() {
+                return studentsGrade;
+            }
+
+            // defining method to calculate weight
+            public double calculateWeight() {
+                double sum = 0;
+                for (int i = 0; i < studentsGrade.size(); i++) {
+                    sum += studentsGrade.get(i);
+                }
+                return sum/studentsGrade.size();
+            }
+            // overload method with new param
+            public double calculateWeight(List<Double> studentsWeight) {
+                double sum = 0;
+                for (int i = 0; i < studentsGrade.size(); i++) {
+                    sum += studentsGrade.get(i) * studentsWeight.get(i);
+                }
+                return sum/studentsGrade.size();
+            }
+        }
+    \end{minted}
+    \item \texttt{Representative.java}
+    \begin{minted}[autogobble,breaklines,linenos]{java}
+        import java.util.List;
+
+        public class Representative {
+            // defining class fields
+            private List<Student> students;
+            private List<Subject> subjects;
+
+            // field getter setter
+            public void setStudents(List<Student> students) {
+                this.students = students;
+            }
+
+            public List<Student> getStudents() {
+                return students;
+            }
+
+            public void setSubjects(List<Subject> subjects) {
+                this.subjects = subjects;
+            }
+
+            public List<Subject> getSubjects() {
+                return subjects;
+            }
+
+            // define method to list student and subject
+            public void displayStudentList() {
+                System.out.println("Student and Subject List");
+                for (int i = 0; i < getStudents().size(); i++) {
+                    String name = getStudents().get(i).getName();
+                    double nim = getStudents().get(i).getNim();
+                    double grade = getStudents().get(i).calcualteGPA();
+                    String subjectName = getSubjects().get(i).getSubjectName();
+                    double credit = getSubjects().get(i).getCredit();
+                    double weight = getSubjects().get(i).calculateWeight();
+
+                    System.out.printf("Student  : %s %n", name);
+                    System.out.printf("  NIM    : %.2f %n", nim);
+                    System.out.printf("  GPA    : %.2f %n", grade);
+                    System.out.printf("Subject  : %s %n", subjectName);
+                    System.out.printf("  Credit : %.2f %n", credit);
+                    System.out.printf("  Weight : %.2f %n", weight);
+                }
+            }
+        }
+    \end{minted}
+    \item \texttt{Main.java}
+    \begin{minted}[autogobble,breaklines,linenos]{java}
+        import java.util.ArrayList;
+        import java.util.List;
+
+        public class Main {
+            public static void main(String[] args) {
+                // define grades
+                List<Double> grades1 = new ArrayList<Double>();
+                grades1.add(90.0);
+                grades1.add(87.0);
+                grades1.add(80.0);
+                List<Double> grades2 = new ArrayList<Double>();
+                grades2.add(80.0);
+                grades2.add(90.0);
+                grades2.add(87.0);
+
+                // define students
+                Student student1 = new Student("student 1", 0001, grades1);
+                Student student2 = new Student("student 2", 0002, grades2);
+
+                // add students to list
+                List<Student> students = new ArrayList<Student>();
+                students.add(student1);
+                students.add(student2);
+
+                // define subjects
+                Subject subject1 = new Subject("subject 1", 0.5, grades1);
+                Subject subject2 = new Subject("subject 2", 0.6, grades2);
+
+                // add subjects to list
+                List<Subject> subjects = new ArrayList<Subject>();
+                subjects.add(subject1);
+                subjects.add(subject2);
+
+                // add students and subjects list to representative
+                Representative representative = new Representative();
+                representative.setStudents(students);
+                representative.setSubjects(subjects);
+
+                // display student list
+                representative.displayStudentList();
+            }
+        }
+    \end{minted}
+    \texttt{Terminal}
+    \begin{minted}[autogobble,breaklines,linenos]{text}
+        PS D:\Kuliah>  d:; cd 'd:\Kuliah'; & 'C:\Program Files\Java\jdk-18.0.2.1\bin\java.exe' '-XX:+ShowCodeDetailsInExceptionMessages' '-cp' 'C:\Users\G4CE-PC\AppData\Roaming\Code\User\workspaceStorage\ 80d97a47d24665dc0bce7ab1e048ecbd\redhat.java\jdt_ws\ Kuliah_28156aa7\bin' 'Main' 
+        Student and Subject List
+        Student  : student 1 
+        NIM    : 1.00 
+        GPA    : 85.67
+        Subject  : subject 1
+        Credit : 0.50
+        Weight : 85.67
+        Student  : student 2
+        NIM    : 2.00
+        GPA    : 85.67
+        Subject  : subject 2
+        Credit : 0.60
+        Weight : 85.67
+    \end{minted}
+\end{enumerate}
+
+\end{document}
