@@ -11,5 +11,8 @@ public class Tester1 {
         e = iEmp;
         p = pEmp;
         p = eBill;
+
+        System.out.println(e);
+        System.out.println(p);
     }
 }

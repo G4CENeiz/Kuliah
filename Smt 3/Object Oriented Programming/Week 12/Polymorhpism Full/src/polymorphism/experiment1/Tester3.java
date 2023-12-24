@@ -8,5 +8,8 @@ public class Tester3 {
         Employee[] e = {pEmp, iEmp};
         Payable[] p = {pEmp, eBill};
         // Employee[] e2 = {pEmp, iEmp, eBill};
+
+        System.out.println(e);
+        System.out.println(p);
     }
 }
