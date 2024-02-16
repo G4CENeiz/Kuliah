@@ -1,0 +1,225 @@
+\documentclass[12pt,titlepage]{article}
+\usepackage[margin=1.25in]{geometry}
+\usepackage{graphicx,amsmath,blindtext,minted}
+
+%% Variables definition
+\newcommand{\vSubject}{Advanced Web Programming}
+\newcommand{\vSubtitle}{Introduction Web Framework Laravel}
+\newcommand{\vName}{Muhammad Baihaqi Aulia Asy'ari}
+\newcommand{\vNIM}{2241720145}
+\newcommand{\vClass}{2I}
+\newcommand{\vDepartment}{Information Technology}
+\newcommand{\vStudyProgram}{D4 Informatics Engineering}
+
+%% [START] Tikz related stuff
+\usepackage{tikz}
+\usetikzlibrary{svg.path,calc,shapes.geometric,shapes.misc}
+\tikzstyle{terminator} = [rectangle, draw, text centered, rounded corners = 1em, minimum height=2em]
+\tikzstyle{preparation} = [chamfered rectangle, chamfered rectangle sep=0.75em, draw, text centered, minimum height = 2em]
+\tikzstyle{process} = [rectangle, draw, text centered, minimum height=2em]
+\tikzstyle{decision} = [diamond, aspect=2, draw, text centered, minimum height=2em]
+\tikzstyle{data}=[trapezium, draw, text centered, trapezium left angle=60, trapezium right angle=120, minimum height=2em]
+\tikzstyle{connector} = [line width=0.25mm,->]
+%% [END] Tikz related stuff
+
+%% [START] Fancy header related stuff
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setlength{\headheight}{15pt} % compensate fancyhdr style
+\fancyhead{}
+\fancyfoot{}
+\fancyfoot[L]{\thepage}
+\fancyfoot[R]{\textit{\vSubject - \vSubtitle}}
+\renewcommand{\footrulewidth}{0.4pt}% default is 0pt, overline for footer
+%% [END] Fancy header related stuff
+
+%% [START] Custom tabular command related stuff
+\usepackage{tabularx}
+\newcommand{\details}[2]{
+    #1 & #2  \\
+}
+%% [END] Custom tabular command related stuff
+
+%% [START] Figure related stuff
+\newcommand{\image}[3][1]{
+    \begin{figure}[h]
+        \centering
+        \includegraphics[#1]{#2}
+        \caption{#3}
+        \label{#3}
+    \end{figure}
+}
+%% [END] Figure related stuff
+
+%%
+\usepackage{pgf-umlcd}
+
+\renewcommand{\umldrawcolor}{black}
+\renewcommand{\umlfillcolor}{white}
+%%
+
+%% [BEGIN] Custom enumerator
+\usepackage{enumitem}
+%% [END] Custom enumerator
+
+%% [BEGIN] Paragraph indent
+\usepackage{indentfirst}
+%% [END] Paragraph indent
+
+%% [BEGIN] URL
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
+
+\urlstyle{same}
+%% [END] URL
+
+\begin{document}
+\begin{titlepage}
+    \centering
+    \vfill
+    {\bfseries\LARGE
+        \vSubject\\
+        \vskip0.25cm
+        \vSubtitle
+    }
+    \vfill
+    \includegraphics[width=6cm]{images/polinema-logo.png}
+    \vfill
+    {
+        \textbf{Name}\\
+        \vName\\
+        \vskip0.5cm
+        \textbf{NIM}\\
+        \vNIM\\
+        \vskip0.5cm
+        \textbf{Class}\\
+        \vClass\\
+        \vskip0.5cm
+        \textbf{Department}\\
+        \vDepartment\\
+        \vskip0.5cm
+        \textbf{Study Program}\\
+        \vStudyProgram
+    }
+\end{titlepage}
+
+\newpage
+
+\section{Laragon Installation}
+
+\begin{enumerate}[label= \alph*.]
+    \item - \\ \includegraphics[width=.9\textwidth]{images/figures/Laragon 1.png}
+    \item - \\ \includegraphics[width=.9\textwidth]{images/figures/Laragon 2.png}
+    \newpage
+    \item - \\ \includegraphics[width=.9\textwidth]{images/figures/Laragon 3.png}
+    \item - \\ \includegraphics[width=.9\textwidth]{images/figures/Laragon 4.png}
+    \newpage
+    \item - \\ \includegraphics[width=.9\textwidth]{images/figures/Laragon 5.png}
+    \item - \\ \includegraphics[width=.9\textwidth]{images/figures/Laragon 6.png}
+    \newpage
+    \item - \\ \includegraphics[width=.9\textwidth]{images/figures/Laragon 7.png}
+    \item - \\ \includegraphics[width=.9\textwidth]{images/figures/Laragon 8.png}
+    \newpage
+    \item - \\ \includegraphics[width=.9\textwidth]{images/figures/Laragon 9.png}
+    \item - \\ \includegraphics[width=.9\textwidth]{images/figures/Laragon 10.png}
+    \newpage
+    \item - \\ \includegraphics[width=.9\textwidth]{images/figures/Laragon 11.png}
+    \item - \\ \includegraphics[width=.9\textwidth]{images/figures/Laragon 12.png}
+\end{enumerate}
+
+\newpage
+
+\section{PhpMyAdmin Installation}
+
+\begin{enumerate}[label= \alph*.]
+    \item - \\ \includegraphics[width=.9\textwidth]{images/figures/PHPMyAdmin 1.png}
+    \item - \\ \includegraphics[width=.9\textwidth]{images/figures/PHPMyAdmin 2.png}
+    \newpage
+    \item - \\ \includegraphics[width=.9\textwidth]{images/figures/PHPMyAdmin 3.png}
+    \item - \\ \includegraphics[width=.9\textwidth]{images/figures/PHPMyAdmin 4.png}
+    \newpage
+    \item - \\ \includegraphics[width=.9\textwidth]{images/figures/PHPMyAdmin 5.png}
+    \item - \\ \includegraphics[width=.9\textwidth]{images/figures/PHPMyAdmin 6.png}
+\end{enumerate}
+
+\newpage
+
+\section{VSCode Extensions Installation}
+
+\begin{enumerate}[label= \alph*.]
+    \item - \\ \includegraphics[width=.9\textwidth]{images/figures/VSCode 1.png}
+    \item - \\ \includegraphics[width=.9\textwidth]{images/figures/VSCode 2.png}
+    \newpage
+    \item - \\ \includegraphics[width=.9\textwidth]{images/figures/VSCode 3.png}
+    \item - \\ \includegraphics[width=.9\textwidth]{images/figures/VSCode 4.png}
+\end{enumerate}
+
+\newpage
+
+\section{Composer Installation}
+
+\begin{enumerate}[label= \alph*.]
+    \item - \\ \includegraphics[width=.9\textwidth]{images/figures/Composer 1.png}
+    \item - \\ \includegraphics[width=.9\textwidth]{images/figures/Composer 2.png}
+    \newpage
+    \item - \\ \includegraphics[width=.9\textwidth]{images/figures/Composer 3.png}
+    \item - \\ \includegraphics[width=.9\textwidth]{images/figures/Composer 4.png}
+    \newpage
+    \item - \\ \includegraphics[width=.9\textwidth]{images/figures/Composer 5.png}
+    \item - \\ \includegraphics[width=.9\textwidth]{images/figures/Composer 6.png}
+    \newpage
+    \item - \\ \includegraphics[width=.9\textwidth]{images/figures/Composer 7.png}
+\end{enumerate}
+
+\newpage
+
+\section{Laravel Installation}
+
+\begin{enumerate}[label= \alph*.]
+    \item - \\ \includegraphics[width=.9\textwidth]{images/figures/Laraval Init 1.png}
+    \item - \\ \includegraphics[width=.9\textwidth]{images/figures/Laraval Init 2.png}
+    \newpage
+    \item - \\ \includegraphics[width=.9\textwidth]{images/figures/Laraval Init 3.png}
+    \item - \\ \includegraphics[width=.9\textwidth]{images/figures/Laraval Init 4.png}
+\end{enumerate}
+
+\newpage
+
+\section{Publish Project to Github}
+
+\begin{enumerate}[label= \alph*.]
+    \item - \\ \includegraphics[width=.9\textwidth]{images/figures/Github Publish 1.png}
+    \item - \\ \includegraphics[width=.9\textwidth]{images/figures/Github Publish 2.png}
+    \newpage
+    \item - \\ \includegraphics[width=.9\textwidth]{images/figures/Github Publish 3.png}
+    \item - \\ \includegraphics[width=.9\textwidth]{images/figures/Github Publish 4.png}
+    \newpage
+    \item - \\ \includegraphics[width=.9\textwidth]{images/figures/Github Publish 5.png}
+    \item - \\ \includegraphics[width=.9\textwidth]{images/figures/Github Publish 6.png}
+\end{enumerate}
+
+\newpage
+
+\section{Using Git Source Control for The Project}
+
+\begin{enumerate}[label= \alph*.]
+    \item - \\ \includegraphics[width=.9\textwidth]{images/figures/Source Control 1.png}
+    \item - \\ \includegraphics[width=.9\textwidth]{images/figures/Source Control 2.png}
+    \newpage
+    \item - \\ \includegraphics[width=.9\textwidth]{images/figures/Source Control 3.png}
+    \item - \\ \includegraphics[width=.9\textwidth]{images/figures/Source Control 4.png}
+    \newpage
+    \item - \\ \includegraphics[width=.9\textwidth]{images/figures/Source Control 5.png}
+    \item - \\ \includegraphics[width=.9\textwidth]{images/figures/Source Control 6.png}
+\end{enumerate}
+
+\texttt{GitHub}: \url{https://github.com/G4CENeiz/PWL_2024}
+
+\end{document}
