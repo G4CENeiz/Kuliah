@@ -1,0 +1,7 @@
+Use Server IP : 192.168.60.43 
+
+Port : 3080 
+
+Username : gns3 
+
+Password : gns3
