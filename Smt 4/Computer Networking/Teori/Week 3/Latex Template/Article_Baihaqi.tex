@@ -1,0 +1,145 @@
+\documentclass[12pt,titlepage]{article}
+\usepackage[margin=1.25in]{geometry}
+\usepackage{graphicx,amsmath,blindtext,minted}
+
+%% Variables definition
+\newcommand{\vSubject}{Computer Networking}
+\newcommand{\vSubtitle}{Application Layer Protocol}
+\newcommand{\vName}{Muhammad Baihaqi Aulia Asy'ari}
+\newcommand{\vNIM}{2241720145}
+\newcommand{\vClass}{2I}
+\newcommand{\vDepartment}{Information Technology}
+\newcommand{\vStudyProgram}{D4 Informatics Engineering}
+
+%% [START] Tikz related stuff
+\usepackage{tikz}
+\usetikzlibrary{svg.path,calc,shapes.geometric,shapes.misc}
+\tikzstyle{terminator} = [rectangle, draw, text centered, rounded corners = 1em, minimum height=2em]
+\tikzstyle{preparation} = [chamfered rectangle, chamfered rectangle sep=0.75em, draw, text centered, minimum height = 2em]
+\tikzstyle{process} = [rectangle, draw, text centered, minimum height=2em]
+\tikzstyle{decision} = [diamond, aspect=2, draw, text centered, minimum height=2em]
+\tikzstyle{data}=[trapezium, draw, text centered, trapezium left angle=60, trapezium right angle=120, minimum height=2em]
+\tikzstyle{connector} = [line width=0.25mm,->]
+%% [END] Tikz related stuff
+
+%% [START] Fancy header related stuff
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setlength{\headheight}{15pt} % compensate fancyhdr style
+\fancyhead{}
+\fancyfoot{}
+\fancyfoot[L]{\thepage}
+\fancyfoot[R]{\textit{\vSubject - \vSubtitle}}
+\renewcommand{\footrulewidth}{0.4pt}% default is 0pt, overline for footer
+%% [END] Fancy header related stuff
+
+%% [START] Custom tabular command related stuff
+\usepackage{tabularx}
+\newcommand{\details}[2]{
+    #1 & #2  \\
+}
+%% [END] Custom tabular command related stuff
+
+%% [START] Figure related stuff
+\newcommand{\image}[3][1]{
+    \begin{figure}[h]
+        \centering
+        \includegraphics[#1]{#2}
+        \caption{#3}
+        \label{#3}
+    \end{figure}
+}
+%% [END] Figure related stuff
+
+%%
+\usepackage{pgf-umlcd}
+
+\renewcommand{\umldrawcolor}{black}
+\renewcommand{\umlfillcolor}{white}
+%%
+
+%% [BEGIN] Custom enumerator
+\usepackage{enumitem}
+%% [END] Custom enumerator
+
+%% [BEGIN] Paragraph indent
+\usepackage{indentfirst}
+%% [END] Paragraph indent
+
+%% [BEGIN] URL
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
+
+\urlstyle{same}
+%% [END] URL
+
+
+\begin{document}
+\begin{titlepage}
+    \centering
+    \vfill
+    {\bfseries\LARGE
+        \vSubject\\
+        \vskip0.25cm
+        \vSubtitle
+    }
+    \vfill
+    \includegraphics[width=6cm]{images/polinema-logo.png}
+    \vfill
+    {
+        \textbf{Name}\\
+        \vName\\
+        \vskip0.5cm
+        \textbf{NIM}\\
+        \vNIM\\
+        \vskip0.5cm
+        \textbf{Class}\\
+        \vClass\\
+        \vskip0.5cm
+        \textbf{Department}\\
+        \vDepartment\\
+        \vskip0.5cm
+        \textbf{Study Program}\\
+        \vStudyProgram
+    }
+\end{titlepage}
+
+\newpage
+
+\section{Introduction}
+The Application Layer is topmost layer in the Open System Interconnection (OSI) model. This layer provides several ways for manipulating the data (information) which actually enables any type of user to access network with ease. 
+
+The Application Layer has several protocol to access data for various services. These protocol provide a standardized way of communication for the application. In our daily life, there are several Application Layer Protocol we usually use, these protocol are DNS, HTTP, SMTP/POP3/IMAP, FTP, DHCP, Telnet/SSH services.
+
+\section{DNS}
+Domain Name System or more commonly known as DNS works by turning domain names into an IP address which then can be processed by browser to display the content of the website. A good analogy for DNS is that DNS is a phonebook for website. It works in the same way as phonebook except that DNS has 4 server to contact to lookup the website you were looking for.
+
+The first server the browser contact is a DNS Recursor. A DNS Recursor is responsible for making additional requests in order to satisfy the client's DNS query. It is designed to receive queries from client machines through applications such as web browsers.
+
+The second server is the Root nameserver is the first step in resolving human readable host names into IP addresses. It is responsible to point the browser to a more specific address to continue resolving the nameserver.
+
+The third server is The top level domain server (TLD). This nameserver is the next step in the search for a specific IP address, and it hosts the last portion of a hostname. The TLD refer to the last part of an address (in detik.com, the TLD is 'com') where then they will lookup the address of the hostname
+
+Lastly, The authoritative nameserver is the last stop in the nameserver query. The IP address for the requested hostname will be returned to DNS Recursor if the authoritative name server has access to the requested record.
+
+\section{HTTP}
+The Hypertext Transfer Protocol (HTTP) is the foundation of the World Wide Web, and is used to load webpages using hypertext links. HTTP is an application layer protocol designed to transfer information between networked devices and runs on top of other layers of the network protocol stack.
+
+When a user requests a resource, such as a webpage, the client sends an HTTP request to the server. Upon receiving the request, the server processes it and sends back an HTTP response, containing a status code, headers, and the requested resource if available. It relies on TCP/IP for reliable data transmission and utilizes methods like GET, POST, PUT, and DELETE to perform actions on resources.
+
+\section{SMTP/POP3/IMAP}
+
+\section{FTP}
+
+\section{DHCP}
+
+\section{Telnet/SSH}
+
+\end{document}
