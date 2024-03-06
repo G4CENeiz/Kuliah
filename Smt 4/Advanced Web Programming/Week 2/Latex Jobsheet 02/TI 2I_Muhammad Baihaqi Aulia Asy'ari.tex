@@ -1,0 +1,491 @@
+\documentclass[12pt,titlepage]{article}
+\usepackage[margin=1.25in]{geometry}
+\usepackage{graphicx,amsmath,blindtext,minted}
+
+%% Variables definition
+\newcommand{\vSubject}{Advanced Web Programming}
+\newcommand{\vSubtitle}{Routing, Controller, Dan View}
+\newcommand{\vName}{Muhammad Baihaqi Aulia Asy'ari}
+\newcommand{\vNIM}{2241720145}
+\newcommand{\vClass}{2I}
+\newcommand{\vDepartment}{Information Technology}
+\newcommand{\vStudyProgram}{D4 Informatics Engineering}
+
+%% [START] Tikz related stuff
+\usepackage{tikz}
+\usetikzlibrary{svg.path,calc,shapes.geometric,shapes.misc}
+\tikzstyle{terminator} = [rectangle, draw, text centered, rounded corners = 1em, minimum height=2em]
+\tikzstyle{preparation} = [chamfered rectangle, chamfered rectangle sep=0.75em, draw, text centered, minimum height = 2em]
+\tikzstyle{process} = [rectangle, draw, text centered, minimum height=2em]
+\tikzstyle{decision} = [diamond, aspect=2, draw, text centered, minimum height=2em]
+\tikzstyle{data}=[trapezium, draw, text centered, trapezium left angle=60, trapezium right angle=120, minimum height=2em]
+\tikzstyle{connector} = [line width=0.25mm,->]
+%% [END] Tikz related stuff
+
+%% [START] Fancy header related stuff
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setlength{\headheight}{15pt} % compensate fancyhdr style
+\fancyhead{}
+\fancyfoot{}
+\fancyfoot[L]{\thepage}
+\fancyfoot[R]{\textit{\vSubject - \vSubtitle}}
+\renewcommand{\footrulewidth}{0.4pt}% default is 0pt, overline for footer
+%% [END] Fancy header related stuff
+
+%% [START] Custom tabular command related stuff
+\usepackage{tabularx}
+\newcommand{\details}[2]{
+    #1 & #2  \\
+}
+%% [END] Custom tabular command related stuff
+
+%% [START] Figure related stuff
+\newcommand{\image}[3][1]{
+    \begin{figure}[h]
+        \centering
+        \includegraphics[#1]{#2}
+        \caption{#3}
+        \label{#3}
+    \end{figure}
+}
+%% [END] Figure related stuff
+
+%%
+\usepackage{pgf-umlcd}
+
+\renewcommand{\umldrawcolor}{black}
+\renewcommand{\umlfillcolor}{white}
+%%
+
+%% [BEGIN] Custom enumerator
+\usepackage{enumitem}
+%% [END] Custom enumerator
+
+%% [BEGIN] Paragraph indent
+\usepackage{indentfirst}
+%% [END] Paragraph indent
+
+%% [BEGIN] URL
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
+
+\urlstyle{same}
+%% [END] URL
+
+\begin{document}
+\begin{titlepage}
+    \centering
+    \vfill
+    {\bfseries\LARGE
+        \vSubject\\
+        \vskip0.25cm
+        \vSubtitle
+    }
+    \vfill
+    \includegraphics[width=6cm]{images/polinema-logo.png}
+    \vfill
+    {
+        \textbf{Name}\\
+        \vName\\
+        \vskip0.5cm
+        \textbf{NIM}\\
+        \vNIM\\
+        \vskip0.5cm
+        \textbf{Class}\\
+        \vClass\\
+        \vskip0.5cm
+        \textbf{Department}\\
+        \vDepartment\\
+        \vskip0.5cm
+        \textbf{Study Program}\\
+        \vStudyProgram
+    }
+\end{titlepage}
+
+\newpage
+
+\section{Routing}
+\subsection{Basic Routing}
+
+\begin{enumerate}[label=\alph*.]
+    \item -
+    \item -
+    \begin{minted}[autogobble,breaklines,linenos]{php}
+        <?php
+
+        use Illuminate\Support\Facades\Route;
+        
+        /*
+        |--------------------------------------------------------------------------
+        | Web Routes
+        |--------------------------------------------------------------------------
+        |
+        | Here is where you can register web routes for your application. These
+        | routes are loaded by the RouteServiceProvider and all of them will
+        | be assigned to the "web" middleware group. Make something great!
+        |
+        */
+        
+        Route::get('/', function () {
+            return view('welcome');
+        });
+        
+        Route::get('/hello', function () {
+            return 'Hello World';
+        });
+    \end{minted}
+    \item a 'Hello World' text appear on the page
+    \newpage
+    \item -
+    \begin{minted}[autogobble,breaklines,linenos]{php}
+        <?php
+
+        use Illuminate\Support\Facades\Route;
+        
+        /*
+        |--------------------------------------------------------------------------
+        | Web Routes
+        |--------------------------------------------------------------------------
+        |
+        | Here is where you can register web routes for your application. These
+        | routes are loaded by the RouteServiceProvider and all of them will
+        | be assigned to the "web" middleware group. Make something great!
+        |
+        */
+        
+        Route::get('/', function () {
+            return view('welcome');
+        });
+        
+        Route::get('/hello', function () {
+            return 'Hello World';
+        });
+        
+        Route::get('/world', function () {
+            return 'World';
+        }); 
+    \end{minted}
+    \item only the word 'World' appear on the page
+    \newpage
+    \item -
+    \begin{minted}[autogobble,breaklines,linenos]{php}
+        <?php
+
+        use Illuminate\Support\Facades\Route;
+        
+        /*
+        |--------------------------------------------------------------------------
+        | Web Routes
+        |--------------------------------------------------------------------------
+        |
+        | Here is where you can register web routes for your application. These
+        | routes are loaded by the RouteServiceProvider and all of them will
+        | be assigned to the "web" middleware group. Make something great!
+        |
+        */
+        
+        Route::get('/', function () {
+            // return view('welcome');
+            return 'Welcome';
+        });
+        
+        Route::get('/hello', function () {
+            return 'Hello World';
+        });
+        
+        Route::get('/world', function () {
+            return 'World';
+        });
+    \end{minted}
+    \newpage
+    \item -
+    \begin{minted}[autogobble,breaklines,linenos]{php}
+        <?php
+
+        use Illuminate\Support\Facades\Route;
+        
+        /*
+        |--------------------------------------------------------------------------
+        | Web Routes
+        |--------------------------------------------------------------------------
+        |
+        | Here is where you can register web routes for your application. These
+        | routes are loaded by the RouteServiceProvider and all of them will
+        | be assigned to the "web" middleware group. Make something great!
+        |
+        */
+        
+        Route::get('/', function () {
+            // return view('welcome');
+            return 'Welcome';
+        });
+        
+        Route::get('/hello', function () {
+            return 'Hello World';
+        });
+        
+        Route::get('/world', function () {
+            return 'World';
+        }); 
+        
+        Route::get('/about', function () {
+            return '2241720145 - Muhammad Baihaqi Aulia Asyari';
+        });
+    \end{minted}
+\end{enumerate}
+
+\newpage
+
+\subsection{Route Parameters}
+\begin{enumerate}[label=\alph*.]
+    \item -
+    \begin{minted}[autogobble,breaklines,linenos]{php}
+        <?php
+
+        use Illuminate\Support\Facades\Route;
+        
+        /*
+        |--------------------------------------------------------------------------
+        | Web Routes
+        |--------------------------------------------------------------------------
+        |
+        | Here is where you can register web routes for your application. These
+        | routes are loaded by the RouteServiceProvider and all of them will
+        | be assigned to the "web" middleware group. Make something great!
+        |
+        */
+        
+        Route::get('/', function () {
+            // return view('welcome');
+            return 'Welcome';
+        });
+        
+        Route::get('/hello', function () {
+            return 'Hello World';
+        });
+        
+        Route::get('/world', function () {
+            return 'World';
+        }); 
+        
+        Route::get('/about', function () {
+            return '2241720145 - Muhammad Baihaqi Aulia Asyari';
+        }); 
+        
+        Route::get('/user/{name}', function ($name) {
+            return 'My name is ' . $name;
+        }); 
+    \end{minted}
+    \item The text has become 'My name is yourname'
+    \item a 404 | Not Found error occur
+    \item -
+    \begin{minted}[autogobble,breaklines,linenos]{php}
+        <?php
+
+        use Illuminate\Support\Facades\Route;
+        
+        /*
+        |--------------------------------------------------------------------------
+        | Web Routes
+        |--------------------------------------------------------------------------
+        |
+        | Here is where you can register web routes for your application. These
+        | routes are loaded by the RouteServiceProvider and all of them will
+        | be assigned to the "web" middleware group. Make something great!
+        |
+        */
+        
+        Route::get('/', function () {
+            // return view('welcome');
+            return 'Welcome';
+        });
+        
+        Route::get('/hello', function () {
+            return 'Hello World';
+        });
+        
+        Route::get('/world', function () {
+            return 'World';
+        }); 
+        
+        Route::get('/about', function () {
+            return '2241720145 - Muhammad Baihaqi Aulia Asyari';
+        }); 
+        
+        Route::get('/user/{name}', function ($name) {
+            return 'My name is ' . $name;
+        }); 
+        
+        Route::get('/posts/{post}/comments/{comment}', function ($postId, $commentId) {
+            return 'Pos ke-' . $postId . ' komentar ke-:' . $commentId;
+        });        
+    \end{minted}
+    \item The text becomes 'Pos ke-1 komentar ke-: 5'
+    \item -
+    \begin{minted}[autogobble,breaklines,linenos]{php}
+        <?php
+
+        use Illuminate\Support\Facades\Route;
+        
+        /*
+        |--------------------------------------------------------------------------
+        | Web Routes
+        |--------------------------------------------------------------------------
+        |
+        | Here is where you can register web routes for your application. These
+        | routes are loaded by the RouteServiceProvider and all of them will
+        | be assigned to the "web" middleware group. Make something great!
+        |
+        */
+        
+        Route::get('/', function () {
+            // return view('welcome');
+            return 'Welcome';
+        });
+        
+        Route::get('/hello', function () {
+            return 'Hello World';
+        });
+        
+        Route::get('/world', function () {
+            return 'World';
+        }); 
+        
+        Route::get('/about', function () {
+            return '2241720145 - Muhammad Baihaqi Aulia Asyari';
+        }); 
+        
+        Route::get('/user/{name}', function ($name) {
+            return 'My name is ' . $name;
+        }); 
+        
+        Route::get('/posts/{post}/comments/{comment}', function ($postId, $commentId) {
+            return 'Pos ke-' . $postId . ' komentar ke-: ' . $commentId;
+        });
+        
+        Route::get('/articles/{id}', function ($id) {
+            return 'Article Page with ID ' . $id;
+        });        
+    \end{minted}
+\end{enumerate}
+
+\subsection{Optional Parameters}
+\begin{enumerate}[label=\alph*.]
+    \item -
+    \begin{minted}[autogobble,breaklines,linenos]{php}
+        <?php
+
+        use Illuminate\Support\Facades\Route;
+        
+        /*
+        |--------------------------------------------------------------------------
+        | Web Routes
+        |--------------------------------------------------------------------------
+        |
+        | Here is where you can register web routes for your application. These
+        | routes are loaded by the RouteServiceProvider and all of them will
+        | be assigned to the "web" middleware group. Make something great!
+        |
+        */
+        
+        Route::get('/', function () {
+            // return view('welcome');
+            return 'Welcome';
+        });
+        
+        Route::get('/hello', function () {
+            return 'Hello World';
+        });
+        
+        Route::get('/world', function () {
+            return 'World';
+        }); 
+        
+        Route::get('/about', function () {
+            return '2241720145 - Muhammad Baihaqi Aulia Asyari';
+        }); 
+        
+        Route::get('/user/{name?}', function ($name=null) {
+            return 'My name is ' . $name;
+        }); 
+        
+        Route::get('/posts/{post}/comments/{comment}', function ($postId, $commentId) {
+            return 'Pos ke-' . $postId . ' komentar ke-: ' . $commentId;
+        });
+        
+        Route::get('/articles/{id}', function ($id) {
+            return 'Article Page with ID ' . $id;
+        });      
+    \end{minted}
+    \item now the 404 doesn't appear anymore and the text has becomes 'My name is'
+    \item the text can still display the parameter which makes the text 'My name is yourname'
+    \item -
+    \begin{minted}[autogobble,breaklines,linenos]{php}
+        <?php
+
+        use Illuminate\Support\Facades\Route;
+        
+        /*
+        |--------------------------------------------------------------------------
+        | Web Routes
+        |--------------------------------------------------------------------------
+        |
+        | Here is where you can register web routes for your application. These
+        | routes are loaded by the RouteServiceProvider and all of them will
+        | be assigned to the "web" middleware group. Make something great!
+        |
+        */
+        
+        Route::get('/', function () {
+            // return view('welcome');
+            return 'Welcome';
+        });
+        
+        Route::get('/hello', function () {
+            return 'Hello World';
+        });
+        
+        Route::get('/world', function () {
+            return 'World';
+        }); 
+        
+        Route::get('/about', function () {
+            return '2241720145 - Muhammad Baihaqi Aulia Asyari';
+        }); 
+        
+        Route::get('/user/{name?}', function ($name='John') {
+            return 'Nama saya ' . $name;
+        }); 
+        
+        Route::get('/posts/{post}/comments/{comment}', function ($postId, $commentId) {
+            return 'Pos ke-' . $postId . ' komentar ke-: ' . $commentId;
+        });
+        
+        Route::get('/articles/{id}', function ($id) {
+            return 'Article Page with ID ' . $id;
+        });        
+    \end{minted}
+    \item now the default name is John and somehow the language change from english to indonesian
+\end{enumerate}
+
+\section{Controller}
+\subsection{Creating Controller}
+
+\begin{enumerate}[label=\alph*.]
+    \item -
+    \begin{minted}[autogobble,breaklines,linenos]{text}
+        PS C:\laragon\www\PWL_2024> php artisan make:controller WelcomeController
+
+        INFO  Controller [C:\laragon\www\PWL_2024\app\Http\Controllers\WelcomeController.php] created successfully.
+    \end{minted}
+\end{enumerate}
+
+\end{document}
