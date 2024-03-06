@@ -1,0 +1,20 @@
+Customer,Product,Region,Date, Item unit price , No.Items , Total Sale 
+Customer 1,Yaris AT,MLG,3/13/2019,340.95,6,2045.7
+Customer 1,Etios AT,SBY,4/16/2019,799.95,1,799.95
+Customer 3,Avanza AT,MLG,6/18/2019,168.95,7,1182.65
+Customer 3,,MLG,7/24/2019,168.95,2,337.9
+Customer 1,Avanza AT,SBY,8/21/2019,168.95,9,1520.55
+Customer 2,Etios AT,KDR,9/7/2019,799.95,7,5599.65
+Customer 3,Etios AT,MLG,9/7/2019,799.95,8,6399.6
+Customer 2,Avanza AT,,,168.95,15,2534.25
+Customer 1,Avanza AT,SBY,9/14/2019,168.95,15,2534.25
+Customer 1,Etios AT,SBY,9/25/2019,799.95,2,1599.9
+Customer 1,Avanza AT,SBY,1/21/2020,168.95,14,2365.3
+Customer 1,Yaris AT,MLG,2/1/2020,340.95,2,681.9
+Customer 1,,,,340.95,7,2386.65
+Customer 1,Etios AT,SBY,5/30/2020,799.95,9,7199.55
+Customer 3,Avanza AT,MLG,6/7/2020,168.95,10,1689.5
+Customer 3,Yaris AT,MLG,6/9/2020,340.95,4,1363.8
+Customer 2,,KDR,8/7/2020,799.95,14,11199.3
+Customer 2,Avanza AT,KDR,8/8/2020,168.95,12,2027.4
+Customer 1,Avanza AT,,8/12/2020,168.95,4,675.8
