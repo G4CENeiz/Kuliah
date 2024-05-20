@@ -486,6 +486,332 @@
 
         INFO  Controller [C:\laragon\www\PWL_2024\app\Http\Controllers\WelcomeController.php] created successfully.
     \end{minted}
+    \item -
+    \begin{minted}[autogobble,breaklines,linenos]{php}
+        <?php
+
+        namespace App\Http\Controllers;
+        
+        use Illuminate\Http\Request;
+        
+        class WelcomeController extends Controller
+        {
+            //
+        }
+        
+    \end{minted}
+
+    \newpage
+    
+    \item -
+    \begin{minted}[autogobble,breaklines,linenos]{php}
+        <?php
+
+        namespace App\Http\Controllers;
+        
+        use Illuminate\Http\Request;
+        
+        class WelcomeController extends Controller
+        {
+            public function hello() {
+                return 'Hello World';
+            }
+        }
+
+    \end{minted}
+    \item -
+    \begin{minted}[autogobble,breaklines,linenos]{php}
+        Route::get('/hello', [WelcomeController::class, 'hello']);
+    \end{minted}
+    \item - \\ \includegraphics[width=.9\textwidth]{images/figures/creating a controller e.png} \\ it display 'Hello World' text from the controller function
+
+    \newpage
+
+    \item -
+    \begin{minted}[autogobble,breaklines,linenos]{php}
+        Route::get('/', [PageController::class, 'index']);
+
+        Route::get('/about', [PageController::class, 'about']);
+
+        Route::get('/articles/{id}', [PageController::class, 'articles']);
+
+    \end{minted}
+
+    \begin{minted}[autogobble,breaklines,linenos]{php}
+        <?php
+
+        namespace App\Http\Controllers;
+        
+        use Illuminate\Http\Request;
+        
+        class PageController extends Controller
+        {
+            public function index() {
+                return 'Welcome';
+            }
+        
+            public function about() {
+                return "2241720145 - Muhammad Baihaqi Aulia Asy'ari";
+            }
+        
+            public function articles($id) {
+                return 'Article Page with ID ' . $id;
+            }
+        }
+
+    \end{minted}
+
+    \newpage
+
+    \item -
+    \begin{minted}[autogobble,breaklines,linenos]{php}
+        <?php
+
+        namespace App\Http\Controllers;
+        
+        use Illuminate\Http\Request;
+        
+        class HomeController extends Controller
+        {
+            public function index() {
+                return 'Welcome';
+            }
+        }
+        
+    \end{minted}
+    \begin{minted}[autogobble,breaklines,linenos]{php}
+        <?php
+
+        namespace App\Http\Controllers;
+        
+        use Illuminate\Http\Request;
+        
+        class AboutController extends Controller
+        {
+            public function about() {
+                return "2241720145 - Muhammad Baihaqi Aulia Asy'ari";
+            }
+        }
+        
+    \end{minted}
+    \begin{minted}[autogobble,breaklines,linenos]{php}
+        <?php
+
+        namespace App\Http\Controllers;
+        
+        use Illuminate\Http\Request;
+        
+        class ArticleController extends Controller
+        {
+            public function articles($id) {
+                return 'Article Page with ID ' . $id;
+            }
+        }
+        
+    \end{minted}
+    \begin{minted}[autogobble,breaklines,linenos]{php}
+        Route::get('/', [HomeController::class, 'index']);
+
+        Route::get('/about', [AboutController::class, 'about']); 
+
+        Route::get('/articles/{id}', [ArticleController::class, 'articles']);
+
+    \end{minted}
 \end{enumerate}
+
+\subsection{Resource Controller}
+\begin{enumerate}[label=\alph*.]
+    \item -
+    \begin{minted}[autogobble,breaklines,linenos]{text}
+        PS C:\laragon\www\PWL_2024> php artisan make:controller PhotoController --resource
+
+        INFO  Controller [C:\laragon\www\PWL_2024\app\Http\Controllers\PhotoController.php] created successfully. 
+    \end{minted}
+
+    \item -
+    \begin{minted}[autogobble,breaklines,linenos]{php}
+        <?php
+        use App\Http\Controllers\PhotoController;
+        
+        Route::resource('photos', PhotoController::class);
+    \end{minted}
+    \item -
+    \begin{minted}[autogobble,breaklines,linenos]{text}
+        PS C:\laragon\www\PWL_2024> php artisan route:list
+
+        GET|HEAD        / ...... ...... ...... ...... ...... ...... ...... ...... .... ...... ...... ...... ...... ...... ...... ...... ...... ...... ...... ..... ......  HomeController@index
+        POST            _ignition/execute-solution ...... ...... ...... ...... ...... ...... ..... ignition.executeSolution > Spatie\LaravelIgnition > ExecuteSolutionController  
+        GET|HEAD        _ignition/health-check ...... ...... ...... ...... ...... ...... ...... ...... ..... ignition.healthCheck > Spatie\LaravelIgnition > HealthCheckController  
+        POST            _ignition/update-config ...... ...... ...... ...... ...... ...... ...... ...... .. ignition.updateConfig > Spatie\LaravelIgnition > UpdateConfigController  
+        GET|HEAD        about ...... ...... ...... ...... ...... ...... ...... ...... ...... ......  ...... ...... ...... ...... ...... ...... ...... ...... ...... .... AboutController@about  
+        GET|HEAD        articles/{id} ...... ...... ...... ...... ...... ...... ...... ...... ...... ...... . ...... ...... ...... ...... ...... ...... ...... .. ArticleController@articles  
+        GET|HEAD        hello ...... ...... ...... ...... ...... ...... ...... ...... ...... ......  ...... ...... ...... ...... ...... ...... ...... ...... ...... .. WelcomeController@hello  
+        GET|HEAD        photos ...... ...... ...... ...... ...... ...... ...... ...... ...... ..... ...... ...... ...... ...... ...... ...... ...... . photos.index > PhotoController@index  
+        POST            photos ...... ...... ...... ...... ...... ...... ...... ...... ...... ..... ...... ...... ...... ...... ...... ...... ...... . photos.store > PhotoController@store  
+        GET|HEAD        photos/create ...... ...... ...... ...... ...... ...... ...... ...... ...... ..... ...... ...... ...... ...... ...... .... photos.create > PhotoController@create  
+        GET|HEAD        photos/{photo} ...... ...... ...... ...... ...... ...... ...... ...... ...... .... ...... ...... ...... ...... ...... ...... .. photos.show > PhotoController@show  
+        PUT|PATCH       photos/{photo} ...... ...... ...... ...... ...... ...... ...... ...... ...... .... ...... ...... ...... ...... ...... .... photos.update > PhotoController@update  
+        DELETE          photos/{photo} ...... ...... ...... ...... ...... ...... ...... ...... ...... .... ...... ...... ...... ...... ...... .. photos.destroy > PhotoController@destroy  
+        GET|HEAD        photos/{photo}/edit ...... ...... ...... ...... ...... ...... ...... ...... ...... ...... . ...... ...... ...... ...... ......  photos.edit > PhotoController@edit  
+        GET|HEAD        posts/{post}/comments/{comment} ...... ...... ...... ...... ...... ...... ...... ...... ...... .. ...... ...... ...... ...... ...... ...... ...... ...... ...... ....  
+        GET|HEAD        sanctum/csrf-cookie ...... ...... ...... ...... ...... ...... ...... ...... ......  ......  sanctum.csrf-cookie > Laravel\Sanctum > CsrfCookieController@show  
+        GET|HEAD        user/{name?} ...... ...... ...... ...... ...... ...... ...... ...... ...... .... ...... ...... ...... ...... ...... ...... ...... ...... ...... ...... ..... ...... ....  
+        GET|HEAD        world ...... ...... ...... ...... ...... ...... ...... ...... ...... ......  ...... ...... ...... ...... ...... ...... ...... ...... ...... ...... ..... ...... ...... ...
+        Showing [19] routes
+    \end{minted}
+    \item -
+    \begin{minted}[autogobble,breaklines,linenos]{php}
+        <?php
+
+        use App\Http\Controllers\AboutController;
+        use App\Http\Controllers\ArticleController;
+        use App\Http\Controllers\HomeController;
+        use App\Http\Controllers\PageController;
+        use App\Http\Controllers\PhotoController;
+        use App\Http\Controllers\WelcomeController;
+        use Illuminate\Support\Facades\Route;
+        
+        /*
+        |--------------------------------------------------------------------------
+        | Web Routes
+        |--------------------------------------------------------------------------
+        |
+        | Here is where you can register web routes for your application. These
+        | routes are loaded by the RouteServiceProvider and all of them will
+        | be assigned to the "web" middleware group. Make something great!
+        |
+        */
+        
+        Route::get('/', [HomeController::class, 'index']);
+        
+        Route::get('/hello', [WelcomeController::class, 'hello']);
+        
+        Route::get('/world', function () {
+            return 'World';
+        }); 
+        
+        Route::get('/about', [AboutController::class, 'about']); 
+        
+        Route::get('/user/{name?}', function ($name='John') {
+            return 'Nama saya ' . $name;
+        }); 
+        
+        Route::get('/posts/{post}/comments/{comment}', function ($postId, $commentId) {
+            return 'Pos ke-' . $postId . ' komentar ke-: ' . $commentId;
+        });
+        
+        Route::get('/articles/{id}', [ArticleController::class, 'articles']);
+        
+        Route::resource('photos', PhotoController::class)->only([
+            'index', 'show'
+        ]);
+        
+        Route::resource('photos', PhotoController::class)->except([
+            'create', 'store', 'update', 'destroy'
+        ]);
+    \end{minted}
+\end{enumerate}
+
+\newpage
+
+\section{View}
+\subsection{Creating View}
+\begin{enumerate}[label=\alph*.]
+    \item -
+    \begin{minted}[autogobble,breaklines,linenos]{php}
+        {{-- View pada resources/views/hello.blade.php --}}
+        <html>
+            <body>
+                <h1>Hello, {{ $name }}</h1>
+            </body>
+        </html>
+    \end{minted}
+    \item -
+    \begin{minted}[autogobble,breaklines,linenos]{php}
+        Route::get('/greeting', function () {
+            return view('hello', ['name' => 'Baihaqi']);
+        });
+    \end{minted}
+    \item - \\ \includegraphics[width=.9\textwidth]{images/figures/creating view c.png}
+\end{enumerate}
+\newpage
+\subsection{View in Directory}
+\begin{enumerate}[label=\alph*.]
+    \item -
+    \item -
+    \item -
+    \begin{minted}[autogobble,breaklines,linenos]{php}
+        Route::get('/greeting', function () {
+            return view('blog.hello', ['name' => 'Baihaqi']);
+        });
+    \end{minted}
+    \item - \\ \includegraphics[width=.9\textwidth]{images/figures/view in directory d.png} \\ nothing has change from the previous change except in the background the view now routes to hello inside the blog directory
+\end{enumerate}
+\newpage
+\subsection{Display View from Controller}
+\begin{enumerate}[label=\alph*.]
+    \item -
+    \begin{minted}[autogobble,breaklines,linenos]{php}
+        <?php
+
+        namespace App\Http\Controllers;
+        
+        use Illuminate\Http\Request;
+        
+        class WelcomeController extends Controller
+        {
+            public function hello() {
+                return 'Hello World';
+            }
+        
+            public function greeting() {
+                return view('blog.hello', ['name' => 'Baihaqi']);
+            }
+        }
+    \end{minted}
+    \item -
+    \begin{minted}[autogobble,breaklines,linenos]{php}
+        Route::get('/greeting', [WelcomeController::class, 'greeting']);
+    \end{minted}
+    \item - \\ \includegraphics[width=.9\textwidth]{images/figures/Displaying View from Controller c.png}
+\end{enumerate}
+\subsection{Forward Data to View}
+\begin{enumerate}[label=\alph*.]
+    \item -
+    \begin{minted}[autogobble,breaklines,linenos]{php}
+        <?php
+
+        namespace App\Http\Controllers;
+        
+        use Illuminate\Http\Request;
+        
+        class WelcomeController extends Controller
+        {
+            public function hello() {
+                return 'Hello World';
+            }
+        
+            public function greeting() {
+                return view('blog.hello')
+                    ->with('name','Baihaqi')
+                    ->with('occupation','Astronaut');
+            }
+        }
+        
+    \end{minted}
+    \newpage
+    \item -
+    \begin{minted}[autogobble,breaklines,linenos]{php}
+    <html>
+        <body>
+            <h1>Hello, {{ $name }}</h1>
+            <h1>You are {{ $occupation }}</h1>
+        </body>
+    </html>
+    \end{minted}
+    \item - \\ \includegraphics[width=.9\textwidth]{images/figures/forward data to view c.png} \\ now the page display the occupation set in the controller with the with function
+\end{enumerate}
+
+\url{https://github.com/G4CENeiz/PWL_2024}
 
 \end{document}
