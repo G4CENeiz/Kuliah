@@ -80,7 +80,7 @@ echo \tikzstyle{preparation} = [chamfered rectangle, chamfered rectangle sep=0.7
 echo \tikzstyle{process} = [rectangle, draw, text centered, minimum height=2em]
 echo \tikzstyle{decision} = [diamond, aspect=2, draw, text centered, minimum height=2em]
 echo \tikzstyle{data}=[trapezium, draw, text centered, trapezium left angle=60, trapezium right angle=120, minimum height=2em]
-echo \tikzstyle{connector} = [line width=0.25mm,->]
+echo "\tikzstyle{connector} = [line width=0.25mm,->]"
 echo %% [END] Tikz related stuff
 echo %% [START] Fancy header related stuff
 echo \usepackage{fancyhdr}
@@ -90,7 +90,8 @@ echo \fancyhead{}
 echo \fancyfoot{}
 echo \fancyfoot[L]{\thepage}
 echo \fancyfoot[R]{\textit{\vSubject - \vSubtitle}}
-echo \renewcommand{\footrulewidth}{0.4pt}% default is 0pt, overline for footer
+echo \renewcommand{\footrulewidth}{0.4pt}
+echo % default is 0pt, overline for footer
 echo %% [END] Fancy header related stuff
 echo %% [START] Custom tabular command related stuff
 echo \usepackage{tabularx}
