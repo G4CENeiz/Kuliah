@@ -1,0 +1,157 @@
+\documentclass[12pt,titlepage]{article}
+\usepackage[margin=1.25in]{geometry}
+\usepackage{graphicx,amsmath,blindtext,minted}
+
+% Variables definition
+\newcommand{\vSubject}{Advanced Web Programming}
+\newcommand{\vSubtitle}{File Upload}
+\newcommand{\vName}{Muhammad Baihaqi Aulia Asy'ari}
+\newcommand{\vNIM}{2241720145}
+\newcommand{\vClass}{2I}
+\newcommand{\vDepartment}{Information Technology}
+\newcommand{\vStudyProgram}{D4 Informatics Engineering}
+
+% [START] Tikz related stuff
+\usepackage{tikz}
+\usetikzlibrary{svg.path,calc,shapes.geometric,shapes.misc}
+\tikzstyle{terminator} = [rectangle, draw, text centered, rounded corners = 1em, minimum height=2em]
+\tikzstyle{preparation} = [chamfered rectangle, chamfered rectangle sep=0.75em, draw, text centered, minimum height = 2em]
+\tikzstyle{process} = [rectangle, draw, text centered, minimum height=2em]
+\tikzstyle{decision} = [diamond, aspect=2, draw, text centered, minimum height=2em]
+\tikzstyle{data}=[trapezium, draw, text centered, trapezium left angle=60, trapezium right angle=120, minimum height=2em]
+\tikzstyle{connector} = [line width=0.25mm,->]
+% [END] Tikz related stuff
+
+% [START] Fancy header related stuff
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setlength{\headheight}{15pt} 
+% compensate fancyhdr style
+\fancyhead{}
+\fancyfoot{}
+\fancyfoot[L]{\thepage}
+\fancyfoot[R]{\textit{\vSubject - \vSubtitle}}
+\renewcommand{\footrulewidth}{0.4pt}
+% default is 0pt, overline for footer
+% [END] Fancy header related stuff
+
+% [START] Custom tabular command related stuff
+\usepackage{tabularx}
+\newcommand{\details}[2]{
+    #1 
+}
+% [END] Custom tabular command related stuff
+
+% [START] Figure related stuff
+\newcommand{\image}[3][1]{
+    \begin{figure}[h]
+        \centering
+        \includegraphics[#1]{#2}
+        \caption{#3}
+        \label{#3}
+    \end{figure}
+}
+% [END] Figure related stuff
+
+%
+\usepackage{pgf-umlcd}
+
+\renewcommand{\umldrawcolor}{black}
+\renewcommand{\umlfillcolor}{white}
+%
+
+% [BEGIN] Custom enumerator
+\usepackage{enumitem}
+% [END] Custom enumerator
+
+% [BEGIN] Paragraph indent
+\usepackage{indentfirst}
+% [END] Paragraph indent
+
+% [BEGIN] URL
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
+
+\urlstyle{same}
+% [END] URL
+
+\begin{document}
+\begin{titlepage}
+    \centering
+    \vfill
+    {\bfseries\LARGE
+        \vSubject\\
+        \vskip0.25cm
+        \vSubtitle
+    }
+    \vfill
+    \includegraphics[width=6cm]{images/polinema-logo.png}
+    \vfill
+    {
+        \textbf{Name}\\
+        \vName\\
+        \vskip0.5cm
+        \textbf{NIM}\\
+        \vNIM\\
+        \vskip0.5cm
+        \textbf{Class}\\
+        \vClass\\
+        \vskip0.5cm
+        \textbf{Department}\\
+        \vDepartment\\
+        \vskip0.5cm
+        \textbf{Study Program}\\
+        \vStudyProgram
+    }
+\end{titlepage}
+
+\newpage
+
+\section{Preparation}
+- 
+\\ \includegraphics[width=.9\textwidth]{images/figures/Screenshot (489).png}
+\\ \includegraphics[width=.9\textwidth]{images/figures/Screenshot (490).png}
+
+\section{File Upload Information}
+\begin{enumerate}
+    \item[2.] - \\ \includegraphics[width=.9\textwidth]{images/figures/Screenshot (489).png} \\ \includegraphics[width=.9\textwidth]{images/figures/Screenshot (491).png} \\ \includegraphics[width=.9\textwidth]{images/figures/Screenshot (492).png} \\ \includegraphics[width=.9\textwidth]{images/figures/Screenshot (493).png}
+    \item[4.] - \\ \includegraphics[width=.9\textwidth]{images/figures/Screenshot (495).png} \\ \includegraphics[width=.9\textwidth]{images/figures/Screenshot (496).png}
+\end{enumerate}
+
+\section{File Upload Validation}
+\begin{enumerate}
+    \item[1.] - \\ \includegraphics[width=.9\textwidth]{images/figures/Screenshot (497).png}
+    \item[2.] - \\ \includegraphics[width=.9\textwidth]{images/figures/Screenshot (498).png}
+\end{enumerate}
+
+\section{Moving File Upload}
+\begin{enumerate}
+    \item[1.] - \\ \includegraphics[width=.9\textwidth]{images/figures/Screenshot (499).png} \\ \includegraphics[width=.9\textwidth]{images/figures/Screenshot (500).png} \\ \includegraphics[width=.9\textwidth]{images/figures/Screenshot (501).png} \\ \includegraphics[width=.9\textwidth]{images/figures/Screenshot (502).png}
+    \item[2.] - \\ \includegraphics[width=.9\textwidth]{images/figures/Screenshot (503).png} \\ \includegraphics[width=.9\textwidth]{images/figures/Screenshot (504).png} \\ \includegraphics[width=.9\textwidth]{images/figures/Screenshot (505).png}
+    \item[3.] - \\ \includegraphics[width=.9\textwidth]{images/figures/Screenshot (506).png} \\ \includegraphics[width=.9\textwidth]{images/figures/Screenshot (507).png} \\ \includegraphics[width=.9\textwidth]{images/figures/Screenshot (508).png}
+\end{enumerate}
+
+\section{Making Symlink}
+\begin{enumerate}
+    \item[2.] - \\ \includegraphics[width=.9\textwidth]{images/figures/Screenshot (509).png} \\ \includegraphics[width=.9\textwidth]{images/figures/Screenshot (510).png} \\ \includegraphics[width=.9\textwidth]{images/figures/Screenshot (511).png}
+    \item[3.] - \\ \includegraphics[width=.9\textwidth]{images/figures/Screenshot (512).png} \\ \includegraphics[width=.9\textwidth]{images/figures/Screenshot (513).png} \\ \includegraphics[width=.9\textwidth]{images/figures/Screenshot (514).png}
+\end{enumerate}
+
+\section{Move Method}
+\begin{enumerate}
+    \item[1.] - \\ \includegraphics[width=.9\textwidth]{images/figures/Screenshot (515).png} \\ \includegraphics[width=.9\textwidth]{images/figures/Screenshot (516).png}
+\end{enumerate}
+
+\section{Assignment}
+\begin{enumerate}
+    \item[1.] - \\ \includegraphics[width=.9\textwidth]{images/figures/Screenshot (519).png} \\ \includegraphics[width=.9\textwidth]{images/figures/Screenshot (520).png}
+\end{enumerate}
+
+\end{document}
