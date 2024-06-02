@@ -64,6 +64,7 @@ REM Create and write the template text to the .tex file
 echo \documentclass[12pt,titlepage]{article}
 echo \usepackage[margin=1.25in]{geometry}
 echo \usepackage{graphicx,amsmath,blindtext,minted}
+echo.
 echo %% Variables definition
 echo \newcommand{\vSubject}{%SUBJECT%}
 echo \newcommand{\vSubtitle}{%SUBTITLE%}
@@ -72,6 +73,7 @@ echo \newcommand{\vNIM}{2241720145}
 echo \newcommand{\vClass}{2I}
 echo \newcommand{\vDepartment}{Information Technology}
 echo \newcommand{\vStudyProgram}{D4 Informatics Engineering}
+echo.
 echo %% [START] Tikz related stuff
 echo \usepackage{tikz}
 echo \usetikzlibrary{svg.path,calc,shapes.geometric,shapes.misc}
@@ -80,25 +82,29 @@ echo \tikzstyle{preparation} = [chamfered rectangle, chamfered rectangle sep=0.7
 echo \tikzstyle{process} = [rectangle, draw, text centered, minimum height=2em]
 echo \tikzstyle{decision} = [diamond, aspect=2, draw, text centered, minimum height=2em]
 echo \tikzstyle{data}=[trapezium, draw, text centered, trapezium left angle=60, trapezium right angle=120, minimum height=2em]
-echo "\tikzstyle{connector} = [line width=0.25mm,->]"
+echo \tikzstyle{connector} = [line width=0.25mm,-^>]
 echo %% [END] Tikz related stuff
+echo.
 echo %% [START] Fancy header related stuff
 echo \usepackage{fancyhdr}
 echo \pagestyle{fancy}
-echo \setlength{\headheight}{15pt}
+echo \setlength{\headheight}{15pt} 
+echo %% compensate fancyhdr style
 echo \fancyhead{}
 echo \fancyfoot{}
 echo \fancyfoot[L]{\thepage}
 echo \fancyfoot[R]{\textit{\vSubject - \vSubtitle}}
 echo \renewcommand{\footrulewidth}{0.4pt}
-echo % default is 0pt, overline for footer
+echo %% default is 0pt, overline for footer
 echo %% [END] Fancy header related stuff
+echo.
 echo %% [START] Custom tabular command related stuff
 echo \usepackage{tabularx}
 echo \newcommand{\details}[2]{
 echo     #1 & #2  \\
 echo }
 echo %% [END] Custom tabular command related stuff
+echo.
 echo %% [START] Figure related stuff
 echo \newcommand{\image}[3][1]{
 echo     \begin{figure}[h]
@@ -109,17 +115,22 @@ echo         \label{#3}
 echo     \end{figure}
 echo }
 echo %% [END] Figure related stuff
+echo.
 echo %%
 echo \usepackage{pgf-umlcd}
+echo.
 echo \renewcommand{\umldrawcolor}{black}
 echo \renewcommand{\umlfillcolor}{white}
 echo %%
+echo.
 echo %% [BEGIN] Custom enumerator
 echo \usepackage{enumitem}
 echo %% [END] Custom enumerator
+echo.
 echo %% [BEGIN] Paragraph indent
 echo \usepackage{indentfirst}
 echo %% [END] Paragraph indent
+echo.
 echo %% [BEGIN] URL
 echo \usepackage{hyperref}
 echo \hypersetup{
@@ -130,8 +141,10 @@ echo     urlcolor=cyan,
 echo     pdftitle={Overleaf Example},
 echo     pdfpagemode=FullScreen,
 echo     }
+echo.
 echo \urlstyle{same}
 echo %% [END] URL
+echo.
 echo \begin{document}
 echo \begin{titlepage}
 echo     \centering
@@ -161,7 +174,9 @@ echo         \textbf{Study Program}\\
 echo         \vStudyProgram
 echo     }
 echo \end{titlepage}
+echo.
 echo \newpage
+echo.
 echo \end{document}
 ) > "%TEX_FILE%"
 
