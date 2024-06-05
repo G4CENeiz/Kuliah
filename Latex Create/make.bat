@@ -93,7 +93,7 @@ echo %% compensate fancyhdr style
 echo \fancyhead{}
 echo \fancyfoot{}
 echo \fancyfoot[L]{\thepage}
-echo \fancyfoot[R]{\textit{\vSubject - \vSubtitle}}
+echo \fancyfoot[R]{\textit{\vSubject\space - \vSubtitle}}
 echo \renewcommand{\footrulewidth}{0.4pt}
 echo %% default is 0pt, overline for footer
 echo %% [END] Fancy header related stuff
