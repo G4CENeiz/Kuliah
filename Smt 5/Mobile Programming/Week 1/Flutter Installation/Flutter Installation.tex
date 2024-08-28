@@ -1,0 +1,169 @@
+\documentclass[12pt,titlepage]{article}
+\usepackage[margin=1.25in]{geometry}
+\usepackage{graphicx,amsmath,blindtext,minted}
+
+%% Variables definition
+\newcommand{\vSubject}{Mobile Programming}
+\newcommand{\vSubtitle}{Flutter Installation}
+\newcommand{\vName}{Muhammad Baihaqi Aulia Asy'ari}
+\newcommand{\vNIM}{2241720145}
+\newcommand{\vClass}{3I}
+\newcommand{\vDepartment}{Information Technology}
+\newcommand{\vStudyProgram}{D4 Informatics Engineering}
+
+%% [START] Tikz related stuff
+\usepackage{tikz}
+\usetikzlibrary{svg.path,calc,shapes.geometric,shapes.misc}
+\tikzstyle{terminator} = [rectangle, draw, text centered, rounded corners = 1em, minimum height=2em]
+\tikzstyle{preparation} = [chamfered rectangle, chamfered rectangle sep=0.75em, draw, text centered, minimum height = 2em]
+\tikzstyle{process} = [rectangle, draw, text centered, minimum height=2em]
+\tikzstyle{decision} = [diamond, aspect=2, draw, text centered, minimum height=2em]
+\tikzstyle{data}=[trapezium, draw, text centered, trapezium left angle=60, trapezium right angle=120, minimum height=2em]
+\tikzstyle{connector} = [line width=0.25mm,->]
+%% [END] Tikz related stuff
+
+%% [START] Fancy header related stuff
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setlength{\headheight}{15pt} % compensate fancyhdr style
+\fancyhead{}
+\fancyfoot{}
+\fancyfoot[L]{\thepage}
+\fancyfoot[R]{\textit{\vSubject - \vSubtitle}}
+\renewcommand{\footrulewidth}{0.4pt}% default is 0pt, overline for footer
+%% [END] Fancy header related stuff
+
+%% [START] Custom tabular command related stuff
+\usepackage{tabularx}
+\newcommand{\details}[2]{
+    #1 & #2  \\
+}
+%% [END] Custom tabular command related stuff
+
+%% [START] Figure related stuff
+\newcommand{\image}[3][1]{
+    \begin{figure}[h]
+        \centering
+        \includegraphics[#1]{#2}
+        \caption{#3}
+        \label{#3}
+    \end{figure}
+}
+%% [END] Figure related stuff
+
+%%
+\usepackage{pgf-umlcd}
+
+\renewcommand{\umldrawcolor}{black}
+\renewcommand{\umlfillcolor}{white}
+%%
+
+%% [BEGIN] Custom enumerator
+\usepackage{enumitem}
+%% [END] Custom enumerator
+
+%% [BEGIN] Paragraph indent
+\usepackage{indentfirst}
+%% [END] Paragraph indent
+
+%% [BEGIN] URL
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
+
+\urlstyle{same}
+%% [END] URL
+
+\begin{document}
+\begin{titlepage}
+    \centering
+    \vfill
+    {\bfseries\LARGE
+        \vSubject\\
+        \vskip0.25cm
+        \vSubtitle
+    }
+    \vfill
+    \includegraphics[width=6cm]{images/polinema-logo.png}
+    \vfill
+    {
+        \textbf{Name}\\
+        \vName\\
+        \vskip0.5cm
+        \textbf{NIM}\\
+        \vNIM\\
+        \vskip0.5cm
+        \textbf{Class}\\
+        \vClass\\
+        \vskip0.5cm
+        \textbf{Department}\\
+        \vDepartment\\
+        \vskip0.5cm
+        \textbf{Study Program}\\
+        \vStudyProgram
+    }
+\end{titlepage}
+
+\newpage
+
+\begin{enumerate}
+    \item Here is information about my laptop \\ \includegraphics[width=.9\textwidth]{images/figures/Screenshot (20).png}
+    \item First we install the Flutter extension in VSCode \\ \includegraphics[width=.9\textwidth]{images/figures/Screenshot (3).png}
+    \newpage
+    \item Then we check if we have git in our system using the \texttt{git --version} command \\ \includegraphics[width=.9\textwidth]{images/figures/Screenshot (4).png}
+    \item Then we try to make a new project with the Flutter extension to trigger the Flutter SDK check \\ \includegraphics[width=.9\textwidth]{images/figures/Screenshot (5).png}
+    \newpage
+    \item Now we have the option to download the Flutter SDK via VSCode \\ \includegraphics[width=.9\textwidth]{images/figures/Screenshot (6).png}
+    \item Once you clicked the download button, we can direct it to our preferred installation directory in C:\textbackslash flutter \\ \includegraphics[width=.9\textwidth]{images/figures/Screenshot (7).png}
+    \newpage
+    \item Then we wait until the download and installation process finish \\ \includegraphics[width=.9\textwidth]{images/figures/Screenshot (10).png}
+    \item Once the installation is finished, we can add the Flutter SDK to out path \\ \includegraphics[width=.9\textwidth]{images/figures/Screenshot (11).png}
+    \newpage
+    \item After the download and installation process finished we can close and reopen VSCode \\ \includegraphics[width=.9\textwidth]{images/figures/Screenshot (13).png}
+    \newpage
+    \item Now we can use \texttt{flutter doctor} command to check if the Flutter SDK is installed properly \\ \includegraphics[width=.9\textwidth]{images/figures/Screenshot (18).png} \\ \includegraphics[width=.9\textwidth]{images/figures/Screenshot (19).png}
+    \newpage
+    \item Next we will be downloading Android Studio to install its SDK \\ \includegraphics[width=.9\textwidth]{images/figures/Screenshot (21).png}
+    \item Now we can install Android Studio using its default options besides one thing \\ \includegraphics[width=.9\textwidth]{images/figures/Screenshot (22).png}
+    \newpage
+    \item Once we get to the components option, we can unchecked the \texttt{Android Virtual Device} so that it would take too much space \\ \includegraphics[width=.9\textwidth]{images/figures/Screenshot (23).png}
+    \item After that we can continue with using default options until its finished and open the Android Studio App \\ \includegraphics[width=.9\textwidth]{images/figures/Screenshot (24).png}
+    \newpage
+    \item Since we don't have previous installation of Android Studio nor do we have any preset settings, we can choose to not import one \\ \includegraphics[width=.9\textwidth]{images/figures/Screenshot (25).png}
+    \item For privacy policy, feel free choose any option. make sure to read the policy so to not make you involuntarily agree to something you don't want \\ \includegraphics[width=.9\textwidth]{images/figures/Screenshot (26).png}
+    \newpage
+    \item Then we can just continue until the installation process \\ \includegraphics[width=.9\textwidth]{images/figures/Screenshot (27).png}
+    \item Once we can choose the setup type, we will be choosing custom \\ \includegraphics[width=.9\textwidth]{images/figures/Screenshot (29).png}
+    \newpage
+    \item We did the previous step because we don't want to install the \texttt{Android Studio Device} component \\ \includegraphics[width=.9\textwidth]{images/figures/Screenshot (30).png}
+    \item The proceed to go with the default options \\ \includegraphics[width=.9\textwidth]{images/figures/Screenshot (31).png}
+    \newpage
+    \item In this step we can make sure we install everything we want \\ \includegraphics[width=.9\textwidth]{images/figures/Screenshot (32).png}
+    \item Next we can accept the Terms and Conditions for everything we are installing \\ \includegraphics[width=.9\textwidth]{images/figures/Screenshot (33).png}
+    \newpage
+    \item Wait until the installation process finished \\ \includegraphics[width=.9\textwidth]{images/figures/Screenshot (34).png}
+    \item We can click \texttt{Finish} to close the installer and open the app \\ \includegraphics[width=.9\textwidth]{images/figures/Screenshot (35).png}
+    \newpage
+    \item Click the \texttt{More Action} dropdown menu and choose \texttt{SDK Manager} \\ \includegraphics[width=.9\textwidth]{images/figures/Screenshot (36).png}
+    \item Go to the \texttt{SDK Tools} Tab and checked the box for \texttt{Android SDK Command-line Tools} then click OK\\ \includegraphics[width=.9\textwidth]{images/figures/Screenshot (38).png}
+    \newpage
+    \item Confirm the changes by clicking OK \\ \includegraphics[width=.9\textwidth]{images/figures/Screenshot (40).png}
+    \item Next we can accept the Lisence Agreement and continue \\ \includegraphics[width=.9\textwidth]{images/figures/Screenshot (41).png}
+    \newpage
+    \item Wait until the installation process finished \\ \includegraphics[width=.9\textwidth]{images/figures/Screenshot (42).png}
+    \item Then we can click Finish once it's done \\ \includegraphics[width=.9\textwidth]{images/figures/Screenshot (43).png}
+    \newpage
+    \item After that we will be brough back to the SDK Manager and we can close Android Studio \\ \includegraphics[width=.9\textwidth]{images/figures/Screenshot (44).png}
+    \item Then we can run \texttt{flutter doctor} to check the installation requirement \\ \includegraphics[width=.9\textwidth]{images/figures/Screenshot (46).png}
+    \newpage
+    \item If it show warning for the \texttt{Android Toolchain} we can run \texttt{flutter doctor --android-lisence} and accept everything \\ \includegraphics[width=.9\textwidth]{images/figures/Screenshot (47).png}
+    \item Then we are done with the installation \\ \includegraphics[width=.9\textwidth]{images/figures/Screenshot (48).png}
+\end{enumerate}
+
+\end{document}
