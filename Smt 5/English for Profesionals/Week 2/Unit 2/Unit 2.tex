@@ -1,0 +1,309 @@
+\documentclass[12pt,titlepage]{article}
+\usepackage[margin=1.25in]{geometry}
+\usepackage{graphicx,amsmath,blindtext,minted}
+
+% Variables definition
+\newcommand{\vSubject}{English for Job Preps}
+\newcommand{\vSubtitle}{Unit 2}
+\newcommand{\vName}{Muhammad Baihaqi Aulia Asy'ari}
+\newcommand{\vNIM}{2241720145}
+\newcommand{\vClass}{2I}
+\newcommand{\vDepartment}{Information Technology}
+\newcommand{\vStudyProgram}{D4 Informatics Engineering}
+
+% [START] Tikz related stuff
+\usepackage{tikz}
+\usetikzlibrary{svg.path,calc,shapes.geometric,shapes.misc}
+\tikzstyle{terminator} = [rectangle, draw, text centered, rounded corners = 1em, minimum height=2em]
+\tikzstyle{preparation} = [chamfered rectangle, chamfered rectangle sep=0.75em, draw, text centered, minimum height = 2em]
+\tikzstyle{process} = [rectangle, draw, text centered, minimum height=2em]
+\tikzstyle{decision} = [diamond, aspect=2, draw, text centered, minimum height=2em]
+\tikzstyle{data}=[trapezium, draw, text centered, trapezium left angle=60, trapezium right angle=120, minimum height=2em]
+\tikzstyle{connector} = [line width=0.25mm,->]
+% [END] Tikz related stuff
+
+% [START] Fancy header related stuff
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setlength{\headheight}{15pt} 
+% compensate fancyhdr style
+\fancyhead{}
+\fancyfoot{}
+\fancyfoot[L]{\thepage}
+\fancyfoot[R]{\textit{\vSubject\space - \vSubtitle}}
+\renewcommand{\footrulewidth}{0.4pt}
+% default is 0pt, overline for footer
+% [END] Fancy header related stuff
+
+% [START] Custom tabular command related stuff
+\usepackage{tabularx}
+\newcommand{\details}[2]{
+    #1 
+}
+% [END] Custom tabular command related stuff
+
+% [START] Figure related stuff
+\newcommand{\image}[3][1]{
+    \begin{figure}[h]
+        \centering
+        \includegraphics[#1]{#2}
+        \caption{#3}
+        \label{#3}
+    \end{figure}
+}
+% [END] Figure related stuff
+
+%
+\usepackage{pgf-umlcd}
+
+\renewcommand{\umldrawcolor}{black}
+\renewcommand{\umlfillcolor}{white}
+%
+
+% [BEGIN] Custom enumerator
+\usepackage{enumitem}
+% [END] Custom enumerator
+
+% [BEGIN] Paragraph indent
+\usepackage{indentfirst}
+% [END] Paragraph indent
+
+% [BEGIN] URL
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
+
+\urlstyle{same}
+% [END] URL
+
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} 
+
+\begin{document}
+\begin{titlepage}
+    \centering
+    \vfill
+    {\bfseries\LARGE
+        \vSubject\\
+        \vskip0.25cm
+        \vSubtitle
+    }
+    \vfill
+    \includegraphics[width=6cm]{images/polinema-logo.png}
+    \vfill
+    {
+        \textbf{Name}\\
+        \vName\\
+        \vskip0.5cm
+        \textbf{NIM}\\
+        \vNIM\\
+        \vskip0.5cm
+        \textbf{Class}\\
+        \vClass\\
+        \vskip0.5cm
+        \textbf{Department}\\
+        \vDepartment\\
+        \vskip0.5cm
+        \textbf{Study Program}\\
+        \vStudyProgram
+    }
+\end{titlepage}
+
+\newpage
+
+\section*{Exercise 1}
+Terms : Meaning
+\begin{enumerate}
+    \item Ads : Iklan - a publication media to promote a product, service, event, or job vacancy
+    \item Applicants : Pendaftar - a person who apply to a job
+    \item Client : Pelanggan - a person who intent to use/have the service or product 
+    \item Desirable : Keinginan - a 
+    \item Experience : Pengalaman - a 
+    \item Full Time : - a typical job that have working days with weekly work hours of around 80 hours
+    \item Job Description : Deskripsi Pekerjaan - 
+    \item Awards : Penghargaan - 
+    \item Portfolio : -
+    \item Qualifier : -
+    \item Recommendation : Rekomendasi - a 
+    \item Requirement : Kebutuhan - a minimum standart set by the employer
+    \item Shift Work : Jadwal kerja - a work schedule set by the employer
+    \item Part Time : Paruh Waktu - a job that doesn't really have a fix amount of hours and doesnt always work in a full week
+    \item Wages : Gaji - an amount of money paid in exchange of working hours
+    \item Candidate : Kandidat - a person who has deemed by the company
+\end{enumerate}
+
+\section*{Exercise 2}
+\begin{enumerate}
+    \item Advert A : B. Looking after children.
+    \item Advert B : A. Delivering newspapers.
+    \item Advert C : C. Working in a shop 
+    \item Advert D : D. Working in a small restaurant.
+\end{enumerate}
+
+\section*{Exercise 3}
+\begin{enumerate}
+    \item Babysitting
+    \item Newspapers Delivery
+    \item Cafe
+    \item Newspapers Delivery
+    \item Shop
+    \item Shop
+    \item Babysitting
+    \item Shop
+\end{enumerate}
+
+\section*{Exercise 4}
+\begin{enumerate}
+    \item F
+    \item T
+    \item T
+    \item F
+    \item F
+    \item F
+    \item F
+    \item F
+\end{enumerate}
+
+\section*{Exercise 5}
+\begin{enumerate}
+    \item Customer Service
+    \item Mobile developer
+    \item Sales Executive
+    \item Brand Marketing
+    \item UI/UX designer
+\end{enumerate}
+
+\section*{Exercise 6}
+\begin{enumerate}
+    \item A. UI/UX Developer
+    \item C. Accounting Officer
+    \item E. Data Analyst
+    \item B. Data Scientist
+    \item D. E-commerce Consultant
+\end{enumerate}
+
+\section*{Exercise 7}
+\begin{tabular}{|p{4cm}|p{3cm}|p{3cm}|p{3cm}|}
+    \hline
+    \multicolumn{4}{|c|}{\textbf{Job Advertisements (Ads)}} \\
+    \hline
+    \textbf{Job Description Terms} & \textbf{Ads 1} & \textbf{Ads 2} & \textbf{Ads 3} \\
+    & \textbf{Title:} & \textbf{Title:} & \textbf{Title:} \\
+    & Applications Developer (.NET) & Back End Developer & Junior IT Project Manager \\
+    \hline
+    Full time & \checkmark & \checkmark & \checkmark \\
+    \hline
+    Part Time & & & \\
+    \hline
+    Permanent & \checkmark & \checkmark & \checkmark \\
+    \hline
+    Contract & & & \\
+    \hline
+    Fixed Work Hours & \checkmark (?) & \checkmark & \checkmark \\
+    \hline
+    Shift work & & & \\
+    \hline
+    Experience required & (?) & \checkmark & \checkmark \\
+    \hline
+    Qualification required & \checkmark & \checkmark & \checkmark \\
+    \hline
+    No Experience required & & & \\
+    \hline
+    Interview & & & \\
+    \hline
+    Apply in Writing: Letter & & & \\
+    \hline
+    Apply in Writing: Application form & \checkmark & \checkmark & \checkmark \\
+    \hline
+    Contact by phone for an appointment & & & \\
+    \hline
+    Contact employer directly & & & \\
+    \hline
+    Work as part of a team & \checkmark & \checkmark & \checkmark \\
+    \hline
+    Work independently & & & \\
+    \hline
+    Work with supervision & \checkmark (?) & \checkmark (?) & \\
+    \hline
+    Work with little supervision & \checkmark (?) & \checkmark (?) & \\
+    \hline
+    Opportunity for promotion & \checkmark (?) & \checkmark (?)  & \checkmark \\
+    \hline
+    Others benefit available & \checkmark & & \\
+    \hline
+\end{tabular} 
+- \\
+
+Ads 1 : \url{https://www.kalibrr.id/c/pt-adicipta-inovasi-teknologi/jobs/197657/applications-developer-net} \\
+Ads 2 : \url{https://www.kalibrr.id/c/btpn/jobs/246051/back-end-developer-2} \\
+Ads 3 : \url{https://www.kalibrr.id/c/klik-digital/jobs/247089/junior-it-project-manager} \\
+
+\section*{Exercise 8}
+\subsection*{Source of the ads}
+\url{https://www.kalibrr.id/c/pt-adicipta-inovasi-teknologi/jobs/197657/applications-developer-net}
+\subsection*{Kind of job being offered}
+Applications Developer (.NET) 
+\subsection*{Job description}
+\begin{itemize}
+    \item Produce detailed specifications and write programs to handle a specific job
+    \item Test a program by running it and looking for bugs (errors)
+    \item Testing, including defining/supporting acceptance testing and gathering feedback from pre-release testers
+    \item Make the appropriate corrections, then rechecks the program until an acceptably low level and severity of bugs remain
+    \item Authoring of documentation needed by users and implementation partners, etc
+    \item Contribute to training manuals, user guides and online help
+    \item Maintaining the systems once they are up and running
+\end{itemize}
+\subsection*{Requirements}
+\begin{itemize}
+    \item Bachelor’s degree in Computer Engineering / Computer Science / Information System with GPA \textgreater  3,00
+    \item Have experience with .NET, ASP .NET, C\# .NET, .NET Core \& SQL Server is preferred
+    \item In-depth knowledge of programming for diverse operating systems and platforms using development tools
+    \item Excellent understanding of software design and programming principles
+    \item Strong passion on IT industry
+    \item Understand OOP Concepts is preferred
+    \item A team player with excellent communication skills
+    \item Self motivated and good attitude
+    \item Have curiosity to explore and learn new things
+\end{itemize}
+\subsection*{Procedures of how to apply}
+Submit an applications form online
+\subsection*{Company information}
+
+Advance Innovations (AdIns) is Independent Software Vendor that established in 2000. We have comprehensive an end-to-end solution for financial businesses such as customer finance and leasing solution, mobile solution, document solution, IT training and development solution, data warehouse and business intelligent solution and payment channel solution. With all of this solutions we are a market leader in this industry with 60\% of market share. AdIns has an excellent track record and 100\% success rate in project implementation supported by an excellent combination of highly skilled professionals, in-depth business understanding, and extensive experience in financial industry especially banking and multi-finance company. \\
+
+Feels Like Home \\
+
+We do not care about who you are, where do you come from, or the colour of your skin. You are one of us and we are one of you. AdIns is home to young innovative professionals, because we know that modern problem need a modern solution. Having fun while working will make an enjoyable, conducive, and comfortable working place and it is one of the privilege that gave to the employees. \\
+
+Learning Experience \\
+
+If you are looking for a job, AdIns is not the right place for you, if you have huge thirst of knowledge, AdIns is the perfect place to keep on learning and developing yourself. Learning is the journey of a lifetime, that's why AdIners aren't just encouraged but also sponsored to take a bunch of certification for free. \\
+
+Same Frequency \\
+
+We understand that not everyone can get along with each other and we all have a fear of being judged. You can be yourself without any hesitation because we talk in the same frequency and have the same set of mind on this world. Being bullied and be the bully with no heartache is an everyday thing. \\
+
+Facility \& Reward \\
+
+Greater power comes with greater responsibility, no pain no gain, yin and yang, everything come in pairs and have to be balance. AdIns will see and acknowledge every skill and potential that you have, so do not be afraid and feel free to do more than what they expect. We really appreciate our loyal and dedicated employees with a further study, certification, vacation trip, etc. \\
+
+Follow our Social Media \\
+Instagram: @lifeatadins \\
+Youtube: AdIns Official \\
+Tiktok: adins\textunderscore official \\
+LinkedIn: PT. Adicipta Inovasi Teknologi (AdIns) \\
+Facebook: PT Adicipta Inovasi Teknologi (AdIns) \\
+
+\section*{Exercise 9}
+In terms of meeting the minimum requirements for this position, I believe I am well-prepared based on my current experience and educational background. Although I may not yet have fulfilled every single requirement listed in the job advertisement, I am confident that by the time I graduate, I will have satisfied most, if not all, of these qualifications. Many of the skills and knowledge areas specified in the job description are integral to my current academic pursuits, and I am actively learning and developing these competencies through my coursework and projects. While there may be a few requirements that are not fully met immediately upon graduation, I anticipate that my forthcoming internship experiences will significantly enhance my qualifications and address any gaps left by my formal education.
+
+The job description aligns perfectly with my career aspirations and the type of work I am eager to engage in. It appears that the position is designed to meet the high standards typically expected from graduates who complete higher education programs. Although it is rare for any graduate to fulfill every single expectation outlined in a job description exactly, the job listing sets a clear and ambitious benchmark for the role, which I find both inspiring and relevant to my career goals. I consider myself a good fit for this entry-level position, especially since the advertisement explicitly states that it is intended for candidates at the beginning of their professional careers. As a future graduate, I fully expect that entry-level roles are structured to accommodate individuals who are just starting out in their careers.
+
+Moreover, the company’s focus on the banking sector is particularly appealing to me, given my deep interest in this field, which aligns closely with my Ikigai—a concept that reflects my sense of purpose and fulfillment. By the time I complete my degree, I will have met various qualifications necessary for this role. This job offers a valuable opportunity to work on subjects that I am passionate about while being compensated for my efforts. Additionally, individuals with an educational background similar to mine are likely to meet the qualifications for this position, highlighting the strong alignment between the job requirements and the education I am receiving. This role represents a promising match for my career objectives and supports my professional and personal development goals.
+
+\end{document}
