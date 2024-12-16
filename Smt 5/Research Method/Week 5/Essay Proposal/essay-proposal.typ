@@ -104,22 +104,22 @@ This study focuses on developing a personal financial application aimed at young
 == Objectives
 The objectives of this study are:
 
-    To design and develop an intuitive personal finance application that helps users track expenses and income.
-    To enable users to set and monitor personal financial goals.
-    To offer personalized insights into spending habits to promote informed financial decisions.
-    To improve user engagement with financial planning by providing a straightforward, user-centric interface.
+  + To design and develop an intuitive personal finance application that helps users track expenses and income.
+  + To enable users to set and monitor personal financial goals.
+  + To offer personalized insights into spending habits to promote informed financial decisions.
+  + To improve user engagement with financial planning by providing a straightforward, user-centric interface.
 
 == Significance
 By providing a simplified, accessible tool for financial management, this application aims to empower individuals to take control of their financial well-being. It will help users develop better financial habits, reduce impulsive spending, and increase their savings potential. Ultimately, this solution seeks to contribute to improved financial literacy and reduced financial stress among users.
 
 = Review of Related Literature
 == Related Studies
-// #lorem(40) \ \
-// #lorem(40)
+#lorem(40) \ \
+#lorem(40)
 
 == Theoretical Foundation
-// #lorem(40) \ \
-// #lorem(40)  
+#lorem(40) \ \
+#lorem(40)  
 
 // #pagebreak()
 
