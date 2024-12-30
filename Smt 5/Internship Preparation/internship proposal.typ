@@ -103,6 +103,8 @@
       columns: (auto, auto),
       align: left,
       stroke: none,
+      // TODO: find a way to loop and print student properly in a table.
+      // * I have failed countless time. AI kept being delulu
       [*#students.at(0).name*],
       [*#students.at(0).nim*],
       [*#students.at(1).name*],
@@ -123,22 +125,28 @@
 
 #pagebreak()
 
-#align(center, heading(text(size: 12pt)[LEMBAR PERSETUJUAN]))
-#v(1em) #h(2em)
-Yang bertanda tangan di bawah ini menyetujui rencana kegiatan yang akan dilaksanakan oleh mahasiswa Politeknik Negeri Malang, sebagaimana tersebut di bawah ini:
+#align(center, heading(text(size: 12pt)[LEMBAR PERSETUJUAN])) \
+#tabed[
+  #t Yang bertanda tangan di bawah ini menyetujui rencana kegiatan yang akan dilaksanakan oleh mahasiswa Politeknik Negeri Malang, sebagaimana tersebut di bawah ini:
+]
 
 #tabed[
   Nama kegiatan#t:  Magang Industri \
   Tempat#t#t#t:  \
   Alamat#t#t#t: \ 
-  Pelaksanaan#t#t: #startDate sampai #endtDate atau sesuai dengan kebijakan instansi asalkan tidak melebihi batas maksimal yang ditetapkan pihak kampus (minimal 5 bulan).\ 
+  Pelaksanaan#t#t: #startDate sampai #endtDate atau sesuai dengan kebijakan instansi asalkan tidak melebihi batas maksimal yang ditetapkan pihak kampus (minimal 5 bulan).\
+  // TODO:  
   Peserta#t#t#t: 1. #students.at(0).name \
   #t#t#t#t#h(6.33pt) 2. #students.at(1).name
 ]
-#v(1fr)
+
+\
+
 Malang, Desember 2024 \
 Mengetahui dan Menyetujui,
-#v(2fr)
+
+\
+
 #align(
   center,
   stack(
@@ -148,14 +156,12 @@ Mengetahui dan Menyetujui,
       columns: (50%, 50%),
       [
         Ketua Program Studi \ 
-        D4 Teknik Informatika \
-        #v(5em)
+        D4 Teknik Informatika \ \ \ \ \
         Dr. Ely Setyo Astuti, ST.,MT \
         NIP. 197605152009122001
       ], 
       [
-        Koordinator Magang \ \
-        #v(5em)
+        Koordinator Magang \ \ \ \ \ \
         Dika Rizky Yunianto, S.Kom., M.Kom. \
         NIP. 199206062019031017
       ]
@@ -163,20 +169,14 @@ Mengetahui dan Menyetujui,
     v(2em),
     [
       Ketua Jurusan \ 
-      Teknologi Informasi \
-      #v(5em)
+      Teknologi Informasi \ \ \ \ \
       Dr. Eng. Rosa Andrie Asmara, ST., MT \
       NIP. 198010102005011001
     ], 
   )
 )
-#v(10fr)
 
 #pagebreak()
-
-#set heading(
-  numbering: "1.1.1.",
-)
 
 #show heading.where(level: 1): set heading(
   numbering: "I."
@@ -187,16 +187,19 @@ Mengetahui dan Menyetujui,
   #pad(left: -1em * it.level, it)
 ]
 
+#set heading(
+  numbering: "1.1.1.", 
+)
+
 #show heading: it => [
   #set text(size: 12pt, weight: "regular")
-  #pad(left: 1em * it.level, it)
+  #pad(left: 1em * 2, it)
 ]
 
 #set par(
-  first-line-indent: 2em,
   justify: true,
-  spacing: 1.5em,
-  hanging-indent: 1em
+  leading: 1.15em,
+  linebreaks: "optimized"
 )
 
 #align(
@@ -217,35 +220,122 @@ Mengetahui dan Menyetujui,
 )
 
 = LATAR BELAKANG
-#h(2em)
-Hidup dalam era perkembangan teknologi informasi saat ini, memberikan kemudahan dalam berbagai bidang. Sejalan dengan hal itu  diperlukan sumber daya manusia (SDM) yang mampu mendayagunakan kemampuannya di segala bidang khususnya di bidang teknologi informasi dalam dunia kerja yang sebenarnya. Mahasiswa sebagai salah satu anggota masyarakat akademis di lingkungan Politeknik diharapkan mampu menjadi lulusan yang terampil, profesional, dan mempunyai etos kerja yang tinggi. Politeknik Negeri Malang sebagai salah satu politeknik di Indonesia selalu menyesuaikan kurikulum pendidikannya sesuai dengan perkembangan dunia kerja yang sesungguhnya. Oleh karena itu, Politeknik Negeri Malang diharapkan mampu mencetak lulusan yang berkualitas dan mampu mengimplementasikan ilmu yang diperoleh saat mengikuti perkuliahan sebagai pondasi dalam menghadapi dan menyelesaikan berbagai permasalahan yang terjadi pada dunia kerja.
-
-Permasalahan yang terjadi dalam dunia kerja berbeda dengan permasalahan saat perkuliahan. Dengan situasi tersebut, mahasiswa  #studyPrograme.ti dituntut untuk mengikuti dan beradaptasi dengan lingkungan pekerjaan sehingga setelah memasuki dunia kerja telah memiliki bekal yang cukup dan siap menghadapi pekerjaan.
-
-Dalam usaha untuk menyesuaikan dan mengikuti perkembangan industri, kegiatan Magang Industri  dinilai sebagai sarana yang efektif untuk menyesuaikan diri dengan perkembangan di dunia kerja. Oleh karena itu mahasiswa hendaknya dapat memanfaatkan kegiatan ini sebaik-baiknya.
-
-Menimbang hal-hal tersebut diatas, maka penulis memilih #companyName sebagai wadah serta tempat untuk melakukan Magang Industri.
+#pad(
+  left: 3em
+)[
+  #tabed[
+    #t Hidup dalam era perkembangan teknologi informasi saat ini, memberikan kemudahan dalam berbagai bidang. Sejalan dengan hal itu  diperlukan sumber daya manusia (SDM) yang mampu mendayagunakan kemampuannya di segala bidang khususnya di bidang teknologi informasi dalam dunia kerja yang sebenarnya. Mahasiswa sebagai salah satu anggota masyarakat akademis di lingkungan Politeknik diharapkan mampu menjadi lulusan yang terampil, profesional, dan mempunyai etos kerja yang tinggi. Politeknik Negeri Malang sebagai salah satu politeknik di Indonesia selalu menyesuaikan kurikulum pendidikannya sesuai dengan perkembangan dunia kerja yang sesungguhnya. Oleh karena itu, Politeknik Negeri Malang diharapkan mampu mencetak lulusan yang berkualitas dan mampu mengimplementasikan ilmu yang diperoleh saat mengikuti perkuliahan sebagai pondasi dalam menghadapi dan menyelesaikan berbagai permasalahan yang terjadi pada dunia kerja. \
+    #t Permasalahan yang terjadi dalam dunia kerja berbeda dengan permasalahan saat perkuliahan. Dengan situasi tersebut, mahasiswa  #studyPrograme.ti dituntut untuk mengikuti dan beradaptasi dengan lingkungan pekerjaan sehingga setelah memasuki dunia kerja telah memiliki bekal yang cukup dan siap menghadapi pekerjaan. \
+    #t Dalam usaha untuk menyesuaikan dan mengikuti perkembangan industri, kegiatan Magang Industri  dinilai sebagai sarana yang efektif untuk menyesuaikan diri dengan perkembangan di dunia kerja. Oleh karena itu mahasiswa hendaknya dapat memanfaatkan kegiatan ini sebaik-baiknya. \
+    #t Menimbang hal-hal tersebut diatas, maka penulis memilih #companyName sebagai wadah serta tempat untuk melakukan Magang Industri.
+  ]
+]
 
 = TUJUAN DAN KEGUNAAN
+
 == Tujuan
-#h(2em)
-Magang Industri ini bertujuan untuk mempersiapkan mahasiswa menjadi tenaga profesional, disiplin, kreatif, dan jujur untuk meningkatkan etos kerja.
+#pad(
+  left: 3em
+)[
+  Magang Industri ini bertujuan untuk mempersiapkan mahasiswa menjadi tenaga profesional, disiplin, kreatif, dan jujur untuk meningkatkan etos kerja.
+]
+
 == Kegunaan
+
 === Bagi Mahasiswa
+
 #set enum(numbering: "a)")
-+ Menerapkan ilmu yang diperoleh selama masa perkuliahan pada kegiatan yang nyata, dengan demikian akan mengetahui perbandingan antara pengetahuan di bangku kuliah dengan kenyataan yang ada di dunia kerja.
-+ Menguji kemampuan pribadi yang sesuai dengan ilmu yang dipelajari serta tata cara bersosialisasi dengan dunia kerja yang sarat dengan persaingan-persaingan.
-+ Memperdalam dan meningkatkan kualitas, keterampilan, dan kreativitas pribadi yang sesuai dengan ilmu yang dimiliki.
-+ Melatih diri agar tanggap dan peka dalam menghadapi situasi dan kondisi lingkungan kerja serta mempersiapkan langkah-langkah yang diperlukan untuk menyesuaikan diri dengan lingkungan di masa yang akan datang.
-+ Menambah wawasan, pengetahuan, dan pengalaman untuk nantinya dapat terjun di lingkungan kerja.
+
+#pad(
+  left: 5.5em
+)[
+  + Menerapkan ilmu yang diperoleh selama masa perkuliahan pada kegiatan yang nyata, dengan demikian akan mengetahui perbandingan antara pengetahuan di bangku kuliah dengan kenyataan yang ada di dunia kerja.
+  + Menguji kemampuan pribadi yang sesuai dengan ilmu yang dipelajari serta tata cara bersosialisasi dengan dunia kerja yang sarat dengan persaingan-persaingan.
+  + Memperdalam dan meningkatkan kualitas, keterampilan, dan kreativitas pribadi yang sesuai dengan ilmu yang dimiliki.
+  + Melatih diri agar tanggap dan peka dalam menghadapi situasi dan kondisi lingkungan kerja serta mempersiapkan langkah-langkah yang diperlukan untuk menyesuaikan diri dengan lingkungan di masa yang akan datang.
+  + Menambah wawasan, pengetahuan, dan pengalaman untuk nantinya dapat terjun di lingkungan kerja.
+]
+
 === Bagi Politeknik Negeri Malang terutama Program Studi Sistem Informasi Bisnis dan Teknik Informatika
-+ Mencetak calon tenaga kerja yang terampil dan jujur dalam menjalankan tugas.
-+ Memberi masukan untuk mengevaluasi kesesuaian kurikulum yang sudah diterapkan dengan kebutuhan tenaga kerja yang terampil di bidangnya.
-+ Menjadi sarana pengenalan Politeknik Negeri Malang khususnya Program Studi Sistem Informasi Bisnis dan Teknik Informatika kepada perusahaan maupun instansi yang membutuhkan lulusan atau tenaga kerja yang dihasilkan oleh Politeknik Negeri Malang.
+
+#pad(
+  left: 5.5em
+)[
+  + Mencetak calon tenaga kerja yang terampil dan jujur dalam menjalankan tugas.
+  + Memberi masukan untuk mengevaluasi kesesuaian kurikulum yang sudah diterapkan dengan kebutuhan tenaga kerja yang terampil di bidangnya.
+  + Menjadi sarana pengenalan Politeknik Negeri Malang khususnya Program Studi Sistem Informasi Bisnis dan Teknik Informatika kepada perusahaan maupun instansi yang membutuhkan lulusan atau tenaga kerja yang dihasilkan oleh Politeknik Negeri Malang.
+]
+
 === Bagi instansi yang bersangkutan
+
+#pad(
+  left: 5.5em
+)[
+  + Memanfaatkan sumber daya yang potensial.
+  + Membantu menyelesaikan pekerjaan yang terdapat pada tempat mahasiswa melaksanakan Magang Industri.
+  + Menjadi sarana untuk menjembatani hubungan kerja sama antara instansi dengan Politeknik di masa yang akan datang, khususnya mengenai rekruitmen tenaga kerja.
+  + Menjadi sarana untuk mengetahui kualitas pendidikan yang ada di Politeknik terutama Politeknik Negeri Malang.
+]
+
 = RUANG LINGKUP
+
 #set enum(numbering: "1.")
-Bidang yang akan diambil dan obyek untuk Magang Industri di .....  (Nama instansi/perusahaan)  meliputi :
-+ (Sebutkan sesuaikan dengan bidang Sistem Informasi Bisnis/Teknik Informatika/ informatika/ konsentrasi masing-masing)
-+ 
-+ 
+#pad(
+  left: 3em
+)[
+  Bidang yang akan diambil dan obyek untuk Magang Industri di #companyName meliputi :
+  // * (Sebutkan sesuaikan dengan bidang Sistem Informasi Bisnis/Teknik Informatika/ informatika/ konsentrasi masing-masing)
+  +  
+  +  
+  +  
+]
+
+= METODOLOGI
+#pad(
+  left: 3em
+)[
+  Tahapan kegiatan  yang akan dilakukan antara lain terdiri :
+  + Pengenalan instansi.
+  + Pengarahan dari pembimbing instansi.
+  + Terjun langsung ke proses.
+  + Pemberian tugas oleh pembimbing instansi.
+  + Diskusi.
+  + Evaluasi hasil Magang Industri.
+  // * (Untuk pelaksanaan tahapan-tahapan di atas disesuaikan dengan kondisi instansi/perusahaan yang bersangkutan).
+]
+
+= WAKTU DAN PELAKSANAAN
+#pad(
+  left: 3em
+)[
+  Magang Industri dilaksanakan  di #companyName selama minimal 5 bulan, yang disesuaikan dengan hari kerja efektif instansi/ perusahaan. Ketentuan jam kerja bagi mahasiswa Magang Industri disesuaikan dengan jam kerja instansi/perusahaan.
+  Selain itu, Magang Industri ini dilaksanakan pada Semester VI, mulai tanggal #startDate  sampai 30 Juni 2025 
+  // * (atau sesuai dengan kebijakan instansi/perusahaan  asalkan tidak kurang dari batas minimal yang ditetapkan oleh kampus, yaitu 5 bulan).
+]
+
+= BIDANG PRAKTEK KERJA LAPANGAN
+#pad(
+  left: 3em
+)[
+  Bidang yang harus diambil adalah sesuai dengan disiplin ilmu yang diperoleh. Mahasiswa selaku pelaksana Magang Industri sanggup dan bersedia menjalankan tata tertib yang ada di instansi/perusahaan. Setelah melaksanakan Magang Industri, mahasiswa diwajibkan membuat laporan tentang pelaksanaan Magang Industri.
+]
+
+= PELAKSANA
+#pad(
+  left: 3em
+)[
+  Magang Industri ini dilaksanakan oleh mahasiswa Jurusan Teknologi Informasi, Program Studi #studyPrograme.ti, yaitu:
+  // TODO: do the looping thing
+  + #students.at(0).name
+  + #students.at(1).name
+  // * Sertakan Curriculum Vitae masing-masing mahasiswa
+]
+= PENUTUP
+#pad(
+  left: 3em
+)[
+  Besar harapan kami pimpinan instansi menerima dan menyetujui proposal kami. Kami berharap dengan adanya pelaksanaan #companyName ini dapat bermanfaat bagi instansi, sehingga antara kedua belah pihak saling menguntungkan.
+  Demikianlah harapan kami, atas bantuan dan bimbingan instansi, kami sampaikan terima kasih.
+]
+
+= CV MAHASISWA
