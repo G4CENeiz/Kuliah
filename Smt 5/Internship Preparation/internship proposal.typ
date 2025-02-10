@@ -47,10 +47,6 @@
 
 #let students = (
   (
-    name: "Dicha Zelianivan Arkana",
-    nim: "2241720002"
-  ),
-  (
     name: "Muhammad Baihaqi Aulia Asy'ari",
     nim: "2241720145"
   ),
@@ -107,8 +103,6 @@
       // * I have failed countless time. AI kept being delulu
       [*#students.at(0).name*],
       [*#students.at(0).nim*],
-      [*#students.at(1).name*],
-      [*#students.at(1).nim*],
     ),
     v(1fr),
     image("polinema-logo.png", width: 6cm),
@@ -125,56 +119,63 @@
 
 #pagebreak()
 
-#align(center, heading(text(size: 12pt)[LEMBAR PERSETUJUAN])) \
-#tabed[
-  #t Yang bertanda tangan di bawah ini menyetujui rencana kegiatan yang akan dilaksanakan oleh mahasiswa Politeknik Negeri Malang, sebagaimana tersebut di bawah ini:
-]
-
-#tabed[
-  Nama kegiatan#t:  Magang Industri \
-  Tempat#t#t#t:  \
-  Alamat#t#t#t: \ 
-  Pelaksanaan#t#t: #startDate sampai #endtDate atau sesuai dengan kebijakan instansi asalkan tidak melebihi batas maksimal yang ditetapkan pihak kampus (minimal 5 bulan).\
-  // TODO:  
-  Peserta#t#t#t: 1. #students.at(0).name \
-  #t#t#t#t#h(6.33pt) 2. #students.at(1).name
-]
-
-\
-
-Malang, Desember 2024 \
-Mengetahui dan Menyetujui,
-
-\
-
-#align(
-  center,
-  stack(
-    table(
-      align: left,
-      stroke: none,
-      columns: (50%, 50%),
-      [
-        Ketua Program Studi \ 
-        D4 Teknik Informatika \ \ \ \ \
-        Dr. Ely Setyo Astuti, ST.,MT \
-        NIP. 197605152009122001
-      ], 
-      [
-        Koordinator Magang \ \ \ \ \ \
-        Dika Rizky Yunianto, S.Kom., M.Kom. \
-        NIP. 199206062019031017
-      ]
-    ),
-    v(2em),
-    [
-      Ketua Jurusan \ 
-      Teknologi Informasi \ \ \ \ \
-      Dr. Eng. Rosa Andrie Asmara, ST., MT \
-      NIP. 198010102005011001
-    ], 
-  )
+#set page(
+  margin: 0cm
 )
+#image("Lembar-Persetujuan-Proposal-Magang-Baihaqi-crop.svg")
+#set page(
+  margin: 2cm
+)
+
+// #align(center, heading(text(size: 12pt)[LEMBAR PERSETUJUAN])) \
+// #tabed[
+//   #t Yang bertanda tangan di bawah ini menyetujui rencana kegiatan yang akan dilaksanakan oleh mahasiswa Politeknik Negeri Malang, sebagaimana tersebut di bawah ini:
+// ]
+
+// #tabed[
+//   Nama kegiatan#t:  Magang Industri \
+//   Tempat#t#t#t:  \
+//   Alamat#t#t#t: \ 
+//   Pelaksanaan#t#t: #startDate sampai #endtDate atau sesuai dengan kebijakan instansi asalkan tidak melebihi batas maksimal yang ditetapkan pihak kampus (minimal 5 bulan).\
+//   // TODO:  
+//   Peserta#t#t#t: 1. #students.at(0).name \
+// ]
+
+// \
+
+// Malang, Desember 2024 \
+// Mengetahui dan Menyetujui,
+
+// \
+
+// #align(
+//   center,
+//   stack(
+//     table(
+//       align: left,
+//       stroke: none,
+//       columns: (50%, 50%),
+//       [
+//         Ketua Program Studi \ 
+//         D4 Teknik Informatika \ \ \ \ \
+//         Dr. Ely Setyo Astuti, ST.,MT \
+//         NIP. 197605152009122001
+//       ], 
+//       [
+//         Koordinator Magang \ \ \ \ \ \
+//         Dika Rizky Yunianto, S.Kom., M.Kom. \
+//         NIP. 199206062019031017
+//       ]
+//     ),
+//     v(2em),
+//     [
+//       Ketua Jurusan \ 
+//       Teknologi Informasi \ \ \ \ \
+//       Dr. Eng. Rosa Andrie Asmara, ST., MT \
+//       NIP. 198010102005011001
+//     ], 
+//   )
+// )
 
 #pagebreak()
 
@@ -285,9 +286,9 @@ Mengetahui dan Menyetujui,
 )[
   Bidang yang akan diambil dan obyek untuk Magang Industri di #companyName meliputi :
   // * (Sebutkan sesuaikan dengan bidang Sistem Informasi Bisnis/Teknik Informatika/ informatika/ konsentrasi masing-masing)
-  +  
-  +  
-  +  
+  +  Frontend Web Development
+  +  Backend Web Development
+  +  DevOps
 ]
 
 = METODOLOGI
@@ -334,7 +335,6 @@ Mengetahui dan Menyetujui,
     #t Magang Industri ini dilaksanakan oleh mahasiswa Jurusan Teknologi Informasi, Program Studi #studyPrograme.ti, yaitu:
     // TODO: do the looping thing
     + #students.at(0).name
-    + #students.at(1).name
     // * Sertakan Curriculum Vitae masing-masing mahasiswa
   ]
 ]
@@ -354,15 +354,17 @@ Mengetahui dan Menyetujui,
   
   #pad(left: 19em)[
     Malang, Desember 2024 \
-    Hormat kami, \ 
+    Hormat kami, \
+    #image("ttd.png", height: 6em)
+    // #v(5em) \ 
+    #students.at(0).name
   ]
-  #table(
-    align: left,
-    stroke: none,
-    columns: (50%, 50%),
-    [#v(5em) \ #students.at(1).name],
-    [#v(5em) \ #students.at(0).name],
-  )
+  // #table(
+  //   align: left,
+  //   stroke: none,
+  //   columns: (50%, 50%),
+  //   [#v(5em) \ #students.at(0).name],
+  // )
 ]
 
 = CV MAHASISWA
