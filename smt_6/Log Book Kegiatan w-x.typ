@@ -1,0 +1,164 @@
+#set page(
+  margin: 1in
+)
+#set text(
+  size: 12pt,
+  font: "Times New Roman"
+)
+
+#let student = (
+  name: "Muhammad Baihaqi Aulia Asy'ari",
+  nim: "2241720145",
+  studyProgram: "Teknik Informatika",
+  partnerName: "PT. Global Scholarship Services Indonesia"
+)
+#let fieldSupervisorName = ""
+#let supervisorLecturerName = "Prof. Cahya Rahmad, ST., M.Kom., Dr. Eng."
+#let activities = (
+  (
+    date: datetime(day: 3, month: 2, year: 2025).display("[weekday], [day]/[month]/[year]"),
+    clockIn: datetime(hour: 8, minute: 0, second: 0).display("[hour]:[minute]"),
+    clockOut: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
+    activity: "Kick off meeting"
+  ),
+  (
+    date: datetime(day: 1, month: 1, year: 1970).display("[weekday], [day]/[month]/[year]"),
+    clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
+    clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
+    activity: "Kick off meeting"
+  ),
+  (
+    date: datetime(day: 1, month: 1, year: 1970).display("[weekday], [day]/[month]/[year]"),
+    clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
+    clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
+    activity: "Kick off meeting"
+  ),
+  (
+    date: datetime(day: 1, month: 1, year: 1970).display("[weekday], [day]/[month]/[year]"),
+    clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
+    clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
+    activity: "Kick off meeting"
+  ),
+  (
+    date: datetime(day: 1, month: 1, year: 1970).display("[weekday], [day]/[month]/[year]"),
+    clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
+    clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
+    activity: "Kick off meeting"
+  ),
+  (
+    date: datetime(day: 1, month: 1, year: 1970).display("[weekday], [day]/[month]/[year]"),
+    clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
+    clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
+    activity: "Kick off meeting"
+  ),
+)
+
+#box()[
+  #box()[
+    #image(
+      "polinema-header-logo.png",
+      height: 3.17cm
+    )
+  ]
+  #box(width: 1fr, height: 3.17cm)[
+    #align(center + horizon)[
+      #text(size: 14pt)[
+        KEMENTERIAN PENDIDIKAN TINGGI, SAINS,\
+        DAN TEKNOLOGI\
+      ]
+      POLITEKNIK NEGERI MALANG\
+      *JURUSAN TEKNOLOGI INFORMASI*\
+      #text(size: 9pt)[
+        Jalan Soekarno Hatta Nomor 9 Jatimulyo, Lowokwaru, Malang 65141\
+        Telepon (0341) 404424, 404425, Faksimile (0341) 404420\
+        Laman www.polinema.ac.id\
+      ]
+    ]
+  ]
+]
+#line(length: 100%, stroke: 2.25pt)
+#text(size: 11pt)[]
+
+#align(center)[
+  *LOG BOOK KEGIATAN*\
+  *PROGRAM MAGANG KAMPUS MERDEKA*\
+]
+
+#set text(
+  size: 11pt
+)
+#box(
+  inset: 0pt,
+  outset: 0pt
+)[
+  #table(
+    columns: (1fr, 1fr),
+    rows: 0.63cm,
+    inset: (x: 0pt),
+    stroke: gray + 0.75pt,
+    [*Nama*], [*: #student.name*],
+    [*NIM*], [*: #student.nim*],
+    [*Program Studi*], [*: #student.studyProgram*],
+    [*Nama Mitra*], [*: #student.partnerName*],
+  )
+]
+#set text(
+  font: "Calibri",
+  size: 11pt
+) 
+#box(
+  inset: 0pt,
+  outset: 0pt
+)[
+  #table(
+    align: center + horizon,
+    inset: 2.5pt,
+    stroke: 0.5pt,
+    columns: (1fr, 2.75cm, 2.5cm, 7.75cm),
+    rows: (auto, 1.6cm, 1.6cm, 1.6cm, 1.6cm, 1.6cm, 1.6cm),
+    table.header(
+      table.cell(fill: gray)[*Hari, Tanggal*],
+      table.cell(fill: gray)[*Jam Masuk*],
+      table.cell(fill: gray)[*Jam Pulang*],
+      table.cell(fill: gray)[*Kegiatan*],
+    ),
+    [#activities.at(0).date], [#activities.at(0).clockIn], [#activities.at(0).clockOut], [#activities.at(0).activity], 
+    [#activities.at(1).date], [#activities.at(1).clockIn], [#activities.at(1).clockOut], [#activities.at(1).activity], 
+    [#activities.at(2).date], [#activities.at(2).clockIn], [#activities.at(2).clockOut], [#activities.at(2).activity], 
+    [#activities.at(3).date], [#activities.at(3).clockIn], [#activities.at(3).clockOut], [#activities.at(3).activity], 
+    [#activities.at(4).date], [#activities.at(4).clockIn], [#activities.at(4).clockOut], [#activities.at(4).activity], 
+    [#activities.at(5).date], [#activities.at(5).clockIn], [#activities.at(5).clockOut], [#activities.at(5).activity], 
+  )
+]
+#box(height: 5em)[
+  #box(width: 1fr)[]
+  #box(width: 1fr)[]
+  #box(width: 1fr)[
+    Mahasiswa,
+    #v(4em) 
+    #student.name
+  ]
+]
+#v(1em)
+#box(height: 1em)[
+  #box(width: 1fr)[]
+  #box(width: 1fr)[
+    #align(center)[
+      Mengetahui,
+    ]
+  ]
+  #box(width: 1fr)[]
+]
+#box(height: 5em)[
+  #box(width: 1fr)[
+    Pembimbing Lapangan,
+    #v(4em) 
+    #fieldSupervisorName
+  ]
+  #box(width: 1fr)[]
+  #box(width: 1fr)[
+    Dosen Pembimbing,
+    #v(4em) 
+    #supervisorLecturerName
+  ]
+]
