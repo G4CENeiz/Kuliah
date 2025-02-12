@@ -96,9 +96,9 @@
     )
   ]
   box(height: 5em)[
-    #box(width: 1fr)[]
-    #box(width: 1fr)[]
-    #box(width: 1fr)[
+    #box(width: 4fr)[]
+    #box(width: 3fr)[]
+    #box(width: 4fr)[
       Mahasiswa,
       #v(4em) 
       #student.name
@@ -106,22 +106,22 @@
   ]
   v(1em)
   box(height: 1em)[
-    #box(width: 1fr)[]
-    #box(width: 1fr)[
+    #box(width: 4fr)[]
+    #box(width: 3fr)[
       #align(center)[
         Mengetahui,
       ]
     ]
-    #box(width: 1fr)[]
+    #box(width: 4fr)[]
   ]
   box(height: 5em)[
-    #box(width: 1fr)[
+    #box(width: 4fr)[
       Pembimbing Lapangan,
       #v(4em) 
       #fieldSupervisorName
     ]
-    #box(width: 1fr)[]
-    #box(width: 1fr)[
+    #box(width: 3fr)[]
+    #box(width: 4fr)[
       Dosen Pembimbing,
       #v(4em) 
       #supervisorLecturerName
