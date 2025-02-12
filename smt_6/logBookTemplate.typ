@@ -95,6 +95,7 @@
       [#activities.at(5).date], [#activities.at(5).clockIn], [#activities.at(5).clockOut], [#activities.at(5).activity], 
     )
   ]
+// Signing field
   box(height: 5em)[
     #box(width: 4fr)[]
     #box(width: 3fr)[]
