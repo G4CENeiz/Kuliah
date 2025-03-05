@@ -1,4 +1,4 @@
-#let conf(
+#let logBook(
   student: (),
   fieldSupervisorName: none,
   supervisorLecturerName: none,
@@ -96,12 +96,12 @@
     )
   ]
 // Signing field
-  box(height: 5em)[
+  box(height: 6em)[
     #box(width: 4fr)[]
     #box(width: 3fr)[]
     #box(width: 4fr)[
       Mahasiswa,
-      #v(4em) 
+      #v(5em) 
       #student.name
     ]
   ]
@@ -115,16 +115,16 @@
     ]
     #box(width: 4fr)[]
   ]
-  box(height: 5em)[
+  box(height: 6em)[
     #box(width: 4fr)[
       Pembimbing Lapangan,
-      #v(4em) 
+      #v(5em) 
       #fieldSupervisorName
     ]
     #box(width: 3fr)[]
     #box(width: 4fr)[
       Dosen Pembimbing,
-      #v(4em) 
+      #v(5em) 
       #supervisorLecturerName
     ]
   ]

@@ -1,5 +1,5 @@
-#import "logBookTemplate.typ": conf
-#show: conf.with(
+#import "logBookTemplate.typ": logBook
+#show: logBook.with(
   student: (
     name: "Muhammad Baihaqi Aulia Asy'ari",
     nim: "2241720145",
