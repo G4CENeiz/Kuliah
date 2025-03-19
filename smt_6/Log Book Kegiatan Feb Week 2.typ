@@ -6,38 +6,39 @@
     studyProgram: "Teknik Informatika",
     partnerName: "PT. Global Scholarship Services Indonesia"
   ),
+  ttd: image("../smt_5/Internship Preparation/ttd.png", height: 5em),
   fieldSupervisorName: "Muhammad Sigit Susanto",
   supervisorLecturerName: "Prof. Cahya Rahmad, ST., M.Kom., Dr. Eng.",
   activities: (
     (
-      date: datetime(day: 17, month: 2, year: 2025).display("[weekday], [day]/[month]/[year]"),
-      clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
+      date: datetime(day: 10, month: 2, year: 2025).display("[weekday], [day]/[month]/[year]"),
+      clockIn: datetime(hour: 8, minute: 0, second: 0).display("[hour]:[minute]"),
       clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-      activity: "Meneyesaikan proses backend untuk compiling typst"
+      activity: "Meeting mingguan dan penyelesaian template email di repo \"main-api\""
     ),
     (
-      date: datetime(day: 18, month: 2, year: 2025).display("[weekday], [day]/[month]/[year]"),
+      date: datetime(day: 11, month: 2, year: 2025).display("[weekday], [day]/[month]/[year]"),
       clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
       clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-      activity: "Merubah JSON data menjadi dictionary di dalam typst"
+      activity: "Membuat template invoice dengan typst"
     ),
     (
-      date: datetime(day: 19, month: 2, year: 2025).display("[weekday], [day]/[month]/[year]"),
+      date: datetime(day: 12, month: 2, year: 2025).display("[weekday], [day]/[month]/[year]"),
       clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
       clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-      activity: "Menambahkan data preprocessing untuk data typst"
+      activity: "mengintegrasikan template email typst dengan system"
     ),
     (
-      date: datetime(day: 20, month: 2, year: 2025).display("[weekday], [day]/[month]/[year]"),
+      date: datetime(day: 13, month: 2, year: 2025).display("[weekday], [day]/[month]/[year]"),
       clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
       clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-      activity: "Mengganti cara pembentukan dokumen pdf typst"
+      activity: "memperbaiki template dengan menggunakan fitur templating typst"
     ),
     (
-      date: datetime(day: 21, month: 2, year: 2025).display("[weekday], [day]/[month]/[year]"),
+      date: datetime(day: 14, month: 2, year: 2025).display("[weekday], [day]/[month]/[year]"),
       clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
       clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-      activity: "Merubah pengguanaan template html ke typst"
+      activity: "melanjutkan memperbaiki template dengan menggunakan fitur templating typst"
     ),
     (
       date: "",

@@ -4,40 +4,41 @@
     name: "Muhammad Baihaqi Aulia Asy'ari",
     nim: "2241720145",
     studyProgram: "Teknik Informatika",
-    partnerName: "PT. Global Scholarship Services Indonesia"
+    partnerName: "PT. Global Scholarship Services Indonesia",
   ),
+  ttd: image("../smt_5/Internship Preparation/ttd.png", height: 5em),
   fieldSupervisorName: "Muhammad Sigit Susanto",
   supervisorLecturerName: "Prof. Cahya Rahmad, ST., M.Kom., Dr. Eng.",
   activities: (
     (
-      date: datetime(day: 24, month: 2, year: 2025).display("[weekday], [day]/[month]/[year]"),
-      clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
-      clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-      activity: "Menggunakan Typst JSON loader untuk mengambil data"
+      date: datetime(day: 3, month: 2, year: 2025).display("[weekday], [day]/[month]/[year]"),
+      clockIn: datetime(hour: 8, minute: 0, second: 0).display("[hour]:[minute]"),
+      clockOut: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
+      activity: "Kick off meeting"
     ),
     (
-      date: datetime(day: 25, month: 2, year: 2025).display("[weekday], [day]/[month]/[year]"),
+      date: datetime(day: 4, month: 2, year: 2025).display("[weekday], [day]/[month]/[year]"),
       clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
       clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-      activity: "Menngunakan Tabel peserta statis"
+      activity: "Uji coba menjalankan repo \"main-api\" untuk melihat preview email"
     ),
     (
-      date: datetime(day: 26, month: 2, year: 2025).display("[weekday], [day]/[month]/[year]"),
+      date: datetime(day: 5, month: 2, year: 2025).display("[weekday], [day]/[month]/[year]"),
       clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
       clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-      activity: "Membuat dummy data sebagai data sementara untuk pengembangan template"
+      activity: "Uji coba menjalankan repo \"skilly\" untuk melihat preview email"
     ),
     (
-      date: datetime(day: 27, month: 2, year: 2025).display("[weekday], [day]/[month]/[year]"),
+      date: datetime(day: 6, month: 2, year: 2025).display("[weekday], [day]/[month]/[year]"),
       clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
       clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-      activity: "Mencari informasi tentang penggunaan looping untuk menampilkan data di tabel"
+      activity: "Merubah format email di repo \"main-api\" menjadi typst"
     ),
     (
-      date: datetime(day: 28, month: 2, year: 2025).display("[weekday], [day]/[month]/[year]"),
+      date: datetime(day: 7, month: 2, year: 2025).display("[weekday], [day]/[month]/[year]"),
       clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
       clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-      activity: "Mencoba penggunaan looping untuk menampilkan data di tabel"
+      activity: "merapikan email typst di repo \"main-api\""
     ),
     (
       date: "",

@@ -6,38 +6,39 @@
     studyProgram: "Teknik Informatika",
     partnerName: "PT. Global Scholarship Services Indonesia"
   ),
+  ttd: image("../smt_5/Internship Preparation/ttd.png", height: 5em),
   fieldSupervisorName: "Muhammad Sigit Susanto",
   supervisorLecturerName: "Prof. Cahya Rahmad, ST., M.Kom., Dr. Eng.",
   activities: (
     (
-      date: datetime(day: 10, month: 2, year: 2025).display("[weekday], [day]/[month]/[year]"),
-      clockIn: datetime(hour: 8, minute: 0, second: 0).display("[hour]:[minute]"),
-      clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-      activity: "Meeting mingguan dan penyelesaian template email di repo \"main-api\""
-    ),
-    (
-      date: datetime(day: 11, month: 2, year: 2025).display("[weekday], [day]/[month]/[year]"),
+      date: datetime(day: 24, month: 2, year: 2025).display("[weekday], [day]/[month]/[year]"),
       clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
       clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-      activity: "Membuat template invoice dengan typst"
+      activity: "Menggunakan Typst JSON loader untuk mengambil data"
     ),
     (
-      date: datetime(day: 12, month: 2, year: 2025).display("[weekday], [day]/[month]/[year]"),
+      date: datetime(day: 25, month: 2, year: 2025).display("[weekday], [day]/[month]/[year]"),
       clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
       clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-      activity: "mengintegrasikan template email typst dengan system"
+      activity: "Menngunakan Tabel peserta statis"
     ),
     (
-      date: datetime(day: 13, month: 2, year: 2025).display("[weekday], [day]/[month]/[year]"),
+      date: datetime(day: 26, month: 2, year: 2025).display("[weekday], [day]/[month]/[year]"),
       clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
       clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-      activity: "memperbaiki template dengan menggunakan fitur templating typst"
+      activity: "Membuat dummy data sebagai data sementara untuk pengembangan template"
     ),
     (
-      date: datetime(day: 14, month: 2, year: 2025).display("[weekday], [day]/[month]/[year]"),
+      date: datetime(day: 27, month: 2, year: 2025).display("[weekday], [day]/[month]/[year]"),
       clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
       clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-      activity: "melanjutkan memperbaiki template dengan menggunakan fitur templating typst"
+      activity: "Mencari informasi tentang penggunaan looping untuk menampilkan data di tabel"
+    ),
+    (
+      date: datetime(day: 28, month: 2, year: 2025).display("[weekday], [day]/[month]/[year]"),
+      clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
+      clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
+      activity: "Mencoba penggunaan looping untuk menampilkan data di tabel"
     ),
     (
       date: "",
