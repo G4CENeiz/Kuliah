@@ -3,6 +3,7 @@
   fieldSupervisorName: none,
   supervisorLecturerName: none,
   activities: (),
+  ttd: none,
   doc
 ) = {
   set page(
@@ -101,7 +102,11 @@
     #box(width: 3fr)[]
     #box(width: 4fr)[
       Mahasiswa,
-      #v(5em) 
+      #if (ttd == none) {
+        v(5em)
+      } else {
+        ttd
+      }
       #student.name
     ]
   ]
