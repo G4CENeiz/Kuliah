@@ -11,34 +11,34 @@
   supervisorLecturerName: "Prof. Cahya Rahmad, ST., M.Kom., Dr. Eng.",
   activities: (
     (
-      date: datetime(day: 3, month: 3, year: 2025).display("[weekday], [day]/[month]/[year]"),
+      date: datetime(day: 24, month: 3, year: 2025).display("[weekday], [day]/[month]/[year]"),
       clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
       clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-      activity: "Menambahkan konten tabel peserta secara dinamis dan detail pembayaran di dalam invoice"
+      activity: "Menambahkan data preprocessing untuk sertifikat"
     ),
     (
-      date: datetime(day: 4, month: 3, year: 2025).display("[weekday], [day]/[month]/[year]"),
+      date: datetime(day: 25, month: 3, year: 2025).display("[weekday], [day]/[month]/[year]"),
       clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
       clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-      activity: "Menyelesaikan data preprocessing data agar data siap disajikan di dalam pdf"
+      activity: "Mengkoreksi style font dan lain lain"
     ),
     (
-      date: datetime(day: 5, month: 3, year: 2025).display("[weekday], [day]/[month]/[year]"),
+      date: datetime(day: 26, month: 3, year: 2025).display("[weekday], [day]/[month]/[year]"),
       clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
       clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-      activity: "Menyelesaikan keseluruhan fitur pemrosesan pembuatan pdf invoice"
+      activity: "Menata ulang susunan sertifikat dengan metode yang lebih akurat"
     ),
     (
-      date: datetime(day: 6, month: 3, year: 2025).display("[weekday], [day]/[month]/[year]"),
+      date: datetime(day: 27, month: 3, year: 2025).display("[weekday], [day]/[month]/[year]"),
       clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
       clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-      activity: "Menunggu penugasan"
+      activity: "Mengkoreksi style font dan lain lain"
     ),
     (
-      date: datetime(day: 7, month: 3, year: 2025).display("[weekday], [day]/[month]/[year]"),
+      date: datetime(day: 28, month: 3, year: 2025).display("[weekday], [day]/[month]/[year]"),
       clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
       clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-      activity: "Menunggu penugasan"
+      activity: "Menyelesaikan keseluruhan fitur pemrosesan pembuatan pdf sertifikat"
     ),
     (
       date: "",
