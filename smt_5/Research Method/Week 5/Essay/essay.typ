@@ -230,6 +230,7 @@ Kami menyadari bahwasannya dengan tanpa adanya dukungan dan kerja sama dari berb
 #align(
   right,
   table(
+    align: left,
     columns: (auto),
     stroke: none,
     [Malang, #validationDate.display("[day] [month repr:long] [year]")],
