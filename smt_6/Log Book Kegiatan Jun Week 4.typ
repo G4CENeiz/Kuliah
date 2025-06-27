@@ -14,31 +14,31 @@
       date: datetime(day: 23, month: 6, year: 2025).display("[weekday], [day]/[month]/[year]"),
       clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
       clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-      activity: ""
+      activity: "Weekly meeting dan penugasan"
     ),
     (
       date: datetime(day: 24, month: 6, year: 2025).display("[weekday], [day]/[month]/[year]"),
       clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
       clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-      activity: ""
+      activity: "Membuat unit test untuk component yang belum memiliki unit test"
     ),
     (
       date: datetime(day: 25, month: 6, year: 2025).display("[weekday], [day]/[month]/[year]"),
       clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
       clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-      activity: ""
+      activity: "Membuat unit test untuk component yang belum memiliki unit test"
     ),
     (
       date: datetime(day: 26, month: 6, year: 2025).display("[weekday], [day]/[month]/[year]"),
       clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
       clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-      activity: ""
+      activity: "Membuat Laporan Magang"
     ),
     (
       date: datetime(day: 27, month: 6, year: 2025).display("[weekday], [day]/[month]/[year]"),
       clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
       clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-      activity: ""
+      activity: "Membuat Laporan Magang"
     ),
     (
       date: "",

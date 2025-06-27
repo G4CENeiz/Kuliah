@@ -14,31 +14,31 @@
       date: datetime(day: 16, month: 6, year: 2025).display("[weekday], [day]/[month]/[year]"),
       clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
       clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-      activity: ""
+      activity: "- (kosong)"
     ),
     (
       date: datetime(day: 17, month: 6, year: 2025).display("[weekday], [day]/[month]/[year]"),
       clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
       clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-      activity: ""
+      activity: "- (kosong)"
     ),
     (
       date: datetime(day: 18, month: 6, year: 2025).display("[weekday], [day]/[month]/[year]"),
       clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
       clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-      activity: ""
+      activity: "- (kosong)"
     ),
     (
       date: datetime(day: 19, month: 6, year: 2025).display("[weekday], [day]/[month]/[year]"),
       clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
       clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-      activity: ""
+      activity: "- (kosong)"
     ),
     (
       date: datetime(day: 20, month: 6, year: 2025).display("[weekday], [day]/[month]/[year]"),
       clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
       clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-      activity: ""
+      activity: "- (kosong)"
     ),
     (
       date: "",

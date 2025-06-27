@@ -32,13 +32,13 @@
       date: datetime(day: 12, month: 6, year: 2025).display("[weekday], [day]/[month]/[year]"),
       clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
       clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-      activity: ""
+      activity: "- (kosong)"
     ),
     (
       date: datetime(day: 13, month: 6, year: 2025).display("[weekday], [day]/[month]/[year]"),
       clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
       clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-      activity: ""
+      activity: "- (kosong)"
     ),
     (
       date: "",
