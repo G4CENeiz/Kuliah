@@ -27,7 +27,7 @@
   nip: "198010102005011001"
 )
 #let approvalSignDate = "Bogor, " + datetime(day: 1, month: 7, year: 2025).display("[day] [month repr:long] [year]")
-#let presentationDate = datetime(day: 1, month: 7, year: 2025).display("[day] [month repr:long] [year]")
+#let presentationDate = datetime(day: 2, month: 7, year: 2025).display("[day] [month repr:long] [year]")
 #let activities = (
   (
     date: datetime(day: 3, month: 2, year: 2025).display("[day] [month repr:long] [year]"),
