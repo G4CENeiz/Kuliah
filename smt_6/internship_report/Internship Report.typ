@@ -680,3 +680,11 @@ Approved By,
 
 == Conclusions
 == Suggestions
+
+#pagebreak()
+
+#show heading.where(level: 1): set heading(
+    numbering: none
+)
+
+#bibliography("../../smt_5/Research Method/Week 5/Essay/references.bib", title: "REFERENCES")
