@@ -204,7 +204,7 @@ Approved By,
     columns: (auto),
     stroke: none,
     [Malang, #presentationDate],
-    v(5em),
+    image("../../smt_5/Internship Preparation/ttd.png", height: 5em),
     [#student.name],
   )
 ) 
