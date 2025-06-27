@@ -1,8 +1,8 @@
 #let title = "project title"
 #let company = (
   name: "PT. Global Scholarship Services Indonesia",
-  address: "Jalan Taman Kencana nomor 3, Babakan, Bogor Tengah, Bogor",
-  field: "Development of human resource",
+  address: "Jalan Taman Kencana Nomor 3, Babakan, Bogor Tengah, Bogor",
+  field: "Development of Human Resource",
   period:  datetime(day: 20, month: 2, year: 2025).display("[day] [month repr:long] [year]") + " - " + datetime(day: 30, month: 6, year: 2025).display("[day] [month repr:long] [year]")
 )
 #let student = (
@@ -41,6 +41,7 @@
   )
 )
 #set text(
+  hyphenate: false,
   size: 12pt, 
   font: "Times New Roman"
 )
@@ -83,6 +84,8 @@
 #set par(
   spacing: 1.5em,
   justify: true,
+  first-line-indent: 0.5in,
+  linebreaks: "simple"
 )
 
 #heading(upper("approval"))
@@ -104,13 +107,13 @@ That the sudent:
 \ \
 Have successfully completed the internship at:
 #table(
-  columns: (auto, auto),
+  columns: (auto, auto, auto),
   stroke: none,
   inset: (x: 0pt),
-  [#tabIndent Company Name], [: #company.name],
-  [#tabIndent Company Address], [: #company.address],
-  [#tabIndent Field], [: #company.field],
-  [#tabIndent Peroid], [: #company.period],
+  [#tabIndent Company Name], [:], [#company.name],
+  [#tabIndent Company Address], [:], [#company.address],
+  [#tabIndent Field], [:], [#company.field],
+  [#tabIndent Peroid], [:], [#company.period],
 )
 \ \
 
@@ -160,6 +163,7 @@ Approved By,
   align: center + bottom,
   stroke: 0pt,
   columns: (1fr, 1fr),
+  inset: (x: 0pt),
   [Head of \ D4 Informatics Engineering Program ], [Supervisor],
   [#v(5em)], [#v(5em)],
   [#underline(headOfProgram.name) \ NIP. #headOfProgram.nip], 
@@ -170,7 +174,7 @@ Approved By,
   align: center + bottom,
   stroke: 0pt,
   columns: (1fr),
-  [Mengetahui, \ Head of The Department of Information Technology ],
+  [Acknowledged, \ Head of The Department of Information Technology ],
   [#v(5em)],
   [#underline(headOfDepartment.name) \ NIP. #headOfDepartment.nip],
 )
@@ -184,17 +188,14 @@ Approved By,
 
 #heading(upper("preface"))
 \
-#par(
-  first-line-indent: 0.5in
-)[
-  #lorem(40)
-  
-  #lorem(40)
 
-  #lorem(40)
+#lorem(40)
 
-  #lorem(40)
-]
+#lorem(40)
+
+#lorem(40)
+
+#lorem(40)
 
 #align(
   right,
