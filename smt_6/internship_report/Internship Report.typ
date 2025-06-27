@@ -665,6 +665,19 @@ Approved By,
 
 == Relevance of Theory and Practice
 == Issues
+I consistently found my initial efforts to be abysmal, frequently resulting in little to no tangible progress. This significant disconnect between my intent and the actual output was a recurring challenge during the early stages of every assignments in my internship.
+
+My initial attempt to recreate the invoice-making system was marred by a fundamental misunderstanding of the core requirements. I found myself adrift, struggling to grasp the essence of the task, which unfortunately led to a slight crisis regarding the assignment. This lack of clarity on my part resulted in the deadline being stretched considerably, as I grappled with what felt like an insurmountable knowledge gap. The experience was a stark reminder of the importance of thorough initial comprehension before diving into complex tasks.
+
+Following the invoice system, my next challenge was recreating the certificate-making system with an identical document structure to its original HTML template. This proved to be a significant hurdle, as I consistently stumbled over layouting the document in Typst to precisely mirror the HTML version. The main issue stemmed directly from my lack of specific skills in Typst to replicate that exact kind of intricate document structure. Despite understanding the desired outcome, I struggled to translate the precise visual and structural elements of the HTML template into Typst's unique formatting environment.
+
+Around the middle of my internship, I experienced a significant setback due to illness, which kept me out for almost an entire month. This prolonged absence created a major hiccup in my progress. When I returned, I found it quite challenging to regain my previous work rhythm and flow, as I struggled to pick up where I'd left off and re-establish my focus on ongoing tasks.
+
+My next assignment, making the main portal site's index and technical pages responsive, started with me underestimating the task. Instead of trying to understand the problem fully, I immediately threw it at multiple AI models with very little understanding of the assignment. This meant the entire first week resulted in nothing. I just kept feeding the problem to every major LLM, hoping for an easy answer, but my lack of initial effort kept me from seeing what I really needed to do.
+
+Adding to my earlier mistakes, I realized I didn't fully understand what makes a page responsive. I also couldn't tell which parts of the page were causing the problem or what I needed to change to make it responsive. So, for the next week, I just kept trying things, making small changes to the page until it looked somewhat right. This trial-and-error approach was very inefficient, but it was through this process that I eventually began to understand the principles and what I was supposed to be doing.
+
+The disruption caused by my illness had a profound impact on my engagement, especially with the responsive page assignment. During this period, I found myself avoiding meetings entirely. This was primarily due to the intense embarrassment I felt, knowing I had practically no tangible results to show for my efforts. I struggled immensely to regain my previous pace, and truthfully, my performance ended up being worse than when I first started the internship.
 
 #pagebreak()
 
