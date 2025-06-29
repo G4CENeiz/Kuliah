@@ -342,67 +342,67 @@
     activity: "menyesuaikan technical hero section kembali ke tampilan sebelumnya"
   ),
   (
-    date: datetime(day: 3, month: 6, year: 2025).display("[weekday], [day]/[month]/[year]"),
+    date: datetime(day: 3, month: 6, year: 2025).display("[day] [month repr:long] [year]"),
     clockIn: datetime(hour: 8, minute: 0, second: 0).display("[hour]:[minute]"),
     clockOut: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
     activity: "weekly meeting"
   ),
   (
-    date: datetime(day: 4, month: 6, year: 2025).display("[weekday], [day]/[month]/[year]"),
+    date: datetime(day: 4, month: 6, year: 2025).display("[day] [month repr:long] [year]"),
     clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
     clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
     activity: "mencoba membuat font size responsive"
   ),
   (
-    date: datetime(day: 5, month: 6, year: 2025).display("[weekday], [day]/[month]/[year]"),
+    date: datetime(day: 5, month: 6, year: 2025).display("[day] [month repr:long] [year]"),
     clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
     clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
     activity: "memproses halaman technical"
   ),
   (
-    date: datetime(day: 9, month: 6, year: 2025).display("[weekday], [day]/[month]/[year]"),
+    date: datetime(day: 9, month: 6, year: 2025).display("[day] [month repr:long] [year]"),
     clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
     clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
     activity: "menyesuaikan halaman technical dengan ldp program dan ila program"
   ),
   (
-    date: datetime(day: 10, month: 6, year: 2025).display("[weekday], [day]/[month]/[year]"),
+    date: datetime(day: 10, month: 6, year: 2025).display("[day] [month repr:long] [year]"),
     clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
     clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
     activity: "menyesuaikan navbar dan footer"
   ),
   (
-    date: datetime(day: 11, month: 6, year: 2025).display("[weekday], [day]/[month]/[year]"),
+    date: datetime(day: 11, month: 6, year: 2025).display("[day] [month repr:long] [year]"),
     clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
     clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
     activity: "penyelesaian keseluruhan halaman"
   ),
   (
-    date: datetime(day: 23, month: 6, year: 2025).display("[weekday], [day]/[month]/[year]"),
+    date: datetime(day: 23, month: 6, year: 2025).display("[day] [month repr:long] [year]"),
     clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
     clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
     activity: "Weekly meeting dan penugasan"
   ),
   (
-    date: datetime(day: 24, month: 6, year: 2025).display("[weekday], [day]/[month]/[year]"),
+    date: datetime(day: 24, month: 6, year: 2025).display("[day] [month repr:long] [year]"),
     clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
     clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
     activity: "Membuat unit test untuk component yang belum memiliki unit test"
   ),
   (
-    date: datetime(day: 25, month: 6, year: 2025).display("[weekday], [day]/[month]/[year]"),
+    date: datetime(day: 25, month: 6, year: 2025).display("[day] [month repr:long] [year]"),
     clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
     clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
     activity: "Membuat unit test untuk component yang belum memiliki unit test"
   ),
   (
-    date: datetime(day: 26, month: 6, year: 2025).display("[weekday], [day]/[month]/[year]"),
+    date: datetime(day: 26, month: 6, year: 2025).display("[day] [month repr:long] [year]"),
     clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
     clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
     activity: "Membuat Laporan Magang"
   ),
   (
-    date: datetime(day: 27, month: 6, year: 2025).display("[weekday], [day]/[month]/[year]"),
+    date: datetime(day: 27, month: 6, year: 2025).display("[day] [month repr:long] [year]"),
     clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
     clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
     activity: "Membuat Laporan Magang"
@@ -423,7 +423,8 @@
 #set text(
   hyphenate: false,
   size: 12pt, 
-  font: "Times New Roman"
+  font: "Times New Roman",
+  kerning: true
 )
 
 #set align(center)
@@ -465,7 +466,7 @@
   spacing: 1.5em,
   justify: true,
   first-line-indent: 0.5in,
-  linebreaks: "simple"
+  linebreaks: "optimized"
 )
 #set figure.caption(position: top)
 #show figure: set block(breakable: true)
