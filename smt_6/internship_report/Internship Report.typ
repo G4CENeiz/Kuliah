@@ -625,7 +625,15 @@ Approved By,
 #set heading(numbering: "1.1.")
 
 = #upper("introduction")
+My internship was conducted at PT. Global Scholarship Services Indonesia (GSSI), a dynamic subsidiary of PT Bogor Life Science & Technology (BLST). This invaluable opportunity, spanning from [Insert Start Date] to [Insert End Date], served as a vital bridge between my theoretical studies and practical professional application. The primary objective of this internship was to gain firsthand experience in the operations of a prominent organization within the education and human capital development sector, thereby enhancing my understanding of corporate functions and industry best practices.
+
+GSSI, also recognized as IPB Training, holds a significant position as an "excellence hub" for the development of human resources through applied science-based skill enhancement. The company is driven by a clear vision to effectively disseminate the extensive expertise cultivated at IPB University. In alignment with this, its mission is firmly rooted in providing high-quality, relevant skill development solutions that cater to a diverse array of sectors and individual needs. Beyond its core training functions, GSSI strategically contributes to IPB's non-academic revenue streams, demonstrating its dual role as both an educational service provider and a sustainable business entity. My tenure at GSSI thus offered a comprehensive immersion into an organization deeply committed to fostering human potential and contributing to national development through specialized learning initiatives.
+
 == Company Profile	
+PT. Global Scholarship Services Indonesia (GSSI), widely recognized as IPB Training, is a limited liability company (Perseroan Terbatas) established on March 12, 2009. Operating as a strategic subsidiary of PT Bogor Life Science & Technology (BLST) since its acquisition in 2014, GSSI is an integral part of the IPB University business group. Based in Bogor, the company functions as an "excellence hub" for human resource development, leveraging IPB University's profound expertise to deliver a diverse range of training and skill enhancement programs across various sectors, including technical, leadership, and language proficiency through its IPB Language Academy.
+
+While its name implies direct scholarship management, GSSI's unique approach to "scholarship services" focuses on enabling individuals to become competitive for external scholarships and career advancements. This is achieved by offering specialized training and "coaching scholarships" for its own courses, such as IELTS preparation, which equip participants with necessary qualifications. By professionalizing human capital and contributing to the advancement of IPB University through its sustainable business practices, GSSI plays a crucial role in enhancing the quality and competitiveness of Indonesia's workforce.
+
 == Work Unit Scope
 
 #pagebreak()
