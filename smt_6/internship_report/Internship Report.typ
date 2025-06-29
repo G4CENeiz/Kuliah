@@ -15,15 +15,15 @@
   position: "Company Director"
 )
 #let supervisingLecturer = (
-  name: "Prof. Cahya Rahmad, ST., M.Kom., Dr. Eng.",
+  name: "Prof. Cahya Rahmad, S.T., M.Kom., Dr. Eng.",
   nip: "197202022005011002"
 )
 #let headOfProgram = (
-  name: "Dr. Ely Styo Astuti, ST., MT.",
+  name: "Dr. Ely Setyo Astuti, S.T., M.T.",
   nip: "197605152009122001"
 )
 #let headOfDepartment = (
-  name: "Prof. Dr. Eng. Rosa Andrie Asmara,ST., MT.",
+  name: "Prof. Dr. Eng. Rosa Andrie Asmara, S.T., M.T.",
   nip: "198010102005011001"
 )
 #let approvalSignDate = "Bogor, " + datetime(day: 1, month: 7, year: 2025).display("[day] [month repr:long] [year]")
