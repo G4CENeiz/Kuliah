@@ -639,6 +639,9 @@ While its name implies direct scholarship management, GSSI's unique approach to 
 #pagebreak()
 
 = #upper("theoretical study")
+== Typst
+== Responsive Web Design
+== Unit Testing
 
 #pagebreak()
 
