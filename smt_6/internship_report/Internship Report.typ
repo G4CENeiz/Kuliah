@@ -460,8 +460,8 @@
 #set page(numbering: "i")
 
 #set align(left)
-#show heading: set align(center)
-#show heading.where(level: 2): set align(left)
+#show heading: set align(left)
+#show heading.where(level: 1): set align(center)
 #set par(
   spacing: 1.5em,
   justify: true,
