@@ -701,4 +701,4 @@ The disruption caused by my illness had a profound impact on my engagement, espe
     numbering: none
 )
 
-#bibliography("../../smt_5/Research Method/Week 5/Essay/references.bib", title: "REFERENCES")
+#bibliography("../../smt_5/Research Method/Week 5/Essay/references.bib", title: "REFERENCES", style: "american-psychological-association")
