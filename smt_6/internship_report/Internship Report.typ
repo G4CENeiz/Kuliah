@@ -471,7 +471,7 @@
 #set figure.caption(position: top)
 #show figure: set block(breakable: true)
 
-#heading(upper("approval"))
+#heading(upper("approval")) <content>
 
 The undersign below:
 #table(
@@ -514,7 +514,7 @@ Have successfully completed the internship at:
 #pagebreak()
 #set align(center)
 
-#heading(upper("approval"))
+#heading(upper("approval")) <content>
 
 \
 #text(size: 14pt)[#upper("internship report")]
@@ -564,11 +564,11 @@ Approved By,
 #set align(left)
 #pagebreak()
 
-#heading(upper("abstract"))
+#heading(upper("abstract")) <content>
 
 #pagebreak()
 
-#heading(upper("preface"))
+#heading(upper("preface")) <content>
 \
 
 #lorem(40)
@@ -593,22 +593,22 @@ Approved By,
 
 #pagebreak()
 
-#heading(upper("list of content"))
-#outline(title: none, indent: 2em)
+#heading(upper("list of content")) <content>
+#outline(title: none, indent: 2em, target: label("content"))
 
 #pagebreak()
 
-#heading(upper("list of table"))
+#heading(upper("list of table")) <content>
 #outline(title: none, target: figure.where(kind: table))
 
+// #pagebreak()
+
+// #heading(upper("list of figures")) <content>
+// #outline(title: none, target: figure.where(kind: image))
+
 #pagebreak()
 
-#heading(upper("list of figures"))
-#outline(title: none, target: figure.where(kind: image))
-
-#pagebreak()
-
-#heading(upper("list of appendicies"))
+#heading(upper("list of appendicies")) <content>
 #outline(title: none, target: label("appendix"))
 
 #pagebreak()
@@ -623,30 +623,33 @@ Approved By,
 
 #set heading(numbering: "1.1.")
 
-= #upper("introduction")
+= #upper("introduction") <content>
+
 My internship was conducted at PT. Global Scholarship Services Indonesia (GSSI), a dynamic subsidiary of PT Bogor Life Science & Technology (BLST). This invaluable opportunity, spanning from [Insert Start Date] to [Insert End Date], served as a vital bridge between my theoretical studies and practical professional application. The primary objective of this internship was to gain firsthand experience in the operations of a prominent organization within the education and human capital development sector, thereby enhancing my understanding of corporate functions and industry best practices.
 
 GSSI, also recognized as IPB Training, holds a significant position as an "excellence hub" for the development of human resources through applied science-based skill enhancement. The company is driven by a clear vision to effectively disseminate the extensive expertise cultivated at IPB University. In alignment with this, its mission is firmly rooted in providing high-quality, relevant skill development solutions that cater to a diverse array of sectors and individual needs. Beyond its core training functions, GSSI strategically contributes to IPB's non-academic revenue streams, demonstrating its dual role as both an educational service provider and a sustainable business entity. My tenure at GSSI thus offered a comprehensive immersion into an organization deeply committed to fostering human potential and contributing to national development through specialized learning initiatives.
 
-== Company Profile	
+== Company Profile <content>
+
 PT. Global Scholarship Services Indonesia (GSSI), widely recognized as IPB Training, is a limited liability company (Perseroan Terbatas) established on March 12, 2009. Operating as a strategic subsidiary of PT Bogor Life Science & Technology (BLST) since its acquisition in 2014, GSSI is an integral part of the IPB University business group. Based in Bogor, the company functions as an "excellence hub" for human resource development, leveraging IPB University's profound expertise to deliver a diverse range of training and skill enhancement programs across various sectors, including technical, leadership, and language proficiency through its IPB Language Academy.
 
 While its name implies direct scholarship management, GSSI's unique approach to "scholarship services" focuses on enabling individuals to become competitive for external scholarships and career advancements. This is achieved by offering specialized training and "coaching scholarships" for its own courses, such as IELTS preparation, which equip participants with necessary qualifications. By professionalizing human capital and contributing to the advancement of IPB University through its sustainable business practices, GSSI plays a crucial role in enhancing the quality and competitiveness of Indonesia's workforce.
 
-== Work Unit Scope
+== Work Unit Scope <content>
 
 #pagebreak()
 
-= #upper("theoretical study")
-== Typst
-== Responsive Web Design
-== Unit Testing
+= #upper("theoretical study") <content>
+== Document Generation with Typst <content>
+== Responsive Web Design with Tailwind CSS <content>
+== Unit Testing with Vitest and React Testing Library <content>
 
 #pagebreak()
 
 = #upper("internship activities")
 
-== Activity Realization
+== Activity Realization <content>
+
 #figure(
   caption: "Internship activities realization",
   table(
@@ -674,8 +677,9 @@ While its name implies direct scholarship management, GSSI's unique approach to 
 
 #pagebreak()
 
-== Relevance of Theory and Practice
-== Issues
+== Relevance of Theory and Practice <content>
+== Issues <content>
+
 I consistently found my initial efforts to be abysmal, frequently resulting in little to no tangible progress. This significant disconnect between my intent and the actual output was a recurring challenge during the early stages of every assignments in my internship.
 
 My initial attempt to recreate the invoice-making system was marred by a fundamental misunderstanding of the core requirements. I found myself adrift, struggling to grasp the essence of the task, which unfortunately led to a slight crisis regarding the assignment. This lack of clarity on my part resulted in the deadline being stretched considerably, as I grappled with what felt like an insurmountable knowledge gap. The experience was a stark reminder of the importance of thorough initial comprehension before diving into complex tasks.
@@ -692,18 +696,18 @@ The disruption caused by my illness had a profound impact on my engagement, espe
 
 #pagebreak()
 
-= #upper("recomendations")
+= #upper("recomendations") <content>
+
+// #pagebreak()
+
+// = #upper("assignments")
 
 #pagebreak()
 
-= #upper("assignments")
+= #upper("conclusions") <content>
 
-#pagebreak()
-
-= #upper("conclusions")
-
-== Conclusions
-== Suggestions
+== Conclusions <content>
+== Suggestions <content>
 
 #pagebreak()
 
@@ -711,4 +715,43 @@ The disruption caused by my illness had a profound impact on my engagement, espe
     numbering: none
 )
 
-#bibliography("../../smt_5/Research Method/Week 5/Essay/references.bib", title: "REFERENCES", style: "american-psychological-association")
+#heading(upper("REFERENCES")) <content>
+#bibliography("references.bib", title: none, style: "american-psychological-association")
+
+#pagebreak()
+
+= APPENDICES <content>
+
+#counter(heading).update(0)
+#show heading.where(level: 1): set align(left)
+#show heading.where(level: 1): set heading(
+    numbering: (..) => "Appendices " + counter(heading).display("1")
+)
+
+#heading("Log Book February") <appendix>
+
+#image("feb-1.jpg")
+#image("feb-2.jpg")
+#image("feb-3.jpg")
+#image("feb-4.jpg")
+
+#pagebreak()
+
+#heading("Log Book March") <appendix>
+
+#image("mar-1.jpg")
+#image("mar-2.jpg")
+#image("mar-3.jpg")
+#image("mar-4.jpg")
+
+#pagebreak()
+
+#heading("Log Book April") <appendix>
+
+#pagebreak()
+
+#heading("Log Book May") <appendix>
+
+#pagebreak()
+
+#heading("Log Book June") <appendix>
