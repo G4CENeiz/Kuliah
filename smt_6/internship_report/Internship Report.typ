@@ -640,9 +640,26 @@ While its name implies direct scholarship management, GSSI's unique approach to 
 #pagebreak()
 
 = #upper("theoretical study") <content>
+
+This chapter provides the theoretical foundation for the technologies and methodologies employed during the internship. It delves into the principles of modern document generation, responsive web design, and software unit testing, specifically focusing on Typst for document creation, Tailwind CSS for front-end responsiveness, and Vitest with React Testing Library for robust component testing.
+
 == Document Generation with Typst <content>
+
+Document generation systems automate the creation of structured documents, ensuring consistency, accuracy, and efficiency, particularly for repetitive tasks like producing invoices or certificates @aalpha_document_2022. These systems typically involve templating mechanisms and data integration to populate predefined layouts. The advent of modern typesetting tools has enhanced the capabilities of such systems, offering greater flexibility and performance.
+
+Typst is a new markup-based typesetting system designed for technical writing and document creation, positioning itself as a contemporary alternative to traditional systems like LaTeX @typst_docs_latex. It distinguishes itself with a focus on ease of learning, a powerful yet intuitive markup language, and a fast, incremental compilation process @lovin_typst_2023. Unlike LaTeX's multi-pass compilation, Typst employs a four-phase compilation architecture—Parsing, Evaluation, Layout, and Export—facilitating rapid previews and efficient iteration @typst_architecture. Its functional programming paradigm allows for robust templating through custom functions and `set`/`show` rules, enabling a clear separation of content and presentation, which is crucial for generating consistent documents like invoices and certificates from structured data @typst_docs_formatting.
+
 == Responsive Web Design with Tailwind CSS <content>
+
+Responsive Web Design (RWD) is an approach to web development that aims to provide an optimal viewing experience—easy reading and navigation—across a wide range of devices, from desktops to mobile phones @udacity_responsive_2024. Key principles of RWD include fluid grids, flexible images, and media queries, which collectively allow a website's layout and content to adapt dynamically to different screen sizes and orientations @webflow_responsive_2023. Implementing RWD ensures accessibility and a consistent user experience regardless of the device used.
+
+Tailwind CSS is a utility-first CSS framework that expedites responsive web design by providing a comprehensive set of low-level utility classes directly within HTML markup @magnet_tailwind_2023. Instead of pre-designed components, developers compose UIs by applying these atomic classes, which can be combined to create complex designs. For responsiveness, Tailwind integrates a mobile-first breakpoint system (`sm`, `md`, `lg`, `xl`, etc.) that allows specific utility classes to be conditionally applied based on screen size, effectively enabling adaptive layouts @geekster_tailwind_responsive_2023. This utility-first approach, complemented by the ability to extract recurring patterns into reusable components using directives like `@apply` or `@layer components`, promotes a modular and highly customizable design architecture for responsive portals @tailwind_docs_custom_styles.
+
 == Unit Testing with Vitest and React Testing Library <content>
+
+Unit testing is a software testing method where individual units or components of a software application are tested in isolation to determine if they are fit for use @wikipedia_unit_testing. The primary goal is to validate that each unit of the software performs as designed, providing early detection of bugs and facilitating easier debugging. Key principles include testing small, isolated units, ensuring tests are fast, and making them deterministic @codefresh_unit_testing_2024. In the context of front-end development, unit testing is crucial for ensuring the reliability and functionality of individual UI components.
+
+Vitest is a modern, fast testing framework specifically designed for JavaScript and TypeScript projects, leveraging the performance benefits of Vite @incubyte_vitest_rtl_2023. It offers a Jest-compatible API, making it familiar to many developers, while providing faster execution and instant feedback through its hot module reloading capabilities during test development @teshome_vitest_rtl_2023. Vitest serves as the test runner and assertion library. Complementing Vitest, React Testing Library (RTL) is a lightweight utility library that focuses on testing React components in a way that closely resembles how users interact with the application @wieruch_vitest_rtl_2024. Instead of testing implementation details (like component internal state or methods), RTL encourages testing user flows and observable behavior, utilizing queries that prioritize accessibility attributes (e.g., `getByRole`, `getByLabelText`). This approach ensures that tests are robust, maintainable, and less prone to breaking due to refactors of internal component logic, thereby validating the functionality and user experience of React components @ignatovich_rtl_best_practices_2023.
 
 #pagebreak()
 
@@ -678,6 +695,15 @@ While its name implies direct scholarship management, GSSI's unique approach to 
 #pagebreak()
 
 == Relevance of Theory and Practice <content>
+
+This internship provided a unique opportunity to bridge the gap between theoretical knowledge and practical application. The concepts of responsive web design, component-based architecture, and robust unit testing, which were once abstract principles, became tangible tools in developing the responsive web portal and its interactive elements. Similarly, understanding modern document generation systems and their underlying principles was crucial in implementing efficient and accurate invoice and certificate generation processes using Typst.
+
+Working with Typst allowed for a direct application of theoretical typesetting and templating principles. The internship tasks, such as creating structured invoices and certificates, directly benefited from Typst's functional approach and its ability to separate content from presentation, ensuring consistency and ease of maintenance. This hands-on experience solidified the understanding of how a well-designed document generation system can streamline critical business operations.
+
+Furthermore, building the responsive web portal using Tailwind CSS provided invaluable practical insight into implementing responsive design philosophies. The theoretical understanding of fluid grids and media queries seamlessly translated into the strategic use of Tailwind's utility-first classes and breakpoint system. This direct application demonstrated how a utility-first framework efficiently facilitates the creation of adaptive user interfaces, ensuring optimal viewing across diverse devices.
+
+Finally, the development of unit tests for the web portal's components using Vitest and React Testing Library offered a practical deep dive into software quality assurance. The theoretical emphasis on testing isolated units and focusing on user behavior over implementation details was directly applied. This experience highlighted how adhering to these testing principles leads to more stable, reliable, and maintainable code, significantly reducing potential bugs and improving overall software quality.
+
 == Issues <content>
 
 I consistently found my initial efforts to be abysmal, frequently resulting in little to no tangible progress. This significant disconnect between my intent and the actual output was a recurring challenge during the early stages of every assignments in my internship.
