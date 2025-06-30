@@ -479,7 +479,6 @@ The undersign below:
   stroke: none,
   inset: (x: 0pt),
   [#tabIndent Name#tabIndent], [: #fieldSupervisor.name],
-  [#tabIndent NIP#tabIndent], [: #fieldSupervisor.nip],
   [#tabIndent Position#tabIndent], [: #fieldSupervisor.position],
 )
 \ \
