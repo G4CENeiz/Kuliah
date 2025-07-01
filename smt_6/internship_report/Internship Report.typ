@@ -54,7 +54,7 @@
   ),
   (
     date: datetime(day: 7, month: 2, year: 2025).display("[day] [month repr:long] [year]"),
-    activity: "merapikan email typst di repo \"main-api\"",
+    activity: "Merapikan email typst di repo \"main-api\"",
     task: "merubah format email menjadi typst",
     achievement: "menata susuan dokumen sesuai template"
   ),
@@ -72,19 +72,19 @@
   ),
   (
     date: datetime(day: 12, month: 2, year: 2025).display("[day] [month repr:long] [year]"),
-    activity: "mengintegrasikan template email typst dengan system",
+    activity: "Mengintegrasikan template email typst dengan system",
     task: "",
     achievement: ""
   ),
   (
     date: datetime(day: 13, month: 2, year: 2025).display("[day] [month repr:long] [year]"),
-    activity: "memperbaiki template dengan menggunakan fitur templating typst",
+    activity: "Memperbaiki template dengan menggunakan fitur templating typst",
     task: "",
     achievement: ""
   ),
   (
     date: datetime(day: 14, month: 2, year: 2025).display("[day] [month repr:long] [year]"),
-    activity: "melanjutkan memperbaiki template dengan menggunakan fitur templating typst",
+    activity: "Melanjutkan memperbaiki template dengan menggunakan fitur templating typst",
     task: "",
     achievement: ""
   ),
@@ -300,79 +300,79 @@
   ),
   (
     date: datetime(day: 15, month: 5, year: 2025).display("[day] [month repr:long] [year]"),
-    activity: "mencoba kembali melakukan perubahan untuk mendapatkan hasil yang berbeda",
+    activity: "Mencoba kembali melakukan perubahan untuk mendapatkan hasil yang berbeda",
     task: "",
     achievement: ""
   ),
   (
     date: datetime(day: 19, month: 5, year: 2025).display("[day] [month repr:long] [year]"),
-    activity: "berusaha memahami apa yang semestinya dilakukan dan perubahan yang dibutuhkan",
+    activity: "Berusaha memahami apa yang semestinya dilakukan dan perubahan yang dibutuhkan",
     task: "",
     achievement: ""
   ),
   (
     date: datetime(day: 21, month: 5, year: 2025).display("[day] [month repr:long] [year]"),
-    activity: "menjabarkan komponen komponen yang digunakan halaman index dan technical",
+    activity: "Menjabarkan komponen komponen yang digunakan halaman index dan technical",
     task: "",
     achievement: ""
   ),
   (
     date: datetime(day: 22, month: 5, year: 2025).display("[day] [month repr:long] [year]"),
-    activity: "merubah className dari beberapa komponen",
+    activity: "Merubah className dari beberapa komponen",
     task: "",
     achievement: ""
   ),
   (
     date: datetime(day: 26, month: 5, year: 2025).display("[day] [month repr:long] [year]"),
-    activity: "mulai memahami apa yang harus dilakukan dan merubah komponen technical hero section",
+    activity: "Mulai memahami apa yang harus dilakukan dan merubah komponen technical hero section",
     task: "",
     achievement: ""
   ),
   (
     date: datetime(day: 27, month: 5, year: 2025).display("[day] [month repr:long] [year]"),
-    activity: "merubah lagi komponen technical hero section",
+    activity: "Merubah lagi komponen technical hero section",
     task: "",
     achievement: ""
   ),
   (
     date: datetime(day: 28, month: 5, year: 2025).display("[day] [month repr:long] [year]"),
-    activity: "menyesuaikan technical hero section kembali ke tampilan sebelumnya",
+    activity: "Menyesuaikan technical hero section kembali ke tampilan sebelumnya",
     task: "",
     achievement: ""
   ),
   (
     date: datetime(day: 3, month: 6, year: 2025).display("[day] [month repr:long] [year]"),
-    activity: "weekly meeting",
+    activity: "Weekly meeting",
     task: "",
     achievement: ""
   ),
   (
     date: datetime(day: 4, month: 6, year: 2025).display("[day] [month repr:long] [year]"),
-    activity: "mencoba membuat font size responsive",
+    activity: "Mencoba membuat font size responsive",
     task: "",
     achievement: ""
   ),
   (
     date: datetime(day: 5, month: 6, year: 2025).display("[day] [month repr:long] [year]"),
-    activity: "memproses halaman technical",
+    activity: "Memproses halaman technical",
     task: "",
     achievement: ""
   ),
   (
     date: datetime(day: 9, month: 6, year: 2025).display("[day] [month repr:long] [year]"),
-    activity: "menyesuaikan halaman technical dengan ldp program dan ila program",
+    activity: "Menyesuaikan halaman technical dengan ldp program dan ila program",
     task: "",
     achievement: ""
   ),
   (
     date: datetime(day: 10, month: 6, year: 2025).display("[day] [month repr:long] [year]"),
-    activity: "menyesuaikan navbar dan footer",
+    activity: "Menyesuaikan navbar dan footer",
     task: "",
     achievement: ""
   ),
   (
     date: datetime(day: 11, month: 6, year: 2025).display("[day] [month repr:long] [year]"),
-    activity: "penyelesaian keseluruhan halaman",
+    activity: "Penyelesaian keseluruhan halaman",
     task: "",
     achievement: ""
   ),
@@ -481,7 +481,7 @@ The undersign below:
   [#tabIndent Position#tabIndent], [: #fieldSupervisor.position],
 )
 \ \
-That the sudent:
+That the student:
 
 *#tabIndent #student.name #tabIndent #student.nim*
 
@@ -713,7 +713,7 @@ Vitest is a modern, fast testing framework specifically designed for JavaScript 
 == Activity Realization <content>
 
 #figure(
-  caption: "Internship activities realization",
+  caption: "Internship Activities Realization",
   table(
     align: left,
     columns: (auto, auto, 1fr, 1fr, 1fr),
