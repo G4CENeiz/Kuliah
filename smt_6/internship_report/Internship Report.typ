@@ -56,361 +56,361 @@
     date: datetime(day: 7, month: 2, year: 2025).display("[day] [month repr:long] [year]"),
     activity: "Merapikan email typst di repo \"main-api\"",
     task: "Merubah format email menjadi typst",
-    achievement: "Menata susuan dokumen sesuai template"
+    achievement: "Dokumen typst sesuai dengan email"
   ),
   (
     date: datetime(day: 10, month: 2, year: 2025).display("[day] [month repr:long] [year]"),
     activity: "Meeting mingguan dan penyelesaian template email di repo \"main-api\"",
-    task: "Merubah format invoice dari HTML menjadi typst",
+    task: "Merubah format invoice dari HTML menjadi typst dan menambahkan prosesnya",
     achievement: "Dokumen typst sesuai dengan email"
   ),
   (
     date: datetime(day: 11, month: 2, year: 2025).display("[day] [month repr:long] [year]"),
     activity: "Membuat template invoice dengan typst",
-    task: "",
-    achievement: ""
+    task: "Merubah format invoice dari HTML menjadi typst dan menambahkan prosesnya",
+    achievement: "Mendapatkan hasil struktur utama dokumen"
   ),
   (
     date: datetime(day: 12, month: 2, year: 2025).display("[day] [month repr:long] [year]"),
     activity: "Mengintegrasikan template email typst dengan system",
-    task: "",
-    achievement: ""
+    task: "Merubah format invoice dari HTML menjadi typst dan menambahkan prosesnya",
+    achievement: "Mendapatkan bentuk invoice berupa email"
   ),
   (
     date: datetime(day: 13, month: 2, year: 2025).display("[day] [month repr:long] [year]"),
     activity: "Memperbaiki template dengan menggunakan fitur templating typst",
-    task: "",
-    achievement: ""
+    task: "Merubah format invoice dari HTML menjadi typst dan menambahkan prosesnya",
+    achievement: "Merubah hasil email menjadi template typst"
   ),
   (
     date: datetime(day: 14, month: 2, year: 2025).display("[day] [month repr:long] [year]"),
     activity: "Melanjutkan memperbaiki template dengan menggunakan fitur templating typst",
-    task: "",
-    achievement: ""
+    task: "Merubah format invoice dari HTML menjadi typst dan menambahkan prosesnya",
+    achievement: "Merubah format tanggal dan menempelkan logo di dokumen"
   ),
   (
     date: datetime(day: 17, month: 2, year: 2025).display("[day] [month repr:long] [year]"),
     activity: "Meneyelesaikan proses backend untuk compiling typst",
-    task: "",
-    achievement: ""
+    task: "Merubah format invoice dari HTML menjadi typst dan menambahkan prosesnya",
+    achievement: "Merubah fungsi createPDF yang lama untuk memproses typst"
   ),
   (
     date: datetime(day: 18, month: 2, year: 2025).display("[day] [month repr:long] [year]"),
     activity: "Merubah JSON data menjadi dictionary di dalam typst",
-    task: "",
-    achievement: ""
+    task: "Merubah format invoice dari HTML menjadi typst dan menambahkan prosesnya",
+    achievement: "Menambahkan proses backend untuk merubah JSON menjadi typst dictionary"
   ),
   (
     date: datetime(day: 19, month: 2, year: 2025).display("[day] [month repr:long] [year]"),
     activity: "Menambahkan data preprocessing untuk data typst",
-    task: "",
-    achievement: ""
+    task: "Merubah format invoice dari HTML menjadi typst dan menambahkan prosesnya",
+    achievement: "Mendapatkan alur proses untuk menyusun data sebelum digunakan oleh template typst"
   ),
   (
     date: datetime(day: 20, month: 2, year: 2025).display("[day] [month repr:long] [year]"),
     activity: "Mengganti cara pembentukan dokumen pdf typst",
-    task: "",
-    achievement: ""
+    task: "Merubah format invoice dari HTML menjadi typst dan menambahkan prosesnya",
+    achievement: "Merubah proses backend agar bisa menyediakan file JSON untuk typst"
   ),
   (
     date: datetime(day: 21, month: 2, year: 2025).display("[day] [month repr:long] [year]"),
     activity: "Merubah pengguanaan template html ke typst",
-    task: "",
-    achievement: ""
+    task: "Merubah format invoice dari HTML menjadi typst dan menambahkan prosesnya",
+    achievement: "Merubah target template createPDF dari file .html ke .typ"
   ),
   (
     date: datetime(day: 24, month: 2, year: 2025).display("[day] [month repr:long] [year]"),
     activity: "Menggunakan Typst JSON loader untuk mengambil data",
-    task: "",
-    achievement: ""
+    task: "Merubah format invoice dari HTML menjadi typst dan menambahkan prosesnya",
+    achievement: "Menambahkan JSON loader ke template typst"
   ),
   (
     date: datetime(day: 25, month: 2, year: 2025).display("[day] [month repr:long] [year]"),
     activity: "Menggunakan Tabel peserta statis",
-    task: "",
-    achievement: ""
+    task: "Merubah format invoice dari HTML menjadi typst dan menambahkan prosesnya",
+    achievement: "Menambahkan solusi sementara untuk menjabarkan item tabel"
   ),
   (
     date: datetime(day: 26, month: 2, year: 2025).display("[day] [month repr:long] [year]"),
     activity: "Membuat dummy data sebagai data sementara untuk pengembangan template",
-    task: "",
-    achievement: ""
+    task: "Merubah format invoice dari HTML menjadi typst dan menambahkan prosesnya",
+    achievement: "Mendapatkan file JSON yang dapat digunakan untuk me-ngembangkan dokumen"
   ),
   (
     date: datetime(day: 27, month: 2, year: 2025).display("[day] [month repr:long] [year]"),
     activity: "Mencari informasi tentang penggunaan looping untuk menampilkan data di tabel",
-    task: "",
-    achievement: ""
+    task: "Merubah format invoice dari HTML menjadi typst dan menambahkan prosesnya",
+    achievement: "Mendapatkan beberapa solusi dari forum diskusi typst"
   ),
   (
     date: datetime(day: 28, month: 2, year: 2025).display("[day] [month repr:long] [year]"),
     activity: "Mencoba penggunaan looping untuk menampilkan data di tabel",
-    task: "",
-    achievement: ""
+    task: "Merubah format invoice dari HTML menjadi typst dan menambahkan prosesnya",
+    achievement: "Mengintegrasikan looping untuk menggantikan posisi tabel statis"
   ),
   (
     date: datetime(day: 3, month: 3, year: 2025).display("[day] [month repr:long] [year]"),
     activity: "Menambahkan konten tabel peserta secara dinamis dan detail pembayaran di dalam invoice",
-    task: "",
-    achievement: ""
+    task: "Merubah format invoice dari HTML menjadi typst dan menambahkan prosesnya",
+    achievement: "Mengintegrasikan looping untuk tabel peserta"
   ),
   (
     date: datetime(day: 4, month: 3, year: 2025).display("[day] [month repr:long] [year]"),
     activity: "Menyelesaikan data preprocessing data agar data siap disajikan di dalam pdf",
-    task: "",
-    achievement: ""
+    task: "Merubah format invoice dari HTML menjadi typst dan menambahkan prosesnya",
+    achievement: "Menkonversi pemrosesan data dari cara kompilasi html ke cara kompilasi typst"
   ),
   (
     date: datetime(day: 5, month: 3, year: 2025).display("[day] [month repr:long] [year]"),
     activity: "Menyelesaikan keseluruhan fitur pemrosesan pembuatan pdf invoice",
-    task: "",
-    achievement: ""
+    task: "Merubah format invoice dari HTML menjadi typst dan menambahkan prosesnya",
+    achievement: "Mebenarkan detail detail kecil yang tertinggal"
   ),
   (
     date: datetime(day: 6, month: 3, year: 2025).display("[day] [month repr:long] [year]"),
     activity: "Menunggu penugasan",
-    task: "",
-    achievement: ""
+    task: "-",
+    achievement: "-"
   ),
   (
     date: datetime(day: 7, month: 3, year: 2025).display("[day] [month repr:long] [year]"),
     activity: "Menunggu penugasan",
-    task: "",
-    achievement: ""
+    task: "-",
+    achievement: "-"
   ),
   (
     date: datetime(day: 10, month: 3, year: 2025).display("[day] [month repr:long] [year]"),
     activity: "Weekly Meeting dan penugasan pemrosesan sertifikat menggunakan typst",
-    task: "",
-    achievement: ""
+    task: "Merubah format sertifikat dari HTML menjadi typst",
+    achievement: "Mengtahui letak template sertifikat dan dependensinya"
   ),
   (
     date: datetime(day: 11, month: 3, year: 2025).display("[day] [month repr:long] [year]"),
     activity: "Menganalisa template design setifikat lama",
-    task: "",
-    achievement: ""
+    task: "Merubah format sertifikat dari HTML menjadi typst",
+    achievement: "Mengetahui proses pembuatan sertifikat yang lama dan cara mendapatkan dependensinya"
   ),
   (
     date: datetime(day: 12, month: 3, year: 2025).display("[day] [month repr:long] [year]"),
     activity: "Membentuk dummy data yang digunakan di dalam sertifikat",
-    task: "",
-    achievement: ""
+    task: "Merubah format sertifikat dari HTML menjadi typst",
+    achievement: "Mendapatkan file JSON yang dapat digunakan untuk me-ngembangkan dokumen"
   ),
   (
     date: datetime(day: 13, month: 3, year: 2025).display("[day] [month repr:long] [year]"),
     activity: "Melanjutkan template sertifikat 2023 halaman 1 dan 2",
-    task: "",
-    achievement: ""
+    task: "Merubah format sertifikat dari HTML menjadi typst",
+    achievement: "Membentuk struktur utama dokumen sertifikat"
   ),
   (
     date: datetime(day: 14, month: 3, year: 2025).display("[day] [month repr:long] [year]"),
     activity: "Melanjutkan template sertifikat 2023 halaman 1 dan 2",
-    task: "",
-    achievement: ""
+    task: "Merubah format sertifikat dari HTML menjadi typst",
+    achievement: "Menyelesaikan halaman 1 dan sebagian halaman 2"
   ),
   (
     date: datetime(day: 17, month: 3, year: 2025).display("[day] [month repr:long] [year]"),
     activity: "Melanjutkan template sertifikat 2023 halaman 2",
-    task: "",
-    achievement: ""
+    task: "Merubah format sertifikat dari HTML menjadi typst",
+    achievement: "Mebenarkan tabel dan detail detail lain di halaman 2"
   ),
   (
     date: datetime(day: 18, month: 3, year: 2025).display("[day] [month repr:long] [year]"),
     activity: "Membuat template sertifikat 2025 halaman 1 dan 2",
-    task: "",
-    achievement: ""
+    task: "Merubah format sertifikat dari HTML menjadi typst",
+    achievement: "Menyesuaikan perubahan dari template 2023 ke 2025"
   ),
   (
     date: datetime(day: 19, month: 3, year: 2025).display("[day] [month repr:long] [year]"),
     activity: "Membuat template sertifikat 2024 halaman 1 dan 2",
-    task: "",
-    achievement: ""
+    task: "Merubah format sertifikat dari HTML menjadi typst",
+    achievement: "Menyesuaikan perubahan dari template 2023 ke 2024"
   ),
   (
     date: datetime(day: 20, month: 3, year: 2025).display("[day] [month repr:long] [year]"),
     activity: "Membuat ulang template sertifikat 2023 halaman 1 dan 2",
-    task: "",
-    achievement: ""
+    task: "Merubah format sertifikat dari HTML menjadi typst",
+    achievement: "Membentuk struktur dokumen yang lebih identik terhadapt template HTMLnya"
   ),
   (
     date: datetime(day: 21, month: 3, year: 2025).display("[day] [month repr:long] [year]"),
     activity: "Menata ulang susunan sertifikat 2025, 2024, 2023",
-    task: "",
-    achievement: ""
+    task: "Merubah format sertifikat dari HTML menjadi typst",
+    achievement: "Penyesuaian ulang sertifikat 2025, 2024, 2023"
   ),
   (
     date: datetime(day: 24, month: 3, year: 2025).display("[day] [month repr:long] [year]"),
     activity: "Menambahkan data preprocessing untuk sertifikat",
-    task: "",
-    achievement: ""
+    task: "Merubah format sertifikat dari HTML menjadi typst",
+    achievement: "Memisahkan pemrosesan data invoice dengan sertifikat"
   ),
   (
     date: datetime(day: 25, month: 3, year: 2025).display("[day] [month repr:long] [year]"),
     activity: "Mengkoreksi style font dan lain lain",
-    task: "",
-    achievement: ""
+    task: "Merubah format sertifikat dari HTML menjadi typst",
+    achievement: "Penyesuaian styling dari elemen elemen dokumen sertifikat"
   ),
   (
     date: datetime(day: 26, month: 3, year: 2025).display("[day] [month repr:long] [year]"),
     activity: "Menata ulang susunan sertifikat dengan metode yang lebih akurat",
-    task: "",
-    achievement: ""
+    task: "Merubah format sertifikat dari HTML menjadi typst",
+    achievement: "Menyusun sertifikat ulang dengan absolute position sama seperti HTML"
   ),
   (
     date: datetime(day: 27, month: 3, year: 2025).display("[day] [month repr:long] [year]"),
     activity: "Mengkoreksi style font dan lain lain",
-    task: "",
-    achievement: ""
+    task: "Merubah format sertifikat dari HTML menjadi typst",
+    achievement: "Penyesuaian lagi setelah posisi berubah dengan absolute position"
   ),
   (
     date: datetime(day: 28, month: 3, year: 2025).display("[day] [month repr:long] [year]"),
     activity: "Menyelesaikan keseluruhan fitur pemrosesan pembuatan pdf sertifikat",
-    task: "",
-    achievement: ""
+    task: "Merubah format sertifikat dari HTML menjadi typst",
+    achievement: "Merubah penggunaan proses lama ke proses baru"
   ),
   (
     date: datetime(day: 28, month: 4, year: 2025).display("[day] [month repr:long] [year]"),
     activity: "Weekly meeting",
-    task: "",
-    achievement: ""
+    task: "Menjadikan halaman index dan technical dari web portal menjadi responsive",
+    achievement: "Menjalankan web portal di sistem lokal"
   ),
   (
     date: datetime(day: 5, month: 5, year: 2025).display("[day] [month repr:long] [year]"),
     activity: "Mencoba merubah dimensi salah satu komponen",
-    task: "",
-    achievement: ""
+    task: "Menjadikan halaman index dan technical dari web portal menjadi responsive",
+    achievement: "Merubah atribut komponen tanpa merubah tampilan"
   ),
   (
     date: datetime(day: 6, month: 5, year: 2025).display("[day] [month repr:long] [year]"),
     activity: "Mencoba untuk mendapatkan perubahan dari komponen",
-    task: "",
-    achievement: ""
+    task: "Menjadikan halaman index dan technical dari web portal menjadi responsive",
+    achievement: "Merubah atribut komponen tanpa merubah tampilan"
   ),
   (
     date: datetime(day: 7, month: 5, year: 2025).display("[day] [month repr:long] [year]"),
     activity: "Mencoba menggunakan AI",
-    task: "",
-    achievement: ""
+    task: "Menjadikan halaman index dan technical dari web portal menjadi responsive",
+    achievement: "Merubah atribut komponen tanpa merubah tampilan"
   ),
   (
     date: datetime(day: 8, month: 5, year: 2025).display("[day] [month repr:long] [year]"),
     activity: "Mencoba AI lain",
-    task: "",
-    achievement: ""
+    task: "Menjadikan halaman index dan technical dari web portal menjadi responsive",
+    achievement: "Merubah atribut komponen tanpa merubah tampilan"
   ),
   (
     date: datetime(day: 15, month: 5, year: 2025).display("[day] [month repr:long] [year]"),
     activity: "Mencoba kembali melakukan perubahan untuk mendapatkan hasil yang berbeda",
-    task: "",
-    achievement: ""
+    task: "Menjadikan halaman index dan technical dari web portal menjadi responsive",
+    achievement: "Merubah hal lain selain atribut"
   ),
   (
     date: datetime(day: 19, month: 5, year: 2025).display("[day] [month repr:long] [year]"),
     activity: "Berusaha memahami apa yang semestinya dilakukan dan perubahan yang dibutuhkan",
-    task: "",
-    achievement: ""
+    task: "Menjadikan halaman index dan technical dari web portal menjadi responsive",
+    achievement: "Mendapatkan pemahaman tentang membuat komponen responsive menggunakan Tailwind"
   ),
   (
     date: datetime(day: 21, month: 5, year: 2025).display("[day] [month repr:long] [year]"),
     activity: "Menjabarkan komponen komponen yang digunakan halaman index dan technical",
-    task: "",
-    achievement: ""
+    task: "Menjadikan halaman index dan technical dari web portal menjadi responsive",
+    achievement: "Mendapatkan gambaran dari susunan halaman dan komponen yang ada di halaman"
   ),
   (
     date: datetime(day: 22, month: 5, year: 2025).display("[day] [month repr:long] [year]"),
     activity: "Merubah className dari beberapa komponen",
-    task: "",
-    achievement: ""
+    task: "Menjadikan halaman index dan technical dari web portal menjadi responsive",
+    achievement: "Merubah max width dari beberapa komponen"
   ),
   (
     date: datetime(day: 26, month: 5, year: 2025).display("[day] [month repr:long] [year]"),
     activity: "Mulai memahami apa yang harus dilakukan dan merubah komponen technical hero section",
-    task: "",
-    achievement: ""
+    task: "Menjadikan halaman index dan technical dari web portal menjadi responsive",
+    achievement: "Merubah max width dan menyesuaikan kembali ke tampilan original dari satu komponen"
   ),
   (
     date: datetime(day: 27, month: 5, year: 2025).display("[day] [month repr:long] [year]"),
     activity: "Merubah lagi komponen technical hero section",
-    task: "",
-    achievement: ""
+    task: "Menjadikan halaman index dan technical dari web portal menjadi responsive",
+    achievement: "Berhasil merubah lebar dari kompnen technical hero section menjadi responsive"
   ),
   (
     date: datetime(day: 28, month: 5, year: 2025).display("[day] [month repr:long] [year]"),
     activity: "Menyesuaikan technical hero section kembali ke tampilan sebelumnya",
-    task: "",
-    achievement: ""
+    task: "Menjadikan halaman index dan technical dari web portal menjadi responsive",
+    achievement: "Menyesuaikan komponen agar tampak semula"
   ),
   (
     date: datetime(day: 3, month: 6, year: 2025).display("[day] [month repr:long] [year]"),
     activity: "Weekly meeting",
-    task: "",
-    achievement: ""
+    task: "Menjadikan halaman index dan technical dari web portal menjadi responsive",
+    achievement: "Merubah max width dan margin x dari berbagai hampir seluruh komponen"
   ),
   (
     date: datetime(day: 4, month: 6, year: 2025).display("[day] [month repr:long] [year]"),
     activity: "Mencoba membuat font size responsive",
-    task: "",
-    achievement: ""
+    task: "Menjadikan halaman index dan technical dari web portal menjadi responsive",
+    achievement: "Menjadikan beberapa text berubah ukuran sesuai dari besar viewport"
   ),
   (
     date: datetime(day: 5, month: 6, year: 2025).display("[day] [month repr:long] [year]"),
     activity: "Memproses halaman technical",
-    task: "",
-    achievement: ""
+    task: "Menjadikan halaman index dan technical dari web portal menjadi responsive",
+    achievement: "Merubah max width dan margin x dari komponen yang digunakan halaman technical"
   ),
   (
     date: datetime(day: 9, month: 6, year: 2025).display("[day] [month repr:long] [year]"),
     activity: "Menyesuaikan halaman technical dengan ldp program dan ila program",
-    task: "",
-    achievement: ""
+    task: "Menjadikan halaman index dan technical dari web portal menjadi responsive",
+    achievement: "Mengimitasi solusi responsive dari halaman serupa"
   ),
   (
     date: datetime(day: 10, month: 6, year: 2025).display("[day] [month repr:long] [year]"),
     activity: "Menyesuaikan navbar dan footer",
-    task: "",
-    achievement: ""
+    task: "Menjadikan halaman index dan technical dari web portal menjadi responsive",
+    achievement: "Menjadikan text berubah ukuran sesuai viewport"
   ),
   (
     date: datetime(day: 11, month: 6, year: 2025).display("[day] [month repr:long] [year]"),
     activity: "Penyelesaian keseluruhan halaman",
-    task: "",
-    achievement: ""
+    task: "Menjadikan halaman index dan technical dari web portal menjadi responsive",
+    achievement: "Menkoreksi detail detail kecil dan komponen yang belum disesuaikan"
   ),
   (
     date: datetime(day: 23, month: 6, year: 2025).display("[day] [month repr:long] [year]"),
     activity: "Weekly meeting dan penugasan",
-    task: "",
-    achievement: ""
+    task: "Menambahkan unit test ke komponen yang belum memiliki unit test",
+    achievement: "Menjalankan unit test di repositori"
   ),
   (
     date: datetime(day: 24, month: 6, year: 2025).display("[day] [month repr:long] [year]"),
     activity: "Membuat unit test untuk component yang belum memiliki unit test",
-    task: "",
-    achievement: ""
+    task: "Menambahkan unit test ke komponen yang belum memiliki unit test",
+    achievement: "Membuat unit test untuk FilterForm"
   ),
   (
     date: datetime(day: 25, month: 6, year: 2025).display("[day] [month repr:long] [year]"),
     activity: "Membuat unit test untuk component yang belum memiliki unit test",
-    task: "",
-    achievement: ""
+    task: "Menambahkan unit test ke komponen yang belum memiliki unit test",
+    achievement: "Membuat unit test untuk OperationIcon"
   ),
   (
     date: datetime(day: 26, month: 6, year: 2025).display("[day] [month repr:long] [year]"),
     activity: "Membuat Laporan Magang",
-    task: "",
-    achievement: ""
+    task: "-",
+    achievement: "-"
   ),
   (
     date: datetime(day: 27, month: 6, year: 2025).display("[day] [month repr:long] [year]"),
     activity: "Membuat Laporan Magang",
-    task: "",
-    achievement: ""
+    task: "-",
+    achievement: "-"
   ),
   (
     date: datetime(day: 30, month: 6, year: 2025).display("[day] [month repr:long] [year]"),
     activity: "Weekly meeting dan pelepasan",
-    task: "",
-    achievement: ""
+    task: "-",
+    achievement: "-"
   ),
 )
 
