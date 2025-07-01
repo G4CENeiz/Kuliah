@@ -12,7 +12,7 @@
   activities: (
     (
       date: datetime(day: 23, month: 6, year: 2025).display("[weekday], [day]/[month]/[year]"),
-      clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
+      clockIn: datetime(hour: 8, minute: 0, second: 0).display("[hour]:[minute]"),
       clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
       activity: "Weekly meeting dan penugasan"
     ),
@@ -41,10 +41,10 @@
       activity: "Membuat Laporan Magang"
     ),
     (
-      date: "",
-      clockIn: "",
-      clockOut: "",
-      activity: ""
+      date: datetime(day: 30, month: 6, year: 2025).display("[weekday], [day]/[month]/[year]"),
+      clockIn: datetime(hour: 8, minute: 0, second: 0).display("[hour]:[minute]"),
+      clockOut: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
+      activity: "Weekly meeting dan pelepasan"
     ),
   )
 )
