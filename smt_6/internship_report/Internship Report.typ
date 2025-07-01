@@ -818,13 +818,17 @@ Despite encountering challenges such as initial difficulties in task comprehensi
 
 Based on the contributions and observations during the internship, the following suggestions are put forth:
 
-- Refine Invoice Template Component with Typst: The initial development of the invoice template component involved a direct replication of the existing HTML template's visual layout, which may have resulted in sub-optimal component positioning. Leveraging the proficiency gained in creating documents with Typst presents a significant opportunity to revisit and enhance the current invoice template. The declarative nature and advanced typesetting capabilities of Typst could lead to a more robust, maintainable, and aesthetically precise template compared to the current HTML-based solution.
+- Refine Invoice Template Component with Typst: 
+The initial development of the invoice template component involved a direct replication of the existing HTML template's visual layout, which may have resulted in sub-optimal component positioning. Leveraging the proficiency gained in creating documents with Typst presents a significant opportunity to revisit and enhance the current invoice template. The declarative nature and advanced typesetting capabilities of Typst could lead to a more robust, maintainable, and aesthetically precise template compared to the current HTML-based solution.
 
-- Improve Backend PDF Generation Process: A critical area for improvement lies within the backend process responsible for PDF generation. Enhancing the readability and modularity of this process would significantly benefit future development and maintenance efforts.
+- Improve Backend PDF Generation Process: 
+A critical area for improvement lies within the backend process responsible for PDF generation. Enhancing the readability and modularity of this process would significantly benefit future development and maintenance efforts.
 
-- Explore Further Optimizations: While not detailed due to their subtle nature, several other minor optimizations and refinements could be implemented across the projects undertaken. Continuous review for these incremental improvements is encouraged.
+- Explore Further Optimizations: 
+While not detailed due to their subtle nature, several other minor optimizations and refinements could be implemented across the projects undertaken. Continuous review for these incremental improvements is encouraged.
 
-- Validate Typst-based Invoice System: It is important to note that the theoretical benefits of transitioning to a Typst-based invoice system, such as improved consistency and easier customization, are yet to be fully validated through practical implementation and testing within the company’s workflow. Further testing and integration into the operational workflow are suggested to confirm these advantages.
+- Validate Typst-based Invoice System: 
+It is important to note that the theoretical benefits of transitioning to a Typst-based invoice system, such as improved consistency and easier customization, are yet to be fully validated through practical implementation and testing within the company’s workflow. Further testing and integration into the operational workflow are suggested to confirm these advantages.
 
 #pagebreak()
 
