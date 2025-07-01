@@ -630,11 +630,41 @@ GSSI, also recognized as IPB Training, holds a significant position as an "excel
 
 == Company Profile <content>
 
-PT. Global Scholarship Services Indonesia (GSSI), widely recognized as IPB Training, is a limited liability company (Perseroan Terbatas) established on March 12, 2009. Operating as a strategic subsidiary of PT Bogor Life Science & Technology (BLST) since its acquisition in 2014, GSSI is an integral part of the IPB University business group. Based in Bogor, the company functions as an "excellence hub" for human resource development, leveraging IPB University's profound expertise to deliver a diverse range of training and skill enhancement programs across various sectors, including technical, leadership, and language proficiency through its IPB Language Academy.
+PT. Global Scholarship Services Indonesia (GSSI), widely recognized as IPB Training, is a limited liability company (Perseroan Terbatas) established on 12 March 2009. Operating as a strategic subsidiary of PT Bogor Life Science & Technology (BLST) since its acquisition in 2014, GSSI is an integral part of the IPB University business group. Based in Bogor, the company functions as an "excellence hub" for human resource development, leveraging IPB University's profound expertise to deliver a diverse range of training and skill enhancement programs across various sectors, including technical, leadership, and language proficiency through its IPB Language Academy.
 
 While its name implies direct scholarship management, GSSI's unique approach to "scholarship services" focuses on enabling individuals to become competitive for external scholarships and career advancements. This is achieved by offering specialized training and "coaching scholarships" for its own courses, such as IELTS preparation, which equip participants with necessary qualifications. By professionalizing human capital and contributing to the advancement of IPB University through its sustainable business practices, GSSI plays a crucial role in enhancing the quality and competitiveness of Indonesia's workforce.
 
 == Work Unit Scope <content>
+
+=== Location <content>
+
+This internship was conducted entirely remotely, providing flexibility and allowing for work to be performed from any location with an internet connection. I was specifically assigned to the Finance and IT Unit, where my primary role was to provide support for initiatives and decisions made by the IT personnel within the unit.
+
+=== Assignment Scope <content>
+
+Upon commencement of the internship, I was granted access and responsibility for three distinct repositories. These repositories serve as the primary focus of my work throughout the internship period. The repositories are:
+
+- Skilly: This repository is IPB Training's internal application where they centralized their bussiness activity in.
+
+- main-api: This repository is an all encompassing API they use for almost everything to bridge between their system and BLST's
+
+- main-portal: This repository is IPB Training's portal site as the gate to every services they provide
+
+My initial tasks involved familiarizing myself with the codebase of these repositories to prepare for future development and contribution.
+
+=== Work Plan Schedule <content>
+
+My weekly work schedule was structured as follows:
+#figure(
+  table(
+    align: center,
+    columns: (3fr, 4fr, 4fr),
+    [Day], [Monday], [Tuesday - Friday],
+    [Work Hours], [08.00 - 17.00], [09.00 - 17.00],
+    [Activity], [Weekly meeting and work], [work],
+  ),
+  caption: "Work Schedule"
+)
 
 #pagebreak()
 
