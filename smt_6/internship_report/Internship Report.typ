@@ -30,381 +30,381 @@
 #let activities = (
   (
     date: datetime(day: 3, month: 2, year: 2025).display("[day] [month repr:long] [year]"),
-    clockIn: datetime(hour: 8, minute: 0, second: 0).display("[hour]:[minute]"),
-    clockOut: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
-    activity: "Kick off meeting"
+    activity: "Kick off meeting",
+    task: "-",
+    achievement: "-"
   ),
   (
     date: datetime(day: 4, month: 2, year: 2025).display("[day] [month repr:long] [year]"),
-    clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
-    clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-    activity: "Uji coba menjalankan repo \"main-api\" untuk melihat preview email"
+    activity: "Uji coba menjalankan repo \"main-api\" untuk melihat preview email",
+    task: "-",
+    achievement: "-"
   ),
   (
     date: datetime(day: 5, month: 2, year: 2025).display("[day] [month repr:long] [year]"),
-    clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
-    clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-    activity: "Uji coba menjalankan repo \"skilly\" untuk melihat preview email"
+    activity: "Uji coba menjalankan repo \"skilly\" untuk melihat preview email",
+    task: "-",
+    achievement: "-"
   ),
   (
     date: datetime(day: 6, month: 2, year: 2025).display("[day] [month repr:long] [year]"),
-    clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
-    clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-    activity: "Merubah format email di repo \"main-api\" menjadi typst"
+    activity: "Merubah format email di repo \"main-api\" menjadi typst",
+    task: "merubah format email menjadi typst",
+    achievement: "dokument typst sesuai dengan email"
   ),
   (
     date: datetime(day: 7, month: 2, year: 2025).display("[day] [month repr:long] [year]"),
-    clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
-    clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-    activity: "merapikan email typst di repo \"main-api\""
+    activity: "merapikan email typst di repo \"main-api\"",
+    task: "merubah format email menjadi typst",
+    achievement: "menata susuan dokumen sesuai template"
   ),
   (
     date: datetime(day: 10, month: 2, year: 2025).display("[day] [month repr:long] [year]"),
-    clockIn: datetime(hour: 8, minute: 0, second: 0).display("[hour]:[minute]"),
-    clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-    activity: "Meeting mingguan dan penyelesaian template email di repo \"main-api\""
+    activity: "Meeting mingguan dan penyelesaian template email di repo \"main-api\"",
+    task: "merubah format invoice dari HTML menjadi typst",
+    achievement: "dokument typst sesuai dengan email"
   ),
   (
     date: datetime(day: 11, month: 2, year: 2025).display("[day] [month repr:long] [year]"),
-    clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
-    clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-    activity: "Membuat template invoice dengan typst"
+    activity: "Membuat template invoice dengan typst",
+    task: "",
+    achievement: ""
   ),
   (
     date: datetime(day: 12, month: 2, year: 2025).display("[day] [month repr:long] [year]"),
-    clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
-    clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-    activity: "mengintegrasikan template email typst dengan system"
+    activity: "mengintegrasikan template email typst dengan system",
+    task: "",
+    achievement: ""
   ),
   (
     date: datetime(day: 13, month: 2, year: 2025).display("[day] [month repr:long] [year]"),
-    clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
-    clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-    activity: "memperbaiki template dengan menggunakan fitur templating typst"
+    activity: "memperbaiki template dengan menggunakan fitur templating typst",
+    task: "",
+    achievement: ""
   ),
   (
     date: datetime(day: 14, month: 2, year: 2025).display("[day] [month repr:long] [year]"),
-    clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
-    clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-    activity: "melanjutkan memperbaiki template dengan menggunakan fitur templating typst"
+    activity: "melanjutkan memperbaiki template dengan menggunakan fitur templating typst",
+    task: "",
+    achievement: ""
   ),
   (
     date: datetime(day: 17, month: 2, year: 2025).display("[day] [month repr:long] [year]"),
-    clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
-    clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-    activity: "Meneyesaikan proses backend untuk compiling typst"
+    activity: "Meneyesaikan proses backend untuk compiling typst",
+    task: "",
+    achievement: ""
   ),
   (
     date: datetime(day: 18, month: 2, year: 2025).display("[day] [month repr:long] [year]"),
-    clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
-    clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-    activity: "Merubah JSON data menjadi dictionary di dalam typst"
+    activity: "Merubah JSON data menjadi dictionary di dalam typst",
+    task: "",
+    achievement: ""
   ),
   (
     date: datetime(day: 19, month: 2, year: 2025).display("[day] [month repr:long] [year]"),
-    clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
-    clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-    activity: "Menambahkan data preprocessing untuk data typst"
+    activity: "Menambahkan data preprocessing untuk data typst",
+    task: "",
+    achievement: ""
   ),
   (
     date: datetime(day: 20, month: 2, year: 2025).display("[day] [month repr:long] [year]"),
-    clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
-    clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-    activity: "Mengganti cara pembentukan dokumen pdf typst"
+    activity: "Mengganti cara pembentukan dokumen pdf typst",
+    task: "",
+    achievement: ""
   ),
   (
     date: datetime(day: 21, month: 2, year: 2025).display("[day] [month repr:long] [year]"),
-    clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
-    clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-    activity: "Merubah pengguanaan template html ke typst"
+    activity: "Merubah pengguanaan template html ke typst",
+    task: "",
+    achievement: ""
   ),
   (
     date: datetime(day: 24, month: 2, year: 2025).display("[day] [month repr:long] [year]"),
-    clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
-    clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-    activity: "Menggunakan Typst JSON loader untuk mengambil data"
+    activity: "Menggunakan Typst JSON loader untuk mengambil data",
+    task: "",
+    achievement: ""
   ),
   (
     date: datetime(day: 25, month: 2, year: 2025).display("[day] [month repr:long] [year]"),
-    clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
-    clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-    activity: "Menngunakan Tabel peserta statis"
+    activity: "Menngunakan Tabel peserta statis",
+    task: "",
+    achievement: ""
   ),
   (
     date: datetime(day: 26, month: 2, year: 2025).display("[day] [month repr:long] [year]"),
-    clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
-    clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-    activity: "Membuat dummy data sebagai data sementara untuk pengembangan template"
+    activity: "Membuat dummy data sebagai data sementara untuk pengembangan template",
+    task: "",
+    achievement: ""
   ),
   (
     date: datetime(day: 27, month: 2, year: 2025).display("[day] [month repr:long] [year]"),
-    clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
-    clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-    activity: "Mencari informasi tentang penggunaan looping untuk menampilkan data di tabel"
+    activity: "Mencari informasi tentang penggunaan looping untuk menampilkan data di tabel",
+    task: "",
+    achievement: ""
   ),
   (
     date: datetime(day: 28, month: 2, year: 2025).display("[day] [month repr:long] [year]"),
-    clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
-    clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-    activity: "Mencoba penggunaan looping untuk menampilkan data di tabel"
+    activity: "Mencoba penggunaan looping untuk menampilkan data di tabel",
+    task: "",
+    achievement: ""
   ),
   (
     date: datetime(day: 3, month: 3, year: 2025).display("[day] [month repr:long] [year]"),
-    clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
-    clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-    activity: "Menambahkan konten tabel peserta secara dinamis dan detail pembayaran di dalam invoice"
+    activity: "Menambahkan konten tabel peserta secara dinamis dan detail pembayaran di dalam invoice",
+    task: "",
+    achievement: ""
   ),
   (
     date: datetime(day: 4, month: 3, year: 2025).display("[day] [month repr:long] [year]"),
-    clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
-    clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-    activity: "Menyelesaikan data preprocessing data agar data siap disajikan di dalam pdf"
+    activity: "Menyelesaikan data preprocessing data agar data siap disajikan di dalam pdf",
+    task: "",
+    achievement: ""
   ),
   (
     date: datetime(day: 5, month: 3, year: 2025).display("[day] [month repr:long] [year]"),
-    clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
-    clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-    activity: "Menyelesaikan keseluruhan fitur pemrosesan pembuatan pdf invoice"
+    activity: "Menyelesaikan keseluruhan fitur pemrosesan pembuatan pdf invoice",
+    task: "",
+    achievement: ""
   ),
   (
     date: datetime(day: 6, month: 3, year: 2025).display("[day] [month repr:long] [year]"),
-    clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
-    clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-    activity: "Menunggu penugasan"
+    activity: "Menunggu penugasan",
+    task: "",
+    achievement: ""
   ),
   (
     date: datetime(day: 7, month: 3, year: 2025).display("[day] [month repr:long] [year]"),
-    clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
-    clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-    activity: "Menunggu penugasan"
+    activity: "Menunggu penugasan",
+    task: "",
+    achievement: ""
   ),
   (
     date: datetime(day: 10, month: 3, year: 2025).display("[day] [month repr:long] [year]"),
-    clockIn: datetime(hour: 8, minute: 0, second: 0).display("[hour]:[minute]"),
-    clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-    activity: "Weekly Meeting dan penugasan pemrosesan sertifikat menggunakan typst"
+    activity: "Weekly Meeting dan penugasan pemrosesan sertifikat menggunakan typst",
+    task: "",
+    achievement: ""
   ),
   (
     date: datetime(day: 11, month: 3, year: 2025).display("[day] [month repr:long] [year]"),
-    clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
-    clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-    activity: "Menganalisa template design setifikat lama"
+    activity: "Menganalisa template design setifikat lama",
+    task: "",
+    achievement: ""
   ),
   (
     date: datetime(day: 12, month: 3, year: 2025).display("[day] [month repr:long] [year]"),
-    clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
-    clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-    activity: "Membentuk dummy data yang digunakan di dalam sertifikat"
+    activity: "Membentuk dummy data yang digunakan di dalam sertifikat",
+    task: "",
+    achievement: ""
   ),
   (
     date: datetime(day: 13, month: 3, year: 2025).display("[day] [month repr:long] [year]"),
-    clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
-    clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-    activity: "Melanjutkan template sertifikat 2023 halaman 1 dan 2"
+    activity: "Melanjutkan template sertifikat 2023 halaman 1 dan 2",
+    task: "",
+    achievement: ""
   ),
   (
     date: datetime(day: 14, month: 3, year: 2025).display("[day] [month repr:long] [year]"),
-    clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
-    clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-    activity: "Melanjutkan template sertifikat 2023 halaman 1 dan 2"
+    activity: "Melanjutkan template sertifikat 2023 halaman 1 dan 2",
+    task: "",
+    achievement: ""
   ),
   (
     date: datetime(day: 17, month: 3, year: 2025).display("[day] [month repr:long] [year]"),
-    clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
-    clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-    activity: "Melanjutkan template sertifikat 2023 halaman 2"
+    activity: "Melanjutkan template sertifikat 2023 halaman 2",
+    task: "",
+    achievement: ""
   ),
   (
     date: datetime(day: 18, month: 3, year: 2025).display("[day] [month repr:long] [year]"),
-    clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
-    clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-    activity: "Membuat template sertifikat 2025 halaman 1 dan 2"
+    activity: "Membuat template sertifikat 2025 halaman 1 dan 2",
+    task: "",
+    achievement: ""
   ),
   (
     date: datetime(day: 19, month: 3, year: 2025).display("[day] [month repr:long] [year]"),
-    clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
-    clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-    activity: "Membuat template sertifikat 2024 halaman 1 dan 2"
+    activity: "Membuat template sertifikat 2024 halaman 1 dan 2",
+    task: "",
+    achievement: ""
   ),
   (
     date: datetime(day: 20, month: 3, year: 2025).display("[day] [month repr:long] [year]"),
-    clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
-    clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-    activity: "Membuat ulang template sertifikat 2023 halaman 1 dan 2"
+    activity: "Membuat ulang template sertifikat 2023 halaman 1 dan 2",
+    task: "",
+    achievement: ""
   ),
   (
     date: datetime(day: 21, month: 3, year: 2025).display("[day] [month repr:long] [year]"),
-    clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
-    clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-    activity: "Menata ulang susunan sertifikat 2025, 2024, 2023"
+    activity: "Menata ulang susunan sertifikat 2025, 2024, 2023",
+    task: "",
+    achievement: ""
   ),
   (
     date: datetime(day: 24, month: 3, year: 2025).display("[day] [month repr:long] [year]"),
-    clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
-    clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-    activity: "Menambahkan data preprocessing untuk sertifikat"
+    activity: "Menambahkan data preprocessing untuk sertifikat",
+    task: "",
+    achievement: ""
   ),
   (
     date: datetime(day: 25, month: 3, year: 2025).display("[day] [month repr:long] [year]"),
-    clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
-    clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-    activity: "Mengkoreksi style font dan lain lain"
+    activity: "Mengkoreksi style font dan lain lain",
+    task: "",
+    achievement: ""
   ),
   (
     date: datetime(day: 26, month: 3, year: 2025).display("[day] [month repr:long] [year]"),
-    clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
-    clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-    activity: "Menata ulang susunan sertifikat dengan metode yang lebih akurat"
+    activity: "Menata ulang susunan sertifikat dengan metode yang lebih akurat",
+    task: "",
+    achievement: ""
   ),
   (
     date: datetime(day: 27, month: 3, year: 2025).display("[day] [month repr:long] [year]"),
-    clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
-    clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-    activity: "Mengkoreksi style font dan lain lain"
+    activity: "Mengkoreksi style font dan lain lain",
+    task: "",
+    achievement: ""
   ),
   (
     date: datetime(day: 28, month: 3, year: 2025).display("[day] [month repr:long] [year]"),
-    clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
-    clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-    activity: "Menyelesaikan keseluruhan fitur pemrosesan pembuatan pdf sertifikat"
+    activity: "Menyelesaikan keseluruhan fitur pemrosesan pembuatan pdf sertifikat",
+    task: "",
+    achievement: ""
   ),
   (
     date: datetime(day: 28, month: 4, year: 2025).display("[day] [month repr:long] [year]"),
-    clockIn: datetime(hour: 13, minute: 0, second: 0).display("[hour]:[minute]"),
-    clockOut: datetime(hour: 14, minute: 0, second: 0).display("[hour]:[minute]"),
-    activity: "Weekly meeting"
+    activity: "Weekly meeting",
+    task: "",
+    achievement: ""
   ),
   (
     date: datetime(day: 5, month: 5, year: 2025).display("[day] [month repr:long] [year]"),
-    clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
-    clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-    activity: "Mencoba merubah dimensi salah satu komponen"
+    activity: "Mencoba merubah dimensi salah satu komponen",
+    task: "",
+    achievement: ""
   ),
   (
     date: datetime(day: 6, month: 5, year: 2025).display("[day] [month repr:long] [year]"),
-    clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
-    clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-    activity: "Mencoba untuk mendapatkan perubahan dari komponen"
+    activity: "Mencoba untuk mendapatkan perubahan dari komponen",
+    task: "",
+    achievement: ""
   ),
   (
     date: datetime(day: 7, month: 5, year: 2025).display("[day] [month repr:long] [year]"),
-    clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
-    clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-    activity: "Mecoba menggunakan AI"
+    activity: "Mecoba menggunakan AI",
+    task: "",
+    achievement: ""
   ),
   (
     date: datetime(day: 8, month: 5, year: 2025).display("[day] [month repr:long] [year]"),
-    clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
-    clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-    activity: "Mencoba AI lain"
+    activity: "Mencoba AI lain",
+    task: "",
+    achievement: ""
   ),
   (
     date: datetime(day: 15, month: 5, year: 2025).display("[day] [month repr:long] [year]"),
-    clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
-    clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-    activity: "mencoba kembali melakukan perubahan untuk mendapatkan hasil yang berbeda"
+    activity: "mencoba kembali melakukan perubahan untuk mendapatkan hasil yang berbeda",
+    task: "",
+    achievement: ""
   ),
   (
     date: datetime(day: 19, month: 5, year: 2025).display("[day] [month repr:long] [year]"),
-    clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
-    clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-    activity: "berusaha memahami apa yang semestinya dilakukan dan perubahan yang dibutuhkan"
+    activity: "berusaha memahami apa yang semestinya dilakukan dan perubahan yang dibutuhkan",
+    task: "",
+    achievement: ""
   ),
   (
     date: datetime(day: 21, month: 5, year: 2025).display("[day] [month repr:long] [year]"),
-    clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
-    clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-    activity: "menjabarkan komponen komponen yang digunakan halaman index dan technical"
+    activity: "menjabarkan komponen komponen yang digunakan halaman index dan technical",
+    task: "",
+    achievement: ""
   ),
   (
     date: datetime(day: 22, month: 5, year: 2025).display("[day] [month repr:long] [year]"),
-    clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
-    clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-    activity: "merubah className dari beberapa komponen"
+    activity: "merubah className dari beberapa komponen",
+    task: "",
+    achievement: ""
   ),
   (
     date: datetime(day: 26, month: 5, year: 2025).display("[day] [month repr:long] [year]"),
-    clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
-    clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-    activity: "mulai memahami apa yang harus dilakukan dan merubah komponen technical hero section"
+    activity: "mulai memahami apa yang harus dilakukan dan merubah komponen technical hero section",
+    task: "",
+    achievement: ""
   ),
   (
     date: datetime(day: 27, month: 5, year: 2025).display("[day] [month repr:long] [year]"),
-    clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
-    clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-    activity: "merubah lagi komponen technical hero section"
+    activity: "merubah lagi komponen technical hero section",
+    task: "",
+    achievement: ""
   ),
   (
     date: datetime(day: 28, month: 5, year: 2025).display("[day] [month repr:long] [year]"),
-    clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
-    clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-    activity: "menyesuaikan technical hero section kembali ke tampilan sebelumnya"
+    activity: "menyesuaikan technical hero section kembali ke tampilan sebelumnya",
+    task: "",
+    achievement: ""
   ),
   (
     date: datetime(day: 3, month: 6, year: 2025).display("[day] [month repr:long] [year]"),
-    clockIn: datetime(hour: 8, minute: 0, second: 0).display("[hour]:[minute]"),
-    clockOut: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
-    activity: "weekly meeting"
+    activity: "weekly meeting",
+    task: "",
+    achievement: ""
   ),
   (
     date: datetime(day: 4, month: 6, year: 2025).display("[day] [month repr:long] [year]"),
-    clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
-    clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-    activity: "mencoba membuat font size responsive"
+    activity: "mencoba membuat font size responsive",
+    task: "",
+    achievement: ""
   ),
   (
     date: datetime(day: 5, month: 6, year: 2025).display("[day] [month repr:long] [year]"),
-    clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
-    clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-    activity: "memproses halaman technical"
+    activity: "memproses halaman technical",
+    task: "",
+    achievement: ""
   ),
   (
     date: datetime(day: 9, month: 6, year: 2025).display("[day] [month repr:long] [year]"),
-    clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
-    clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-    activity: "menyesuaikan halaman technical dengan ldp program dan ila program"
+    activity: "menyesuaikan halaman technical dengan ldp program dan ila program",
+    task: "",
+    achievement: ""
   ),
   (
     date: datetime(day: 10, month: 6, year: 2025).display("[day] [month repr:long] [year]"),
-    clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
-    clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-    activity: "menyesuaikan navbar dan footer"
+    activity: "menyesuaikan navbar dan footer",
+    task: "",
+    achievement: ""
   ),
   (
     date: datetime(day: 11, month: 6, year: 2025).display("[day] [month repr:long] [year]"),
-    clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
-    clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-    activity: "penyelesaian keseluruhan halaman"
+    activity: "penyelesaian keseluruhan halaman",
+    task: "",
+    achievement: ""
   ),
   (
     date: datetime(day: 23, month: 6, year: 2025).display("[day] [month repr:long] [year]"),
-    clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
-    clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-    activity: "Weekly meeting dan penugasan"
+    activity: "Weekly meeting dan penugasan",
+    task: "",
+    achievement: ""
   ),
   (
     date: datetime(day: 24, month: 6, year: 2025).display("[day] [month repr:long] [year]"),
-    clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
-    clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-    activity: "Membuat unit test untuk component yang belum memiliki unit test"
+    activity: "Membuat unit test untuk component yang belum memiliki unit test",
+    task: "",
+    achievement: ""
   ),
   (
     date: datetime(day: 25, month: 6, year: 2025).display("[day] [month repr:long] [year]"),
-    clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
-    clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-    activity: "Membuat unit test untuk component yang belum memiliki unit test"
+    activity: "Membuat unit test untuk component yang belum memiliki unit test",
+    task: "",
+    achievement: ""
   ),
   (
     date: datetime(day: 26, month: 6, year: 2025).display("[day] [month repr:long] [year]"),
-    clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
-    clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-    activity: "Membuat Laporan Magang"
+    activity: "Membuat Laporan Magang",
+    task: "",
+    achievement: ""
   ),
   (
     date: datetime(day: 27, month: 6, year: 2025).display("[day] [month repr:long] [year]"),
-    clockIn: datetime(hour: 9, minute: 0, second: 0).display("[hour]:[minute]"),
-    clockOut: datetime(hour: 17, minute: 0, second: 0).display("[hour]:[minute]"),
-    activity: "Membuat Laporan Magang"
+    activity: "Membuat Laporan Magang",
+    task: "",
+    achievement: ""
   ),
 )
 
