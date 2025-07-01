@@ -476,7 +476,7 @@
 #set figure.caption(position: top)
 #show figure: set block(breakable: true)
 
-#heading(upper("approval")) <content>
+#heading(upper("approval")) 
 
 The undersign below:
 #table(
@@ -519,7 +519,7 @@ Have successfully completed the internship at:
 #pagebreak()
 #set align(center)
 
-#heading(upper("approval")) <content>
+#heading(upper("approval")) 
 
 \
 #text(size: 14pt)[#upper("internship report")]
@@ -569,7 +569,7 @@ Approved By,
 #set align(left)
 #pagebreak()
 
-#heading(upper("abstract")) <content>
+#heading(upper("abstract")) 
 \
 
 This internship report details the activities undertaken at PT. Global Scholarship Services Indonesia (GSSI) from 20 February 2025, to 30 June 2025, as part of the D4 Informatics Engineering Program at Politeknik Negeri Malang. The internship focused on practical application of theoretical knowledge in modern software development, specifically in document generation, responsive web design, and unit testing. Key contributions included the migration of email and invoice templates from HTML to Typst, the development of a responsive web portal using Tailwind CSS, and the implementation of unit tests for React components with Vitest and React Testing Library. 
@@ -580,7 +580,7 @@ Despite these issues, the internship provided invaluable hands-on experience, si
 
 #pagebreak()
 
-#heading(upper("preface")) <content>
+#heading(upper("preface")) 
 \
 
 All praise and gratitude are due to Almighty Allah, whose blessings and mercy have enabled me to successfully complete this report. This report is based on my internship activities from 20 February 2025 - 30 June 2025, as part of the requirements for the internship program evaluation.
@@ -615,22 +615,22 @@ Throughout my internship journey and the process of writing this report, I recei
 
 #pagebreak()
 
-#heading(upper("list of content")) <content>
-#outline(title: none, indent: 2em, target: label("content"))
+#heading(upper("list of content")) 
+#outline(title: none, indent: 2em)
 
 #pagebreak()
 
-#heading(upper("list of table")) <content>
+#heading(upper("list of table")) 
 #outline(title: none, target: figure.where(kind: table))
 
 // #pagebreak()
 
-// #heading(upper("list of figures")) <content>
+// #heading(upper("list of figures")) 
 // #outline(title: none, target: figure.where(kind: image))
 
 // #pagebreak()
 
-// #heading(upper("list of appendicies")) <content>
+// #heading(upper("list of appendicies")) 
 // #outline(title: none, target: label("appendix"))
 
 #pagebreak()
@@ -645,28 +645,28 @@ Throughout my internship journey and the process of writing this report, I recei
 
 #set heading(numbering: "1.1.")
 
-= #upper("introduction") <content>
+= #upper("introduction") 
 \
 
 My internship was conducted at PT. Global Scholarship Services Indonesia (GSSI), a dynamic subsidiary of PT Bogor Life Science & Technology (BLST). This invaluable opportunity, spanning from [Insert Start Date] to [Insert End Date], served as a vital bridge between my theoretical studies and practical professional application. The primary objective of this internship was to gain firsthand experience in the operations of a prominent organization within the education and human capital development sector, thereby enhancing my understanding of corporate functions and industry best practices.
 
 GSSI, also recognized as IPB Training, holds a significant position as an "excellence hub" for the development of human resources through applied science-based skill enhancement. The company is driven by a clear vision to effectively disseminate the extensive expertise cultivated at IPB University. In alignment with this, its mission is firmly rooted in providing high-quality, relevant skill development solutions that cater to a diverse array of sectors and individual needs. Beyond its core training functions, GSSI strategically contributes to IPB's non-academic revenue streams, demonstrating its dual role as both an educational service provider and a sustainable business entity. My tenure at GSSI thus offered a comprehensive immersion into an organization deeply committed to fostering human potential and contributing to national development through specialized learning initiatives.
 
-== Company Profile <content>
+== Company Profile 
 \
 
 PT. Global Scholarship Services Indonesia (GSSI), widely recognized as IPB Training, is a limited liability company (Perseroan Terbatas) established on 12 March 2009. Operating as a strategic subsidiary of PT Bogor Life Science & Technology (BLST) since its acquisition in 2014, GSSI is an integral part of the IPB University business group. Based in Bogor, the company functions as an "excellence hub" for human resource development, leveraging IPB University's profound expertise to deliver a diverse range of training and skill enhancement programs across various sectors, including technical, leadership, and language proficiency through its IPB Language Academy.
 
 While its name implies direct scholarship management, GSSI's unique approach to "scholarship services" focuses on enabling individuals to become competitive for external scholarships and career advancements. This is achieved by offering specialized training and "coaching scholarships" for its own courses, such as IELTS preparation, which equip participants with necessary qualifications. By professionalizing human capital and contributing to the advancement of IPB University through its sustainable business practices, GSSI plays a crucial role in enhancing the quality and competitiveness of Indonesia's workforce.
 
-== Work Unit Scope <content>
+== Work Unit Scope 
 
-=== Location <content>
+=== Location 
 \
 
 This internship was conducted entirely remotely, providing flexibility and allowing for work to be performed from any location with an internet connection. I was specifically assigned to the Finance and IT Unit, where my primary role was to provide support for initiatives and decisions made by the IT personnel within the unit.
 
-=== Assignment Scope <content>
+=== Assignment Scope 
 \
 
 Upon commencement of the internship, I was granted access and responsibility for three distinct repositories. These repositories serve as the primary focus of my work throughout the internship period. The repositories are:
@@ -679,7 +679,7 @@ Upon commencement of the internship, I was granted access and responsibility for
 
 My initial tasks involved familiarizing myself with the codebase of these repositories to prepare for future development and contribution.
 
-=== Work Plan Schedule <content>
+=== Work Plan Schedule 
 \
 
 My weekly work schedule was structured as follows:
@@ -696,26 +696,26 @@ My weekly work schedule was structured as follows:
 
 #pagebreak()
 
-= #upper("theoretical study") <content>
+= #upper("theoretical study") 
 \
 
 This chapter provides the theoretical foundation for the technologies and methodologies employed during the internship. It delves into the principles of modern document generation, responsive web design, and software unit testing, specifically focusing on Typst for document creation, Tailwind CSS for front-end responsiveness, and Vitest with React Testing Library for robust component testing.
 
-== Document Generation with Typst <content>
+== Document Generation with Typst 
 \
 
 Document generation systems automate the creation of structured documents, ensuring consistency, accuracy, and efficiency, particularly for repetitive tasks like producing invoices or certificates @aalpha_document_2022. These systems typically involve templating mechanisms and data integration to populate predefined layouts. The advent of modern typesetting tools has enhanced the capabilities of such systems, offering greater flexibility and performance.
 
 Typst is a new markup-based typesetting system designed for technical writing and document creation, positioning itself as a contemporary alternative to traditional systems like LaTeX @typst_docs_latex. It distinguishes itself with a focus on ease of learning, a powerful yet intuitive markup language, and a fast, incremental compilation process @lovin_typst_2023. Unlike LaTeX's multi-pass compilation, Typst employs a four-phase compilation architecture—Parsing, Evaluation, Layout, and Export—facilitating rapid previews and efficient iteration @typst_architecture. Its functional programming paradigm allows for robust templating through custom functions and `set`/`show` rules, enabling a clear separation of content and presentation, which is crucial for generating consistent documents like invoices and certificates from structured data @typst_docs_formatting.
 
-== Responsive Web Design with Tailwind CSS <content>
+== Responsive Web Design with Tailwind CSS 
 \
 
 Responsive Web Design (RWD) is an approach to web development that aims to provide an optimal viewing experience—easy reading and navigation—across a wide range of devices, from desktops to mobile phones @udacity_responsive_2024. Key principles of RWD include fluid grids, flexible images, and media queries, which collectively allow a website's layout and content to adapt dynamically to different screen sizes and orientations @webflow_responsive_2023. Implementing RWD ensures accessibility and a consistent user experience regardless of the device used.
 
 Tailwind CSS is a utility-first CSS framework that expedites responsive web design by providing a comprehensive set of low-level utility classes directly within HTML markup @magnet_tailwind_2023. Instead of pre-designed components, developers compose UIs by applying these atomic classes, which can be combined to create complex designs. For responsiveness, Tailwind integrates a mobile-first breakpoint system (`sm`, `md`, `lg`, `xl`, etc.) that allows specific utility classes to be conditionally applied based on screen size, effectively enabling adaptive layouts @geekster_tailwind_responsive_2023. This utility-first approach, complemented by the ability to extract recurring patterns into reusable components using directives like `@apply` or `@layer components`, promotes a modular and highly customizable design architecture for responsive portals @tailwind_docs_custom_styles.
 
-== Unit Testing with Vitest and React Testing Library <content>
+== Unit Testing with Vitest and React Testing Library 
 \
 
 Unit testing is a software testing method where individual units or components of a software application are tested in isolation to determine if they are fit for use @wikipedia_unit_testing. The primary goal is to validate that each unit of the software performs as designed, providing early detection of bugs and facilitating easier debugging. Key principles include testing small, isolated units, ensuring tests are fast, and making them deterministic @codefresh_unit_testing_2024. In the context of front-end development, unit testing is crucial for ensuring the reliability and functionality of individual UI components.
@@ -726,7 +726,7 @@ Vitest is a modern, fast testing framework specifically designed for JavaScript 
 
 = #upper("internship activities")
 
-== Activity Realization <content>
+== Activity Realization 
 
 #figure(
   caption: "Internship Activities Realization",
@@ -753,7 +753,7 @@ Vitest is a modern, fast testing framework specifically designed for JavaScript 
   )
 )
 
-== Relevance of Theory and Practice <content>
+== Relevance of Theory and Practice 
 \
 
 This internship provided a unique opportunity to bridge the gap between theoretical knowledge and practical application. The concepts of responsive web design, component-based architecture, and robust unit testing, which were once abstract principles, became tangible tools in developing the responsive web portal and its interactive elements. Similarly, understanding modern document generation systems and their underlying principles was crucial in implementing efficient and accurate invoice and certificate generation processes using Typst.
@@ -764,7 +764,7 @@ Furthermore, building the responsive web portal using Tailwind CSS provided inva
 
 Finally, the development of unit tests for the web portal's components using Vitest and React Testing Library offered a practical deep dive into software quality assurance. The theoretical emphasis on testing isolated units and focusing on user behavior over implementation details was directly applied. This experience highlighted how adhering to these testing principles leads to more stable, reliable, and maintainable code, significantly reducing potential bugs and improving overall software quality.
 
-== Issues <content>
+== Issues 
 \
 
 I consistently found my initial efforts to be abysmal, frequently resulting in little to no tangible progress. This significant disconnect between my intent and the actual output was a recurring challenge during the early stages of every assignments in my internship.
@@ -783,7 +783,7 @@ The disruption caused by my illness had a profound impact on my engagement, espe
 
 #pagebreak()
 
-= #upper("recommendations") <content>
+= #upper("recommendations") 
 \
 
 This section provides recommendations primarily focused on the areas directly impacted by my contributions during the internship. While my exposure to the company's broader operational frameworks and ongoing projects was limited to the scope of my assigned tasks, I observed specific opportunities for enhancement within the projects I undertook.
@@ -798,9 +798,9 @@ Furthermore, a critical area for improvement lies within the backend process res
 
 #pagebreak()
 
-= #upper("conclusions") <content>
+= #upper("conclusions") 
 
-== Conclusions <content>
+== Conclusions 
 \
 
 This internship at PT. Global Scholarship Services Indonesia provided a comprehensive and invaluable experience, bridging the gap between theoretical knowledge and practical application in a professional development environment. Over the period from February 20, 2025, to June 30, 2025, significant progress was made in several key areas of software development.
@@ -813,7 +813,7 @@ Finally, the implementation of unit tests for React components using Vitest and 
 
 Despite encountering challenges such as initial difficulties in task comprehension, complexities in replicating intricate document layouts, and the impact of health-related disruptions, these experiences proved to be crucial learning opportunities. They emphasized the importance of thorough problem understanding, continuous skill development, and resilience in a professional setting. Overall, the internship successfully enhanced practical skills, deepened theoretical understanding, and provided valuable insights into the real-world application of informatics engineering principles.
 
-== Suggestions <content>
+== Suggestions 
 \
 
 Based on the contributions and observations during the internship, the following suggestions are put forth:
@@ -832,6 +832,6 @@ Based on the contributions and observations during the internship, the following
     numbering: none
 )
 
-#heading(upper("REFERENCES")) <content>
+#heading(upper("REFERENCES")) 
 \
 #bibliography("references.bib", title: none, style: "american-psychological-association")
