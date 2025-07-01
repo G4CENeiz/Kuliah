@@ -11,7 +11,6 @@
 )
 #let fieldSupervisor = (
   name: "Muhammad Sigit Susanto",
-  nip: "",
   position: "Company Director"
 )
 #let supervisingLecturer = (
