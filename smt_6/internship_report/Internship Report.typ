@@ -25,8 +25,8 @@
   name: "Prof. Dr. Eng. Rosa Andrie Asmara, S.T., M.T.",
   nip: "198010102005011001"
 )
-#let approvalSignDate = "Bogor, " + datetime(day: 1, month: 7, year: 2025).display("[day] [month repr:long] [year]")
-#let presentationDate = datetime(day: 2, month: 7, year: 2025).display("[day] [month repr:long] [year]")
+#let approvalSignDate = "Bogor, " + datetime(day: 2, month: 7, year: 2025).display("[day] [month repr:long] [year]")
+#let presentationDate = datetime(day: 3, month: 7, year: 2025).display("[day] [month repr:long] [year]")
 #let activities = (
   (
     date: datetime(day: 3, month: 2, year: 2025).display("[day] [month repr:long] [year]"),
@@ -648,7 +648,7 @@ Throughout my internship journey and the process of writing this report, I recei
 = #upper("introduction") 
 \
 
-My internship was conducted at PT. Global Scholarship Services Indonesia (GSSI), a dynamic subsidiary of PT Bogor Life Science & Technology (BLST). This invaluable opportunity, spanning from [Insert Start Date] to [Insert End Date], served as a vital bridge between my theoretical studies and practical professional application. The primary objective of this internship was to gain firsthand experience in the operations of a prominent organization within the education and human capital development sector, thereby enhancing my understanding of corporate functions and industry best practices.
+My internship was conducted at PT. Global Scholarship Services Indonesia (GSSI), a dynamic subsidiary of PT Bogor Life Science & Technology (BLST). This invaluable opportunity, spanning from 20 February 2025 to 30 June 2025, served as a vital bridge between my theoretical studies and practical professional application. The primary objective of this internship was to gain firsthand experience in the operations of a prominent organization within the education and human capital development sector, thereby enhancing my understanding of corporate functions and industry best practices.
 
 GSSI, also recognized as IPB Training, holds a significant position as an "excellence hub" for the development of human resources through applied science-based skill enhancement. The company is driven by a clear vision to effectively disseminate the extensive expertise cultivated at IPB University. In alignment with this, its mission is firmly rooted in providing high-quality, relevant skill development solutions that cater to a diverse array of sectors and individual needs. Beyond its core training functions, GSSI strategically contributes to IPB's non-academic revenue streams, demonstrating its dual role as both an educational service provider and a sustainable business entity. My tenure at GSSI thus offered a comprehensive immersion into an organization deeply committed to fostering human potential and contributing to national development through specialized learning initiatives.
 
