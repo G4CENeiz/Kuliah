@@ -1,4 +1,4 @@
-#let title = "project title"
+#let title = "industrial internship"
 #let company = (
   name: "PT. Global Scholarship Services Indonesia",
   address: "Jalan Taman Kencana Nomor 3, Babakan, Bogor Tengah, Bogor",
