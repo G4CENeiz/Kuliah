@@ -565,18 +565,34 @@ Approved By,
 
 #heading(upper("abstract")) <content>
 
+This internship report details the activities undertaken at PT. Global Scholarship Services Indonesia (GSSI) from 20 February 2025, to 30 June 2025, as part of the D4 Informatics Engineering Program at Politeknik Negeri Malang. The internship focused on practical application of theoretical knowledge in modern software development, specifically in document generation, responsive web design, and unit testing. Key contributions included the migration of email and invoice templates from HTML to Typst, the development of a responsive web portal using Tailwind CSS, and the implementation of unit tests for React components with Vitest and React Testing Library. 
+
+The report discusses the theoretical foundations of these technologies, the realization of various tasks, and the relevance of practical experience to academic learning. It also addresses challenges encountered, such as initial misunderstandings of requirements, difficulties in replicating complex document structures with Typst, and the impact of personal illness on work rhythm. 
+
+Despite these issues, the internship provided invaluable hands-on experience, significantly enhancing the understanding of efficient document processing, adaptive UI development, and robust software quality assurance. Recommendations for future improvements in document templating and backend PDF generation processes are also presented.
+
 #pagebreak()
 
 #heading(upper("preface")) <content>
 \
 
-#lorem(40)
+All praise and gratitude are due to Almighty Allah, whose blessings and mercy have enabled me to successfully complete this report. This report is based on my internship activities from 20 February 2025 - 30 June 2025, as part of the requirements for the internship program evaluation.
 
-#lorem(40)
+Throughout my internship journey and the process of writing this report, I received invaluable support and assistance from various parties. On this occasion, I would like to express my deepest gratitude to:
 
-#lorem(40)
++ My parents and family, who provided unwavering support, prayers, and encouragement, both materially and spiritually.
 
-#lorem(40)
++ Politeknik Negeri Malang, especially the leadership and faculty, for facilitating and encouraging students development through this program.
+
++ PT. Global Scholarship Services Indonesia, where I completed my internship program, for the valuable experience I gained during the period of 20 February 2025 - 30 June 2025.
+
++ Prof. Dr. Eng. Rosa Andrie Asmara, S.T., M.T., as the Head of the Information Technology Department at Politeknik Negeri Malang.
+
++ Dr. Ely Setyo Astuti, S.T., M.T., as the Head of the D4 Informatics Engineering Study Program.
+
++ Prof. Cahya Rahmad, S.T., M.Kom., Dr. Eng., who provided technical advice and direction during the internship.
+
++ All other parties who supported and assisted me during the internship program, whose names I cannot mention one by one.
 
 #align(
   right,
