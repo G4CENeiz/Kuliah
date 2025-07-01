@@ -751,7 +751,13 @@ The disruption caused by my illness had a profound impact on my engagement, espe
 
 #pagebreak()
 
-= #upper("recomendations") <content>
+= #upper("recommendations") <content>
+
+This section provides recommendations primarily focused on the areas directly impacted by my contributions during the internship. While my exposure to the company's broader operational frameworks and ongoing projects was limited to the scope of my assigned tasks, I observed specific opportunities for enhancement within the projects I undertook.
+
+Regarding the invoice template component, my initial development involved a direct replication of the existing HTML template's visual layout. Consequently, some aspects of component positioning may not be optimally refined. However, throughout this internship, I have acquired proficiency in creating documents using Typst, a skill that presents a significant opportunity to revisit and enhance the current invoice template. The declarative nature and advanced typesetting capabilities of Typst could lead to a more robust, maintainable, and aesthetically precise template compared to the current HTML-based solution.
+
+Furthermore, a critical area for improvement lies within the backend process responsible for PDF generation. Enhancing the readability and modularity of this process would significantly benefit future development and maintenance efforts. While I believe there are several other minor optimizations and refinements that could be implemented, their subtle nature makes a detailed explanation challenging within this report. It is important to note that the theoretical benefits of transitioning to a Typst-based invoice system, such as improved consistency and easier customization, are yet to be validated through practical implementation and testing within the company's workflow.
 
 // #pagebreak()
 
@@ -762,7 +768,30 @@ The disruption caused by my illness had a profound impact on my engagement, espe
 = #upper("conclusions") <content>
 
 == Conclusions <content>
+
+This internship at PT. Global Scholarship Services Indonesia provided a comprehensive and invaluable experience, bridging the gap between theoretical knowledge and practical application in a professional development environment. Over the period from February 20, 2025, to June 30, 2025, significant progress was made in several key areas of software development.
+
+Firstly, the migration of existing email and invoice templates to Typst demonstrated a practical understanding of modern document generation systems. This involved not only converting formats but also leveraging Typst's functional programming paradigm for robust templating, ensuring consistency and maintainability in critical business documents. The experience solidified the importance of efficient document processing and the benefits of separating content from presentation.
+
+Secondly, the development of a responsive web portal utilizing Tailwind CSS provided hands-on experience with adaptive user interface design. By applying principles of fluid grids and media queries through Tailwind's utility-first approach, the internship successfully contributed to creating a user-friendly and accessible web experience across various devices. This reinforced the critical nature of responsive design in contemporary web development.
+
+Finally, the implementation of unit tests for React components using Vitest and React Testing Library underscored the significance of software quality assurance. Focusing on user behavior and isolated unit testing, this aspect of the internship ensured the reliability and functionality of the web portal's components, highlighting best practices for creating stable and maintainable code.
+
+Despite encountering challenges such as initial difficulties in task comprehension, complexities in replicating intricate document layouts, and the impact of health-related disruptions, these experiences proved to be crucial learning opportunities. They emphasized the importance of thorough problem understanding, continuous skill development, and resilience in a professional setting. Overall, the internship successfully enhanced practical skills, deepened theoretical understanding, and provided valuable insights into the real-world application of informatics engineering principles.
+
+#pagebreak()
+
 == Suggestions <content>
+
+Based on the contributions and observations during the internship, the following suggestions are put forth:
+
+- Refine Invoice Template Component with Typst: The initial development of the invoice template component involved a direct replication of the existing HTML template's visual layout, which may have resulted in sub-optimal component positioning. Leveraging the proficiency gained in creating documents with Typst presents a significant opportunity to revisit and enhance the current invoice template. The declarative nature and advanced typesetting capabilities of Typst could lead to a more robust, maintainable, and aesthetically precise template compared to the current HTML-based solution.
+
+- Improve Backend PDF Generation Process: A critical area for improvement lies within the backend process responsible for PDF generation. Enhancing the readability and modularity of this process would significantly benefit future development and maintenance efforts.
+
+- Explore Further Optimizations: While not detailed due to their subtle nature, several other minor optimizations and refinements could be implemented across the projects undertaken. Continuous review for these incremental improvements is encouraged.
+
+- Validate Typst-based Invoice System: It is important to note that the theoretical benefits of transitioning to a Typst-based invoice system, such as improved consistency and easier customization, are yet to be fully validated through practical implementation and testing within the company’s workflow. Further testing and integration into the operational workflow are suggested to confirm these advantages.
 
 #pagebreak()
 
