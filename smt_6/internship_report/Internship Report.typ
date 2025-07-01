@@ -593,6 +593,8 @@ Throughout my internship journey and the process of writing this report, I recei
 
 + PT. Global Scholarship Services Indonesia, where I completed my internship program, for the valuable experience I gained during the period of 20 February 2025 - 30 June 2025.
 
++ Mr. #fieldSupervisor.name, as the director of the company where I complemented my internship and as my field supervisor.
+
 + Prof. Dr. Eng. Rosa Andrie Asmara, S.T., M.T., as the Head of the Information Technology Department at Politeknik Negeri Malang.
 
 + Dr. Ely Setyo Astuti, S.T., M.T., as the Head of the D4 Informatics Engineering Study Program.
