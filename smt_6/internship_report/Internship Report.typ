@@ -621,10 +621,10 @@ Throughout my internship journey and the process of writing this report, I recei
 // #heading(upper("list of figures")) <content>
 // #outline(title: none, target: figure.where(kind: image))
 
-#pagebreak()
+// #pagebreak()
 
-#heading(upper("list of appendicies")) <content>
-#outline(title: none, target: label("appendix"))
+// #heading(upper("list of appendicies")) <content>
+// #outline(title: none, target: label("appendix"))
 
 #pagebreak()
 
@@ -816,42 +816,5 @@ Based on the contributions and observations during the internship, the following
 )
 
 #heading(upper("REFERENCES")) <content>
+\
 #bibliography("references.bib", title: none, style: "american-psychological-association")
-
-#pagebreak()
-
-= APPENDICES <content>
-
-#counter(heading).update(0)
-#show heading.where(level: 1): set align(left)
-#show heading.where(level: 1): set heading(
-    numbering: (..) => "Appendices " + counter(heading).display("1")
-)
-
-#heading("Log Book February") <appendix>
-
-#image("feb-1.jpg")
-#image("feb-2.jpg")
-#image("feb-3.jpg")
-#image("feb-4.jpg")
-
-#pagebreak()
-
-#heading("Log Book March") <appendix>
-
-#image("mar-1.jpg")
-#image("mar-2.jpg")
-#image("mar-3.jpg")
-#image("mar-4.jpg")
-
-#pagebreak()
-
-#heading("Log Book April") <appendix>
-
-#pagebreak()
-
-#heading("Log Book May") <appendix>
-
-#pagebreak()
-
-#heading("Log Book June") <appendix>
