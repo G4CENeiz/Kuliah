@@ -406,6 +406,12 @@
     task: "",
     achievement: ""
   ),
+  (
+    date: datetime(day: 30, month: 6, year: 2025).display("[day] [month repr:long] [year]"),
+    activity: "Weekly meeting dan pelepasan",
+    task: "",
+    achievement: ""
+  ),
 )
 
 #let tabIndent = [#h(1in/2)]
