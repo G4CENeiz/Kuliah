@@ -49,20 +49,20 @@
   (
     date: datetime(day: 6, month: 2, year: 2025).display("[day] [month repr:long] [year]"),
     activity: "Merubah format email di repo \"main-api\" menjadi typst",
-    task: "merubah format email menjadi typst",
-    achievement: "dokument typst sesuai dengan email"
+    task: "Merubah format email menjadi typst",
+    achievement: "Dokumen typst sesuai dengan email"
   ),
   (
     date: datetime(day: 7, month: 2, year: 2025).display("[day] [month repr:long] [year]"),
     activity: "Merapikan email typst di repo \"main-api\"",
-    task: "merubah format email menjadi typst",
-    achievement: "menata susuan dokumen sesuai template"
+    task: "Merubah format email menjadi typst",
+    achievement: "Menata susuan dokumen sesuai template"
   ),
   (
     date: datetime(day: 10, month: 2, year: 2025).display("[day] [month repr:long] [year]"),
     activity: "Meeting mingguan dan penyelesaian template email di repo \"main-api\"",
-    task: "merubah format invoice dari HTML menjadi typst",
-    achievement: "dokument typst sesuai dengan email"
+    task: "Merubah format invoice dari HTML menjadi typst",
+    achievement: "Dokumen typst sesuai dengan email"
   ),
   (
     date: datetime(day: 11, month: 2, year: 2025).display("[day] [month repr:long] [year]"),
@@ -90,7 +90,7 @@
   ),
   (
     date: datetime(day: 17, month: 2, year: 2025).display("[day] [month repr:long] [year]"),
-    activity: "Meneyesaikan proses backend untuk compiling typst",
+    activity: "Meneyelesaikan proses backend untuk compiling typst",
     task: "",
     achievement: ""
   ),
@@ -126,7 +126,7 @@
   ),
   (
     date: datetime(day: 25, month: 2, year: 2025).display("[day] [month repr:long] [year]"),
-    activity: "Menngunakan Tabel peserta statis",
+    activity: "Menggunakan Tabel peserta statis",
     task: "",
     achievement: ""
   ),
@@ -288,7 +288,7 @@
   ),
   (
     date: datetime(day: 7, month: 5, year: 2025).display("[day] [month repr:long] [year]"),
-    activity: "Mecoba menggunakan AI",
+    activity: "Mencoba menggunakan AI",
     task: "",
     achievement: ""
   ),
