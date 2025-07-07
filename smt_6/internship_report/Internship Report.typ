@@ -26,7 +26,8 @@
   nip: "198010102005011001"
 )
 #let approvalSignDate = "Bogor, " + datetime(day: 2, month: 7, year: 2025).display("[day] [month repr:long] [year]")
-#let presentationDate = datetime(day: 3, month: 7, year: 2025).display("[day] [month repr:long] [year]")
+#let presentationDate = datetime(day: 7, month: 7, year: 2025).display("[day] [month repr:long] [year]")
+#let prefaceDate = datetime(day: 2, month: 7, year: 2025).display("[day] [month repr:long] [year]")
 #let activities = (
   (
     date: datetime(day: 3, month: 2, year: 2025).display("[day] [month repr:long] [year]"),
@@ -609,7 +610,7 @@ Throughout my internship journey and the process of writing this report, I recei
     align: left,
     columns: (auto),
     stroke: none,
-    [Malang, #presentationDate],
+    [Malang, #prefaceDate],
     image("../../smt_5/Internship Preparation/ttd.png", height: 5em),
     [#student.name],
   )
