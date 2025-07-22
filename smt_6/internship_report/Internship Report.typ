@@ -1,4 +1,4 @@
-#let title = "industrial internship"
+#let title = "Implementation of Typst for Document Generation and Responsive Web Design with Component Unit Testing"
 #let company = (
   name: "PT. Global Scholarship Services Indonesia",
   address: "Jalan Taman Kencana Nomor 3, Babakan, Bogor Tengah, Bogor",
@@ -26,7 +26,7 @@
   nip: "198010102005011001"
 )
 #let approvalSignDate = "Bogor, " + datetime(day: 2, month: 7, year: 2025).display("[day] [month repr:long] [year]")
-#let presentationDate = datetime(day: 7, month: 7, year: 2025).display("[day] [month repr:long] [year]")
+#let presentationDate = datetime(day: 9, month: 7, year: 2025).display("[day] [month repr:long] [year]")
 #let prefaceDate = datetime(day: 2, month: 7, year: 2025).display("[day] [month repr:long] [year]")
 #let activities = (
   (
@@ -553,7 +553,7 @@ Approved By,
   columns: (1fr, 1fr),
   inset: (x: 0pt),
   [Head of \ D4 Informatics Engineering Program ], [Supervisor],
-  [#v(5em)], [#v(5em)],
+  [#v(4em)], [#v(4em)],
   [#underline(headOfProgram.name) \ NIP. #headOfProgram.nip], 
   [#underline(supervisingLecturer.name) \ NIP. #supervisingLecturer.nip],
 )
@@ -563,7 +563,7 @@ Approved By,
   stroke: 0pt,
   columns: (1fr),
   [Acknowledged, \ Head of The Department of Information Technology ],
-  [#v(5em)],
+  [#v(4em)],
   [#underline(headOfDepartment.name) \ NIP. #headOfDepartment.nip],
 )
 
