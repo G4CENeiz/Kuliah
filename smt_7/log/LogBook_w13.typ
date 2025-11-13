@@ -1,0 +1,35 @@
+#import "LogBookTemplate.typ": logBook
+#show: logBook.with(
+  activities: (
+    (
+      date: datetime(day: 10, month: 11, year: 2025),
+      clockIn: datetime(hour: 9, minute: 0, second: 0),
+      clockOut: datetime(hour: 17, minute: 0, second: 0),
+      activity: none
+    ),
+    (
+      date: datetime(day: 11, month: 11, year: 2025),
+      clockIn: datetime(hour: 9, minute: 0, second: 0),
+      clockOut: datetime(hour: 17, minute: 0, second: 0),
+      activity: none
+    ),
+    (
+      date: datetime(day: 12, month: 11, year: 2025),
+      clockIn: datetime(hour: 9, minute: 0, second: 0),
+      clockOut: datetime(hour: 17, minute: 0, second: 0),
+      activity: none
+    ),
+    (
+      date: datetime(day: 13, month: 11, year: 2025),
+      clockIn: datetime(hour: 9, minute: 0, second: 0),
+      clockOut: datetime(hour: 17, minute: 0, second: 0),
+      activity: none
+    ),
+    (
+      date: datetime(day: 14, month: 11, year: 2025),
+      clockIn: datetime(hour: 9, minute: 0, second: 0),
+      clockOut: datetime(hour: 17, minute: 0, second: 0),
+      activity: none
+    ),
+  )
+)
