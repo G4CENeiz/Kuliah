@@ -1,32 +1,32 @@
-#import "LogBookTemplate.typ": logBook
+#import "../LogBookTemplate.typ": logBook
 #show: logBook.with(
   activities: (
     (
-      date: datetime(day: 6, month: 10, year: 2025),
+      date: datetime(day: 17, month: 11, year: 2025),
       clockIn: datetime(hour: 9, minute: 0, second: 0),
       clockOut: datetime(hour: 17, minute: 0, second: 0),
       activity: none
     ),
     (
-      date: datetime(day: 7, month: 10, year: 2025),
+      date: datetime(day: 18, month: 11, year: 2025),
       clockIn: datetime(hour: 9, minute: 0, second: 0),
       clockOut: datetime(hour: 17, minute: 0, second: 0),
       activity: none
     ),
     (
-      date: datetime(day: 8, month: 10, year: 2025),
+      date: datetime(day: 19, month: 11, year: 2025),
       clockIn: datetime(hour: 9, minute: 0, second: 0),
       clockOut: datetime(hour: 17, minute: 0, second: 0),
       activity: none
     ),
     (
-      date: datetime(day: 9, month: 10, year: 2025),
+      date: datetime(day: 20, month: 11, year: 2025),
       clockIn: datetime(hour: 9, minute: 0, second: 0),
       clockOut: datetime(hour: 17, minute: 0, second: 0),
       activity: none
     ),
     (
-      date: datetime(day: 10, month: 10, year: 2025),
+      date: datetime(day: 21, month: 11, year: 2025),
       clockIn: datetime(hour: 9, minute: 0, second: 0),
       clockOut: datetime(hour: 17, minute: 0, second: 0),
       activity: none

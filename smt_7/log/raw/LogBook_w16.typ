@@ -1,4 +1,4 @@
-#import "LogBookTemplate.typ": logBook
+#import "../LogBookTemplate.typ": logBook
 #show: logBook.with(
   activities: (
     (
