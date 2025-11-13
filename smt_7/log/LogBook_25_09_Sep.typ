@@ -1,5 +1,0 @@
-#include "LogBook_w3.typ"
-#include "LogBook_w4.typ"
-#include "LogBook_w5.typ"
-#include "LogBook_w6.typ"
-#include "LogBook_w7.typ"
