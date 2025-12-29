@@ -121,7 +121,11 @@
   box(height: 6em)[
     #box(width: 3fr)[
       Pembimbing Lapangan,
-      #v(5em) 
+      #if (supervisorTtd == none) {
+        v(5em)
+      } else {
+        supervisorTtd
+      }
       #fieldSupervisorName
     ]
     #box(width: 2fr)[]
