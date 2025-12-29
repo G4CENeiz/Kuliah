@@ -1,7 +1,9 @@
   #let student_name= "Muhammad Baihaqi Aulia Asy'ari"
   #let student_nim= "2241720145"
   #let studyProgram= "Teknik Informatika"
-  #let partnerName= "SEAL (social economy accelerator lab)"
-  #let ttd= image("/smt_7/img/ttd.png", height: 5em)
+  #let partnerName= "Social Economy Accelerator Lab (SEAL)"
+  // #let ttd= image("/smt_7/img/ttd.png", height: 5em)
+  #let ttd= none
   #let fieldSupervisorName= "Robbi Tri Murdani"
-  #let supervisorLecturerName= "Yan Watequlis Syaifudin, ST., MMT., PhD."
+  #let supervisorTtd= image("/smt_7/img/ttd robbi.png", height: 5em)
+  #let supervisorLecturerName= "Ir. Yan Watequlis Syaifudin, ST., M.MT., Ph.D."
