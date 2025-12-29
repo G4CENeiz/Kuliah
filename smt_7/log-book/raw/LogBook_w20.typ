@@ -5,19 +5,19 @@
       date: datetime(day: 29, month: 12, year: 2025),
       clockIn: datetime(hour: 9, minute: 0, second: 0),
       clockOut: datetime(hour: 17, minute: 0, second: 0),
-      activity: none
+      activity: "Libur"
     ),
     (
       date: datetime(day: 30, month: 12, year: 2025),
       clockIn: datetime(hour: 9, minute: 0, second: 0),
       clockOut: datetime(hour: 17, minute: 0, second: 0),
-      activity: none
+      activity: "Libur"
     ),
     (
       date: datetime(day: 31, month: 12, year: 2025),
       clockIn: datetime(hour: 9, minute: 0, second: 0),
       clockOut: datetime(hour: 17, minute: 0, second: 0),
-      activity: none
+      activity: "Libur"
     ),
     (
       date: datetime(day: 1, month: 1, year: 2026),

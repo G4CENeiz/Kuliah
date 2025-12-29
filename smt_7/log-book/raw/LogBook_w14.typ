@@ -5,31 +5,31 @@
       date: datetime(day: 17, month: 11, year: 2025),
       clockIn: datetime(hour: 9, minute: 0, second: 0),
       clockOut: datetime(hour: 17, minute: 0, second: 0),
-      activity: none
+      activity: "menambahkan audit table pada sistem"
     ),
     (
       date: datetime(day: 18, month: 11, year: 2025),
       clockIn: datetime(hour: 9, minute: 0, second: 0),
       clockOut: datetime(hour: 17, minute: 0, second: 0),
-      activity: none
+      activity: "mengimplementasikan audit table pada saat login"
     ),
     (
       date: datetime(day: 19, month: 11, year: 2025),
       clockIn: datetime(hour: 9, minute: 0, second: 0),
       clockOut: datetime(hour: 17, minute: 0, second: 0),
-      activity: none
+      activity: "memulai pembuatan fitur lokasi minat"
     ),
     (
       date: datetime(day: 20, month: 11, year: 2025),
       clockIn: datetime(hour: 9, minute: 0, second: 0),
       clockOut: datetime(hour: 17, minute: 0, second: 0),
-      activity: none
+      activity: "menyelesaikan fitur lokasi minat"
     ),
     (
       date: datetime(day: 21, month: 11, year: 2025),
       clockIn: datetime(hour: 9, minute: 0, second: 0),
       clockOut: datetime(hour: 17, minute: 0, second: 0),
-      activity: none
+      activity: "deploy fitur baru"
     ),
   )
 )
