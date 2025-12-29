@@ -1,0 +1,566 @@
+#let activities = (
+  (
+    date: datetime(day: 22, month: 8, year: 2025),
+    activity: "Onboarding SEAL dan koordinasi tim NusantaraGPS",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 25, month: 8, year: 2025),
+    activity: "menerima akses ke codebase yang akan dikerjakan",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 26, month: 8, year: 2025),
+    activity: "menganalisis cobebase yang telah diterima",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 27, month: 8, year: 2025),
+    activity: "mencoba menjalankan proyek dengan laravel sail",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 28, month: 8, year: 2025),
+    activity: "membenahi env file yang dibutuhkan untuk menjalankan proyek",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 29, month: 8, year: 2025),
+    activity: "mencoba untuk mengakses salah satu endpoint rest api dari proyek",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 1, month: 9, year: 2025),
+    activity: "menerima dokumentasi API silacak KLH yang ingin ditambahkan",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 2, month: 9, year: 2025),
+    activity: "menganalisis penggunaan API silacak KLH di dalam sistem",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 3, month: 9, year: 2025),
+    activity: "konsultasi perihal implementasi API silacak KLH di dalam sistem",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 4, month: 9, year: 2025),
+    activity: "melanjutkan analisis untuk menjalakan proyek",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 5, month: 9, year: 2025),
+    activity: "menganalisis kebutuhan migration table untuk proyek",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 8, month: 9, year: 2025),
+    activity: "mendapatkan alamat kantor dan melanjutkan analisis migration table",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 9, month: 9, year: 2025),
+    activity: "mulai membuat migration table",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 10, month: 9, year: 2025),
+    activity: "melanjutkan pembuatan migration table",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 11, month: 9, year: 2025),
+    activity: "melanjutkan pembuatan migration table",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 12, month: 9, year: 2025),
+    activity: "melanjutkan pembuatan migration table",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 15, month: 9, year: 2025),
+    activity: "melanjutkan pembuatan migration table",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 16, month: 9, year: 2025),
+    activity: "menganalisis meengapa wujud migration table dan model dibentuk
+    task: none,
+    achievement: none, demikian",
+  ),
+  (
+    date: datetime(day: 17, month: 9, year: 2025),
+    activity: "menambahkan service tambahan yang dibutuhkan proyek (traccar)",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 18, month: 9, year: 2025),
+    activity: "memahami dan menyesuaikan kebutuhan dan konfigurasi traccar",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 19, month: 9, year: 2025),
+    activity: "menyelesaikan pembuatan migration table dan konfigurasi traccar",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 22, month: 9, year: 2025),
+    activity: "melakukan test pada endpoin test funsionalitas koneksi antara proyek
+    task: none,
+    achievement: none, dengan traccar",
+  ),
+  (
+    date: datetime(day: 23, month: 9, year: 2025),
+    activity: "merubah bentuk timestamp di database",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 24, month: 9, year: 2025),
+    activity: "merekronstruksi api route pada proyek",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 25, month: 9, year: 2025),
+    activity: "menambahkan service access token pada traccar",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 26, month: 9, year: 2025),
+    activity: "menambahkan seeding untuk development environment",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 29, month: 9, year: 2025),
+    activity: "menkonfigurasi ulang model dan koneksi database laravel untuk
+    task: none,
+    achievement: none, menyesuaikan dengan proyek lama",
+  ),
+  (
+    date: datetime(day: 30, month: 9, year: 2025),
+    activity: "menyesuaikan bentuk tabel dengan back up database dari proyek lama",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 1, month: 10, year: 2025),
+    activity: "menyesuaikan model dengan tabel yang telah disesuaikan dari back up
+    task: none,
+    achievement: none, database lama",
+  ),
+  (
+    date: datetime(day: 2, month: 10, year: 2025),
+    activity: "standarisasi respons api dan penggunaan dependency injection untuk
+    task: none,
+    achievement: none, service di controller",
+  ),
+  (
+    date: datetime(day: 3, month: 10, year: 2025),
+    activity: "merapihkan service dan menghapus penggunaan repository pattern pada
+    task: none,
+    achievement: none, beberapa fitur",
+  ),
+  (
+    date: datetime(day: 6, month: 10, year: 2025),
+    activity: "refaktor fitur fuel type",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 7, month: 10, year: 2025),
+    activity: "refaktor fitur master",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 8, month: 10, year: 2025),
+    activity: "menggunankan time zone pada timestamp database",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 9, month: 10, year: 2025),
+    activity: "refaktor controller dan service pada beberapa fitur dan manghapus
+    task: none,
+    achievement: none, repository pattern pada beberapa fitur",
+  ),
+  (
+    date: datetime(day: 10, month: 10, year: 2025),
+    activity: "menambahkan error handling dan exception pada beberapa fitur",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 13, month: 10, year: 2025),
+    activity: "menstandardkan respons api",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 14, month: 10, year: 2025),
+    activity: "memperbaiki konfigurasi traccar agar websocket dapat diakses
+    task: none,
+    achievement: none, frontend web",
+  ),
+  (
+    date: datetime(day: 15, month: 10, year: 2025),
+    activity: "menambahkan cloudflare tunnel agar kerja remote lebih mudah",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 16, month: 10, year: 2025),
+    activity: "refaktor model dan tabel migrasi pada tabel user",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 17, month: 10, year: 2025),
+    activity: "refaktor service akumulator",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 20, month: 10, year: 2025),
+    activity: "memnyiapkan kebutuhan untuk deployment",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 21, month: 10, year: 2025),
+    activity: "mekonfigurasi ulang traccar",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 22, month: 10, year: 2025),
+    activity: "menyederhanakan bentuk deployment",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 23, month: 10, year: 2025),
+    activity: "mengembalikan deployment ke bentuk semula",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 24, month: 10, year: 2025),
+    activity: "memisahkan database server untuk proyek dengan database traccar",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 27, month: 10, year: 2025),
+    activity: "memperbaiki ke kacauan deployment",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 28, month: 10, year: 2025),
+    activity: "mekonfigurasi ulang traccar server",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 29, month: 10, year: 2025),
+    activity: "mengembalikan kondisi deployment ke versi yang terakhir berfungsi",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 30, month: 10, year: 2025),
+    activity: "memisahkan docker compose file production dengan development",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 31, month: 10, year: 2025),
+    activity: "menyesuaikan pengambilan data env dengan ketentuan portainer",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 3, month: 11, year: 2025),
+    activity: "menghapus salah satu service yang tidak digunakan",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 4, month: 11, year: 2025),
+    activity: "menambahkan database client di server agar lebih mudah untuk melihat
+    task: none,
+    achievement: none, data yang ada di database",
+  ),
+  (
+    date: datetime(day: 5, month: 11, year: 2025),
+    activity: "mengahpus repository pattern pada vehicle service",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 6, month: 11, year: 2025),
+    activity: "menggunakan helper yang disediakan untuk melakukan api call ke
+    task: none,
+    achievement: none, traccar",
+  ),
+  (
+    date: datetime(day: 7, month: 11, year: 2025),
+    activity: "menambahkan input validation pada fitur vehicle",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 10, month: 11, year: 2025),
+    activity: "mencoba fitur tracking dengan alat gps tracker",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 11, month: 11, year: 2025),
+    activity: "menelrusuri data hillang di database traccar",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 12, month: 11, year: 2025),
+    activity: "memindahkan 9 device dari traccar lama ke traccar baru dan
+    task: none,
+    achievement: none, menyesuaikan dev API untuk tampilan dev frontend",
+  ),
+  (
+    date: datetime(day: 13, month: 11, year: 2025),
+    activity: "mendapat kabar proyek di-cancel. pemindahan ke proyek baru",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 14, month: 11, year: 2025),
+    activity: "proyek tidak jadi dicancel. menunggu kabar baru tentang proyek",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 17, month: 11, year: 2025),
+    activity: "menambahkan audit table pada sistem",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 18, month: 11, year: 2025),
+    activity: "mengimplementasikan audit table pada saat login",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 19, month: 11, year: 2025),
+    activity: "memulai pembuatan fitur lokasi minat",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 20, month: 11, year: 2025),
+    activity: "menyelesaikan fitur lokasi minat",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 21, month: 11, year: 2025),
+    activity: "deploy fitur baru",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 24, month: 11, year: 2025),
+    activity: "menggunakan http client laravel untuk melakukan api call",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 25, month: 11, year: 2025),
+    activity: "menghapus helper function untuk melakukan api call (digantikan http
+    task: none,
+    achievement: none, client laravel)",
+  ),
+  (
+    date: datetime(day: 26, month: 11, year: 2025),
+    activity: "membuat dan menggunakan http client macro untuk mempermudah
+    task: none,
+    achievement: none, melakukan api call ke traccar",
+  ),
+  (
+    date: datetime(day: 27, month: 11, year: 2025),
+    activity: "refaktor vehicle service dan lokasi minat",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 28, month: 11, year: 2025),
+    activity: "refaktor report service",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 1, month: 12, year: 2025),
+    activity: "memperbaiki proses api call pada report service",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 2, month: 12, year: 2025),
+    activity: "memperbaiki token traccar yang hilang di data user",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 3, month: 12, year: 2025),
+    activity: "memulai pembuatan fitur geofence",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 4, month: 12, year: 2025),
+    activity: "menyelesaikan pembuatan fitur geofence",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 5, month: 12, year: 2025),
+    activity: "memperbaiki error geofence",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 8, month: 12, year: 2025),
+    activity: "memperbaiki format tanggal report",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 9, month: 12, year: 2025),
+    activity: "menghapus beberapa metode lama untuk error checking yang sudah tidak
+    task: none,
+    achievement: none, digunakan",
+  ),
+  (
+    date: datetime(day: 10, month: 12, year: 2025),
+    activity: "melakukan deployment untuk fitur fitur baru (lokasi minat & geofence
+    task: none,
+    achievement: none,)",
+  ),
+  (
+    date: datetime(day: 11, month: 12, year: 2025),
+    activity: "mengajukan subdomain kepada atasan untuk proyek",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 12, month: 12, year: 2025),
+    activity: "memulai pembuatan fitur riwayat laporan",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 15, month: 12, year: 2025),
+    activity: "memperbaiki validasi input riwayat laporan",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 16, month: 12, year: 2025),
+    activity: "memperbaiki error pada pemilihan tipe laporan",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 17, month: 12, year: 2025),
+    activity: "memperbaiki error ketika laporan bernilai null (tidak ada laporan di
+    task: none,
+    achievement: none, hari itu)",
+  ),
+  (
+    date: datetime(day: 18, month: 12, year: 2025),
+    activity: "refaktor besar pada fitur vehicle",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 19, month: 12, year: 2025),
+    activity: "memperbaiki error pada proses create dan update vehicle",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 22, month: 12, year: 2025),
+    activity: "Izin",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 23, month: 12, year: 2025),
+    activity: "Izin",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 24, month: 12, year: 2025),
+    activity: "Libur",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 25, month: 12, year: 2025),
+    activity: "Libur",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 26, month: 12, year: 2025),
+    activity: "Libur",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 29, month: 12, year: 2025),
+    activity: "Libur",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 30, month: 12, year: 2025),
+    activity: "Libur",
+    task: none,
+    achievement: none,
+  ),
+  (
+    date: datetime(day: 31, month: 12, year: 2025),
+    activity: "Libur",
+    task: none,
+    achievement: none,
+  ),
+)
