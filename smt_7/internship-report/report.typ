@@ -84,11 +84,9 @@
 
 #heading(upper("abstract"))
 
-#lorem(100)
+The rapid development of logistics and transportation sectors requires efficient fleet management systems to ensure operational effectiveness. This internship report details the development and maintenance of the backend system for "NusantaraGPS", a fleet management platform developed at the Social Economy Accelerator Lab (SEAL). The primary objective was to orchestrate data between GPS tracking devices and user interfaces (Mobile and Web) using a REST API architecture. The system integrates with the open-source Traccar platform to handle real-time geolocation data.
 
-#lorem(100)
-
-#lorem(100)
+The project utilized the Laravel framework with a MySQL database. Key activities included refactoring a legacy codebase to adhere to modern software engineering standards, developing new features such as Geofencing and Points of Interest, and stabilizing the deployment pipeline. A significant portion of the work involved addressing technical debt, specifically regarding the misuse of the Repository Pattern and standardizing API responses. The result is a more robust, albeit still evolving, REST API that successfully facilitates real-time vehicle tracking, reporting, and user management. This report outlines the technical implementation, the architectural challenges encountered, and recommendations for future system stability, highlighting the importance of clean code practices and proper infrastructure in scalable web development.
 
 #pagebreak()
 
@@ -258,29 +256,65 @@ Traccar is a modern, open-source GPS tracking system that supports a wide variet
 )
 
 == Relevance of Theory and Practice
-Explain how i refactored a lot of features because while the code are performing as a REST API supposed to do, and the code is technically following the MVC structure even as far as having service and repository classes for each feature, the code is a jungle of mess that not only has pieces of code that defeat the purpose of having service and repository pattern, but also not doing things the "laravel" way. for example making an endpoint to get a list of data that is paginated manually in the response, using repository pattern as direct wrapper of model without any complex and repeatable usage, having logic in the controller instead of the service class, and a whole lot more problem that would break more things if i try fix it while also not having enough time to fix the problem. while the traccar side made me learn a whole lot about consuming REST API. 
+During the internship, the implementation of software architecture theories faced significant real-world challenges. While the legacy codebase ostensibly followed the Model-View-Controller (MVC) architectural pattern, the practical application deviated significantly from industry standards and best practices, specifically regarding the "Laravel way" of development.
+
+Theoretically, the Repository Pattern is utilized to decouple business logic from data access logic, allowing for easier testing and maintenance. However, in practice, the existing codebase utilized repositories merely as direct wrappers for Eloquent models without adding necessary abstraction or complex query handling. This redundancy defeated the purpose of the pattern. Furthermore, business logic that theoretically belongs in Service classes was frequently found coupled tightly within Controllers, leading to "bloated controllers"—a common anti-pattern in MVC frameworks.
+
+The internship provided an opportunity to refactor these inconsistencies. I applied theoretical knowledge of Clean Code and SOLID principles to decouple these dependencies. Additionally, the integration with Traccar required extensive use of HTTP Clients and API consumption. This bridged the gap between the theoretical understanding of RESTful constraints and the practical necessity of handling third-party API tokens, managing asynchronous requests, and standardizing JSON responses for the frontend.
 == Issues
-Intially the project was not heading anywhere. It was just plainly "continuing" the project from the previous vendor. There was no documentation, no one who really understand the flow of the progam. The project was intially seems abandoned until the PM was eventually not in contact with development team and the project was fully steered by the client. The problem soon was solved by having another intern worked as the PM. Other problem also occurs because nobody in the organization truly understand the codebase. I was given no way to stagged or deploy the project. There was also no database and object storage server for the projcet and was stuck with running the project on Laravel Sail with local server storage. After the client has given the development team a VPS instance that was previously used by the previous vendor, we management to deploy it publicly. Despite that, we still have no staging server since the devices used in the server is technically not for testing and is a real and heavily monitored vehicle. 
+Several technical and managerial issues were encountered during the development process which impacted the project timeline and stability:
+
++ Legacy Code Quality and Technical Debt: The pre-existing project contained substantial technical debt. The codebase lacked consistency, with manual pagination implementation instead of leveraging Laravel’s built-in features, and an incoherent folder structure. This required significant time to be allocated to refactoring rather than feature development.
+
++ Lack of Documentation: There was a complete absence of technical documentation or handover files from the previous vendor. This "black box" environment made it difficult to understand the data flow, particularly concerning the "Accumulator" service and the specific configurations required for the Traccar server integration.
+
++ Infrastructure and Deployment Constraints:
+
+  - No Staging Environment: The development team was forced to deploy directly to production or test on local environments without a proper staging server. Testing was conducted on a live, heavily monitored vehicle, posing high risks to data integrity.
+
+  - Stateless Architecture Violation: The application relied on local server storage for file uploads rather than an object storage service (like AWS S3). This hindered the ability to scale or load-balance the application, as the API was not truly stateless.
+
+  - Deployment Instability: Initial deployment processes were manual and error-prone, leading to downtime. This was eventually mitigated by stabilizing the VPS environment and properly configuring Docker containers.
 
 #pagebreak()
 
 = RECOMMENDATIONS
-In my opinion, this project has a lot of technical debt. Every CRUD features has technical debt in architectural and implementation aspect. The way the code is written is not in the way Laravel intend it to be. There is also an "Accumulator" features, where during the entirity of my internship has remain useless because nobody understand usage. The only thing to know about them is there's a scheduler to get and store data to redis, and there's a worker to proccess the data from redis. The user management endpoint and authentication is also not separated well enough. Authentication need to be refactored heavily. In the current state of the application, only one instance of session can be logged in to the system. Vehicle endpoint doesn't only cover CRUD but also other thing that no one has ever mention before, i assume it needs to be refactored too because how bad the code looks and works. the client once ask for a "history of action" happening in the progam. i have made a crude audit table which need to be rework with laravel polymorphic table ORM thingy. we also need object storage ASAP, someone need to make this REST API stateless by having a dedicated object storage. at the current state of the application, they also need to implement load balancing and to deploy more instance of the api server to handle more request. the project also somehow use repository pattern in the most useless way possible, someone need to stop that. and most important of all, someone need to make this rest api do thing in the most laravel way possible, because laravel is a highly opinionated framework, there's always a way to make things in the most convinient way possible. please dear god
+Based on the analysis of the "NusantaraGPS" system and the activities conducted during the internship, the following technical and architectural recommendations are proposed to ensure the long-term viability of the project:
+
+== Codebase Refactoring and Standardization
+
+- Re-evaluate Repository Pattern Usage: The current implementation of the repository pattern adds unnecessary complexity. It is recommended to either implement the pattern correctly (abstracting complex queries) or revert to using Laravel's Eloquent ORM directly in Service classes to reduce boilerplate code.
+
+- Adherence to Framework Standards: Future development should strictly follow Laravel conventions. This includes using built-in pagination, Resource classes for API responses, and Service Providers for dependency injection, ensuring the code remains maintainable and readable for future developers.
+
+== Architecture and Infrastructure
+
+- Implementation of Object Storage: To ensure the REST API is truly stateless and scalable, file storage (such as photos or reports) must be migrated from local server storage to a cloud-based Object Storage service (e.g., S3 or MinIO). This is a prerequisite for implementing load balancing.
+
+- Establishment of a Staging Environment: It is critical to provision a dedicated staging server with dummy devices. Testing on live vehicles in a production environment is highly risky and violates standard DevOps practices.
+
+== Feature-Specific Improvements
+
+- Audit Trail Implementation: The current "history of action" requirement is implemented crudely. It should be refactored to utilize Laravel’s Polymorphic relationships to create a scalable and query-efficient Audit Log system.
+
+- Authentication Overhaul: User management and authentication require immediate refactoring. Currently, session management is restrictive (allowing only one active session). A implementation of a robust token-based authentication system (such as Laravel Sanctum or Passport) is recommended to handle multiple sessions and secure API access.
+
+- Accumulator Service Documentation: The "Accumulator" feature, currently a mysterious background process involving Redis, must be audited. Its purpose, data flow, and dependencies need to be documented or deprecated if found redundant.
 
 #pagebreak()
 
 = CONCLUSION
 == Conclusion
 
-#lorem(60)
+The internship at the Social Economy Accelerator Lab (SEAL) provided a comprehensive experience in backend software engineering. The primary goal of developing and orchestrating the REST API for the "NusantaraGPS" fleet management system was achieved. Despite significant challenges posed by legacy code and infrastructure limitations, the system was successfully stabilized, and key features such as Geofencing, Points of Interest, and Traccar integration were implemented.
 
-#lorem(60)
+The project highlighted the critical importance of software architecture. While the system functioned, the presence of technical debt—specifically the misuse of design patterns and lack of documentation—severely hampered development speed. The experience demonstrated that writing code that "works" is insufficient; code must be maintainable, scalable, and standardized. The internship also bridged the gap between academic theory and practice, particularly in the areas of API consumption, CI/CD pipelines, and the complexities of real-world fleet tracking data.
 
 == Suggestions
 
-#lorem(60)
+For the SEAL: It is strongly suggested to enforce strict documentation standards for all vendors and internal developers. A "Documentation First" approach will prevent future "black box" scenarios. Additionally, investing in a proper DevOps infrastructure (Staging Server and Object Storage) for this specific project knowing how every other project has better DevOps infrastructure than this and how it feels like this project is neglected to be worked by interns.
 
-#lorem(60)
+For Future Interns: Master the core principles of the framework (Laravel) before attempting complex design patterns. Prioritize reading the official documentation and understanding the "why" behind an architectural decision before implementation.
 
 
 #pagebreak()
