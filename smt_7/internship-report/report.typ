@@ -54,11 +54,31 @@
 
 #pagebreak()
 
-#include "approval-company.typ"
+#set page(
+  paper: "a4",
+  margin: (
+    top: 0cm,
+    bottom: 0cm,
+    left: 0cm,
+    right: 0cm,
+  ),
+)
+
+#image("approval-company_Scanned.pdf")
 
 #pagebreak()
 
-#include "approval-campus.typ"
+#image("approval-campus_Scanned_Partial_1.pdf")
+
+#set page(
+  paper: "a4",
+  margin: (
+    top: 4cm,
+    bottom: 3cm,
+    left: 4cm,
+    right: 3cm,
+  ),
+)
 
 #pagebreak()
 
