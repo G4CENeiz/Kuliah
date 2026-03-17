@@ -1,5 +1,6 @@
 #set page(paper: "a4")
-#set text(font: "Times New Roman", size: 12pt)
+#set text(font: "Times New Roman", size: 12pt, hyphenate: false)
+#set par(justify: true)
 
 *Name*: Muhammad Baihaqi Aulia Asy'ari
 
@@ -18,7 +19,7 @@ DevOps Engineer with background in Backend Development
 
 == Skills that Still Needs to be Learned
 + Implementing continous integration and continous development
-+ managing CDN, Object Storage, and Database
++ Managing CDN, Object Storage, and Database
 + Comprehensive testing applications
 + Configuring production environment
 + Guaranteeing observability of application
