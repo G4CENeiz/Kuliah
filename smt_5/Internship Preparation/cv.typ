@@ -1,4 +1,4 @@
-#import "@preview/basic-resume:0.2.3": *
+#import "@preview/basic-resume:0.2.9": *
 
 // Put your personal information here, replacing mine
 #let name = "Muhammad Baihaqi Aulia Asy'ari"
@@ -7,7 +7,7 @@
 #let github = "github.com/G4CENeiz"
 #let linkedin = "linkedin.com/in/baihaqiasyari"
 #let phone = "+62 823-3675-0134"
-#let personal-site = ""
+#let personal-site = "byhaqi.my.id"
 
 #show: resume.with(
   author: name,
@@ -23,8 +23,28 @@
 == Projects
 
 #project(
-  role: "Team Leads",
+  name: "Dolla",
+  url: "https://github.com/G4CENeiz/Dolla",
+  dates: "Apr 2026 - Present"
+)\
+Monorepo project for an "autonomous" cryptocurrency dollar cost averaging strategy
+- Turborepo
+- Vite React
+- React Native
+- Hono
+
+#project(
+  name: "FaMiSo",
+  url: "https://github.com/G4CENeiz/FaMiSo",
+  dates: "Mar 2026 - Present"
+)\ 
+Fleet Management System based on traccar. 
+- Laravel
+- Filament
+
+#project(
   name: "RW 1 Information System",
+  url: "https://github.com/integer-class/rwis-png",
   dates: dates-helper(start-date: "Aug 2023", end-date: "Nov 2023")
 )
 // - Analyzed the clients need by doing interview and field observation
@@ -48,7 +68,7 @@
   dates: dates-helper(start-date: "Aug 2022", end-date: "2026"),
   degree: "Bachelor's of Applied Science, Informatics Engineering",
 )
-- Cumulative GPA: 3.5\/4.0
+- Cumulative GPA: 3.62\/4.0
 - Member of Workshop Riset Informatika
 // - Relevant Coursework: Data Structures, Program Development, Microprocessors, Abstract Algebra I: Groups and Rings, Linear Algebra, Discrete Mathematics, Multivariable & Single Variable Calculus, Principles and Practice of Comp Sci
 
@@ -70,8 +90,8 @@
   - Coordinate joint projects and initiatives with partnering organizations.
 
 == Skills
-- *Programming Languages*: HTML/CSS, JavaScript, TypesScript, PHP, Java, Python, Dart
-- *Frameworks*: Laravel, React, Tailwind CSS, Flutter
+- *Programming Languages*: HTML, CSS, JavaScript, TypesScript, PHP, Java, Python, Dart
+- *Frameworks*: Laravel, React, Tailwind CSS, Flutter, Astro, Hono
 - *Technologies*: Git, Docker, Typst
 - *Interests*: Automotive, Minecraft
 
